@@ -1,4 +1,4 @@
-# ModelMonitor 🧠
+# ModelMonitor
 
 > **April 2026 AI Model Release Tracker** — A weekly-updated dashboard of notable AI model releases, organized by company, week, and license type.
 
@@ -90,12 +90,12 @@ Open `public/models.json` and append a new entry to the array:
 
 | License | Badge Color |
 |---|---|
-| `Open Weights` | 🟢 Green |
-| `Open Source` | 🟢 Green |
-| `MIT` | 🟢 Green |
-| `Apache 2.0` | 🟢 Green |
-| `Proprietary` | 🔴 Red |
-| `Gated` | 🩷 Pink |
+| `Open Weights` | Green |
+| `Open Source` | Green |
+| `MIT` | Green |
+| `Apache 2.0` | Green |
+| `Proprietary` | Red |
+| `Gated` | Pink |
 
 ---
 
