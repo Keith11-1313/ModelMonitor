@@ -1,6 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 
-const MODELS = [
+// ── DATA is fetched from /public/models.json at runtime ──
+// Add new models there; this file does not need to change.
+
+const FALLBACK_MODELS = [
   {
     id: 1, name: "DeepSeek V4", company: "DeepSeek", date: "2026-04-24",
     week: 4, color: "#5b9cf6",
@@ -91,6 +94,7 @@ const MODELS = [
   },
 ];
 
+
 const WEEKS = [
   { id: "all", label: "All Releases", range: "Apr 1 – 24" },
   { id: 4, label: "Week 4", range: "Apr 21 – 27" },
@@ -131,8 +135,28 @@ export default function App() {
   const [activeView, setActiveView] = useState("grid");
   const [selected, setSelected] = useState(null);
   const [mounted, setMounted] = useState(false);
+  const [models, setModels] = useState(FALLBACK_MODELS);
+  const [loadState, setLoadState] = useState("idle"); // "idle" | "loading" | "error"
 
   const closeModal = useCallback(() => setSelected(null), []);
+
+  // Fetch models.json on mount
+  useEffect(() => {
+    setLoadState("loading");
+    fetch("/models.json")
+      .then((r) => {
+        if (!r.ok) throw new Error("Failed to load models.json");
+        return r.json();
+      })
+      .then((data) => {
+        setModels(data);
+        setLoadState("idle");
+      })
+      .catch(() => {
+        setLoadState("error");
+        // FALLBACK_MODELS already set as default, so UI still works
+      });
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -233,11 +257,11 @@ export default function App() {
     return () => window.removeEventListener("keydown", handler);
   }, [closeModal]);
 
-  const filtered = activeWeek === "all" ? MODELS : MODELS.filter(m => m.week === activeWeek);
-  const companyCount = [...new Set(MODELS.map(m => m.company))].length;
-  const openCount = MODELS.filter(m => ["Open Weights", "Open Source", "MIT", "Apache 2.0"].includes(m.license)).length;
+  const filtered = activeWeek === "all" ? models : models.filter(m => m.week === activeWeek);
+  const companyCount = [...new Set(models.map(m => m.company))].length;
+  const openCount = models.filter(m => ["Open Weights", "Open Source", "MIT", "Apache 2.0"].includes(m.license)).length;
   const companySummary = Object.entries(
-    MODELS.reduce((acc, m) => { acc[m.company] = (acc[m.company] || 0) + 1; return acc; }, {})
+    models.reduce((acc, m) => { acc[m.company] = (acc[m.company] || 0) + 1; return acc; }, {})
   ).sort((a, b) => b[1] - a[1]);
 
   const s = {
@@ -584,15 +608,35 @@ export default function App() {
   };
 
   const STATS = [
-    { value: MODELS.length,           label: "Total Releases",       color: "#5b9cf6" },
-    { value: companyCount,            label: "Companies",            color: "#a78bfa" },
-    { value: openCount,               label: "Open Weights / Source", color: "#4ade80" },
-    { value: MODELS.length - openCount, label: "Proprietary / Gated", color: "#f97316" },
-    { value: 4,                       label: "Active Weeks",         color: "#64748b" },
+    { value: models.length,             label: "Total Releases",       color: "#5b9cf6" },
+    { value: companyCount,              label: "Companies",            color: "#a78bfa" },
+    { value: openCount,                 label: "Open Weights / Source", color: "#4ade80" },
+    { value: models.length - openCount, label: "Proprietary / Gated", color: "#f97316" },
+    { value: [...new Set(models.map(m => m.week))].length, label: "Active Weeks", color: "#64748b" },
   ];
+
+  // ── Loading / Error banner ──
+  const LoadBanner = () => {
+    if (loadState === "loading") return (
+      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#3d5270",
+        textAlign: "center", padding: "8px", letterSpacing: "2px",
+        background: "rgba(13,18,27,0.8)", borderBottom: "1px solid #1a2840" }}>
+        ⟳ FETCHING LATEST MODELS…
+      </div>
+    );
+    if (loadState === "error") return (
+      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#f87171",
+        textAlign: "center", padding: "8px", letterSpacing: "2px",
+        background: "rgba(42,13,13,0.8)", borderBottom: "1px solid #991b1b" }}>
+        ⚠ COULD NOT FETCH models.json — SHOWING CACHED DATA
+      </div>
+    );
+    return null;
+  };
 
   return (
     <div style={s.root}>
+      <LoadBanner />
 
       {/* ── HEADER ── */}
       <header style={s.header}>
@@ -899,7 +943,7 @@ export default function App() {
           // LIVE TRACKER — APRIL 2026
         </div>
         <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#2a3f5a", letterSpacing: "1px" }}>
-          {MODELS.length} MODELS · {companyCount} COMPANIES
+          {models.length} MODELS · {companyCount} COMPANIES
         </div>
       </footer>
 
