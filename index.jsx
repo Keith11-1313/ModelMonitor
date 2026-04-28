@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+const { useState, useEffect, useCallback } = React;
 
 // ── DATA is fetched from /public/models.json at runtime ──
 // Add new models there; this file does not need to change.
@@ -130,7 +130,7 @@ function formatDateShort(d) {
   return new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
-export default function App() {
+function App() {
   const [activeWeek, setActiveWeek] = useState("all");
   const [activeView, setActiveView] = useState("grid");
   const [selected, setSelected] = useState(null);
@@ -143,7 +143,7 @@ export default function App() {
   // Fetch models.json on mount
   useEffect(() => {
     setLoadState("loading");
-    fetch("/models.json")
+    fetch("./public/models.json")
       .then((r) => {
         if (!r.ok) throw new Error("Failed to load models.json");
         return r.json();
@@ -681,8 +681,8 @@ export default function App() {
                 {w.label}
                 <span style={{ color: "#2a4060", marginLeft: "5px", fontSize: "10px" }}>
                   {w.id !== "all"
-                    ? `(${MODELS.filter(m => m.week === w.id).length})`
-                    : `(${MODELS.length})`}
+                    ? `(${models.filter(m => m.week === w.id).length})`
+                    : `(${models.length})`}
                 </span>
               </button>
             ))}
@@ -779,8 +779,8 @@ export default function App() {
                 APRIL 2026 — AI RELEASE SUMMARY
               </div>
               <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#3d5270", lineHeight: 1.9 }}>
-                In just 24 days, {companyCount} major AI companies shipped {MODELS.length} significant model releases.{" "}
-                {openCount} of these were open weights or open source, representing {Math.round(openCount / MODELS.length * 100)}% of total releases.{" "}
+                In just 24 days, {companyCount} major AI companies shipped {models.length} significant model releases.{" "}
+                {openCount} of these were open weights or open source, representing {Math.round(openCount / models.length * 100)}% of total releases.{" "}
                 Alibaba led with 3 releases. Anthropic and Meta both shipped major capability upgrades.{" "}
                 The pace of releases across coding benchmarks, agentic workflows, and long-context tasks
                 signals rapid convergence toward capable, long-running agent models.
@@ -795,7 +795,7 @@ export default function App() {
                   <div key={company} style={{ ...s.barRow, animationDelay: `${i * 0.07}s` }}>
                     <div style={s.barLabel}>{company}</div>
                     <div style={s.barTrack}>
-                      <div className="bar-fill" style={s.barFill((count / MODELS.length) * 100, COMPANY_COLORS[company] || "#5b9cf6")} />
+                      <div className="bar-fill" style={s.barFill((count / models.length) * 100, COMPANY_COLORS[company] || "#5b9cf6")} />
                     </div>
                     <div style={s.barCount}>{count}</div>
                   </div>
@@ -807,12 +807,12 @@ export default function App() {
                 <div style={s.summaryTitle}>License Breakdown</div>
                 {[
                   ["Open / Weights / MIT", openCount, "#4ade80"],
-                  ["Proprietary / Gated", MODELS.length - openCount, "#f87171"],
+                  ["Proprietary / Gated", models.length - openCount, "#f87171"],
                 ].map(([label, count, color], i) => (
                   <div key={label} style={{ ...s.barRow, animationDelay: `${i * 0.1}s` }}>
                     <div style={{ ...s.barLabel, width: "150px" }}>{label}</div>
                     <div style={s.barTrack}>
-                      <div className="bar-fill" style={s.barFill((count / MODELS.length) * 100, color)} />
+                      <div className="bar-fill" style={s.barFill((count / models.length) * 100, color)} />
                     </div>
                     <div style={s.barCount}>{count}</div>
                   </div>
@@ -820,12 +820,12 @@ export default function App() {
                 <div style={{ ...s.divider, margin: "14px 0" }} />
                 <div style={s.summaryTitle}>Releases by Week</div>
                 {[4, 3, 2, 1].map((w, i) => {
-                  const wc = MODELS.filter(m => m.week === w).length;
+                  const wc = models.filter(m => m.week === w).length;
                   return (
                     <div key={w} style={{ ...s.barRow, animationDelay: `${(i + 2) * 0.07}s` }}>
                       <div style={s.barLabel}>Week {w}</div>
                       <div style={s.barTrack}>
-                        <div className="bar-fill" style={s.barFill((wc / MODELS.length) * 100, "#5b9cf6")} />
+                        <div className="bar-fill" style={s.barFill((wc / models.length) * 100, "#5b9cf6")} />
                       </div>
                       <div style={s.barCount}>{wc}</div>
                     </div>

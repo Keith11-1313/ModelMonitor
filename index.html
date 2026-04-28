@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>April in AI — 2026 Model Release Tracker</title>
+  <meta name="description" content="Week-by-week tracker of major AI model releases in April 2026. Featuring DeepSeek, GPT-5.5, Qwen, Llama 4, Claude, and more." />
+
+  <!-- React + ReactDOM (production CDN) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel standalone — transpiles JSX in the browser (no build step needed) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #070b12; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!--
+    Fetch index.jsx as text, transpile with Babel, eval it, then mount.
+    This avoids the limitations of Babel standalone's external src loading.
+  -->
+  <script>
+    fetch('./index.jsx')
+      .then(r => r.text())
+      .then(src => {
+        const transformed = Babel.transform(src, { presets: ['react'] }).code;
+        // eslint-disable-next-line no-new-func
+        new Function(transformed)();
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+      })
+      .catch(err => {
+        document.getElementById('root').innerHTML =
+          '<div style="color:#f87171;font-family:monospace;padding:40px">Failed to load app: ' + err + '</div>';
+      });
+  </script>
+</body>
+</html>
