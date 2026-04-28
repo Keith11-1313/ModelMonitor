@@ -6,7 +6,7 @@ const { useState, useEffect, useCallback } = React;
 const FALLBACK_MODELS = [
   {
     id: 1, name: "DeepSeek V4", company: "DeepSeek", date: "2026-04-24",
-    week: 4, color: "#5b9cf6",
+    week: 4, color: "#0f62fe",
     tags: ["Open Weights", "1.6T Params"],
     license: "Open Weights",
     summary: "1.6T parameters, 1M context window. Costs a fraction of GPT-5.5.",
@@ -14,7 +14,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 2, name: "GPT-5.5", company: "OpenAI", date: "2026-04-23",
-    week: 4, color: "#10a37f",
+    week: 4, color: "#0f62fe",
     tags: ["Proprietary", "Agentic"],
     license: "Proprietary",
     summary: "Smartest OpenAI model yet. Stronger coding and agentic workflows at same speed as 5.4.",
@@ -22,7 +22,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 3, name: "Qwen3.6-27B", company: "Alibaba", date: "2026-04-22",
-    week: 4, color: "#f97316",
+    week: 4, color: "#0f62fe",
     tags: ["Open Source"],
     license: "Open Source",
     summary: "Open source mid-size coding model. Solid performance for its parameter count.",
@@ -30,7 +30,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 4, name: "Kimi K2.6", company: "Moonshot AI", date: "2026-04-20",
-    week: 3, color: "#a78bfa",
+    week: 3, color: "#0f62fe",
     tags: ["Open Weights", "MoE", "Multi-agent"],
     license: "Open Weights",
     summary: "1T open-weight MoE model. 300 parallel sub-agents, capable of running 12+ hours nonstop.",
@@ -38,7 +38,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 5, name: "Qwen3.6-Max-Preview", company: "Alibaba", date: "2026-04-20",
-    week: 3, color: "#f97316",
+    week: 3, color: "#0f62fe",
     tags: ["Proprietary", "Flagship"],
     license: "Proprietary",
     summary: "Proprietary flagship. Claimed top scores on 6 major coding benchmarks.",
@@ -46,7 +46,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 6, name: "Claude Opus 4.7", company: "Anthropic", date: "2026-04-16",
-    week: 3, color: "#e879a0",
+    week: 3, color: "#0f62fe",
     tags: ["Proprietary", "Reasoning"],
     license: "Proprietary",
     summary: "Biggest upgrade for complex reasoning and long-running agentic tasks.",
@@ -54,7 +54,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 7, name: "Qwen3.6-35B-A3B", company: "Alibaba", date: "2026-04-16",
-    week: 3, color: "#f97316",
+    week: 3, color: "#0f62fe",
     tags: ["Open Source", "Apache 2.0"],
     license: "Apache 2.0",
     summary: "Open source release under Apache 2.0 license. 35B total, 3B active parameters.",
@@ -62,7 +62,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 8, name: "Llama 4", company: "Meta", date: "2026-04-08",
-    week: 2, color: "#3b82f6",
+    week: 2, color: "#0f62fe",
     tags: ["Open Weights", "10M Context"],
     license: "Open Weights",
     summary: "Open weights. Scout model ships with 10M token context window.",
@@ -70,7 +70,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 9, name: "GLM-5.1", company: "Zhipu AI", date: "2026-04-07",
-    week: 2, color: "#facc15",
+    week: 2, color: "#0f62fe",
     tags: ["MIT License"],
     license: "MIT",
     summary: "MIT licensed. Outperformed GPT-5.4 and Opus 4.6 on SWE-bench Pro.",
@@ -78,7 +78,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 10, name: "Claude Mythos Preview", company: "Anthropic", date: "2026-04-07",
-    week: 2, color: "#e879a0",
+    week: 2, color: "#0f62fe",
     tags: ["Gated", "ASL-4"],
     license: "Gated",
     summary: "Gated to 50 organizations. Triggered Anthropic ASL-4 safety protocol.",
@@ -86,7 +86,7 @@ const FALLBACK_MODELS = [
   },
   {
     id: 11, name: "Gemma 4 31B", company: "Google", date: "2026-04-02",
-    week: 1, color: "#34d399",
+    week: 1, color: "#0f62fe",
     tags: ["Open Source"],
     license: "Open Source",
     summary: "Open source. Outperforms models 20x its size in benchmarks.",
@@ -94,6 +94,61 @@ const FALLBACK_MODELS = [
   },
 ];
 
+// ── IBM Carbon CDS token map (white theme) ──
+const CDS = {
+  background:       "#ffffff",
+  layer01:          "#f4f4f4",
+  layer02:          "#e0e0e0",
+  textPrimary:      "#161616",
+  textSecondary:    "#525252",
+  textPlaceholder:  "#6f6f6f",
+  borderSubtle:     "#c6c6c6",
+  borderStrong:     "#8d8d8d",
+  interactive:      "#0f62fe",
+  interactiveHover: "#0353e9",
+  interactiveActive:"#002d9c",
+  linkPrimary:      "#0f62fe",
+  linkHover:        "#0043ce",
+  focusRing:        "#0f62fe",
+  supportError:     "#da1e28",
+  supportSuccess:   "#24a148",
+  supportWarning:   "#f1c21b",
+  supportInfo:      "#0f62fe",
+  navBg:            "#161616",
+  navText:          "#c6c6c6",
+  navTextHover:     "#ffffff",
+  gray90:           "#262626",
+  gray80:           "#393939",
+  gray70:           "#525252",
+  gray60:           "#6f6f6f",
+  gray50:           "#8d8d8d",
+  gray30:           "#c6c6c6",
+  gray20:           "#e0e0e0",
+  gray10:           "#f4f4f4",
+  blue10:           "#edf5ff",
+};
+
+// License badge styles using Carbon semantic colors
+const LICENSE_STYLE = {
+  "Open Weights": { bg: CDS.blue10,              color: CDS.interactive,    border: "#a6c8ff" },
+  "Open Source":  { bg: CDS.blue10,              color: CDS.interactive,    border: "#a6c8ff" },
+  "MIT":          { bg: "#defbe6",               color: CDS.supportSuccess, border: "#a7f0ba" },
+  "Apache 2.0":   { bg: "#defbe6",               color: CDS.supportSuccess, border: "#a7f0ba" },
+  "Proprietary":  { bg: "#fff1f1",               color: CDS.supportError,   border: "#ffd7d9" },
+  "Gated":        { bg: "#fff8e1",               color: "#b28600",          border: "#ffe082" },
+};
+
+// Company accent (used only for bar charts & decorative dots — single blue palette)
+const COMPANY_COLORS = {
+  "DeepSeek":   CDS.interactive,
+  "OpenAI":     "#0043ce",
+  "Alibaba":    "#002d9c",
+  "Moonshot AI":"#4589ff",
+  "Anthropic":  "#78a9ff",
+  "Meta":       "#0f62fe",
+  "Zhipu AI":   "#0353e9",
+  "Google":     "#0043ce",
+};
 
 const WEEKS = [
   { id: "all", label: "All Releases", range: "Apr 1 – 24" },
@@ -102,26 +157,6 @@ const WEEKS = [
   { id: 2, label: "Week 2", range: "Apr 7 – 13" },
   { id: 1, label: "Week 1", range: "Apr 1 – 6" },
 ];
-
-const COMPANY_COLORS = {
-  "DeepSeek": "#5b9cf6",
-  "OpenAI": "#10a37f",
-  "Alibaba": "#f97316",
-  "Moonshot AI": "#a78bfa",
-  "Anthropic": "#e879a0",
-  "Meta": "#3b82f6",
-  "Zhipu AI": "#facc15",
-  "Google": "#34d399",
-};
-
-const LICENSE_STYLE = {
-  "Open Weights": { bg: "rgba(26,47,26,0.9)", color: "#4ade80", border: "#166534" },
-  "Open Source":  { bg: "rgba(26,47,26,0.9)", color: "#4ade80", border: "#166534" },
-  "MIT":          { bg: "rgba(26,47,26,0.9)", color: "#4ade80", border: "#166534" },
-  "Apache 2.0":   { bg: "rgba(26,47,26,0.9)", color: "#4ade80", border: "#166534" },
-  "Proprietary":  { bg: "rgba(42,26,26,0.9)", color: "#f87171", border: "#991b1b" },
-  "Gated":        { bg: "rgba(42,26,32,0.9)", color: "#f472b6", border: "#9d174d" },
-};
 
 function formatDate(d) {
   return new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
@@ -134,9 +169,8 @@ function App() {
   const [activeWeek, setActiveWeek] = useState("all");
   const [activeView, setActiveView] = useState("grid");
   const [selected, setSelected] = useState(null);
-  const [mounted, setMounted] = useState(false);
   const [models, setModels] = useState(FALLBACK_MODELS);
-  const [loadState, setLoadState] = useState("idle"); // "idle" | "loading" | "error"
+  const [loadState, setLoadState] = useState("idle");
 
   const closeModal = useCallback(() => setSelected(null), []);
 
@@ -154,96 +188,126 @@ function App() {
       })
       .catch(() => {
         setLoadState("error");
-        // FALLBACK_MODELS already set as default, so UI still works
       });
   }, []);
 
+  // Inject global CSS with IBM Plex fonts, Carbon reset, and micro-animations
   useEffect(() => {
-    setMounted(true);
     const style = document.createElement("style");
     style.textContent = `
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      body { background: #070b12; }
-      ::-webkit-scrollbar { width: 4px; }
-      ::-webkit-scrollbar-track { background: #070b12; }
-      ::-webkit-scrollbar-thumb { background: #1e2d40; border-radius: 2px; }
+      :root {
+        --cds-background: ${CDS.background};
+        --cds-layer-01: ${CDS.layer01};
+        --cds-layer-02: ${CDS.layer02};
+        --cds-text-primary: ${CDS.textPrimary};
+        --cds-text-secondary: ${CDS.textSecondary};
+        --cds-border-subtle: ${CDS.borderSubtle};
+        --cds-interactive: ${CDS.interactive};
+        --cds-button-primary: ${CDS.interactive};
+        --cds-button-primary-hover: ${CDS.interactiveHover};
+        --cds-button-primary-active: ${CDS.interactiveActive};
+        --cds-link-primary: ${CDS.linkPrimary};
+        --cds-link-primary-hover: ${CDS.linkHover};
+        --cds-focus: ${CDS.focusRing};
+        --cds-support-error: ${CDS.supportError};
+        --cds-support-success: ${CDS.supportSuccess};
+        --cds-support-warning: ${CDS.supportWarning};
+        --cds-support-info: ${CDS.supportInfo};
+      }
 
-      .card-hover {
-        transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.22s ease, border-color 0.22s ease;
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+        background: var(--cds-background);
+        color: var(--cds-text-primary);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: ${CDS.layer01}; }
+      ::-webkit-scrollbar-thumb { background: ${CDS.borderSubtle}; }
+
+      /* Tile hover — background shift only, no transform per Carbon */
+      .cds-tile {
+        transition: background-color 0.15s ease;
         cursor: pointer;
       }
-      .card-hover:hover { transform: translateY(-3px); }
+      .cds-tile:hover { background-color: ${CDS.layer02} !important; }
+      .cds-tile:focus { outline: 2px solid ${CDS.focusRing}; outline-offset: -2px; }
 
-      .tab-btn {
-        transition: color 0.15s ease, background 0.15s ease, border-bottom-color 0.15s ease;
+      /* Tab buttons */
+      .cds-tab {
+        transition: color 0.15s ease, border-bottom-color 0.15s ease, background-color 0.15s ease;
         touch-action: manipulation;
       }
-      .view-btn { transition: all 0.15s ease; touch-action: manipulation; }
+      .cds-tab:hover { color: ${CDS.textPrimary} !important; background-color: ${CDS.layer01} !important; }
 
-      .fade-in { animation: fadeUp 0.38s cubic-bezier(0.22,1,0.36,1) both; }
-      @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(12px); }
-        to   { opacity: 1; transform: translateY(0); }
+      /* View toggle buttons */
+      .cds-view-btn {
+        transition: color 0.15s ease, background-color 0.15s ease;
+        touch-action: manipulation;
       }
+      .cds-view-btn:hover { background-color: ${CDS.layer01} !important; }
 
-      .modal-enter { animation: modalIn 0.22s cubic-bezier(0.34,1.56,0.64,1) both; }
-      @keyframes modalIn {
-        from { opacity: 0; transform: scale(0.96) translateY(8px); }
-        to   { opacity: 1; transform: scale(1) translateY(0); }
-      }
-
-      .pulse-dot { animation: pulse 2s ease-in-out infinite; }
-      @keyframes pulse {
-        0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }
-        50%       { opacity: 0.6; box-shadow: 0 0 0 4px rgba(74,222,128,0); }
-      }
-
-      .bar-fill { animation: barGrow 0.7s cubic-bezier(0.22,1,0.36,1) both; }
-      @keyframes barGrow { from { width: 0% !important; } }
-
-      .list-arrow {
+      /* Arrow reveal on list rows */
+      .cds-list-arrow {
         opacity: 0;
         transform: translateX(-4px);
         transition: opacity 0.15s ease, transform 0.15s ease;
+        color: ${CDS.textSecondary};
         font-size: 18px;
-        color: #4a6080;
+        flex-shrink: 0;
       }
-      .card-hover:hover .list-arrow {
+      .cds-tile:hover .cds-list-arrow {
         opacity: 1;
         transform: translateX(0);
       }
 
-      .close-btn {
-        transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
-      }
-      .close-btn:hover {
-        background: #1e2d40 !important;
-        color: #e2e8f0 !important;
-        transform: scale(1.1);
+      /* Fade-up entry */
+      .cds-fade-in { animation: cdsUp 0.3s ease both; }
+      @keyframes cdsUp {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
       }
 
-      .stat-card-hover {
-        transition: transform 0.18s ease, box-shadow 0.18s ease;
-      }
-      .stat-card-hover:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-      }
-
-      .highlight-card-hover {
-        transition: transform 0.18s ease, box-shadow 0.18s ease;
-      }
-      .highlight-card-hover:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      /* Modal entry */
+      .cds-modal-enter { animation: cdsModal 0.2s ease both; }
+      @keyframes cdsModal {
+        from { opacity: 0; transform: scale(0.98) translateY(6px); }
+        to   { opacity: 1; transform: scale(1)   translateY(0); }
       }
 
-      @media (max-width: 640px) {
-        .stats-row { display: grid !important; grid-template-columns: 1fr 1fr !important; }
-        .controls-row { flex-direction: column !important; align-items: stretch !important; }
-        .list-summary-col { display: none !important; }
-        .summary-grid { grid-template-columns: 1fr !important; }
+      /* Live pulse dot */
+      .cds-pulse { animation: cdsPulse 2s ease-in-out infinite; }
+      @keyframes cdsPulse {
+        0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(36,161,72,0.4); }
+        50%       { opacity: 0.7; box-shadow: 0 0 0 4px rgba(36,161,72,0); }
+      }
+
+      /* Bar grow */
+      .cds-bar-fill { animation: cdsBar 0.6s ease both; }
+      @keyframes cdsBar { from { width: 0% !important; } }
+
+      /* Stat tile subtle hover */
+      .cds-stat-tile {
+        transition: background-color 0.15s ease;
+      }
+      .cds-stat-tile:hover { background-color: ${CDS.layer02} !important; }
+
+      /* Close button */
+      .cds-close-btn {
+        transition: background-color 0.15s ease;
+      }
+      .cds-close-btn:hover { background-color: ${CDS.layer02} !important; }
+
+      /* Responsive */
+      @media (max-width: 672px) {
+        .cds-stats-row { grid-template-columns: 1fr 1fr !important; }
+        .cds-controls-row { flex-direction: column !important; align-items: stretch !important; }
+        .cds-list-summary-col { display: none !important; }
+        .cds-summary-grid { grid-template-columns: 1fr !important; }
+        .cds-tab-row { flex-wrap: wrap !important; }
       }
     `;
     document.head.appendChild(style);
@@ -264,473 +328,294 @@ function App() {
     models.reduce((acc, m) => { acc[m.company] = (acc[m.company] || 0) + 1; return acc; }, {})
   ).sort((a, b) => b[1] - a[1]);
 
-  const s = {
-    root: {
-      fontFamily: "'Outfit', sans-serif",
-      background: "#070b12",
-      minHeight: "100vh",
-      color: "#e2e8f0",
-    },
-
-    // ── HEADER ──
-    header: {
-      position: "relative",
-      background: "linear-gradient(180deg, #0a1020 0%, #070b12 100%)",
-      borderBottom: "1px solid #1a2840",
-      padding: "28px 32px 24px",
-      overflow: "hidden",
-    },
-    headerGlow: {
-      position: "absolute", top: 0, left: "50%",
-      transform: "translateX(-50%)",
-      width: "600px", height: "200px",
-      background: "radial-gradient(ellipse at top, rgba(91,156,246,0.07) 0%, transparent 70%)",
-      pointerEvents: "none",
-    },
-    headerTop: {
-      position: "relative",
-      display: "flex", alignItems: "flex-end",
-      justifyContent: "space-between",
-      marginBottom: "24px",
-    },
-    title: {
-      fontFamily: "'Bebas Neue', sans-serif",
-      fontSize: "clamp(32px, 4.5vw, 52px)",
-      letterSpacing: "4px", lineHeight: 1, color: "#fff",
-    },
-    titleAccent: {
-      background: "linear-gradient(135deg, #5b9cf6, #a78bfa)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
-    },
-    subtitle: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", color: "#3d5270",
-      letterSpacing: "3px", marginTop: "6px",
-      textTransform: "uppercase",
-    },
-    liveTag: {
-      display: "flex", alignItems: "center", gap: "7px",
-      background: "rgba(13,31,13,0.8)",
-      border: "1px solid #166534",
-      borderRadius: "6px", padding: "5px 12px",
-      fontSize: "11px",
-      fontFamily: "'IBM Plex Mono', monospace",
-      color: "#4ade80", letterSpacing: "2px",
-      backdropFilter: "blur(8px)",
-    },
-
-    // ── STAT CARDS ──
-    statsRow: {
-      position: "relative",
-      display: "flex", gap: "10px", flexWrap: "wrap",
-    },
-    statCard: (accentColor) => ({
-      background: "rgba(13,18,27,0.85)",
-      border: "1px solid #1a2840",
-      borderTop: `2px solid ${accentColor}`,
-      borderRadius: "8px",
-      padding: "14px 20px", flex: "1", minWidth: "120px",
-      backdropFilter: "blur(8px)",
-      WebkitBackdropFilter: "blur(8px)",
-    }),
-    statNum: {
-      fontFamily: "'Bebas Neue', sans-serif",
-      fontSize: "38px", letterSpacing: "2px", lineHeight: 1,
-    },
-    statLabel: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "10px", color: "#3d5270",
-      letterSpacing: "2px", textTransform: "uppercase", marginTop: "3px",
-    },
-
-    // ── BODY ──
-    body: { padding: "24px 32px" },
-    controls: {
-      display: "flex", justifyContent: "space-between",
-      alignItems: "center", marginBottom: "20px",
-      flexWrap: "wrap", gap: "10px",
-    },
-    tabRow: {
-      display: "flex", gap: "2px",
-      background: "rgba(13,18,27,0.8)",
-      border: "1px solid #1a2840",
-      borderRadius: "8px", padding: "4px",
-      backdropFilter: "blur(8px)",
-    },
-    tab: (active) => ({
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", letterSpacing: "1px",
-      padding: "7px 14px", borderRadius: "5px",
-      border: "none", cursor: "pointer",
-      background: active ? "#1a2d47" : "transparent",
-      color: active ? "#93c5fd" : "#3d5270",
-      borderBottom: active ? "2px solid #5b9cf6" : "2px solid transparent",
-      fontWeight: active ? 600 : 400,
-    }),
-    viewToggle: {
-      display: "flex", gap: "2px",
-      background: "rgba(13,18,27,0.8)",
-      border: "1px solid #1a2840",
-      borderRadius: "8px", padding: "4px",
-      backdropFilter: "blur(8px)",
-    },
-    viewBtn: (active) => ({
-      padding: "7px 14px", borderRadius: "5px",
-      border: "none", cursor: "pointer",
-      background: active ? "#1a2d47" : "transparent",
-      color: active ? "#93c5fd" : "#3d5270",
-      fontSize: "11px",
-      fontFamily: "'IBM Plex Mono', monospace",
-      letterSpacing: "1px",
-      fontWeight: active ? 600 : 400,
-    }),
-
-    // ── GRID CARDS ──
-    grid: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-      gap: "12px",
-    },
-    card: (color) => ({
-      background: "rgba(13,18,27,0.88)",
-      border: "1px solid #1a2840",
-      borderTop: `2px solid ${color}`,
-      borderRadius: "8px", padding: "20px 20px 16px",
-      position: "relative", overflow: "hidden",
-      backdropFilter: "blur(8px)",
-      WebkitBackdropFilter: "blur(8px)",
-    }),
-    cardGlow: (color) => ({
-      position: "absolute", top: 0, right: 0,
-      width: "100px", height: "100px",
-      background: `radial-gradient(circle at top right, ${color}14, transparent 70%)`,
-      pointerEvents: "none",
-    }),
-    cardName: {
-      fontSize: "16px", fontWeight: 600,
-      color: "#f1f5f9", marginBottom: "2px", letterSpacing: "0.2px",
-    },
-    cardCompany: (color) => ({
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", color,
-      letterSpacing: "1.5px", textTransform: "uppercase",
-      marginBottom: "8px", fontWeight: 500,
-    }),
-    cardDate: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", color: "#3d5270",
-      marginBottom: "10px", letterSpacing: "0.5px",
-    },
-    cardSummary: {
-      fontSize: "13px", color: "#7a92b0",
-      lineHeight: 1.65, marginBottom: "14px",
-    },
-    tags: { display: "flex", gap: "6px", flexWrap: "wrap" },
-    tag: {
-      fontSize: "10px",
-      fontFamily: "'IBM Plex Mono', monospace",
-      padding: "3px 8px", borderRadius: "4px",
-      background: "rgba(19,29,46,0.8)",
-      border: "1px solid #1e2d40",
-      color: "#4a6080", letterSpacing: "0.5px",
-    },
-    licenseTag: (lic) => {
-      const st = LICENSE_STYLE[lic] || LICENSE_STYLE["Proprietary"];
-      return {
-        fontSize: "10px",
-        fontFamily: "'IBM Plex Mono', monospace",
-        padding: "3px 8px", borderRadius: "4px",
-        background: st.bg,
-        border: `1px solid ${st.border}`,
-        color: st.color,
-        letterSpacing: "0.8px",
-        fontWeight: 600,
-        textTransform: "uppercase",
-      };
-    },
-
-    // ── LIST VIEW ──
-    listItem: (color) => ({
-      background: "rgba(13,18,27,0.88)",
-      border: "1px solid #1a2840",
-      borderLeft: `3px solid ${color}`,
-      borderRadius: "8px", padding: "14px 18px",
-      display: "flex", alignItems: "center", gap: "16px",
-      backdropFilter: "blur(8px)",
-      WebkitBackdropFilter: "blur(8px)",
-    }),
-    listDatePill: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", color: "#4a6080",
-      background: "rgba(19,29,46,0.8)",
-      border: "1px solid #1e2d40",
-      borderRadius: "4px", padding: "3px 8px",
-      whiteSpace: "nowrap", flexShrink: 0,
-    },
-    listName: { fontSize: "15px", fontWeight: 600, color: "#f1f5f9" },
-    listCompany: (color) => ({
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "10px", color, letterSpacing: "1px",
-      textTransform: "uppercase", marginTop: "2px", fontWeight: 500,
-    }),
-    listSummary: {
-      fontSize: "12px", color: "#4a6080",
-      flex: 2, lineHeight: 1.5,
-    },
-
-    // ── MODAL ──
-    overlay: {
-      position: "fixed", inset: 0,
-      background: "rgba(4,7,14,0.88)",
-      backdropFilter: "blur(6px)",
-      WebkitBackdropFilter: "blur(6px)",
-      zIndex: 100,
-      display: "flex", alignItems: "center",
-      justifyContent: "center", padding: "20px",
-    },
-    modal: {
-      background: "rgba(10,15,25,0.97)",
-      border: "1px solid #1a2840",
-      borderRadius: "12px",
-      width: "100%", maxWidth: "520px",
-      padding: "28px", position: "relative",
-      backdropFilter: "blur(24px)",
-      WebkitBackdropFilter: "blur(24px)",
-      boxShadow: "0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04)",
-    },
-    modalTopBorder: (color) => ({
-      position: "absolute", top: 0, left: 0, right: 0,
-      height: "2px",
-      background: `linear-gradient(90deg, ${color}, ${color}44, transparent)`,
-      borderRadius: "12px 12px 0 0",
-    }),
-    modalGlow: (color) => ({
-      position: "absolute", top: 0, right: 0,
-      width: "200px", height: "200px",
-      background: `radial-gradient(circle at top right, ${color}10, transparent 70%)`,
-      borderRadius: "0 12px 0 0",
-      pointerEvents: "none",
-    }),
-    modalHeader: { paddingLeft: "0", marginBottom: "20px", marginTop: "8px" },
-    modalWeekBadge: {
-      display: "inline-flex", alignItems: "center",
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "10px", color: "#3d5270",
-      background: "rgba(19,29,46,0.8)",
-      border: "1px solid #1e2d40",
-      borderRadius: "4px", padding: "2px 8px",
-      letterSpacing: "1px", textTransform: "uppercase",
-      marginBottom: "10px",
-    },
-    modalName: {
-      fontFamily: "'Bebas Neue', sans-serif",
-      fontSize: "30px", letterSpacing: "2px", color: "#f1f5f9",
-    },
-    modalCompany: (color) => ({
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", color,
-      letterSpacing: "2px", textTransform: "uppercase",
-      marginTop: "3px", fontWeight: 500,
-    }),
-    modalDate: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", color: "#3d5270", marginTop: "4px",
-    },
-    divider: { borderTop: "1px solid #1a2840", margin: "16px 0" },
-    modalSection: { marginBottom: "16px" },
-    modalSectionTitle: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "10px", color: "#3d5270",
-      letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px",
-    },
-    highlight: {
-      display: "flex", alignItems: "flex-start",
-      gap: "10px", marginBottom: "8px",
-      fontSize: "13px", color: "#7a92b0", lineHeight: 1.55,
-    },
-    bullet: (color) => ({
-      width: "6px", height: "6px", borderRadius: "50%",
-      background: color, flexShrink: 0, marginTop: "5px",
-      boxShadow: `0 0 6px ${color}80`,
-    }),
-    closeBtn: {
-      position: "absolute", top: "16px", right: "16px",
-      background: "rgba(19,29,46,0.8)",
-      border: "1px solid #1a2840",
-      borderRadius: "6px", color: "#4a6080",
-      cursor: "pointer", fontSize: "16px",
-      width: "30px", height: "30px",
-      display: "flex", alignItems: "center", justifyContent: "center",
-      fontFamily: "sans-serif", lineHeight: 1,
-    },
-
-    // ── SUMMARY VIEW ──
-    summaryGrid: {
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr",
-      gap: "12px", marginTop: "16px",
-    },
-    summaryCard: {
-      background: "rgba(13,18,27,0.88)",
-      border: "1px solid #1a2840",
-      borderRadius: "8px", padding: "20px 22px",
-      backdropFilter: "blur(8px)",
-      WebkitBackdropFilter: "blur(8px)",
-    },
-    summaryTitle: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "10px", color: "#3d5270",
-      letterSpacing: "2px", textTransform: "uppercase", marginBottom: "16px",
-    },
-    barRow: {
-      display: "flex", alignItems: "center",
-      gap: "10px", marginBottom: "12px",
-    },
-    barLabel: { fontSize: "12px", color: "#7a92b0", width: "100px", flexShrink: 0 },
-    barTrack: {
-      flex: 1, height: "4px",
-      background: "rgba(19,29,46,0.8)",
-      borderRadius: "4px", overflow: "hidden",
-    },
-    barFill: (w, color) => ({
-      height: "100%", width: `${w}%`,
-      background: `linear-gradient(90deg, ${color}, ${color}88)`,
-      borderRadius: "4px",
-      boxShadow: `0 0 8px ${color}44`,
-    }),
-    barCount: {
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: "11px", color: "#3d5270",
-      width: "16px", textAlign: "right",
-    },
+  // ── Inline style helpers ──
+  const typo = {
+    // Display 01: 60px, weight 300, lh 1.17
+    display01: { fontSize: "clamp(32px,4.5vw,60px)", fontWeight: 300, lineHeight: 1.17, color: CDS.textPrimary },
+    // Heading 04: 20px, weight 600, lh 1.40
+    heading04: { fontSize: "20px", fontWeight: 600, lineHeight: 1.40, color: CDS.textPrimary },
+    // Heading 05: 20px, weight 400, lh 1.40
+    heading05: { fontSize: "20px", fontWeight: 400, lineHeight: 1.40, color: CDS.textPrimary },
+    // Body Short 01: 14px, weight 400, lh 1.29, ls 0.16px
+    bodyShort01: { fontSize: "14px", fontWeight: 400, lineHeight: 1.29, letterSpacing: "0.16px", color: CDS.textPrimary },
+    // Body Short 02: 14px, weight 600, lh 1.29, ls 0.16px
+    bodyShort02: { fontSize: "14px", fontWeight: 600, lineHeight: 1.29, letterSpacing: "0.16px", color: CDS.textPrimary },
+    // Body Long 01: 16px, weight 400, lh 1.50
+    bodyLong01: { fontSize: "16px", fontWeight: 400, lineHeight: 1.50, color: CDS.textSecondary },
+    // Caption 01: 12px, weight 400, lh 1.33, ls 0.32px
+    caption01: { fontSize: "12px", fontWeight: 400, lineHeight: 1.33, letterSpacing: "0.32px", color: CDS.textSecondary },
+    // Code 01: Mono 14px, weight 400, lh 1.43, ls 0.16px
+    code01: { fontFamily: "'IBM Plex Mono', Menlo, Courier, monospace", fontSize: "14px", fontWeight: 400, lineHeight: 1.43, letterSpacing: "0.16px" },
   };
 
   const STATS = [
-    { value: models.length,             label: "Total Releases",       color: "#5b9cf6" },
-    { value: companyCount,              label: "Companies",            color: "#a78bfa" },
-    { value: openCount,                 label: "Open Weights / Source", color: "#4ade80" },
-    { value: models.length - openCount, label: "Proprietary / Gated", color: "#f97316" },
-    { value: [...new Set(models.map(m => m.week))].length, label: "Active Weeks", color: "#64748b" },
+    { value: models.length,             label: "Total Releases" },
+    { value: companyCount,              label: "Companies" },
+    { value: openCount,                 label: "Open Weights / Source" },
+    { value: models.length - openCount, label: "Proprietary / Gated" },
+    { value: [...new Set(models.map(m => m.week))].length, label: "Active Weeks" },
   ];
 
-  // ── Loading / Error banner ──
+  // ── Load / Error notification bar (Carbon notification banner style) ──
   const LoadBanner = () => {
     if (loadState === "loading") return (
-      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#3d5270",
-        textAlign: "center", padding: "8px", letterSpacing: "2px",
-        background: "rgba(13,18,27,0.8)", borderBottom: "1px solid #1a2840" }}>
-        ⟳ FETCHING LATEST MODELS…
+      <div style={{
+        background: CDS.interactive, color: "#ffffff",
+        padding: "8px 32px",
+        ...typo.bodyShort01,
+        letterSpacing: "0.16px",
+      }}>
+        Fetching latest models…
       </div>
     );
     if (loadState === "error") return (
-      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#f87171",
-        textAlign: "center", padding: "8px", letterSpacing: "2px",
-        background: "rgba(42,13,13,0.8)", borderBottom: "1px solid #991b1b" }}>
-        ⚠ COULD NOT FETCH models.json — SHOWING CACHED DATA
+      <div style={{
+        background: CDS.supportError, color: "#ffffff",
+        padding: "8px 32px",
+        ...typo.bodyShort01,
+      }}>
+        ⚠ Could not load models.json — showing cached data.
       </div>
     );
     return null;
   };
 
+  // ── Tag component (Carbon Tag / Label) ──
+  const Tag = ({ children, style: extra }) => (
+    <span style={{
+      display: "inline-block",
+      background: CDS.layer01,
+      color: CDS.textSecondary,
+      ...typo.caption01,
+      padding: "2px 8px",
+      borderRadius: "24px",
+      border: `1px solid ${CDS.borderSubtle}`,
+      ...extra,
+    }}>
+      {children}
+    </span>
+  );
+
+  // ── License tag (color-coded Tag variant) ──
+  const LicenseTag = ({ lic }) => {
+    const st = LICENSE_STYLE[lic] || LICENSE_STYLE["Proprietary"];
+    return (
+      <span style={{
+        display: "inline-block",
+        background: st.bg,
+        color: st.color,
+        border: `1px solid ${st.border}`,
+        ...typo.caption01,
+        padding: "2px 8px",
+        borderRadius: "24px",
+        fontWeight: 600,
+        flexShrink: 0,
+        textTransform: "uppercase",
+        letterSpacing: "0.32px",
+      }}>
+        {lic}
+      </span>
+    );
+  };
+
   return (
-    <div style={s.root}>
+    <div style={{ fontFamily: "'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif", background: CDS.background, minHeight: "100vh", color: CDS.textPrimary }}>
       <LoadBanner />
 
-      {/* ── HEADER ── */}
-      <header style={s.header}>
-        <div style={s.headerGlow} />
-        <div style={s.headerTop}>
-          <div>
-            <div style={s.title}>
-              <span style={s.titleAccent}>APRIL</span> IN AI
-            </div>
-            <div style={s.subtitle}>2026 Model Release Tracker — Week-by-Week</div>
-          </div>
-          <div style={s.liveTag}>
-            <span className="pulse-dot" style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4ade80", display: "inline-block", flexShrink: 0 }} />
-            APR 2026
-          </div>
+      {/* ── NAV (Carbon masthead: Gray 100, 48px) ── */}
+      <nav style={{
+        background: CDS.navBg,
+        height: "48px",
+        display: "flex", alignItems: "center",
+        justifyContent: "space-between",
+        padding: "0 32px",
+        position: "sticky", top: 0, zIndex: 200,
+      }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          {/* IBM 8-bar logo mark (simplified SVG) */}
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="#ffffff" aria-label="ModelMonitor">
+            <rect x="0" y="2" width="32" height="4"/><rect x="0" y="8" width="32" height="4"/>
+            <rect x="4" y="14" width="24" height="4"/><rect x="4" y="20" width="24" height="4"/>
+            <rect x="0" y="26" width="32" height="4"/>
+          </svg>
+          <span style={{ ...typo.bodyShort02, color: "#ffffff", letterSpacing: "0.16px" }}>
+            ModelMonitor
+          </span>
         </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <span className="cds-pulse" style={{ width: "6px", height: "6px", borderRadius: "50%", background: CDS.supportSuccess, display: "inline-block" }} />
+          <span style={{ ...typo.code01, fontSize: "11px", color: CDS.navText, letterSpacing: "0.32px" }}>APR 2026</span>
+        </div>
+      </nav>
 
-        <div className="stats-row" style={s.statsRow}>
+      {/* ── HEADER ── */}
+      <header style={{ background: CDS.background, padding: "48px 32px 32px", borderBottom: `1px solid ${CDS.borderSubtle}` }}>
+        {/* Display headline */}
+        <h1 style={{ ...typo.display01, marginBottom: "16px", maxWidth: "720px" }}>
+          April in AI
+          <span style={{ display: "block", color: CDS.interactive }}>2026 Model Release Tracker</span>
+        </h1>
+        <p style={{ ...typo.bodyLong01, maxWidth: "600px", marginBottom: "40px" }}>
+          Week-by-week coverage of every significant AI model release in April 2026 — open weights, proprietary, and everything in between.
+        </p>
+
+        {/* ── Stat tiles (Carbon Layer 01: #f4f4f4, 0px radius, no shadow) ── */}
+        <div className="cds-stats-row" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1px", background: CDS.borderSubtle }}>
           {STATS.map((st, i) => (
-            <div key={i} className="stat-card-hover" style={s.statCard(st.color)}>
-              <div style={{ ...s.statNum, color: st.color }}>{st.value}</div>
-              <div style={s.statLabel}>{st.label}</div>
+            <div key={i} className="cds-stat-tile" style={{
+              background: CDS.layer01,
+              padding: "24px 20px 20px",
+              borderRadius: "0",
+            }}>
+              <div style={{
+                ...typo.display01,
+                fontSize: "clamp(28px,3vw,42px)",
+                fontFamily: "'IBM Plex Mono', monospace",
+                color: CDS.textPrimary,
+                lineHeight: 1,
+                marginBottom: "8px",
+              }}>
+                {st.value}
+              </div>
+              <div style={{ ...typo.caption01, textTransform: "uppercase", letterSpacing: "0.32px" }}>
+                {st.label}
+              </div>
             </div>
           ))}
         </div>
       </header>
 
       {/* ── BODY ── */}
-      <main style={s.body}>
+      <main style={{ padding: "32px" }}>
 
-        {/* Controls */}
-        <div className="controls-row" style={s.controls}>
-          <div style={s.tabRow}>
-            {WEEKS.map(w => (
-              <button
-                key={w.id}
-                className="tab-btn"
-                style={s.tab(activeWeek === w.id)}
-                onClick={() => setActiveWeek(w.id)}
-                aria-pressed={activeWeek === w.id}
-              >
-                {w.label}
-                <span style={{ color: "#2a4060", marginLeft: "5px", fontSize: "10px" }}>
-                  {w.id !== "all"
-                    ? `(${models.filter(m => m.week === w.id).length})`
-                    : `(${models.length})`}
-                </span>
-              </button>
-            ))}
+        {/* Controls row */}
+        <div className="cds-controls-row" style={{
+          display: "flex", justifyContent: "space-between",
+          alignItems: "center", marginBottom: "24px",
+          flexWrap: "wrap", gap: "12px",
+        }}>
+          {/* Week tabs (Carbon bottom-border Tab pattern) */}
+          <div className="cds-tab-row" style={{
+            display: "flex", gap: "0",
+            borderBottom: `1px solid ${CDS.borderSubtle}`,
+          }}>
+            {WEEKS.map(w => {
+              const active = activeWeek === w.id;
+              return (
+                <button
+                  key={w.id}
+                  className="cds-tab"
+                  style={{
+                    ...typo.bodyShort01,
+                    fontWeight: active ? 600 : 400,
+                    padding: "12px 16px",
+                    border: "none",
+                    borderBottom: active ? `2px solid ${CDS.interactive}` : "2px solid transparent",
+                    background: "transparent",
+                    color: active ? CDS.textPrimary : CDS.textSecondary,
+                    cursor: "pointer",
+                    whiteSpace: "nowrap",
+                  }}
+                  onClick={() => setActiveWeek(w.id)}
+                  aria-pressed={active}
+                >
+                  {w.label}
+                  <span style={{ ...typo.caption01, marginLeft: "6px", color: CDS.textSecondary }}>
+                    ({w.id !== "all" ? models.filter(m => m.week === w.id).length : models.length})
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
-          <div style={s.viewToggle}>
-            <button className="view-btn" style={s.viewBtn(activeView === "grid")}    onClick={() => setActiveView("grid")}>⊞ GRID</button>
-            <button className="view-btn" style={s.viewBtn(activeView === "list")}    onClick={() => setActiveView("list")}>☰ LIST</button>
-            <button className="view-btn" style={s.viewBtn(activeView === "summary")} onClick={() => setActiveView("summary")}>◈ SUMMARY</button>
+          {/* View toggle (Ghost button group) */}
+          <div style={{ display: "flex", border: `1px solid ${CDS.borderSubtle}` }}>
+            {[
+              { id: "grid",    label: "⊞  Grid" },
+              { id: "list",    label: "☰  List" },
+              { id: "summary", label: "◈  Summary" },
+            ].map(v => {
+              const active = activeView === v.id;
+              return (
+                <button
+                  key={v.id}
+                  className="cds-view-btn"
+                  style={{
+                    ...typo.bodyShort01,
+                    padding: "10px 16px",
+                    border: "none",
+                    borderRight: v.id !== "summary" ? `1px solid ${CDS.borderSubtle}` : "none",
+                    background: active ? CDS.interactive : "transparent",
+                    color: active ? "#ffffff" : CDS.textSecondary,
+                    cursor: "pointer",
+                    borderRadius: "0",
+                  }}
+                  onClick={() => setActiveView(v.id)}
+                  aria-pressed={active}
+                >
+                  {v.label}
+                </button>
+              );
+            })}
           </div>
         </div>
 
         {/* Week range label */}
         {activeWeek !== "all" && (
-          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#3d5270", letterSpacing: "2px", marginBottom: "16px", textTransform: "uppercase" }}>
+          <div style={{ ...typo.caption01, marginBottom: "16px", textTransform: "uppercase" }}>
             {WEEKS.find(w => w.id === activeWeek)?.range} — {filtered.length} release{filtered.length !== 1 ? "s" : ""}
           </div>
         )}
 
         {/* ── GRID VIEW ── */}
         {activeView === "grid" && (
-          <div style={s.grid}>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(296px, 1fr))",
+            gap: "1px",
+            background: CDS.borderSubtle,
+          }}>
             {filtered.length === 0 && (
-              <div style={{ gridColumn: "1/-1", textAlign: "center", padding: "60px 20px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px", color: "#3d5270", letterSpacing: "2px" }}>
-                NO RELEASES IN THIS PERIOD
+              <div style={{ gridColumn: "1/-1", textAlign: "center", padding: "64px 20px", ...typo.bodyShort01, color: CDS.textSecondary }}>
+                No releases in this period.
               </div>
             )}
             {filtered.map((m, i) => (
               <div
                 key={m.id}
-                className="card-hover fade-in"
-                style={{ ...s.card(m.color), animationDelay: `${i * 0.05}s` }}
+                className="cds-tile cds-fade-in"
+                style={{
+                  background: CDS.background,
+                  padding: "24px 20px 20px",
+                  borderRadius: "0",
+                  position: "relative",
+                  animationDelay: `${i * 0.04}s`,
+                }}
                 onClick={() => setSelected(m)}
                 role="button"
                 tabIndex={0}
                 aria-label={`${m.name} by ${m.company}`}
                 onKeyDown={e => e.key === "Enter" && setSelected(m)}
               >
-                <div style={s.cardGlow(m.color)} />
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px", gap: "8px" }}>
-                  <div style={s.cardName}>{m.name}</div>
-                  <span style={{ ...s.licenseTag(m.license), flexShrink: 0 }}>{m.license}</span>
+                {/* Top blue accent bar (2px) */}
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: CDS.interactive }} />
+
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px", gap: "8px" }}>
+                  <h2 style={{ ...typo.heading04, fontSize: "16px" }}>{m.name}</h2>
+                  <LicenseTag lic={m.license} />
                 </div>
-                <div style={s.cardCompany(m.color)}>{m.company}</div>
-                <div style={s.cardDate}>{formatDate(m.date)}</div>
-                <div style={s.cardSummary}>{m.summary}</div>
-                <div style={s.tags}>
-                  {m.tags.map(t => <span key={t} style={s.tag}>{t}</span>)}
+
+                <div style={{ ...typo.code01, fontSize: "11px", color: CDS.interactive, textTransform: "uppercase", letterSpacing: "0.32px", marginBottom: "4px" }}>
+                  {m.company}
+                </div>
+                <div style={{ ...typo.caption01, marginBottom: "12px" }}>
+                  {formatDate(m.date)}
+                </div>
+                <p style={{ ...typo.bodyShort01, color: CDS.textSecondary, marginBottom: "16px" }}>
+                  {m.summary}
+                </p>
+                <div style={{ display: "flex", gap: "4px", flexWrap: "wrap" }}>
+                  {m.tags.map(t => <Tag key={t}>{t}</Tag>)}
                 </div>
               </div>
             ))}
@@ -739,31 +624,43 @@ function App() {
 
         {/* ── LIST VIEW ── */}
         {activeView === "list" && (
-          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          <div style={{ borderTop: `1px solid ${CDS.borderSubtle}` }}>
             {filtered.length === 0 && (
-              <div style={{ textAlign: "center", padding: "60px 20px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px", color: "#3d5270", letterSpacing: "2px" }}>
-                NO RELEASES IN THIS PERIOD
+              <div style={{ textAlign: "center", padding: "64px 20px", ...typo.bodyShort01, color: CDS.textSecondary }}>
+                No releases in this period.
               </div>
             )}
             {filtered.map((m, i) => (
               <div
                 key={m.id}
-                className="card-hover fade-in"
-                style={{ ...s.listItem(m.color), animationDelay: `${i * 0.04}s` }}
+                className="cds-tile cds-fade-in"
+                style={{
+                  background: CDS.background,
+                  borderBottom: `1px solid ${CDS.borderSubtle}`,
+                  borderLeft: `3px solid ${CDS.interactive}`,
+                  padding: "14px 16px",
+                  display: "flex", alignItems: "center", gap: "16px",
+                  animationDelay: `${i * 0.03}s`,
+                }}
                 onClick={() => setSelected(m)}
                 role="button"
                 tabIndex={0}
                 aria-label={`${m.name} by ${m.company}`}
                 onKeyDown={e => e.key === "Enter" && setSelected(m)}
               >
-                <div style={s.listDatePill}>{formatDateShort(m.date)}</div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={s.listName}>{m.name}</div>
-                  <div style={s.listCompany(m.color)}>{m.company}</div>
+                {/* Date pill */}
+                <div style={{ ...typo.code01, fontSize: "11px", color: CDS.textSecondary, background: CDS.layer01, padding: "2px 8px", whiteSpace: "nowrap", flexShrink: 0, letterSpacing: "0.16px" }}>
+                  {formatDateShort(m.date)}
                 </div>
-                <div className="list-summary-col" style={s.listSummary}>{m.summary}</div>
-                <span style={{ ...s.licenseTag(m.license), flexShrink: 0 }}>{m.license}</span>
-                <span className="list-arrow">›</span>
+                <div style={{ flex: "0 0 200px", minWidth: 0 }}>
+                  <div style={{ ...typo.bodyShort02 }}>{m.name}</div>
+                  <div style={{ ...typo.code01, fontSize: "11px", color: CDS.interactive, textTransform: "uppercase", letterSpacing: "0.32px", marginTop: "2px" }}>{m.company}</div>
+                </div>
+                <div className="cds-list-summary-col" style={{ ...typo.bodyShort01, color: CDS.textSecondary, flex: 2 }}>
+                  {m.summary}
+                </div>
+                <LicenseTag lic={m.license} />
+                <span className="cds-list-arrow">›</span>
               </div>
             ))}
           </div>
@@ -771,179 +668,206 @@ function App() {
 
         {/* ── SUMMARY VIEW ── */}
         {activeView === "summary" && (
-          <div className="fade-in">
-            {/* Summary narrative card */}
-            <div style={{ ...s.summaryCard, borderTop: "2px solid #1e3a5f", position: "relative", overflow: "hidden" }}>
-              <div style={{ position: "absolute", top: 0, right: 0, width: "300px", height: "100%", background: "radial-gradient(circle at top right, rgba(91,156,246,0.06), transparent 70%)", pointerEvents: "none" }} />
-              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "20px", letterSpacing: "2px", color: "#f1f5f9", marginBottom: "6px" }}>
-                APRIL 2026 — AI RELEASE SUMMARY
-              </div>
-              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#3d5270", lineHeight: 1.9 }}>
+          <div className="cds-fade-in">
+            {/* Narrative block */}
+            <div style={{ background: CDS.layer01, padding: "32px", marginBottom: "1px", borderTop: `2px solid ${CDS.interactive}` }}>
+              <h2 style={{ ...typo.heading04, marginBottom: "12px" }}>April 2026 — AI Release Summary</h2>
+              <p style={{ ...typo.bodyLong01, maxWidth: "800px" }}>
                 In just 24 days, {companyCount} major AI companies shipped {models.length} significant model releases.{" "}
                 {openCount} of these were open weights or open source, representing {Math.round(openCount / models.length * 100)}% of total releases.{" "}
                 Alibaba led with 3 releases. Anthropic and Meta both shipped major capability upgrades.{" "}
-                The pace of releases across coding benchmarks, agentic workflows, and long-context tasks
-                signals rapid convergence toward capable, long-running agent models.
-              </div>
+                The pace of releases across coding benchmarks, agentic workflows, and long-context tasks signals rapid convergence toward capable, long-running agent models.
+              </p>
             </div>
 
-            <div className="summary-grid" style={s.summaryGrid}>
+            <div className="cds-summary-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", background: CDS.borderSubtle, marginBottom: "1px" }}>
               {/* By Company */}
-              <div style={s.summaryCard}>
-                <div style={s.summaryTitle}>Releases by Company</div>
+              <div style={{ background: CDS.background, padding: "24px" }}>
+                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>Releases by Company</div>
                 {companySummary.map(([company, count], i) => (
-                  <div key={company} style={{ ...s.barRow, animationDelay: `${i * 0.07}s` }}>
-                    <div style={s.barLabel}>{company}</div>
-                    <div style={s.barTrack}>
-                      <div className="bar-fill" style={s.barFill((count / models.length) * 100, COMPANY_COLORS[company] || "#5b9cf6")} />
+                  <div key={company} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+                    <div style={{ ...typo.bodyShort01, width: "100px", flexShrink: 0, color: CDS.textSecondary }}>{company}</div>
+                    <div style={{ flex: 1, height: "4px", background: CDS.layer01 }}>
+                      <div className="cds-bar-fill" style={{ height: "100%", width: `${(count / models.length) * 100}%`, background: COMPANY_COLORS[company] || CDS.interactive }} />
                     </div>
-                    <div style={s.barCount}>{count}</div>
+                    <div style={{ ...typo.code01, fontSize: "12px", color: CDS.textSecondary, width: "16px", textAlign: "right" }}>{count}</div>
                   </div>
                 ))}
               </div>
 
               {/* License + Week breakdown */}
-              <div style={s.summaryCard}>
-                <div style={s.summaryTitle}>License Breakdown</div>
+              <div style={{ background: CDS.background, padding: "24px" }}>
+                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>License Breakdown</div>
                 {[
-                  ["Open / Weights / MIT", openCount, "#4ade80"],
-                  ["Proprietary / Gated", models.length - openCount, "#f87171"],
+                  ["Open / Weights / MIT", openCount, CDS.supportSuccess],
+                  ["Proprietary / Gated", models.length - openCount, CDS.supportError],
                 ].map(([label, count, color], i) => (
-                  <div key={label} style={{ ...s.barRow, animationDelay: `${i * 0.1}s` }}>
-                    <div style={{ ...s.barLabel, width: "150px" }}>{label}</div>
-                    <div style={s.barTrack}>
-                      <div className="bar-fill" style={s.barFill((count / models.length) * 100, color)} />
+                  <div key={label} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+                    <div style={{ ...typo.bodyShort01, width: "150px", flexShrink: 0, color: CDS.textSecondary }}>{label}</div>
+                    <div style={{ flex: 1, height: "4px", background: CDS.layer01 }}>
+                      <div className="cds-bar-fill" style={{ height: "100%", width: `${(count / models.length) * 100}%`, background: color }} />
                     </div>
-                    <div style={s.barCount}>{count}</div>
+                    <div style={{ ...typo.code01, fontSize: "12px", color: CDS.textSecondary, width: "16px", textAlign: "right" }}>{count}</div>
                   </div>
                 ))}
-                <div style={{ ...s.divider, margin: "14px 0" }} />
-                <div style={s.summaryTitle}>Releases by Week</div>
-                {[4, 3, 2, 1].map((w, i) => {
+
+                <div style={{ borderTop: `1px solid ${CDS.borderSubtle}`, margin: "20px 0" }} />
+
+                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>Releases by Week</div>
+                {[4, 3, 2, 1].map(w => {
                   const wc = models.filter(m => m.week === w).length;
                   return (
-                    <div key={w} style={{ ...s.barRow, animationDelay: `${(i + 2) * 0.07}s` }}>
-                      <div style={s.barLabel}>Week {w}</div>
-                      <div style={s.barTrack}>
-                        <div className="bar-fill" style={s.barFill((wc / models.length) * 100, "#5b9cf6")} />
+                    <div key={w} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
+                      <div style={{ ...typo.bodyShort01, width: "64px", flexShrink: 0, color: CDS.textSecondary }}>Week {w}</div>
+                      <div style={{ flex: 1, height: "4px", background: CDS.layer01 }}>
+                        <div className="cds-bar-fill" style={{ height: "100%", width: `${(wc / models.length) * 100}%`, background: CDS.interactive }} />
                       </div>
-                      <div style={s.barCount}>{wc}</div>
+                      <div style={{ ...typo.code01, fontSize: "12px", color: CDS.textSecondary, width: "16px", textAlign: "right" }}>{wc}</div>
                     </div>
                   );
                 })}
               </div>
+            </div>
 
-              {/* Notable highlights — full width */}
-              <div style={{ ...s.summaryCard, gridColumn: "1 / -1" }}>
-                <div style={s.summaryTitle}>Notable Highlights</div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "10px" }}>
-                  {[
-                    { label: "Largest Model",    value: "DeepSeek V4",         sub: "1.6T parameters",          color: "#5b9cf6" },
-                    { label: "Largest Context",  value: "Llama 4 Scout",        sub: "10M token context",        color: "#3b82f6" },
-                    { label: "Most Agents",      value: "Kimi K2.6",            sub: "300 parallel sub-agents",  color: "#a78bfa" },
-                    { label: "Most Restricted",  value: "Claude Mythos Preview", sub: "Gated to 50 orgs, ASL-4", color: "#e879a0" },
-                    { label: "Best Value",       value: "DeepSeek V4",          sub: "Fraction of GPT-5.5 cost", color: "#5b9cf6" },
-                    { label: "Top Benchmark",    value: "GLM-5.1",              sub: "Beats GPT-5.4 on SWE-bench Pro", color: "#facc15" },
-                  ].map(item => (
-                    <div
-                      key={item.label}
-                      className="highlight-card-hover"
-                      style={{
-                        background: `linear-gradient(135deg, rgba(19,29,46,0.9), rgba(13,18,27,0.95))`,
-                        border: "1px solid #1a2840",
-                        borderTop: `2px solid ${item.color}`,
-                        borderRadius: "6px",
-                        padding: "14px 16px",
-                        position: "relative", overflow: "hidden",
-                      }}
-                    >
-                      <div style={{ position: "absolute", top: 0, right: 0, width: "60px", height: "60px", background: `radial-gradient(circle at top right, ${item.color}14, transparent)`, pointerEvents: "none" }} />
-                      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#3d5270", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "6px" }}>
-                        {item.label}
-                      </div>
-                      <div style={{ fontSize: "14px", fontWeight: 600, color: item.color }}>
-                        {item.value}
-                      </div>
-                      <div style={{ fontSize: "11px", color: "#4a6080", marginTop: "3px" }}>
-                        {item.sub}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            {/* Notable Highlights */}
+            <div style={{ background: CDS.background, padding: "24px", border: `1px solid ${CDS.borderSubtle}` }}>
+              <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>Notable Highlights</div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1px", background: CDS.borderSubtle }}>
+                {[
+                  { label: "Largest Model",    value: "DeepSeek V4",         sub: "1.6T parameters" },
+                  { label: "Largest Context",  value: "Llama 4 Scout",        sub: "10M token context" },
+                  { label: "Most Agents",      value: "Kimi K2.6",            sub: "300 parallel sub-agents" },
+                  { label: "Most Restricted",  value: "Claude Mythos Preview", sub: "Gated to 50 orgs, ASL-4" },
+                  { label: "Best Value",       value: "DeepSeek V4",          sub: "Fraction of GPT-5.5 cost" },
+                  { label: "Top Benchmark",    value: "GLM-5.1",              sub: "Beats GPT-5.4 on SWE-bench" },
+                ].map(item => (
+                  <div key={item.label} style={{ background: CDS.layer01, padding: "20px 16px", borderTop: `2px solid ${CDS.interactive}` }}>
+                    <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "8px" }}>{item.label}</div>
+                    <div style={{ ...typo.bodyShort02, color: CDS.interactive, marginBottom: "4px" }}>{item.value}</div>
+                    <div style={{ ...typo.caption01 }}>{item.sub}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         )}
+
       </main>
 
-      {/* ── MODAL ── */}
+      {/* ── MODAL (Carbon Dialog / Side Panel style) ── */}
       {selected && (
         <div
-          style={s.overlay}
+          style={{
+            position: "fixed", inset: 0,
+            background: "rgba(22,22,22,0.5)",
+            backdropFilter: "blur(4px)",
+            WebkitBackdropFilter: "blur(4px)",
+            zIndex: 300,
+            display: "flex", alignItems: "center",
+            justifyContent: "center", padding: "20px",
+          }}
           onClick={closeModal}
           role="dialog"
           aria-modal="true"
           aria-label={`Details for ${selected.name}`}
         >
-          <div className="modal-enter" style={s.modal} onClick={e => e.stopPropagation()}>
-            <div style={s.modalTopBorder(selected.color)} />
-            <div style={s.modalGlow(selected.color)} />
-
+          <div
+            className="cds-modal-enter"
+            style={{
+              background: CDS.background,
+              width: "100%", maxWidth: "540px",
+              position: "relative",
+              boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+              borderTop: `2px solid ${CDS.interactive}`,
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Close button */}
             <button
-              className="close-btn"
-              style={s.closeBtn}
+              className="cds-close-btn"
+              style={{
+                position: "absolute", top: "16px", right: "16px",
+                background: "transparent",
+                border: `1px solid ${CDS.borderSubtle}`,
+                color: CDS.textSecondary,
+                cursor: "pointer",
+                width: "32px", height: "32px",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "18px", lineHeight: 1,
+                borderRadius: "0",
+              }}
               onClick={closeModal}
               aria-label="Close"
             >
               ×
             </button>
 
-            <div style={s.modalHeader}>
-              <div style={s.modalWeekBadge}>Week {selected.week} of April</div>
-              <div style={s.modalName}>{selected.name}</div>
-              <div style={s.modalCompany(selected.color)}>{selected.company}</div>
-              <div style={s.modalDate}>{formatDate(selected.date)}</div>
-            </div>
+            {/* Modal content */}
+            <div style={{ padding: "32px" }}>
+              {/* Week badge */}
+              <div style={{
+                display: "inline-block",
+                background: CDS.layer01,
+                color: CDS.textSecondary,
+                ...typo.caption01, textTransform: "uppercase",
+                padding: "2px 8px",
+                marginBottom: "12px",
+              }}>
+                Week {selected.week} of April
+              </div>
 
-            <div style={s.divider} />
+              <h2 style={{ ...typo.display01, fontSize: "clamp(24px,3vw,36px)", marginBottom: "4px" }}>
+                {selected.name}
+              </h2>
+              <div style={{ ...typo.code01, fontSize: "11px", color: CDS.interactive, textTransform: "uppercase", letterSpacing: "0.32px", marginBottom: "4px" }}>
+                {selected.company}
+              </div>
+              <div style={{ ...typo.caption01, marginBottom: "24px" }}>{formatDate(selected.date)}</div>
 
-            <div style={s.modalSection}>
-              <div style={s.modalSectionTitle}>Overview</div>
-              <div style={{ fontSize: "13px", color: "#7a92b0", lineHeight: 1.75 }}>{selected.summary}</div>
-            </div>
+              <div style={{ borderTop: `1px solid ${CDS.borderSubtle}`, marginBottom: "20px" }} />
 
-            <div style={s.modalSection}>
-              <div style={s.modalSectionTitle}>Key Highlights</div>
-              {selected.highlights.map(h => (
-                <div key={h} style={s.highlight}>
-                  <div style={s.bullet(selected.color)} />
-                  <span>{h}</span>
-                </div>
-              ))}
-            </div>
+              {/* Overview */}
+              <div style={{ marginBottom: "20px" }}>
+                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "10px" }}>Overview</div>
+                <p style={{ ...typo.bodyLong01 }}>{selected.summary}</p>
+              </div>
 
-            <div style={s.divider} />
+              {/* Key highlights */}
+              <div style={{ marginBottom: "20px" }}>
+                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "10px" }}>Key Highlights</div>
+                {selected.highlights.map(h => (
+                  <div key={h} style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "8px" }}>
+                    <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: CDS.interactive, flexShrink: 0, marginTop: "7px" }} />
+                    <span style={{ ...typo.bodyShort01, color: CDS.textSecondary }}>{h}</span>
+                  </div>
+                ))}
+              </div>
 
-            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
-              <span style={s.licenseTag(selected.license)}>{selected.license}</span>
-              {selected.tags.map(t => <span key={t} style={s.tag}>{t}</span>)}
+              <div style={{ borderTop: `1px solid ${CDS.borderSubtle}`, marginBottom: "20px" }} />
+
+              {/* Tags */}
+              <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", alignItems: "center" }}>
+                <LicenseTag lic={selected.license} />
+                {selected.tags.map(t => <Tag key={t}>{t}</Tag>)}
+              </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* ── FOOTER ── */}
+      {/* ── FOOTER (Carbon style: Gray 100 bg, white text) ── */}
       <footer style={{
-        borderTop: "1px solid #1a2840",
-        padding: "14px 32px",
+        background: CDS.navBg,
+        padding: "16px 32px",
         display: "flex", alignItems: "center", justifyContent: "space-between",
         flexWrap: "wrap", gap: "8px",
+        marginTop: "auto",
       }}>
-        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#2a3f5a", letterSpacing: "3px" }}>
-          // LIVE TRACKER — APRIL 2026
+        <div style={{ ...typo.code01, fontSize: "12px", color: CDS.navText, letterSpacing: "0.32px" }}>
+          ModelMonitor — April 2026
         </div>
-        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#2a3f5a", letterSpacing: "1px" }}>
-          {models.length} MODELS · {companyCount} COMPANIES
+        <div style={{ ...typo.code01, fontSize: "12px", color: CDS.navText, letterSpacing: "0.16px" }}>
+          {models.length} models · {companyCount} companies
         </div>
       </footer>
 
