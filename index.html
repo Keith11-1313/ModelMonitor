@@ -30,10 +30,12 @@
       .then(r => r.text())
       .then(src => {
         const transformed = Babel.transform(src, { presets: ['react'] }).code;
+        // Append a line that leaks App into the global scope before mounting,
+        // because new Function() runs in its own isolated scope.
         // eslint-disable-next-line no-new-func
-        new Function(transformed)();
+        new Function(transformed + '\nwindow.App = App;')();
         const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(React.createElement(App));
+        root.render(React.createElement(window.App));
       })
       .catch(err => {
         document.getElementById('root').innerHTML =
