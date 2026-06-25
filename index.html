@@ -34,7 +34,7 @@
     fetch('./index.jsx')
       .then(r => r.text())
       .then(src => {
-        const transformed = Babel.transform(src, { presets: ['react'] }).code;
+        const transformed = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]] }).code;
         // Append a line that leaks App into the global scope before mounting,
         // because new Function() runs in its own isolated scope.
         // eslint-disable-next-line no-new-func
