@@ -145,7 +145,7 @@ A model may expose downloadable weights while using a license with restrictions.
 
 ## Automation
 
-`.github/workflows/update-models.yml` runs the model-intelligence refresh on a schedule. The job installs dependencies, runs tests and linting, collects data, validates the result, and commits generated `public/data/` changes only when something actually changed.
+`.github/workflows/update-models.yml` runs the model-intelligence refresh every 6 hours at minute 17 (`00:17`, `06:17`, `12:17`, and `18:17` UTC; `08:17`, `14:17`, `20:17`, and `02:17` in Philippine Time). GitHub may start scheduled jobs a little late during platform load. The workflow can also be started manually from the Actions tab. The job installs dependencies, runs tests and linting, collects data, validates the result, and commits generated `public/data/` changes only when something actually changed.
 
 Source failures are isolated. A failed source should not erase valid data from other sources, and stale evidence is excluded from current availability/free-paid totals where the freshness rules require it. OpenRouter is collected automatically; Groq and Gemini live catalogs are optional authenticated sources. Cloudflare Workers AI and Hugging Face free access are represented as provider-level allowances/credits from official documentation rather than mislabeled as universally free models.
 

@@ -6,8 +6,8 @@ const compare = (a, b) => a < b ? -1 : a > b ? 1 : 0;
 const numeric = (value) => typeof value === "number" && Number.isFinite(value) && value >= 0;
 const modelFields = ["name", "context", "capabilities", "reasoning", "tools", "structuredOutput", "modalities", "license", "openness", "status", "type", "identity", "provider", "providerModelId", "canonicalId", "lineage", "baseModel", "baseModels", "baseModelRelation", "aliases", "hfId", "parameters", "activeParameters", "architecture", "quantization", "releaseDate", "dateBasis", "confidence", "sources"];
 const availabilityFields = ["modelId", "provider", "providerModelId", "status", "free", "pricing", "context", "capabilities", "reasoning", "tools", "structuredOutput", "modalities", "confidence", "sources"];
-const historicalTypes = new Set(["model_release", "release", "preview_release", "open_source_release", "open_weight_release", "open_weights_release", "model_reveal", "model_deprecation", "model_retirement", "deprecation", "retirement", "stealth_model", "stealth_appearance", "stealth_observed"]);
-const releaseTypes = new Set(["model_release", "release", "preview_release", "open_source_release", "open_weight_release", "open_weights_release"]);
+const historicalTypes = new Set(["model_release", "release", "family_introduction", "preview_release", "open_source_release", "open_weight_release", "open_weights_release", "reasoning_release", "multimodal_release", "agentic_release", "model_reveal", "model_deprecation", "model_retirement", "deprecation", "retirement", "stealth_model", "stealth_appearance", "stealth_observed"]);
+const releaseTypes = new Set(["model_release", "release", "family_introduction", "preview_release", "open_source_release", "open_weight_release", "open_weights_release", "reasoning_release", "multimodal_release", "agentic_release"]);
 const ignored = new Set(["lastChecked", "lastSuccess", "firstSeen", "generatedAt", "observedAt", "downloads", "likes"]);
 
 function normalize(value) {
@@ -51,7 +51,15 @@ function aggregate(current, date) {
   const identities = models.filter(canonical);
   const available = availability.filter((row) => currentEvidence(row, metadata, now));
   const priced = available.filter((row) => currentPriced(row, metadata, now));
-  const releases = list(current.timeline).filter((row) => row.notable && releaseTypes.has(row.type) && evidence(row).level === "fact" && row.date <= date);
+  const timelineReleases = list(current.timeline).filter((row) => row.notable && releaseTypes.has(row.type) && evidence(row).level === "fact" && row.date <= date);
+  const milestoneReleases = list(current.milestones?.milestones ?? current.milestones).filter((row) => releaseTypes.has(row.eventType) && evidence(row).level === "fact" && row.date <= date);
+  const releaseMap = new Map();
+  for (const row of [...timelineReleases, ...milestoneReleases]) {
+    const key = `${row.date?.slice(0, 10)}|${String(row.title ?? row.name ?? row.id ?? "").trim().toLowerCase()}`;
+    if (!releaseMap.has(key)) releaseMap.set(key, row);
+  }
+  const releases = [...releaseMap.values()];
+  const unknownOpenness = identities.filter((row) => !["open_source", "open_weights", "proprietary"].includes(row.openness) || (["open_source", "open_weights"].includes(row.openness) && !isOpen(row))).length;
   return {
     trackedModels: models.length,
     canonicalModels: identities.length,
@@ -62,6 +70,7 @@ function aggregate(current, date) {
     openSource: identities.filter((row) => isOpen(row) && row.openness === "open_source").length,
     openWeights: identities.filter((row) => isOpen(row) && row.openness === "open_weights").length,
     proprietary: identities.filter((row) => row.openness === "proprietary").length,
+    unknownOpenness,
     providers: new Set(identities.map((row) => row.provider).filter((provider) => provider && provider !== "Unknown")).size,
     notableReleasesThisYear: releases.filter((row) => row.date.slice(0, 4) === date.slice(0, 4)).length,
     notableReleasesThisMonth: releases.filter((row) => row.date.slice(0, 7) === date.slice(0, 7)).length,

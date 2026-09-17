@@ -142,6 +142,22 @@ test("only sourced releases dated today enter new notable releases", () => {
   assert.equal(run(previous, current).summary.newNotableReleases, 0);
 });
 
+
+test("snapshot release totals include curated milestones and deduplicate matching timeline releases", () => {
+  const current = fixture();
+  current.milestones.milestones.push({
+    id: "milestone:current", title: "Current release", date: "2026-09-10", eventType: "multimodal_release",
+    confidence: "official", sourceUrl: url, sourceLabel: "Official release",
+  });
+  current.timeline.push({
+    id: "timeline:current", date: "2026-09-10", type: "multimodal_release", title: "Current release", notable: true,
+    confidence: "official", sources: structuredClone(sources),
+  });
+  const report = buildReport({ current, date });
+  assert.equal(report.snapshot.notableReleasesThisYear, 1);
+  assert.equal(report.snapshot.notableReleasesThisMonth, 1);
+});
+
 test("weakest provenance controls facts, derived observations and unverified signals", () => {
   for (const [confidence, level] of [["official", "fact"], ["confirmed", "fact"], ["observed", "derived"], ["unverified", "unverified"]]) {
     const current = fixture();

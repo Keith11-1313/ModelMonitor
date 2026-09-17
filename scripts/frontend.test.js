@@ -82,6 +82,15 @@ test("Overview supports structured report data and browser-local last-visit stat
   assert.ok(/ModelMonitor Intelligence Brief/.test(source), "missing intelligence brief heading");
 });
 
+
+test("Overview treats incomplete openness classification as unknown and counts curated releases", async () => {
+  const source = await readText("index.jsx");
+  assert.ok(source.includes("A dash means “not established,” not zero."));
+  assert.ok(source.includes("combinedReleases(events, milestones"));
+  assert.ok(source.includes("Curated LLM History + live release events"));
+  assert.ok(source.includes("unknownOpenness"));
+});
+
 test("glossary UI uses explanation, examples and related-term links when present", async () => {
   const source = await readText("index.jsx");
   for (const token of ["term.explanation", "term.example", "term.related"]) assert.ok(source.includes(token), `Glossary UI does not use ${token}`);
