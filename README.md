@@ -1,135 +1,162 @@
 # ModelMonitor
 
-An AI model release, availability and market-intelligence dashboard. The original React/CDN, static-hosting architecture and white Carbon-inspired interface remain intact. Browsing is continuous, not tied to a month or week.
+ModelMonitor is a static dashboard for two related jobs: following the history of large language models and checking what changed in the current model ecosystem.
+
+The site keeps historical milestones separate from live observations. A paper publication date, a model launch, a Hugging Face repository creation date, and the first time ModelMonitor saw an endpoint are different facts and are stored as such.
+
+## What the site shows
+
+- **Overview** — an automatically generated intelligence brief: recent changes, current totals, source health, and a browser-local “since your last visit” summary.
+- **LLM History** — a curated timeline from important pre-Transformer work through current reasoning, multimodal, open-weight, and agentic systems.
+- **Releases** — the broader release/observation feed with filters and provenance.
+- **Free Models** — provider free-tier/credit programs plus endpoints that have recent evidence for zero input and output token pricing. These are kept separate so a provider-level allowance is never mistaken for a permanently free model.
+- **Open Models** — tracked open-source and open-weight models, with licenses and available metadata kept distinct.
+- **Analysis** — transparent comparisons and derived metrics based on the data ModelMonitor actually has.
+- **Glossary** — plain-language explanations of LLM terminology used around the dashboard.
 
 ## Run locally
 
-Node.js 20+ is required for collectors and checks. Serve the **repository root**, not just `public/`:
+Node.js 20+ is required for the collectors and checks.
 
 ```sh
 npm ci
-python -m http.server 8000 --bind 127.0.0.1
-```
-
-Visit `http://localhost:8000`. Do not use `file://`. The frontend needs network access to the existing React/Babel and font CDNs. No bundler, database, account credentials or backend service is required.
-
-```sh
-npm run fetch
 npm test
 npm run lint
 npm run validate
+python -m http.server 8000 --bind 127.0.0.1
 ```
 
-`fetch` updates generated JSON locally and never runs Git commands. `lint` checks script syntax and parses JSX; this JavaScript project does not have a separate static type checker. `validate` checks data schemas, provenance, references, history consistency and the legacy archive checksum.
+Open `http://localhost:8000`.
 
-## Architecture
+The frontend is intentionally static-host friendly. There is no database, account system, or application server.
+
+## Refreshing data
+
+```sh
+npm run fetch
+```
+
+That command collects live public data, normalizes it, updates generated datasets, compares the result with the previous successful state, and regenerates the intelligence brief.
+
+To republish curated history/glossary/report data without making network requests:
+
+```sh
+node scripts/fetch-models.js --offline
+```
+
+The collector never runs Git commands. GitHub Actions handles validation and commits generated `public/data/` changes after a successful scheduled run.
+
+### Optional provider API secrets
+
+OpenRouter is checked from its public model catalog and can optionally use `OPENROUTER_API_KEY` if you want authenticated catalog access. Groq and Gemini model catalogs require credentials, so their live endpoint inventories are enabled only when these GitHub Actions repository secrets are present:
+
+- `GROQ_API_KEY`
+- `GEMINI_API_KEY`
+- optionally `OPENROUTER_API_KEY`
+
+If those secrets are missing, the refresh still succeeds. ModelMonitor continues to verify the providers' public free-tier/allowance documentation and shows those programs separately from model-level `$0` pricing. Never commit API keys into the repository.
+
+## Data flow
 
 ```text
-public/models.json (preserved legacy archive)
-public APIs + data/curation.json
-                 |
-scripts/collectors.js + scripts/pipeline.js
-                 |
-scripts/timeline.js (deterministic historical normalization)
-                 |
-public/data/*.json
-                 |
-index.html + index.jsx + styles.css
+public APIs / official model catalogs
+                +
+       data/curation.json
+       data/milestones.json
+       data/glossary.json
+                |
+                v
+     collectors + pipeline
+                |
+                v
+        public/data/*.json
+                |
+                v
+            index.jsx
 ```
+
+### Curated inputs
+
+`data/curation.json` is a small manual verification/configuration layer. It exists for cases automation should not guess: explicit identity overrides, sourced alias/reveal relationships, public usage-limit facts, and collector source configuration. It is **not** the primary model database and the application does not give special UI treatment to records listed there.
+
+`data/milestones.json` contains the reviewed LLM-history backbone and its eras. The main history is intentionally curated rather than an attempt to list every paper, fine-tune, quantization, or repository.
+
+`data/glossary.json` contains the user-facing terminology reference.
+
+### Generated datasets
 
 | File | Purpose |
 | --- | --- |
-| `public/models.json` | Original archive, preserved without deleting reports or rewriting claims |
-| `public/data/models.json` | Canonical, provider-scoped entities and field evidence |
-| `public/data/timeline.json` | Persisted chronological events referencing entity IDs |
-| `public/data/availability.json` | Current/removed endpoints, prices and capabilities |
-| `public/data/history.json` | Initial membership baseline, compact deltas and daily counts |
-| `public/data/metadata.json` | Build date, per-source health and limitations |
-| `public/data/audit.json` | Legacy dispositions and reasons; links to original reports |
-| `public/data/limits.json` | Source-backed public usage-limit records |
-| `public/data/signals.json` | Separate community evidence; initially empty |
-| `public/data/cache.json` | Collector-only normalized fallback metadata, not a UI dataset |
-| `data/curation.json` | Tracked HF organizations, identity assertions, exact links, reveals and limits |
+| `public/data/models.json` | Canonical/provider-scoped model entities and their evidence |
+| `public/data/timeline.json` | Machine-observed releases, availability events, reveals, archive records, and other dated events |
+| `public/data/availability.json` | Current and removed provider endpoints, prices, context, and capabilities |
+| `public/data/history.json` | Compact provider availability snapshots/deltas |
+| `public/data/report.json` | Structured intelligence brief generated by comparing the current and previous state |
+| `public/data/snapshot.json` | Compact current aggregate snapshot used by report/history logic |
+| `public/data/milestones.json` | Published copy of the curated LLM-history milestones |
+| `public/data/glossary.json` | Published glossary |
+| `public/data/metadata.json` | Build/source health, limitations, and archive metadata |
+| `public/data/limits.json` | Source-backed provider free-tier, credit, allowance, and usage-limit records |
+| `public/data/signals.json` | Separate unverified/community signals when present |
+| `public/data/audit.json` | Disposition of the preserved legacy archive |
+| `public/data/cache.json` | Collector fallback metadata; not a primary UI dataset |
 
-Generated files should normally be refreshed with the collector, not edited individually. The frontend loads datasets independently; a failed fetch has an explicit empty state and retry control rather than invented fallback models.
+`public/models.json` is the preserved legacy archive. Its dates and claims are not silently promoted to verified release facts.
 
-## Timeline and identity
+## Intelligence brief
 
-Timeline groups are derived from event dates and span all retained history. Search, provider, event-type and date filters work across months and years. Notable events are the default; all observations include derivatives and product announcements.
+`public/data/report.json` is deterministic. It is generated from dataset differences rather than by asking an LLM to write commentary.
 
-Dates are deliberately separate:
+It can report changes such as:
 
-- `releaseDate`: only an explicitly documented model launch date. Currently unknown for collected entities.
-- `legacyReportDate`: an **unverified** date from the original archive. These appear as `legacy_report`, not verified releases.
-- `repositoryCreatedAt`: HF repository creation, not launch. The timeline labels these `repository_created`.
-- `firstSeen`: first local catalog observation. Initial membership is a baseline, not a batch of new releases.
+- model added/removed/updated
+- endpoint added/removed
+- paid to free / free to paid
+- token-price changes
+- context or capability changes
+- open-model/license changes
+- historical milestone additions/corrections
+- deprecations and retirements
 
-The initial timeline is built from existing local records, with no exhaustive historical research. Unsupported legacy benchmark summaries and license guesses are not promoted into the normalized catalog. Conservative model-title candidates stay unverified; customer stories and other articles are separated as product announcements. Classification can still require review.
+The Overview also stores a last-seen timestamp in browser `localStorage`. That powers “Since your last visit” on that browser only; it is not synced to an account.
 
-Quantizations, fine-tunes and optimizations are not treated as foundation models. HF non-derivative repositories need at least 50 likes for the notable timeline; that is an editorial discovery threshold, not a quality score.
+## Evidence and dates
 
-Stable IDs use `legacy:`, `hf:` and `opencode:` namespaces. Exact IDs and explicitly sourced aliases are matched; no loose fuzzy matching merges models. Duplicate underlying models across sources are possible and preferable to incorrect identity merges.
+ModelMonitor uses four evidence labels:
 
-Union Alpha and Big Pickle retain unknown underlying identities. Their `stealth_model` events mark first **local** observation only. No ox-alpha reveal has been added without supporting evidence. `model_reveal` support preserves the original entity, prior events and aliases, redirects availability to the confirmed entity and adds a separate reveal event.
+- **official** — the claim is directly supported by an official provider, paper, model card, or first-party source.
+- **confirmed** — the relationship is supported by strong, explicit evidence but is not represented as a first-party live field.
+- **observed** — the value comes from a secondary catalog or direct observation and is not promoted beyond what that source establishes.
+- **unverified** — retained for visibility/history but not treated as established fact.
 
-For a future reveal, add a `reveals` record with `id`, `fromId`, `toId`, documented `date`, `sourceUrl` and a verbatim `evidence` quotation. Both entities must already exist, and the target must have known identity. The collector checks the quotation against the public source; this is a drift guard, not a substitute for editorial verification of identity and date. Exact cross-source links use `alias`, `modelId`, `sourceUrl`, `evidence`. Identity assertions and limits follow the existing examples in `data/curation.json`.
+Important date fields are kept separate:
 
-## Sources and confidence
+- `releaseDate` — an explicitly supported release/launch date.
+- `repositoryCreatedAt` — repository creation, not a launch date.
+- `firstSeen` — first local observation by ModelMonitor.
+- `lastChecked` — most recent evidence check.
+- `legacyReportDate` — date stored by the old archive; unverified unless separately sourced.
 
-- **Official:** direct provider endpoint/documentation or official organization model metadata.
-- **Confirmed:** manually reviewed, source-backed identity evidence.
-- **Observed:** secondary catalog metadata or reproducible observations, not provider attribution.
-- **Unverified:** archived unsupported claims or community reports. Repetition never upgrades confidence.
+## Open source vs open weights
 
-Sources:
+ModelMonitor does not treat these as synonyms.
 
-1. `https://opencode.ai/zen/v1/models`: authoritative Zen endpoint membership.
-2. `https://opencode.ai/docs/zen/`: public token pricing, tier conditions and curated stealth/limit evidence.
-3. `https://models.dev/api.json`: secondary **opencode-provider-only** capability/price metadata joined by exact ID.
-4. Hugging Face API: selected official organizations, five recent repositories each plus previously observed repositories. Full per-repository metadata supplies license, popularity and available specifications.
+A model may expose downloadable weights while using a license with restrictions. Those records are classified as **open weights**. Recognized permissive weight licenses may be classified as **open source** within ModelMonitor's narrower tracking convention; the dashboard does not claim broader OSI/Open Source AI certification from weight availability alone.
 
-The OpenCode provider list is collected, not hardcoded. This is **Zen coverage**, not every provider that can be configured in the OpenCode client. Protocol/SDK compatibility never establishes a stealth model's maker. Familiar but unattributed endpoint names remain provider `Unknown`.
+## Automation
 
-Official membership does not make secondary pricing/capabilities official. Detail panels show field-specific source labels and dates. Source requests have timeouts, preserve previous good records on failure and continue independently. Empty/malformed catalogs and contractions greater than 25% are rejected for review rather than mass-removing models. Real bulk removals can consequently be delayed.
+`.github/workflows/update-models.yml` runs the model-intelligence refresh on a schedule. The job installs dependencies, runs tests and linting, collects data, validates the result, and commits generated `public/data/` changes only when something actually changed.
 
-The documentation price parser is guarded but depends on published table structure. It uses official base input/output and cache rates plus available long-context tiers; temporary discounts, fees and account terms must still be checked at the source. RSS and Semantic Scholar title-search enrichment are no longer used.
+Source failures are isolated. A failed source should not erase valid data from other sources, and stale evidence is excluded from current availability/free-paid totals where the freshness rules require it. OpenRouter is collected automatically; Groq and Gemini live catalogs are optional authenticated sources. Cloudflare Workers AI and Hugging Face free access are represented as provider-level allowances/credits from official documentation rather than mislabeled as universally free models.
 
-## Free and open models
+## Development rules
 
-Free results require available status, zero input/output token prices, explicit free status, healthy contributing sources and evidence no older than 48 hours. Stale/failed-source claims move to a separate retained-claims section. Unknown pricing is neither free nor paid. Free token pricing does not promise unlimited requests or permanent availability.
+When adding new logic:
 
-Weight licensing is distinct from hosted access:
-
-- `open_source`: recognized permissive weight license (MIT, Apache-2.0, etc.), displayed as **Permissive weight license**. This is not certification against the full Open Source AI Definition.
-- `open_weights`: recognized restrictive weight license, displayed separately.
-- Missing, custom or ambiguous licenses remain unknown. HF hosting alone proves neither classification.
-
-No private sessions, browser cookies or personal usage accounts are accessed. Public limits currently cover Zen spending controls; ChatGPT, Claude and Antigravity limits need source-backed curation. Account-specific reset times must never become a universal countdown. Community signals remain a separate manually maintained dataset.
-
-## Analysis methodology
-
-There are no fabricated benchmarks or universal winners. Best free, paid, open and value rankings explicitly lack sufficient comparable evidence.
-
-Seven comparisons use collected values:
-
-1. Free versus paid endpoint feature-support counts, including unknowns.
-2. Price versus feature coverage: count of reasoning, tools, multimodality and structured-output support (0–4), **not intelligence**. Price is USD for 1M input + 1M output tokens, not a workload-adjusted value score.
-3. Open-model downloads: popularity only, not a capability leaderboard.
-4. Observed OpenCode free availability over time, beginning at the local baseline.
-5. Attributed provider distribution, not market share.
-6. Largest documented context windows, not effective recall or quality.
-7. Documented weight-license distribution, with unknown separate.
-
-Each chart states scope and missing-data rules. Detail panels and Analysis expose source timestamps. Entity/endpoint aliases may appear separately in context comparisons. No proprietary benchmark dataset is redistributed.
-
-## Automation and history
-
-`.github/workflows/update-models.yml` runs at **00:17, 06:17, 12:17 and 18:17 UTC**, plus manual dispatch. It installs development dependencies, runs tests/syntax checks, collects, validates and publishes only changed `public/data/` files. Unchanged output exits successfully. Publishing requires repository write permission; overlapping jobs are serialized.
-
-The workflow's future publishing step uses Git commits/pushes in Actions, as the original automation did. Local collector and test commands do not commit or push.
-
-Observation timestamps have UTC **day precision** to reduce no-change churn. Same-day meaningful transitions have ordered deltas; unchanged scans update evidence at most daily. History can reconstruct observed membership using the initial baseline and upsert/removal deltas. It cannot answer pre-baseline availability questions or infer exact transition times between scans. Full model event history is retained; daily counts/deltas grow linearly, without duplicating the entire catalog per scan.
-
-## Limitations
-
-Coverage is intentionally incomplete. Verified release-date enrichment, benchmark winners, unknown makers, custom licenses, broader usage-limit records and community evidence remain manual review work. Timeline date bases must not be conflated. Name/type heuristics can misclassify articles or derivative variants; the original archive and audit trail are retained for correction. This is an evidence dashboard, not a complete census of AI releases.
+- keep collectors/provider adapters separate from the generic model/timeline UI;
+- do not hardcode named models into generic components;
+- prefer explicit unknown values over guesses;
+- keep historical dates and observation dates separate;
+- add curated historical milestones only when there is a useful, source-backed reason;
+- keep user-facing copy concise and factual;
+- run `npm test`, `npm run lint`, and `npm run validate` before publishing.

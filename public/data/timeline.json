@@ -182,7 +182,7 @@
     "modelId": "hf:deepseek-ai/DeepSeek-V4.1-Flash",
     "title": "repository created: DeepSeek-V4.1-Flash",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -201,7 +201,7 @@
     "modelId": "legacy:96",
     "title": "Archived report: DeepSeek-V4.1-Flash",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -353,7 +353,7 @@
     "modelId": "legacy:94",
     "title": "Archived report: GPT-6 Astra",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -410,7 +410,7 @@
     "modelId": "legacy:88",
     "title": "Archived report: VibeVoice-ASR-Streaming-7B",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -429,7 +429,7 @@
     "modelId": "legacy:90",
     "title": "Archived report: VibeVoice-ASR-Streaming-1.5B",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -505,7 +505,7 @@
     "modelId": "hf:deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
     "title": "repository created: DeepSeek-V4-Flash-Vision-Exp",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -524,7 +524,7 @@
     "modelId": "legacy:86",
     "title": "Archived report: DeepSeek-V4-Flash-Vision-Exp",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -562,7 +562,7 @@
     "modelId": "legacy:87",
     "title": "Archived report: Qwen-Drive-1.0-4B",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -575,13 +575,52 @@
     ]
   },
   {
+    "id": "reveal:ox-alpha-glm-5.3-flash",
+    "date": "2026-08-26",
+    "type": "model_reveal",
+    "modelId": "hf:zai-org/GLM-5.3-Flash",
+    "title": "ox-alpha revealed as GLM-5.3-Flash",
+    "previousAlias": "ox-alpha",
+    "provider": "Zhipu AI",
+    "notable": true,
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://docs.z.ai/guides/llm/glm-5.3-flash",
+        "label": "Confirmed identity reveal",
+        "confidence": "confirmed",
+        "lastChecked": "2026-09-17"
+      },
+      {
+        "url": "https://z.ai/blog/assets/glm-5.3-flash--uSKeP6w.js",
+        "label": "Official announcement publication date",
+        "confidence": "official",
+        "lastChecked": "2026-09-17"
+      },
+      {
+        "url": "https://z.ai/blog/glm-5.3-flash",
+        "label": "Official announcement disclosing the former alias",
+        "confidence": "official",
+        "lastChecked": "2026-09-17"
+      }
+    ],
+    "dateBasis": "announcement_publication",
+    "description": "Dated by the official announcement disclosing this alias. This is not the first anonymous appearance date, which remains unknown.",
+    "before": {
+      "modelId": "opencode:ox-alpha"
+    },
+    "after": {
+      "modelId": "hf:zai-org/GLM-5.3-Flash"
+    }
+  },
+  {
     "id": "history:0f9cbbd548aec1349d071fce",
     "date": "2026-08-25",
     "type": "repository_created",
     "modelId": "hf:zai-org/GLM-5.3-Flash",
     "title": "repository created: GLM-5.3-Flash",
     "provider": "Zhipu AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -638,7 +677,7 @@
     "modelId": "hf:zai-org/GLM-5.3",
     "title": "repository created: GLM-5.3",
     "provider": "Zhipu AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -676,7 +715,7 @@
     "modelId": "hf:zai-org/GLM-5.3-Flash-BF16",
     "title": "repository created: GLM-5.3-Flash-BF16",
     "provider": "Zhipu AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -695,7 +734,7 @@
     "modelId": "hf:Qwen/Qwen3.8-Flash-Next",
     "title": "repository created: Qwen3.8-Flash-Next",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -714,7 +753,7 @@
     "modelId": "hf:google/timesfm-3.0-pytorch",
     "title": "repository created: timesfm-3.0-pytorch",
     "provider": "Google",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -733,7 +772,7 @@
     "modelId": "legacy:84",
     "title": "Archived report: timesfm-3.0-pytorch",
     "provider": "Google",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -752,7 +791,7 @@
     "modelId": "legacy:85",
     "title": "Archived report: Nemotron-3-Diarization-preview",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -790,7 +829,7 @@
     "modelId": "legacy:81",
     "title": "Archived report: Qwen3.8-Flash-Next",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -961,7 +1000,7 @@
     "modelId": "legacy:75",
     "title": "Archived report: NVIDIA-Nemotron-Labs-Teacher-General-Reasoning",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1018,7 +1057,7 @@
     "modelId": "legacy:72",
     "title": "Archived report: DeepSeek-V4-Pro-0813",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1075,7 +1114,7 @@
     "modelId": "hf:deepseek-ai/DeepSeek-V4-Pro-0813",
     "title": "repository created: DeepSeek-V4-Pro-0813",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -1113,7 +1152,7 @@
     "modelId": "legacy:65",
     "title": "Archived report: Qwen3.8-2.4T-A95B",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1132,7 +1171,7 @@
     "modelId": "hf:Qwen/Qwen3.8-2.4T-A95B",
     "title": "repository created: Qwen3.8-2.4T-A95B",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -1170,7 +1209,7 @@
     "modelId": "legacy:64",
     "title": "Archived report: Improving GPT‑5.6 Sol in ChatGPT",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1189,7 +1228,7 @@
     "modelId": "legacy:67",
     "title": "Archived report: NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1265,7 +1304,7 @@
     "modelId": "legacy:61",
     "title": "Archived report: DeepSeek-V4-Flash-0731",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1284,7 +1323,7 @@
     "modelId": "hf:deepseek-ai/DeepSeek-V4-Flash-0731",
     "title": "repository created: DeepSeek-V4-Flash-0731",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -1303,7 +1342,7 @@
     "modelId": "legacy:62",
     "title": "Archived report: Advancing the price-performance frontier with GPT-5.6",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1322,7 +1361,7 @@
     "modelId": "legacy:63",
     "title": "Archived report: NVIDIA-NemotronLabs-VoiceChat-11B",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1360,7 +1399,7 @@
     "modelId": "legacy:58",
     "title": "Archived report: Mage-ViT",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1379,7 +1418,7 @@
     "modelId": "legacy:53",
     "title": "Archived report: Mage-VL",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1455,7 +1494,7 @@
     "modelId": "legacy:59",
     "title": "Archived report: Cosmos-H-Dreams",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1474,7 +1513,7 @@
     "modelId": "legacy:49",
     "title": "Archived report: Mage-Flow-Base",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1493,7 +1532,7 @@
     "modelId": "legacy:46",
     "title": "Archived report: Mage-Flow-Edit",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1512,7 +1551,7 @@
     "modelId": "legacy:55",
     "title": "Archived report: Mage-Flow-Edit-Base",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1531,7 +1570,7 @@
     "modelId": "legacy:48",
     "title": "Archived report: Mage-Flow",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1569,7 +1608,7 @@
     "modelId": "legacy:45",
     "title": "Archived report: Mage-Flow-Edit-Turbo",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1588,7 +1627,7 @@
     "modelId": "legacy:47",
     "title": "Archived report: Mage-Flow-Turbo",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1607,7 +1646,7 @@
     "modelId": "legacy:50",
     "title": "Archived report: Fara1.5-27B",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1626,7 +1665,7 @@
     "modelId": "legacy:56",
     "title": "Archived report: Fara1.5-4B",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1702,7 +1741,7 @@
     "modelId": "legacy:41",
     "title": "Archived report: Nemotron-3-Embed-8B-BF16",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1721,7 +1760,7 @@
     "modelId": "legacy:42",
     "title": "Archived report: Nemotron-3-Embed-1B-BF16",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1759,7 +1798,7 @@
     "modelId": "legacy:38",
     "title": "Archived report: GPT-5.6",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1797,7 +1836,7 @@
     "modelId": "legacy:37",
     "title": "Archived report: GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1816,7 +1855,7 @@
     "modelId": "legacy:36",
     "title": "Archived report: GPT-Live",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1835,7 +1874,7 @@
     "modelId": "legacy:34",
     "title": "Archived report: Nemotron-Labs-Audex-2B",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1854,7 +1893,7 @@
     "modelId": "legacy:35",
     "title": "Archived report: Nemotron-Labs-Audex-30B-A3B",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1892,7 +1931,7 @@
     "modelId": "legacy:33",
     "title": "Archived report: Leanstral-1.5-119B-A6B",
     "provider": "Mistral AI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1949,7 +1988,7 @@
     "modelId": "legacy:25",
     "title": "Archived report: GELab-Zero-4B-preview-Sico-Evolution",
     "provider": "Microsoft",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -1968,7 +2007,7 @@
     "modelId": "legacy:22",
     "title": "Archived report: tabfm-1.0.0-pytorch",
     "provider": "Google",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2101,7 +2140,7 @@
     "modelId": "legacy:24",
     "title": "Archived report: Qwen3-ASR-0.6B-hf",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2120,7 +2159,7 @@
     "modelId": "legacy:27",
     "title": "Archived report: c-fast-foundationstereo",
     "provider": "NVIDIA",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2139,7 +2178,7 @@
     "modelId": "legacy:32",
     "title": "Archived report: Qwen3-ForcedAligner-0.6B-hf",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2158,7 +2197,7 @@
     "modelId": "legacy:19",
     "title": "Archived report: Previewing GPT-5.6 Sol",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2177,7 +2216,7 @@
     "modelId": "legacy:15",
     "title": "Archived report: Qwen3-ASR-1.7B-hf",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2272,7 +2311,7 @@
     "modelId": "legacy:16",
     "title": "Archived report: Qwen-AgentWorld-35B-A3B",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2329,7 +2368,7 @@
     "modelId": "hf:zai-org/GLM-5.2",
     "title": "repository created: GLM-5.2",
     "provider": "Zhipu AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2348,7 +2387,7 @@
     "modelId": "hf:moonshotai/Kimi-K3",
     "title": "repository created: Kimi-K3",
     "provider": "Moonshot AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2367,7 +2406,7 @@
     "modelId": "hf:moonshotai/Kimi-K2.7-Code",
     "title": "repository created: Kimi-K2.7-Code",
     "provider": "Moonshot AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2405,7 +2444,7 @@
     "modelId": "legacy:1",
     "title": "Archived report: DeepSeek V4",
     "provider": "DeepSeek",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2424,7 +2463,7 @@
     "modelId": "legacy:2",
     "title": "Archived report: GPT-5.5",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2443,7 +2482,7 @@
     "modelId": "legacy:3",
     "title": "Archived report: Qwen3.6-27B",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2462,7 +2501,7 @@
     "modelId": "legacy:4",
     "title": "Archived report: Kimi K2.6",
     "provider": "Moonshot AI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2481,7 +2520,7 @@
     "modelId": "legacy:5",
     "title": "Archived report: Qwen3.6-Max-Preview",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2500,7 +2539,7 @@
     "modelId": "hf:openai/privacy-filter",
     "title": "repository created: privacy-filter",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2519,7 +2558,7 @@
     "modelId": "legacy:7",
     "title": "Archived report: Qwen3.6-35B-A3B",
     "provider": "Alibaba",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2538,7 +2577,7 @@
     "modelId": "legacy:6",
     "title": "Archived report: Claude Opus 4.7",
     "provider": "Anthropic",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2557,7 +2596,7 @@
     "modelId": "hf:moonshotai/Kimi-K2.6",
     "title": "repository created: Kimi-K2.6",
     "provider": "Moonshot AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2576,7 +2615,7 @@
     "modelId": "legacy:8",
     "title": "Archived report: Llama 4",
     "provider": "Meta",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2595,7 +2634,7 @@
     "modelId": "legacy:9",
     "title": "Archived report: GLM-5.1",
     "provider": "Zhipu AI",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2614,7 +2653,7 @@
     "modelId": "legacy:10",
     "title": "Archived report: Claude Mythos Preview",
     "provider": "Anthropic",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2633,7 +2672,7 @@
     "modelId": "legacy:11",
     "title": "Archived report: Gemma 4 31B",
     "provider": "Google",
-    "notable": true,
+    "notable": false,
     "confidence": "unverified",
     "description": "Preserved archive report. This date and the reported model identity are unverified, not a verified launch. Original claims have not been promoted to model metadata.",
     "sources": [
@@ -2652,7 +2691,7 @@
     "modelId": "hf:mistralai/Mistral-Medium-3.5-128B",
     "title": "repository created: Mistral-Medium-3.5-128B",
     "provider": "Mistral AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2671,7 +2710,7 @@
     "modelId": "hf:mistralai/Leanstral-2603",
     "title": "repository created: Leanstral-2603",
     "provider": "Mistral AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2690,7 +2729,7 @@
     "modelId": "hf:moonshotai/Kimi-K2.5",
     "title": "repository created: Kimi-K2.5",
     "provider": "Moonshot AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2709,7 +2748,7 @@
     "modelId": "hf:openai/circuit-sparsity",
     "title": "repository created: circuit-sparsity",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2728,7 +2767,7 @@
     "modelId": "hf:moonshotai/Kimi-K2-Thinking",
     "title": "repository created: Kimi-K2-Thinking",
     "provider": "Moonshot AI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2785,7 +2824,7 @@
     "modelId": "hf:openai/gpt-oss-20b",
     "title": "repository created: gpt-oss-20b",
     "provider": "OpenAI",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2804,7 +2843,7 @@
     "modelId": "hf:meta-llama/Llama-Prompt-Guard-2-22M",
     "title": "repository created: Llama-Prompt-Guard-2-22M",
     "provider": "Meta",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2823,7 +2862,7 @@
     "modelId": "hf:meta-llama/Llama-Prompt-Guard-2-86M",
     "title": "repository created: Llama-Prompt-Guard-2-86M",
     "provider": "Meta",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [
@@ -2842,7 +2881,7 @@
     "modelId": "hf:meta-llama/Llama-Guard-4-12B",
     "title": "repository created: Llama-Guard-4-12B",
     "provider": "Meta",
-    "notable": true,
+    "notable": false,
     "confidence": "official",
     "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
     "sources": [

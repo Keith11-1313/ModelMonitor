@@ -1,10 +1,12 @@
 import { readFile, mkdir, writeFile, rename } from "node:fs/promises";
+import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { collectZen, collectCatalog, collectDocs, collectHF, ZEN, CATALOG, DOCS } from "./collectors.js";
+import { collectZen, collectCatalog, collectDocs, collectHF, collectOpenRouter, collectGroq, collectGemini, ZEN, CATALOG, DOCS, OPENROUTER, GROQ, GEMINI } from "./collectors.js";
 import { day, model, source, mergeKnown, resolveIdentity, migrateLegacy, updateAvailability, appendHistory, sorted, digest, event, applyReveal } from "./pipeline.js";
 import { validateCuration, validateData } from "./validation.js";
 import { buildTimeline } from "./timeline.js";
+import { buildReport } from "./report.js";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const destination = join(root, "public", "data");
@@ -25,15 +27,37 @@ async function save(name, value) {
   await rename(`${path}.tmp`, path);
 }
 
+async function publishCurated(output, previous) {
+  const glossary = await readJSON(join(root, "data", "glossary.json"), null);
+  const milestones = await readJSON(join(root, "data", "milestones.json"), null);
+  assert.ok(glossary && Array.isArray(glossary.terms) && glossary.terms.length, "Glossary data missing");
+  assert.ok(milestones && Array.isArray(milestones.milestones) && milestones.milestones.length, "Milestones data missing");
+  output.glossary = glossary;
+  output.milestones = milestones;
+  output.report = buildReport({ previous, current: output, date });
+  const snapshot = { schemaVersion: 2, generatedAt: date, snapshot: output.report.snapshot };
+  output.snapshot = previous.snapshot?.schemaVersion === 2 && digest(previous.snapshot.snapshot) === digest(snapshot.snapshot) ? previous.snapshot : snapshot;
+}
+
 async function main() {
   const archiveBytes = await readFile(join(root, "public", "models.json"));
   const archive = JSON.parse(archiveBytes.toString("utf8"));
   const curation = await readJSON(join(root, "data", "curation.json"));
   validateCuration(curation);
-  const names = ["models", "timeline", "availability", "history", "metadata", "limits", "signals", "audit", "cache"];
+  const names = ["models", "timeline", "availability", "history", "metadata", "limits", "signals", "audit", "cache", "glossary", "milestones", "report", "snapshot"];
   const previous = Object.fromEntries(await Promise.all(names.map(async (name) => [name, await readJSON(join(destination, `${name}.json`), name === "history" ? { snapshots: [] } : name === "metadata" ? { sources: [] } : name === "cache" ? {} : [])])));
+  if (process.argv.includes("--offline")) {
+    assert.ok(previous.metadata.schemaVersion === 1 && previous.models.length, "Offline publishing requires persisted datasets");
+    const output = structuredClone(previous);
+    validateData(output, archive);
+    await publishCurated(output, previous);
+    await mkdir(destination, { recursive: true });
+    for (const name of ["glossary", "milestones", "report", "snapshot"]) await save(name, output[name]);
+    console.log("Published curated datasets and report offline; source data and timestamps unchanged.");
+    return;
+  }
   const migration = migrateLegacy(archive, date);
-  const map = new Map(previous.models.map((m) => [m.id, m]));
+  const map = new Map(previous.models.map((m) => [m.id, structuredClone(m)]));
   for (const row of migration.models) {
     const old = map.get(row.id);
     map.set(row.id, old ? { ...old, type: row.type } : row);
@@ -56,15 +80,17 @@ async function main() {
       return null;
     }
   }
-  const [zen, catalog, docs] = await Promise.all([
+  const [zen, catalog, docs, openrouter] = await Promise.all([
     collect("opencode", "OpenCode Zen official availability", ZEN, () => collectZen(oldStatus("opencode")?.count)),
     collect("models-dev", "models.dev secondary opencode catalog", CATALOG, () => collectCatalog(oldStatus("models-dev")?.count)),
     collect("zen-docs", "OpenCode Zen official documentation and prices", DOCS, () => collectDocs(oldStatus("zen-docs")?.count)),
+    collect("openrouter", "OpenRouter official model catalog", OPENROUTER, () => collectOpenRouter(oldStatus("openrouter")?.count, { apiKey: process.env.OPENROUTER_API_KEY || null })),
   ]);
   if (catalog) cache.catalog = { rows: catalog, lastSuccess: date };
   if (docs) cache.docs = { rows: docs.rows, lastSuccess: date };
   const verified = new Set();
-  const assertions = [...curation.identities, ...curation.links, ...curation.reveals, ...curation.limits];
+  const revealDates = new Map(curation.reveals.filter((reveal) => reveal.dateSourceUrl).map((reveal) => [reveal.id, { sourceUrl: reveal.dateSourceUrl, evidence: reveal.dateEvidence }]));
+  const assertions = [...curation.identities, ...curation.links, ...curation.reveals, ...curation.limits, ...revealDates.values()];
   const evidencePages = new Map([[DOCS, docs?.text ?? null]]);
   for (const assertion of assertions) {
     if (!evidencePages.has(assertion.sourceUrl)) {
@@ -94,7 +120,7 @@ async function main() {
     const row = map.get(link.modelId);
     row.aliases = [...new Set([...row.aliases, link.alias])].sort();
   }
-  let availability = previous.availability;
+  let availability = structuredClone(previous.availability);
   if (zen) {
     const secondary = new Map((cache.catalog?.rows ?? []).map((r) => [r.id, r]));
     const official = new Map((cache.docs?.rows ?? []).map((r) => [r.id, r]));
@@ -136,6 +162,77 @@ async function main() {
     timeline.push(...result.events);
     appendHistory(history, availability, "opencode", date);
   }
+  if (openrouter) {
+    const observations = [];
+    for (const item of openrouter) {
+      const entityId = `openrouter:${item.id}`;
+      const prior = map.get(entityId);
+      const row = mergeKnown(prior, {
+        ...(prior ?? model(entityId, item.name, "Unknown", date)),
+        aliases: [item.id, `openrouter/${item.id}`], identity: "unknown", confidence: "official",
+        context: item.context, reasoning: item.reasoning, tools: item.tools, structuredOutput: item.structuredOutput, modalities: item.modalities,
+        hfId: item.hfId, lastChecked: date,
+        sources: [source(OPENROUTER, "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence", "official", date)],
+      });
+      map.set(entityId, row);
+      observations.push({
+        id: `openrouter:${item.id}`, modelId: entityId, provider: "openrouter", providerModelId: item.id,
+        status: "available", free: item.pricing ? item.pricing.input === 0 && item.pricing.output === 0 : null,
+        context: item.context, reasoning: item.reasoning, tools: item.tools, structuredOutput: item.structuredOutput, modalities: item.modalities,
+        pricing: item.pricing, confidence: "official",
+        sources: [source(OPENROUTER, "Official OpenRouter model catalog availability and token pricing", "official", date)],
+        firstSeen: date, lastChecked: date,
+        notes: "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+      });
+    }
+    const baseline = !history.snapshots.some((s) => s.provider === "openrouter");
+    const result = updateAvailability(availability, observations, "openrouter", date, baseline, timeline.length);
+    availability = result.availability;
+    timeline.push(...result.events);
+    appendHistory(history, availability, "openrouter", date);
+  }
+
+  const optionalProviderCollectors = [
+    {
+      id: "groq", name: "Groq official active model catalog", url: GROQ, key: process.env.GROQ_API_KEY,
+      action: () => collectGroq(process.env.GROQ_API_KEY, oldStatus("groq")?.count),
+      normalize: (item) => ({ context: item.context, reasoning: null, tools: null, structuredOutput: null, modalities: ["text"] }),
+    },
+    {
+      id: "gemini", name: "Google Gemini API official model catalog", url: GEMINI, key: process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY,
+      action: () => collectGemini(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY, oldStatus("gemini")?.count),
+      normalize: (item) => ({ context: item.context, reasoning: null, tools: item.methods?.some((m) => /generateContent|interactions/i.test(m)) ? null : null, structuredOutput: null, modalities: [] }),
+    },
+  ];
+  for (const providerSource of optionalProviderCollectors) {
+    if (!providerSource.key) continue;
+    const rows = await collect(providerSource.id, providerSource.name, providerSource.url, providerSource.action);
+    if (!rows) continue;
+    const observations = [];
+    for (const item of rows) {
+      const entityId = `${providerSource.id}:${item.id}`;
+      const prior = map.get(entityId);
+      const extra = providerSource.normalize(item);
+      const row = mergeKnown(prior, {
+        ...(prior ?? model(entityId, item.name || item.id, "Unknown", date)),
+        aliases: [`${providerSource.id}/${item.id}`], identity: "unknown", confidence: "official", lastChecked: date, ...extra,
+        sources: [source(providerSource.url, `Official ${providerSource.id} API catalog; provider-scoped availability only`, "official", date)],
+      });
+      map.set(entityId, row);
+      observations.push({
+        id: `${providerSource.id}:${item.id}`, modelId: entityId, provider: providerSource.id, providerModelId: item.id, status: "available",
+        free: null, pricing: null, confidence: "official", firstSeen: date, lastChecked: date, ...extra,
+        sources: [source(providerSource.url, `Official ${providerSource.id} API model availability; free-tier eligibility is tracked separately`, "official", date)],
+        notes: "This endpoint is listed by the provider API. Model-level free eligibility is not inferred from catalog membership; see the provider free-access program card.",
+      });
+    }
+    const baseline = !history.snapshots.some((s) => s.provider === providerSource.id);
+    const result = updateAvailability(availability, observations, providerSource.id, date, baseline, timeline.length);
+    availability = result.availability;
+    timeline.push(...result.events);
+    appendHistory(history, availability, providerSource.id, date);
+  }
+
   for (let offset = 0; offset < curation.hfOrganizations.length; offset += 3) {
     await Promise.all(curation.hfOrganizations.slice(offset, offset + 3).map(async (organization) => {
       const id = `hf:${organization.org}`;
@@ -158,7 +255,7 @@ async function main() {
     }));
   }
   for (const reveal of curation.reveals) {
-    if (!verified.has(reveal)) continue;
+    if (!verified.has(reveal) || (revealDates.has(reveal.id) && !verified.has(revealDates.get(reveal.id)))) continue;
     applyReveal([...map.values()], availability, timeline, reveal, date);
   }
   if (zen) appendHistory(history, availability, "opencode", date);
@@ -182,11 +279,12 @@ async function main() {
       "Source failures retain known fields and prices. A greater-than-25-percent catalog contraction is rejected for review, which may delay real mass-removal detection. Individual HF metadata failures retain their prior rows.",
       "Prices are USD per million tokens; official documentation takes precedence over secondary catalog prices. Free does not mean unlimited. Conditional discounts, input length tiers and fees require checking the source. Unknown free status is neither free nor paid.",
       "Observation timestamps have UTC day precision to limit six-hour schedule churn. Same-day meaningful transitions append ordered snapshots/events; no-change checks refresh at most daily. Generated time is a build date, not evidence that every source succeeded.",
-      "No OpenRouter or RSS discovery is used. Signals and verified release dates remain empty until source-backed evidence is added. Published deprecation does not imply endpoint removal.",
+      "OpenRouter is collected from its official model catalog. Groq and Gemini API catalogs are optional and run only when their GitHub Actions secrets are configured; provider free-tier documentation is verified separately. Signals and verified release dates remain source-backed; published deprecation does not imply endpoint removal.",
     ],
   };
   const output = { models: sorted([...map.values()]), timeline: buildTimeline([...map.values()], availability, timeline), availability: sorted(availability), history, metadata, limits, signals: previous.signals, audit: migration.audit, cache };
   validateData(output, archive);
+  await publishCurated(output, previous);
   if (digest(await readFile(join(root, "public", "models.json"))) !== digest(archiveBytes)) throw new Error("Legacy archive changed during collection");
   await mkdir(destination, { recursive: true });
   for (const name of names.filter((n) => n !== "metadata")) await save(name, output[name]);
@@ -195,3 +293,4 @@ async function main() {
 }
 
 main().catch((error) => { console.error(error); process.exitCode = 1; });
+

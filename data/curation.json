@@ -22,10 +22,34 @@
       "sourceUrl": "https://opencode.ai/docs/zen/",
       "evidence": "Big Pickle is a stealth model",
       "summary": "Stealth model offered free for a limited time on OpenCode Zen; underlying identity remains unknown."
+    },
+    {
+      "id": "opencode:ox-alpha",
+      "providerModelId": "ox-alpha",
+      "name": "ox-alpha",
+      "provider": "Unknown",
+      "identity": "unknown",
+      "type": "stealth",
+      "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.3-flash",
+      "evidence": "Before release, we tested GLM-5.3-Flash anonymously as ox-alpha on OpenCode and OpenRouter to gather user feedback.",
+      "summary": "Historical anonymous alias used on OpenCode and OpenRouter before the GLM-5.3-Flash disclosure. Appearance date is unknown; see the separate sourced reveal event."
     }
   ],
   "links": [],
-  "reveals": [],
+  "reveals": [
+    {
+      "id": "reveal:ox-alpha-glm-5.3-flash",
+      "fromId": "opencode:ox-alpha",
+      "toId": "hf:zai-org/GLM-5.3-Flash",
+      "date": "2026-08-26",
+      "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.3-flash",
+      "evidence": "Before release, we tested GLM-5.3-Flash anonymously as ox-alpha on OpenCode and OpenRouter to gather user feedback.",
+      "dateSourceUrl": "https://z.ai/blog/assets/glm-5.3-flash--uSKeP6w.js",
+      "dateEvidence": "date:`2026-08-26`",
+      "announcementUrl": "https://z.ai/blog/glm-5.3-flash",
+      "dateBasis": "announcement_publication"
+    }
+  ],
   "limits": [
     {
       "provider": "opencode",
@@ -38,19 +62,129 @@
       },
       "confidence": "official",
       "sourceUrl": "https://opencode.ai/docs/zen/",
-      "evidence": "You can also set a monthly usage limit for the entire workspace and for each member of your team."
+      "evidence": "You can also set a monthly usage limit for the entire workspace and for each member of your team.",
+      "id": "limit:opencode-zen",
+      "accessType": "usage_controls",
+      "allowance": "Usage is pay-as-you-go; workspace and member spending caps are configurable."
+    },
+    {
+      "id": "limit:openrouter-free",
+      "provider": "openrouter",
+      "product": "OpenRouter Free",
+      "plan": "Free",
+      "window": "daily",
+      "accessType": "zero_price_models",
+      "allowance": "Free plan with a rotating pool of zero-token-price models; base account limit is 50 requests per day.",
+      "reset": {
+        "type": "daily",
+        "description": "Daily request allowance; check OpenRouter pricing for current account-specific details."
+      },
+      "confidence": "official",
+      "sourceUrl": "https://openrouter.ai/pricing",
+      "evidence": "50 requests/day"
+    },
+    {
+      "id": "limit:groq-free",
+      "provider": "groq",
+      "product": "GroqCloud",
+      "plan": "Free tier",
+      "window": "provider-defined",
+      "accessType": "free_tier",
+      "allowance": "Free API access exists with model-specific rate limits. Exact quotas can vary by model and account.",
+      "reset": {
+        "type": "provider-defined",
+        "description": "Rate-limit windows vary by metric and model; check the Groq limits page for current quotas."
+      },
+      "confidence": "official",
+      "sourceUrl": "https://console.groq.com/docs/billing-faqs",
+      "evidence": "upgrade from the Free tier to the Developer tier"
+    },
+    {
+      "id": "limit:gemini-free",
+      "provider": "gemini",
+      "product": "Gemini API",
+      "plan": "Free tier",
+      "window": "model-specific",
+      "accessType": "free_tier",
+      "allowance": "Free-tier quotas are model-specific and may include RPM, TPM and RPD limits.",
+      "reset": {
+        "type": "daily",
+        "description": "Requests-per-day quotas reset at midnight Pacific time; other limit windows vary."
+      },
+      "confidence": "official",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "evidence": "Requests per day (RPD) quotas reset at midnight Pacific time."
+    },
+    {
+      "id": "limit:cloudflare-workers-ai-free",
+      "provider": "cloudflare",
+      "product": "Workers AI",
+      "plan": "Workers Free",
+      "window": "daily",
+      "accessType": "daily_compute_allowance",
+      "allowance": "10,000 Neurons per day at no charge; some models require a paid plan despite the general allowance.",
+      "reset": {
+        "type": "daily",
+        "description": "Free allocation resets daily at 00:00 UTC."
+      },
+      "confidence": "official",
+      "sourceUrl": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "evidence": "10,000 Neurons per day at no charge"
+    },
+    {
+      "id": "limit:huggingface-free-credits",
+      "provider": "huggingface",
+      "product": "Inference Providers",
+      "plan": "Free user",
+      "window": "monthly",
+      "accessType": "monthly_credits",
+      "allowance": "Free users receive a small monthly inference credit allowance; the amount is subject to change.",
+      "reset": {
+        "type": "monthly",
+        "description": "Credits are applied monthly; check Hugging Face pricing for the current amount and eligible providers."
+      },
+      "confidence": "official",
+      "sourceUrl": "https://huggingface.co/docs/inference-providers/en/pricing",
+      "evidence": "Every Hugging Face user receives monthly credits to experiment with Inference Providers"
     }
   ],
   "hfOrganizations": [
-    { "org": "openai", "provider": "OpenAI" },
-    { "org": "google", "provider": "Google" },
-    { "org": "meta-llama", "provider": "Meta" },
-    { "org": "deepseek-ai", "provider": "DeepSeek" },
-    { "org": "Qwen", "provider": "Alibaba" },
-    { "org": "mistralai", "provider": "Mistral AI" },
-    { "org": "moonshotai", "provider": "Moonshot AI" },
-    { "org": "zai-org", "provider": "Zhipu AI" },
-    { "org": "nvidia", "provider": "NVIDIA" }
+    {
+      "org": "openai",
+      "provider": "OpenAI"
+    },
+    {
+      "org": "google",
+      "provider": "Google"
+    },
+    {
+      "org": "meta-llama",
+      "provider": "Meta"
+    },
+    {
+      "org": "deepseek-ai",
+      "provider": "DeepSeek"
+    },
+    {
+      "org": "Qwen",
+      "provider": "Alibaba"
+    },
+    {
+      "org": "mistralai",
+      "provider": "Mistral AI"
+    },
+    {
+      "org": "moonshotai",
+      "provider": "Moonshot AI"
+    },
+    {
+      "org": "zai-org",
+      "provider": "Zhipu AI"
+    },
+    {
+      "org": "nvidia",
+      "provider": "NVIDIA"
+    }
   ],
   "hfRecentPerOrganization": 5
 }

@@ -121,7 +121,9 @@ export function applyReveal(models, availability, timeline, reveal, date) {
     id: reveal.id, date: reveal.date, type: "model_reveal", modelId: to.id,
     title: `${from.name} revealed as ${to.name}`, previousAlias: from.name,
     provider: to.provider, notable: true, confidence: "confirmed",
-    sources: [source(reveal.sourceUrl, "Confirmed identity reveal", "confirmed", date)],
+    sources: [source(reveal.sourceUrl, "Confirmed identity reveal", "confirmed", date),
+      ...(reveal.dateSourceUrl ? [source(reveal.dateSourceUrl, "Official announcement publication date", "official", date), source(reveal.announcementUrl, "Official announcement disclosing the former alias", "official", date)] : [])],
+    ...(reveal.dateBasis ? { dateBasis: reveal.dateBasis, description: "Dated by the official announcement disclosing this alias. This is not the first anonymous appearance date, which remains unknown." } : {}),
     before: { modelId: from.id }, after: { modelId: to.id },
   });
 }

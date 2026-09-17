@@ -3,9 +3,12 @@ import { boolean, number, strings, source, model, licenseOf, classify } from "./
 export const ZEN = "https://opencode.ai/zen/v1/models";
 export const CATALOG = "https://models.dev/api.json";
 export const DOCS = "https://opencode.ai/docs/zen/";
+export const OPENROUTER = "https://openrouter.ai/api/v1/models";
+export const GROQ = "https://api.groq.com/openai/v1/models";
+export const GEMINI = "https://generativelanguage.googleapis.com/v1beta/models";
 
-export async function request(url, { fetcher = fetch, timeout = 20000, text = false } = {}) {
-  const response = await fetcher(url, { headers: { "User-Agent": "ModelMonitor/2.0" }, signal: AbortSignal.timeout(timeout) });
+export async function request(url, { fetcher = fetch, timeout = 20000, text = false, headers = {} } = {}) {
+  const response = await fetcher(url, { headers: { "User-Agent": "ModelMonitor/2.0", ...headers }, signal: AbortSignal.timeout(timeout) });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   const value = text ? await response.text() : await response.json();
   return { value, headers: response.headers };
@@ -44,6 +47,66 @@ export function pricing(cost) {
     currency: "USD", unit: "1M tokens",
     ...(cost.context_over_200k ? { tiers: [{ contextAbove: 200000, ...pricing(cost.context_over_200k) }] } : {}),
   };
+}
+
+
+
+const perMillion = (value) => {
+  const amount = typeof value === "string" && value.trim() !== "" ? Number(value) : number(value);
+  return Number.isFinite(amount) && amount >= 0 ? amount * 1_000_000 : null;
+};
+
+export async function collectOpenRouter(previousCount = 0, options = {}) {
+  const headers = options.apiKey ? { Authorization: `Bearer ${options.apiKey}` } : {};
+  const { value } = await request(OPENROUTER, { ...options, headers: { ...headers, ...(options.headers ?? {}) } });
+  const rows = guardRows(value?.data, previousCount, 10);
+  return rows.map((r) => {
+    const input = perMillion(r.pricing?.prompt);
+    const output = perMillion(r.pricing?.completion);
+    const pricing = input !== null && output !== null ? {
+      input, output, cachedInput: perMillion(r.pricing?.input_cache_read), cachedOutput: perMillion(r.pricing?.input_cache_write),
+      currency: "USD", unit: "1M tokens",
+    } : null;
+    const parameters = Array.isArray(r.supported_parameters) ? r.supported_parameters : [];
+    const modalities = strings([...(r.architecture?.input_modalities ?? []), ...(r.architecture?.output_modalities ?? [])]);
+    return {
+      id: r.id, name: typeof r.name === "string" ? r.name : r.id,
+      context: number(r.context_length), pricing, modalities,
+      reasoning: typeof r.reasoning === "object" || parameters.some((v) => /reasoning/i.test(v)) ? true : null,
+      tools: parameters.includes("tools") || parameters.includes("tool_choice") ? true : null,
+      structuredOutput: parameters.includes("structured_outputs") || parameters.includes("response_format") ? true : null,
+      hfId: typeof r.hugging_face_id === "string" ? r.hugging_face_id : null,
+    };
+  });
+}
+
+export async function collectGroq(apiKey, previousCount = 0, options = {}) {
+  if (!apiKey) return null;
+  const { value } = await request(GROQ, { ...options, headers: { Authorization: `Bearer ${apiKey}`, ...(options.headers ?? {}) } });
+  const rows = guardRows(value?.data, previousCount, 1);
+  return rows.filter((r) => r.active !== false).map((r) => ({
+    id: r.id, name: r.id, owner: typeof r.owned_by === "string" ? r.owned_by : null, context: number(r.context_window),
+  }));
+}
+
+export async function collectGemini(apiKey, previousCount = 0, options = {}) {
+  if (!apiKey) return null;
+  const rows = [];
+  let pageToken = null;
+  do {
+    const params = new URLSearchParams({ pageSize: "1000" });
+    if (pageToken) params.set("pageToken", pageToken);
+    const { value } = await request(`${GEMINI}?${params}`, { ...options, headers: { "x-goog-api-key": apiKey, ...(options.headers ?? {}) } });
+    if (!Array.isArray(value?.models)) throw new Error("Invalid Gemini model listing");
+    rows.push(...value.models);
+    pageToken = value.nextPageToken || null;
+  } while (pageToken);
+  guardRows(rows.map((r) => ({ id: String(r.name || "").replace(/^models\//, "") })), previousCount, 1);
+  return rows.map((r) => ({
+    id: String(r.name).replace(/^models\//, ""), name: r.displayName || String(r.name).replace(/^models\//, ""),
+    context: number(r.inputTokenLimit), outputLimit: number(r.outputTokenLimit),
+    methods: strings(r.supportedGenerationMethods ?? r.supportedActions ?? []),
+  }));
 }
 
 export const plain = (html) => html.replace(/<[^>]*>/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();

@@ -24,7 +24,12 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run lint
-      - run: npm run fetch
+      - name: Collect model data
+        run: npm run fetch
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - run: npm run validate
       - name: Publish changed generated data
         run: |

@@ -70,12 +70,104 @@ export function validateCuration(curation) {
   const revealFrom = new Set();
   for (const reveal of curation.reveals) {
     assert.ok(text(reveal.fromId) && text(reveal.toId) && reveal.fromId !== reveal.toId && validDate(reveal.date), "Reveal requires exact distinct IDs and documented date");
+    if (reveal.dateSourceUrl !== undefined) {
+      assert.ok(url(reveal.dateSourceUrl) && text(reveal.dateEvidence) && reveal.dateEvidence.includes(reveal.date), "Reveal date requires matching source evidence");
+      assert.ok(url(reveal.announcementUrl) && reveal.dateBasis === "announcement_publication", "Reveal requires its announcement and date basis");
+    }
     assert.ok(!revealFrom.has(reveal.fromId), "Ambiguous reveal");
     revealFrom.add(reveal.fromId);
   }
   assert.ok(Number.isInteger(curation.hfRecentPerOrganization) && curation.hfRecentPerOrganization > 0 && curation.hfRecentPerOrganization <= 50);
   assert.equal(new Set(curation.hfOrganizations.map((o) => o.org)).size, curation.hfOrganizations.length);
   for (const entry of curation.hfOrganizations) assert.ok(/^[\w-]+$/.test(entry.org) && text(entry.provider));
+  const limitIds = curation.limits.map((entry) => entry.id).filter(Boolean);
+  assert.equal(new Set(limitIds).size, limitIds.length, "Duplicate curated limit ID");
+  const accessTypes = new Set(["usage_controls", "zero_price_models", "free_tier", "daily_compute_allowance", "monthly_credits"]);
+  for (const entry of curation.limits) {
+    if (entry.id !== undefined) assert.ok(text(entry.id), "Invalid curated limit ID");
+    if (entry.accessType !== undefined) assert.ok(accessTypes.has(entry.accessType), `Invalid free-access type: ${entry.id || entry.provider}`);
+    if (entry.allowance !== undefined) assert.ok(text(entry.allowance), `Invalid free-access allowance: ${entry.id || entry.provider}`);
+  }
+}
+
+export function validateMilestones(data) {
+  assert.equal(data?.schemaVersion, 1, "Invalid milestone schema version");
+  assert.ok(Array.isArray(data.eras) && data.eras.length, "Milestone eras missing");
+  assert.ok(Array.isArray(data.milestones) && data.milestones.length, "Milestones missing");
+  unique(data.eras, "milestone eras");
+  unique(data.milestones, "milestones");
+  const eraIds = new Set(data.eras.map((row) => row.id));
+  const allowedEra = new Set(["id", "label", "range", "description"]);
+  for (const era of data.eras) {
+    assert.ok(Object.keys(era).every((key) => allowedEra.has(key)), `Unknown era field: ${era.id}`);
+    assert.ok(text(era.label) && text(era.description), `Incomplete era: ${era.id}`);
+    assert.ok(Array.isArray(era.range) && era.range.length === 2 && era.range.every(Number.isInteger) && era.range[0] <= era.range[1], `Invalid era range: ${era.id}`);
+  }
+  const allowedMilestone = new Set(["id", "date", "title", "organization", "eventType", "era", "dateBasis", "description", "whyItMatters", "confidence", "sourceUrl", "sourceLabel", "lastChecked"]);
+  const junk = /placeholder|fix later|duplicate\s*-?\s*remove|gibberish|\bjunk\b/i;
+  for (const row of data.milestones) {
+    assert.ok(Object.keys(row).every((key) => allowedMilestone.has(key)), `Unknown milestone field: ${row.id}`);
+    for (const key of ["title", "organization", "eventType", "era", "dateBasis", "description", "whyItMatters", "sourceLabel"]) assert.ok(text(row[key]), `Missing milestone ${key}: ${row.id}`);
+    assert.ok(validDate(row.date), `Invalid milestone date: ${row.id}`);
+    assert.ok(eraIds.has(row.era), `Unknown milestone era: ${row.id}`);
+    assert.ok(confidences.includes(row.confidence), `Invalid milestone confidence: ${row.id}`);
+    assert.ok(url(row.sourceUrl), `Invalid milestone source URL: ${row.id}`);
+    assert.ok(!/example\.(com|org|net)/i.test(row.sourceUrl), `Placeholder milestone source: ${row.id}`);
+    assert.ok(!junk.test(JSON.stringify(row)), `Placeholder or junk milestone content: ${row.id}`);
+    if (row.lastChecked !== undefined) assert.ok(validDate(row.lastChecked), `Invalid milestone check date: ${row.id}`);
+  }
+  return true;
+}
+
+export function validateGlossary(data) {
+  assert.equal(data?.schemaVersion, 1, "Invalid glossary schema version");
+  assert.ok(stringArray(data.categories) && data.categories.length, "Glossary categories missing or duplicated");
+  assert.ok(Array.isArray(data.terms) && data.terms.length, "Glossary terms missing");
+  unique(data.terms, "glossary terms");
+  const categories = new Set(data.categories);
+  const ids = new Set(data.terms.map((row) => row.id));
+  const allowed = new Set(["id", "term", "category", "definition", "explanation", "example", "related", "aliases", "abbreviation"]);
+  for (const row of data.terms) {
+    assert.ok(Object.keys(row).every((key) => allowed.has(key)), `Unknown glossary field: ${row.id}`);
+    assert.ok(text(row.term) && text(row.definition), `Incomplete glossary term: ${row.id}`);
+    assert.ok(categories.has(row.category), `Unknown glossary category: ${row.id}`);
+    for (const key of ["explanation", "example", "abbreviation"]) if (row[key] !== undefined) assert.ok(text(row[key]), `Invalid glossary ${key}: ${row.id}`);
+    if (row.aliases !== undefined) assert.ok(stringArray(row.aliases), `Invalid glossary aliases: ${row.id}`);
+    if (row.related !== undefined) {
+      assert.ok(stringArray(row.related), `Invalid related terms: ${row.id}`);
+      for (const related of row.related) assert.ok(ids.has(related) && related !== row.id, `Unknown related glossary term ${related}: ${row.id}`);
+    }
+  }
+  return true;
+}
+
+export function validateReport(report) {
+  assert.equal(report?.schemaVersion, 2, "Invalid report schema version");
+  assert.equal(typeof report.baseline, "boolean", "Invalid report baseline flag");
+  assert.ok(validDate(report.generatedAt), "Invalid report generation date");
+  assert.ok(report.periodStart === null || validDate(report.periodStart), "Invalid report period start");
+  assert.ok(report.periodEnd === null || validDate(report.periodEnd), "Invalid report period end");
+  for (const key of ["highlights", "modelChanges", "availabilityChanges", "pricingChanges", "openModelChanges", "historicalChanges", "changeLog", "watchlist"]) assert.ok(Array.isArray(report[key]), `Invalid report ${key}`);
+  assert.ok(report.summary && Object.values(report.summary).every((value) => Number.isInteger(value) && value >= 0), "Invalid report summary");
+  assert.ok(report.snapshot && Object.values(report.snapshot).every((value) => Number.isInteger(value) && value >= 0), "Invalid report snapshot");
+  assert.ok(report.health && validDate(report.health.checkedAt) && Number.isInteger(report.health.sources) && Number.isInteger(report.health.failedSources), "Invalid report health");
+  const ids = report.changeLog.map((row) => row.id);
+  assert.equal(new Set(ids).size, ids.length, "Duplicate report change ID");
+  for (const row of report.changeLog) {
+    assert.ok(text(row.id) && text(row.type) && text(row.dataset) && text(row.entityId), "Incomplete report change");
+    assert.ok(validDate(row.observedAt) && validDate(row.date), `Invalid report change date: ${row.id}`);
+    assert.ok(["fact", "derived", "unverified"].includes(row.level) && confidences.includes(row.confidence), `Invalid report change evidence: ${row.id}`);
+  }
+  for (const row of report.highlights) assert.ok(text(row.id) && text(row.text) && ["fact", "derived", "unverified"].includes(row.level), "Invalid report highlight");
+  for (const row of report.watchlist) assert.ok(text(row.kind) && text(row.text), "Invalid watchlist item");
+  return true;
+}
+
+export function validateSnapshot(snapshot) {
+  assert.equal(snapshot?.schemaVersion, 2, "Invalid snapshot schema version");
+  assert.ok(validDate(snapshot.generatedAt), "Invalid snapshot generation date");
+  assert.ok(snapshot.snapshot && Object.values(snapshot.snapshot).every((value) => Number.isInteger(value) && value >= 0), "Invalid snapshot totals");
+  return true;
 }
 
 export function validateData(data, archive = []) {

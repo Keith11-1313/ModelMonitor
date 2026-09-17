@@ -1,0 +1,877 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    "fundamentals",
+    "architecture",
+    "training",
+    "inference",
+    "capabilities",
+    "retrieval",
+    "open-models",
+    "optimization",
+    "performance",
+    "modelmonitor"
+  ],
+  "terms": [
+    {
+      "term": "Active parameters",
+      "id": "active-parameters",
+      "category": "architecture",
+      "definition": "In a mixture-of-experts model, the subset of parameters actually used for a given token. A 671B/37B model stores 671B parameters but runs about 37B per token, so it is cheaper to serve than a dense 671B model.",
+      "explanation": "Total parameters describe everything stored in the model. Active parameters describe how much of that model is used for one token or forward pass. MoE models can therefore be very large overall while using a smaller subset each time.",
+      "example": "A 100B-parameter MoE model might use roughly 10B parameters for a token. That does not mean it behaves like a dense 10B model.",
+      "related": [
+        "parameter-count",
+        "mixture-of-experts",
+        "dense-model"
+      ]
+    },
+    {
+      "term": "Agent",
+      "id": "agent",
+      "category": "capabilities",
+      "definition": "An LLM in a loop with tools, given a goal and allowed to act across multiple steps. Reliability drops with chain length; 'agentic' often means aspirational."
+    },
+    {
+      "term": "Agentic workflow",
+      "id": "agentic-workflow",
+      "category": "capabilities",
+      "definition": "A multi-step setup where models plan, call tools, read results and continue. Coding agents that edit files and run tests are the current mainstream case.",
+      "explanation": "The model is part of a loop that can plan, call tools, inspect results and continue until a task is finished or a limit is reached. The surrounding software matters as much as the model.",
+      "example": "A coding agent might inspect a repository, edit several files, run tests, read the failures and revise the patch.",
+      "related": [
+        "agent",
+        "tool-calling",
+        "computer-use",
+        "function-calling"
+      ]
+    },
+    {
+      "term": "AI",
+      "id": "ai",
+      "category": "fundamentals",
+      "definition": "A broad label for computer systems doing things we associate with intelligent behavior: recognizing images, translating text, playing games, holding conversations. LLMs are one small, very visible slice of it."
+    },
+    {
+      "term": "Alias",
+      "id": "alias",
+      "category": "modelmonitor",
+      "definition": "An alternate identifier for the same underlying model: a codename, a provider ID, or a repository path. Aliases are recorded only with source evidence."
+    },
+    {
+      "term": "Apache 2.0",
+      "id": "apache-2.0",
+      "category": "open-models",
+      "definition": "A permissive license allowing commercial use, modification and redistribution with attribution. The most common genuinely permissive LLM weight license."
+    },
+    {
+      "term": "Attention",
+      "id": "attention",
+      "category": "fundamentals",
+      "definition": "A mechanism that lets a model assign different importance to different pieces of a sequence while processing another piece.",
+      "explanation": "Rather than compressing an entire sentence into one fixed vector, attention lets the model dynamically retrieve the parts that matter for the current computation.",
+      "related": [
+        "self-attention",
+        "transformer",
+        "context-window"
+      ]
+    },
+    {
+      "term": "Autoregressive model",
+      "id": "autoregressive-model",
+      "category": "architecture",
+      "definition": "A model whose output is fed back in as input, one step at a time. All standard text LLMs work this way, which is why generation cost scales with output length."
+    },
+    {
+      "term": "Availability event",
+      "id": "availability-event",
+      "category": "modelmonitor",
+      "definition": "A record of an endpoint appearing or disappearing from a provider's catalog, with the observation date and source."
+    },
+    {
+      "term": "Base model",
+      "id": "base-model",
+      "category": "open-models",
+      "definition": "A pretrained model without instruction tuning. It completes text rather than answering; the same architecture with post-training becomes the chat model."
+    },
+    {
+      "term": "Benchmark",
+      "id": "benchmark",
+      "category": "performance",
+      "definition": "A standardized test for model capability (MMLU, GPQA, SWE-bench). Useful for comparison, increasingly saturated and contamination-prone; single numbers hide more than they reveal.",
+      "explanation": "Benchmarks are useful when the task, scoring method and test set match what you care about. Results can be distorted by contamination, prompt choices, tool setup and saturation, so one score should not stand in for overall model quality.",
+      "related": [
+        "leaderboard",
+        "elo",
+        "capability-proxy",
+        "price-performance"
+      ]
+    },
+    {
+      "term": "BF16",
+      "id": "bf16",
+      "category": "optimization",
+      "definition": "Brain float 16: same exponent range as FP32 with less precision. Preferred for training and inference of modern large models because it avoids overflow issues."
+    },
+    {
+      "term": "Canonical model",
+      "id": "canonical-model",
+      "category": "modelmonitor",
+      "definition": "The identity other records (aliases, endpoints) point to. Solves duplicate entries without fuzzy name matching."
+    },
+    {
+      "term": "Capability proxy",
+      "id": "capability-proxy",
+      "category": "performance",
+      "definition": "ModelMonitor's term for indirect signals like documented feature support or context size. Useful for comparison, explicitly not a measurement of intelligence."
+    },
+    {
+      "term": "Catalog baseline",
+      "id": "catalog-baseline",
+      "category": "modelmonitor",
+      "definition": "The first snapshot of a provider's catalog. Everything in it was already there; the baseline is not a batch of new releases."
+    },
+    {
+      "id": "chain-of-thought",
+      "term": "Chain of thought",
+      "category": "capabilities",
+      "definition": "A sequence of intermediate reasoning steps used to work through a problem before producing an answer.",
+      "explanation": "Some research and prompting methods expose intermediate steps, while many production reasoning systems keep internal reasoning hidden and return only the final answer or a short summary.",
+      "related": [
+        "reasoning-model",
+        "prompt"
+      ]
+    },
+    {
+      "term": "Checkpoint",
+      "id": "checkpoint",
+      "category": "open-models",
+      "definition": "A saved snapshot of model weights. Intermediate checkpoints during training are usually not released; 'the checkpoint' usually means the final weights."
+    },
+    {
+      "term": "Computer use",
+      "id": "computer-use",
+      "category": "capabilities",
+      "definition": "Models that see screenshots and emit mouse/keyboard actions to operate software. Early stage; demos outnumber deployments."
+    },
+    {
+      "term": "Confirmed",
+      "id": "confirmed",
+      "category": "modelmonitor",
+      "definition": "Verified by comparing multiple sources against each other, or by an official source confirming a secondary claim."
+    },
+    {
+      "term": "Context window",
+      "id": "context-window",
+      "category": "inference",
+      "definition": "The amount of tokenized information a model can work with at one time. It usually includes the prompt, conversation history, retrieved text, tool results and the model's output. A larger context window lets a model handle more information at once, but it does not automatically make the model smarter.",
+      "explanation": "The limit usually covers the prompt, conversation history, retrieved text, tool output and generated tokens, depending on the provider. A larger window lets the model see more at once but does not guarantee better reasoning or perfect recall.",
+      "example": "A 128K-token model can accept much more text than an 8K-token model, but actual usable output space and retrieval quality still depend on the implementation.",
+      "related": [
+        "token",
+        "long-context"
+      ]
+    },
+    {
+      "term": "CPU inference",
+      "id": "cpu-inference",
+      "category": "optimization",
+      "definition": "Running models on CPUs. Much slower but possible for small quantized models; llama.cpp popularized it."
+    },
+    {
+      "term": "Decoder",
+      "id": "decoder",
+      "category": "architecture",
+      "definition": "A model that generates text left to right, one token at a time. GPT-style models are decoders; this is the LLM lineage."
+    },
+    {
+      "term": "Dense model",
+      "id": "dense-model",
+      "category": "architecture",
+      "definition": "A model where every parameter participates in every token's computation, as opposed to mixture-of-experts. Simpler to reason about, more expensive per token at large sizes."
+    },
+    {
+      "term": "Deprecated",
+      "id": "deprecated",
+      "category": "modelmonitor",
+      "definition": "The provider announced a model is being phased out, usually with a shutdown date. The endpoint often keeps working in the meantime."
+    },
+    {
+      "term": "Distillation",
+      "id": "distillation",
+      "category": "training",
+      "definition": "Training a smaller model to imitate a larger one's outputs. Cheaper to run, usually a bit weaker. DeepSeek-R1's distilled variants are a well-known example."
+    },
+    {
+      "term": "Elo",
+      "id": "elo",
+      "category": "performance",
+      "definition": "A rating from pairwise comparisons, borrowed from chess. Chatbot Arena uses human votes; an Elo gap means a statistical tendency, not a guaranteed win."
+    },
+    {
+      "term": "Embedding",
+      "id": "embedding",
+      "category": "architecture",
+      "definition": "A numeric vector representing text so that similar meanings land near each other. Used for search, clustering and retrieval."
+    },
+    {
+      "term": "Embeddings",
+      "id": "embeddings",
+      "category": "retrieval",
+      "definition": "Vector representations of text used to find similar content. The retrieval half of RAG."
+    },
+    {
+      "term": "Encoder",
+      "id": "encoder",
+      "category": "architecture",
+      "definition": "A model that reads text and produces representations, without generating. BERT-style models are encoders; they power search and classification more than chat."
+    },
+    {
+      "term": "Experimental model",
+      "id": "experimental-model",
+      "category": "modelmonitor",
+      "definition": "A model published for research or feedback rather than production use. Often under a non-commercial license."
+    },
+    {
+      "term": "Expert",
+      "id": "expert",
+      "category": "architecture",
+      "definition": "One sub-network in a mixture-of-experts model. The name overstates it: experts are generic FFN blocks, not specialists in particular topics."
+    },
+    {
+      "term": "Fine-tuning",
+      "id": "fine-tuning",
+      "category": "training",
+      "definition": "Continuing to train a pretrained model on a smaller, focused dataset. Cheaper than pretraining; used for style, domains, or behavior."
+    },
+    {
+      "term": "First seen",
+      "id": "first-seen",
+      "category": "modelmonitor",
+      "definition": "The date ModelMonitor first recorded an entity locally. Not a launch date and not the model's actual first appearance worldwide."
+    },
+    {
+      "term": "Foundation model",
+      "id": "foundation-model",
+      "category": "fundamentals",
+      "definition": "One big model trained broadly on the first pass, then adapted to many tasks rather than trained per task. GPT-3 popularized the pattern."
+    },
+    {
+      "term": "FP16",
+      "id": "fp16",
+      "category": "optimization",
+      "definition": "16-bit float. The traditional inference precision; roughly half the memory of FP32."
+    },
+    {
+      "term": "FP32",
+      "id": "fp32",
+      "category": "optimization",
+      "definition": "32-bit floating point, the traditional full-precision training format. Rarely used for inference now."
+    },
+    {
+      "term": "FP4",
+      "id": "fp4",
+      "category": "optimization",
+      "definition": "4-bit float formats. Aggressive compression where quality preservation depends on the specific method."
+    },
+    {
+      "term": "FP8",
+      "id": "fp8",
+      "category": "optimization",
+      "definition": "8-bit float. Used for inference (and increasingly training) of large models; about 2x memory savings over FP16 with minimal quality loss when done properly."
+    },
+    {
+      "term": "Free model",
+      "id": "free-model",
+      "category": "modelmonitor",
+      "definition": "In ModelMonitor, a hosted endpoint with fresh evidence showing zero input and output token prices. It does not mean unlimited use, permanent availability or no account requirements.",
+      "related": [
+        "paid-model",
+        "input-price",
+        "output-price",
+        "last-checked"
+      ]
+    },
+    {
+      "term": "Function calling",
+      "id": "function-calling",
+      "category": "capabilities",
+      "definition": "The provider-side name for tool calling: the model outputs JSON matching a function signature instead of prose."
+    },
+    {
+      "term": "Gated model",
+      "id": "gated-model",
+      "category": "open-models",
+      "definition": "Downloadable weights behind an access request or acceptance of terms (common on Hugging Face). Gated is about access control, not license freedom."
+    },
+    {
+      "term": "Generative AI",
+      "id": "generative-ai",
+      "category": "fundamentals",
+      "definition": "Models that produce new content (text, images, audio) rather than only labels or scores. LLMs are the text-focused branch."
+    },
+    {
+      "term": "GGUF",
+      "id": "gguf",
+      "category": "optimization",
+      "definition": "The llama.cpp file format for quantized models on CPU and consumer GPUs. The format of choice for local model files."
+    },
+    {
+      "term": "GPU inference",
+      "id": "gpu-inference",
+      "category": "optimization",
+      "definition": "Running models on graphics processors, the standard for hosted inference because of throughput."
+    },
+    {
+      "term": "Grounding",
+      "id": "grounding",
+      "category": "retrieval",
+      "definition": "Anchoring model output in supplied sources so answers can be checked against them. RAG is the common mechanism."
+    },
+    {
+      "term": "Hallucination",
+      "id": "hallucination",
+      "category": "inference",
+      "definition": "A confident, wrong output, especially invented facts or citations. A consequence of next-token prediction, not a bug that can be fully patched out."
+    },
+    {
+      "term": "Inference",
+      "id": "inference",
+      "category": "inference",
+      "definition": "Running the trained model to get outputs. Everything about latency, pricing and tokens-per-second is about this stage."
+    },
+    {
+      "term": "Input price",
+      "id": "input-price",
+      "category": "modelmonitor",
+      "definition": "Cost per million input (prompt) tokens. Cached input, when priced separately, is tracked as its own field."
+    },
+    {
+      "term": "Input token",
+      "id": "input-token",
+      "category": "inference",
+      "definition": "A token in what you send to the model. Usually priced lower than output tokens."
+    },
+    {
+      "term": "Instruct model",
+      "id": "instruct-model",
+      "category": "open-models",
+      "definition": "The instruction-tuned variant of a base model, ready for prompt-response use."
+    },
+    {
+      "term": "Instruction tuning",
+      "id": "instruction-tuning",
+      "category": "training",
+      "definition": "SFT where the examples are instructions and good responses. The 2022 discovery that this alone made models dramatically more usable (InstructGPT, FLAN) kicked off the chatbot era."
+    },
+    {
+      "term": "INT4",
+      "id": "int4",
+      "category": "optimization",
+      "definition": "4-bit integer quantization. The common 'fits on a laptop' format; quality varies by method (GPTQ, AWQ and similar)."
+    },
+    {
+      "term": "INT8",
+      "id": "int8",
+      "category": "optimization",
+      "definition": "8-bit integer quantization. A classic post-training quantization target with well-understood calibration methods."
+    },
+    {
+      "term": "JSON mode",
+      "id": "json-mode",
+      "category": "capabilities",
+      "definition": "A lighter version of structured output: guarantees valid JSON, but not a specific schema."
+    },
+    {
+      "term": "Knowledge cutoff",
+      "id": "knowledge-cutoff",
+      "category": "retrieval",
+      "definition": "The last date of training data a model saw. Anything after that is unknown to the model unless you supply it via tools or retrieval."
+    },
+    {
+      "term": "Language model",
+      "id": "language-model",
+      "category": "fundamentals",
+      "definition": "A model trained to assign probabilities to sequences of language. Many modern generative language models do this by predicting the next token, while other language-model designs use different training objectives.",
+      "explanation": "For chat-style LLMs, next-token prediction is the usual core objective: given the text so far, the model estimates what token should come next. Repeating that process produces a response.",
+      "related": [
+        "llm",
+        "token",
+        "autoregressive-model"
+      ]
+    },
+    {
+      "term": "Last checked",
+      "id": "last-checked",
+      "category": "modelmonitor",
+      "definition": "When a field's source was last successfully consulted. Freshness thresholds build on this, so stale records drop out of 'current' views."
+    },
+    {
+      "term": "Latency",
+      "id": "latency",
+      "category": "performance",
+      "definition": "Round-trip time for a request. For LLMs it is dominated by output length, so comparisons need fixed output sizes."
+    },
+    {
+      "term": "Leaderboard",
+      "id": "leaderboard",
+      "category": "performance",
+      "definition": "Ranked comparisons of models, either benchmark aggregates (like LMSYS Arena's human preference votes) or curated suites. Treat movements within a few ranks as noise."
+    },
+    {
+      "term": "Legacy report",
+      "id": "legacy-report",
+      "category": "modelmonitor",
+      "definition": "A record from ModelMonitor's original manually assembled archive. Retained for history but marked unverified: the reported dates and identities have not been independently confirmed."
+    },
+    {
+      "term": "LLM",
+      "id": "llm",
+      "category": "fundamentals",
+      "definition": "A large language model: a language model trained at enough scale to handle many tasks from one general model. There is no fixed parameter count that officially makes a model an LLM.",
+      "explanation": "Size matters, but so do data quality, architecture, post-training and inference strategy. A smaller newer model can outperform a much larger older one.",
+      "related": [
+        "language-model",
+        "foundation-model",
+        "parameter-count"
+      ]
+    },
+    {
+      "term": "Local model",
+      "id": "local-model",
+      "category": "optimization",
+      "definition": "A model running on hardware you control rather than a hosted API. Local use can improve privacy, offline access and cost control, while capability depends heavily on the model and available hardware."
+    },
+    {
+      "id": "long-context",
+      "term": "Long context",
+      "category": "inference",
+      "definition": "A model setup designed to handle unusually large context windows, such as long documents, codebases or extended conversations.",
+      "explanation": "Long context increases how much information can fit into one request. It does not guarantee that a model will use every part of that context equally well.",
+      "related": [
+        "context-window",
+        "token"
+      ]
+    },
+    {
+      "term": "Machine learning",
+      "id": "machine-learning",
+      "category": "fundamentals",
+      "definition": "Programming by example instead of by rule. You show a system data with known outcomes, and it adjusts internal numbers until it can predict outcomes for data it has not seen."
+    },
+    {
+      "term": "MIT",
+      "id": "mit",
+      "category": "open-models",
+      "definition": "The most permissive common license: do almost anything, keep the copyright notice."
+    },
+    {
+      "term": "Mixture of Experts (MoE)",
+      "id": "mixture-of-experts",
+      "category": "architecture",
+      "definition": "An architecture with many expert sub-networks and a router that sends each token to a few of them. Lets total capacity grow while compute per token stays low. Common in current frontier open models.",
+      "explanation": "An MoE layer contains several expert subnetworks plus a router. The router chooses a small subset of experts for each token, so total model capacity can grow faster than the compute used on every token.",
+      "example": "A model can have hundreds of billions of total parameters while activating only a fraction of them for each token.",
+      "related": [
+        "expert",
+        "active-parameters",
+        "dense-model",
+        "parameter-count"
+      ]
+    },
+    {
+      "term": "Model card",
+      "id": "model-card",
+      "category": "open-models",
+      "definition": "Documentation shipped with a model describing intended use, training data at a high level, and limitations. Quality varies from excellent to marketing."
+    },
+    {
+      "term": "Model family",
+      "id": "model-family",
+      "category": "modelmonitor",
+      "definition": "Related models sharing lineage and naming (GPT, Claude, Llama, Qwen). ModelMonitor groups by canonical identity, not name similarity."
+    },
+    {
+      "term": "Model license",
+      "id": "model-license",
+      "category": "open-models",
+      "definition": "The legal terms attached to model weights. Ranges from MIT/Apache to custom community licenses with use restrictions. Read it before assuming commercial use is allowed."
+    },
+    {
+      "term": "Model reveal",
+      "id": "model-reveal",
+      "category": "modelmonitor",
+      "definition": "A verified disclosure connecting a stealth alias to its real identity, backed by an official statement. The event date is the announcement date, not the alias's first appearance."
+    },
+    {
+      "term": "Multimodal",
+      "id": "multimodal",
+      "category": "capabilities",
+      "definition": "A model that handles more than text: images, audio, video, either as input or output. Most frontier models are now at least image-input multimodal."
+    },
+    {
+      "term": "Neural network",
+      "id": "neural-network",
+      "category": "fundamentals",
+      "definition": "A stack of simple mathematical units connected in layers, each connection with an adjustable weight. Training tunes those weights. Deep just means many layers."
+    },
+    {
+      "term": "NVFP4",
+      "id": "nvfp4",
+      "category": "optimization",
+      "definition": "NVIDIA's 4-bit floating point format for inference on recent GPUs, designed to retain more quality than naive INT4."
+    },
+    {
+      "term": "Observed",
+      "id": "observed",
+      "category": "modelmonitor",
+      "definition": "Directly seen in a source's live data, without that source vouching for interpretation (for example, a model ID present in an API response)."
+    },
+    {
+      "term": "Official",
+      "id": "official",
+      "category": "modelmonitor",
+      "definition": "Evidence from the provider or publisher itself: their docs, API, or announcement. The strongest confidence tier here."
+    },
+    {
+      "term": "Open source",
+      "id": "open-source",
+      "category": "open-models",
+      "definition": "Licenses permitting use, modification and redistribution with minimal restriction (MIT, Apache 2.0). For LLMs it strictly describes the weight license; training code and data are usually not included, so 'open source' is a shorthand worth questioning.",
+      "explanation": "For AI models, the phrase is used inconsistently. ModelMonitor uses it conservatively for weights under a recognized permissive license and does not claim that every part of the training pipeline, data and code is open.",
+      "related": [
+        "open-weights",
+        "model-license",
+        "source-available",
+        "checkpoint"
+      ]
+    },
+    {
+      "term": "Open weights",
+      "id": "open-weights",
+      "category": "open-models",
+      "definition": "The model's parameters are downloadable, but the license may restrict commercial use, sub-licensing or specific uses (Llama-style community licenses). Open weights are not automatically open source.",
+      "explanation": "You can obtain the trained parameters, but the license or missing training assets may prevent the model from meeting a broader definition of open source. Open weights still matter because they allow local inference, inspection and fine-tuning.",
+      "related": [
+        "open-source",
+        "model-license",
+        "gated-model",
+        "checkpoint"
+      ]
+    },
+    {
+      "term": "Output price",
+      "id": "output-price",
+      "category": "modelmonitor",
+      "definition": "Cost per million generated tokens. Usually the larger share of cost for generative workloads."
+    },
+    {
+      "term": "Output token",
+      "id": "output-token",
+      "category": "inference",
+      "definition": "A token the model generates. Usually priced higher than input tokens, often 3-5x, because generation is more expensive than reading."
+    },
+    {
+      "term": "Paid model",
+      "id": "paid-model",
+      "category": "modelmonitor",
+      "definition": "An endpoint with documented nonzero token pricing. Unknown pricing is neither free nor paid."
+    },
+    {
+      "term": "Parameter",
+      "id": "parameter",
+      "category": "architecture",
+      "definition": "One adjustable number inside the network. Training nudges billions of these until the model's predictions fit the data."
+    },
+    {
+      "term": "Parameter count",
+      "id": "parameter-count",
+      "category": "architecture",
+      "definition": "How many weights a model has, usually quoted in billions (B). It bounds what the model can learn, but training data, architecture and post-training often matter more than the raw number."
+    },
+    {
+      "term": "Post-training",
+      "id": "post-training",
+      "category": "training",
+      "definition": "Everything after pretraining: SFT, preference tuning, reasoning training. Usually what separates a base model from a usable product."
+    },
+    {
+      "term": "Pretraining",
+      "id": "pretraining",
+      "category": "training",
+      "definition": "The first, most expensive training stage: predicting next tokens over trillions of words. Produces the base model that later stages adapt."
+    },
+    {
+      "term": "Preview",
+      "id": "preview",
+      "category": "modelmonitor",
+      "definition": "A model released in a preview or beta state, possibly rate-limited or changed without notice. Distinguished from stable releases in the timeline."
+    },
+    {
+      "term": "Price per 1M tokens",
+      "id": "price-per-1m-tokens",
+      "category": "modelmonitor",
+      "definition": "ModelMonitor's standard price unit, matching how most providers quote. Always check the currency; only USD is tracked here."
+    },
+    {
+      "term": "Price/performance",
+      "id": "price-performance",
+      "category": "performance",
+      "definition": "Capability per unit cost. Meaningful only when you define the workload; a cheap bad model is not good value."
+    },
+    {
+      "term": "Prompt",
+      "id": "prompt",
+      "category": "inference",
+      "definition": "The text you give a model. Getting consistently good outputs from prompts is a skill, and the term 'prompt engineering' describes it, half seriously."
+    },
+    {
+      "term": "Proprietary",
+      "id": "proprietary",
+      "category": "open-models",
+      "definition": "Available only through the provider's API or product; weights are not published."
+    },
+    {
+      "term": "Provider",
+      "id": "provider",
+      "category": "modelmonitor",
+      "definition": "The platform serving access to a model. The provider and the model maker can be different, so hosting alone is not evidence of who trained the model."
+    },
+    {
+      "term": "Quantization",
+      "id": "quantization",
+      "category": "optimization",
+      "definition": "Storing weights in fewer bits to shrink memory and speed up inference. 4-bit quantized models run on much smaller GPUs. Quality loss at 8-bit is usually negligible; at 2-4 bit it depends heavily on the method and model. Quantized variants are never the reference weights.",
+      "explanation": "Quantization reduces the precision used to store or compute model values. Lower precision usually reduces memory and can improve speed, but the effect on quality depends on the method, hardware and model.",
+      "example": "An FP16 checkpoint might be converted to INT4 or a 4-bit GGUF file so it can run on much less VRAM.",
+      "related": [
+        "fp16",
+        "fp8",
+        "fp4",
+        "int8",
+        "int4",
+        "gguf",
+        "vram"
+      ]
+    },
+    {
+      "term": "RAG",
+      "id": "rag",
+      "category": "retrieval",
+      "definition": "Retrieval-augmented generation: fetch relevant documents and put them in the context before the model answers. Reduces hallucination on private or current information.",
+      "explanation": "Instead of relying only on what the model learned during training, an application searches an external source first and puts the relevant material into the prompt. The model then answers using that retrieved context.",
+      "example": "A company chatbot can search internal policy documents, retrieve the relevant sections and ask the LLM to answer from those sections.",
+      "related": [
+        "embeddings",
+        "vector-database",
+        "grounding",
+        "context-window"
+      ]
+    },
+    {
+      "term": "Reasoning model",
+      "id": "reasoning-model",
+      "category": "capabilities",
+      "definition": "A model trained to produce long chains of thought before answering, trading extra tokens and latency for accuracy on hard problems (o1, DeepSeek-R1 style). The thinking is not human-like deliberation; it is learned text that improves the answer.",
+      "explanation": "The label usually means the model or product is designed to spend extra inference compute on hard problems. Providers implement this differently, so the term does not imply human-like thought or one universal architecture.",
+      "related": [
+        "chain-of-thought",
+        "reinforcement-learning"
+      ]
+    },
+    {
+      "term": "Reinforcement learning",
+      "id": "reinforcement-learning",
+      "category": "training",
+      "definition": "Training by reward instead of example: the model tries outputs, gets scored, and adjusts to score higher. Used for alignment and for reasoning training."
+    },
+    {
+      "term": "Release event",
+      "id": "release-event",
+      "category": "modelmonitor",
+      "definition": "A dated record of a model becoming available, with an explicit date basis: announcement, paper, or repository. Repository creation is never reported as a release."
+    },
+    {
+      "term": "Repository created",
+      "id": "repository-created",
+      "category": "modelmonitor",
+      "definition": "The date a Hugging Face repository was created. Useful for tracking activity, and consistently misleading as a launch date, so it is labeled separately."
+    },
+    {
+      "term": "Retired",
+      "id": "retired",
+      "category": "modelmonitor",
+      "definition": "The endpoint is no longer served. Tracked as a removal with the observation date, which may differ from the announced deprecation date."
+    },
+    {
+      "term": "RLHF",
+      "id": "rlhf",
+      "category": "training",
+      "definition": "Reinforcement learning from human feedback. Humans rank model outputs, a reward model learns the preferences, and RL pushes the model toward preferred behavior. What makes modern assistants polished, and sometimes sycophantic."
+    },
+    {
+      "term": "Safetensors",
+      "id": "safetensors",
+      "category": "optimization",
+      "definition": "A safe tensor-serialization format (no executable code embedded, unlike pickle). The standard on Hugging Face."
+    },
+    {
+      "term": "Sampling",
+      "id": "sampling",
+      "category": "inference",
+      "definition": "How a model picks the next token from its probability distribution. Deterministic at temperature 0; random otherwise, which is why repeated runs differ."
+    },
+    {
+      "term": "Self-attention",
+      "id": "self-attention",
+      "category": "fundamentals",
+      "definition": "Attention applied within the same sequence, so positions can use information from other positions in that sequence.",
+      "explanation": "The exact attention pattern depends on the model. Causal LLMs normally prevent a token from looking at future tokens during generation.",
+      "related": [
+        "attention",
+        "transformer",
+        "autoregressive-model"
+      ]
+    },
+    {
+      "term": "SFT",
+      "id": "sft",
+      "category": "training",
+      "definition": "Supervised fine-tuning: fine-tuning on curated prompt-response pairs written or approved by people. The first step in turning a base model into an assistant."
+    },
+    {
+      "term": "Source available",
+      "id": "source-available",
+      "category": "open-models",
+      "definition": "Code or weights you can read but not freely reuse under an OSI license. In practice most 'open' LLM releases are source-available or open-weights."
+    },
+    {
+      "term": "Speech-to-text",
+      "id": "speech-to-text",
+      "category": "capabilities",
+      "definition": "Audio transcription models. Usually separate products from LLMs, though some multimodal models handle audio directly."
+    },
+    {
+      "term": "Stealth model",
+      "id": "stealth-model",
+      "category": "modelmonitor",
+      "definition": "A model offered under an opaque codename, usually to gather feedback before reveal. Its maker and identity are unknown by design; ModelMonitor records the alias and evidence without guessing the maker."
+    },
+    {
+      "term": "Structured output",
+      "id": "structured-output",
+      "category": "capabilities",
+      "definition": "Provider features that constrain output to valid JSON matching a schema. Essential for programmatic use, since free-text models otherwise drift from format."
+    },
+    {
+      "term": "Synthetic data",
+      "id": "synthetic-data",
+      "category": "training",
+      "definition": "Training data generated by another model rather than humans. Widely used for reasoning and code; quality control is the hard part."
+    },
+    {
+      "term": "System prompt",
+      "id": "system-prompt",
+      "category": "inference",
+      "definition": "A hidden instruction that sets the model's behavior before the user's text. Where personality, refusals and formatting rules live."
+    },
+    {
+      "term": "Temperature",
+      "id": "temperature",
+      "category": "inference",
+      "definition": "A sampling dial: low values make output predictable, high values make it more varied. Does not make a model smarter or more accurate."
+    },
+    {
+      "term": "Text-to-speech",
+      "id": "text-to-speech",
+      "category": "capabilities",
+      "definition": "Models that generate audio speech from text. A separate model class from LLMs, increasingly integrated into voice assistants."
+    },
+    {
+      "term": "Throughput",
+      "id": "throughput",
+      "category": "performance",
+      "definition": "Total tokens per second across concurrent requests. What providers optimize for; what users usually experience is latency."
+    },
+    {
+      "term": "Time to first token",
+      "id": "time-to-first-token",
+      "category": "performance",
+      "definition": "How long it takes before the first generated token arrives. It strongly affects how responsive a model feels, even when total generation speed is high."
+    },
+    {
+      "term": "Token",
+      "id": "token",
+      "category": "inference",
+      "definition": "The chunk of text models actually read and write: common words are one token, rare words several. Roughly 0.75 words in English. Pricing and context limits are both measured in tokens."
+    },
+    {
+      "term": "Tokenizer",
+      "id": "tokenizer",
+      "category": "inference",
+      "definition": "The fixed dictionary and rules for splitting text into tokens. Different model families use different tokenizers, so the same text costs different amounts across providers."
+    },
+    {
+      "term": "Tokens per second",
+      "id": "tokens-per-second",
+      "category": "performance",
+      "definition": "Generation speed. Depends on hardware, batching and quantization as much as the model itself."
+    },
+    {
+      "term": "Tool calling",
+      "id": "tool-calling",
+      "category": "capabilities",
+      "definition": "The model emitting structured requests to run functions you define (search, calculation, API calls) and using the results. Same idea as function calling."
+    },
+    {
+      "term": "Top-p",
+      "id": "top-p",
+      "category": "inference",
+      "definition": "Another sampling control: keep only the most likely tokens whose probabilities add up to this fraction, then sample from those."
+    },
+    {
+      "term": "Transformer",
+      "id": "transformer",
+      "category": "fundamentals",
+      "definition": "The neural-network architecture introduced in 2017 that became the foundation of most modern LLMs. It processes sequences with attention instead of recurrent connections.",
+      "explanation": "In a causal language model, attention lets each token use relevant earlier tokens in the context. Other Transformer designs can use bidirectional attention or encoder-decoder layouts.",
+      "example": "GPT-style models use decoder-only Transformers; BERT uses an encoder-only Transformer.",
+      "related": [
+        "attention",
+        "self-attention",
+        "decoder",
+        "encoder"
+      ]
+    },
+    {
+      "term": "Unverified",
+      "id": "unverified",
+      "category": "modelmonitor",
+      "definition": "Plausible but unconfirmed: community reports, archive entries, or claims without a checkable source. Displayed with warnings and never promoted to fact."
+    },
+    {
+      "term": "Variant",
+      "id": "variant",
+      "category": "modelmonitor",
+      "definition": "A derived version of a model: fine-tune, quantization or size variant. Tracked as its own entity, never counted as a new foundation release."
+    },
+    {
+      "term": "Vector database",
+      "id": "vector-database",
+      "category": "retrieval",
+      "definition": "A database optimized for nearest-neighbor search over embeddings. Many are just indexes; the interesting choices are chunking and embedding model quality."
+    },
+    {
+      "term": "VLM",
+      "id": "vlm",
+      "category": "capabilities",
+      "definition": "Vision-language model: a model that takes images plus text. Ranges from OCR-capable document models to full visual reasoning."
+    },
+    {
+      "term": "VRAM",
+      "id": "vram",
+      "category": "optimization",
+      "definition": "GPU memory. The practical constraint on what you can run locally: a 7B model at 4-bit needs roughly 4-6 GB, a 70B model needs multiple large GPUs."
+    }
+  ]
+}

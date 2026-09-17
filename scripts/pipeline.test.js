@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { model, source, licenseOf, classify, migrateLegacy, resolveIdentity, mergeKnown, updateAvailability, appendHistory, reconstruct, digest, applyReveal } from "./pipeline.js";
-import { guardRows, collectZen, collectCatalog, collectHF, normalizeHF, parseDocs, request } from "./collectors.js";
+import { guardRows, collectZen, collectCatalog, collectHF, collectOpenRouter, collectGroq, collectGemini, normalizeHF, parseDocs, request } from "./collectors.js";
 import { validateData, validateCuration, validDate } from "./validation.js";
 
 const date = "2026-09-17";
@@ -147,18 +147,17 @@ test("legacy audit retains every archive record without unsupported metadata", a
   assert.equal(digest(bytes), digest(await readFile(new URL("../public/models.json", import.meta.url))));
 });
 
-test("curation has no invented stealth dates or seeded reveals", async () => {
+test("curation keeps unknown identities neutral and requires sourced reveal dates", async () => {
   const curation = JSON.parse(await readFile(new URL("../data/curation.json", import.meta.url)));
   validateCuration(curation);
-  assert.deepEqual(curation.reveals, []);
-  const union = curation.identities.find((i) => i.id === "opencode:union-alpha");
-  assert.equal(union.provider, "Unknown");
-  assert.equal(union.identity, "unknown");
+  for (const identity of curation.identities.filter((row) => row.identity === "unknown")) assert.equal(identity.provider, "Unknown");
+  for (const reveal of curation.reveals) if (reveal.dateSourceUrl) assert.ok(reveal.dateEvidence.includes(reveal.date));
   const invalid = structuredClone(curation);
   invalid.identities[0].firstSeen = "2026-09-16";
   assert.throws(() => validateCuration(invalid), /fabricated dates/);
   invalid.identities[0] = curation.identities[0];
-  invalid.links = [{ alias: "a", modelId: "b", sourceUrl: union.sourceUrl, evidence: "x" }, { alias: "a", modelId: "c", sourceUrl: union.sourceUrl, evidence: "x" }];
+  const sourceUrl = curation.identities[0].sourceUrl;
+  invalid.links = [{ alias: "a", modelId: "b", sourceUrl, evidence: "x" }, { alias: "a", modelId: "c", sourceUrl, evidence: "x" }];
   assert.throws(() => validateCuration(invalid), /Ambiguous/);
 });
 
@@ -230,6 +229,35 @@ test("documentation prices are exact-name joined, tiered and protocol-independen
   assert.throws(() => parseDocs("<html>error</html>"), /truncated/);
 });
 
+
+
+test("OpenRouter normalizes official pricing and free variants without maker inference", async () => {
+  const rows = Array.from({ length: 10 }, (_, i) => ({
+    id: `lab/model-${i}${i === 0 ? ":free" : ""}`, name: `Model ${i}`, context_length: 128000,
+    pricing: { prompt: i === 0 ? "0" : "0.000001", completion: i === 0 ? "0" : "0.000002" },
+    architecture: { input_modalities: ["text"], output_modalities: ["text"] },
+    supported_parameters: ["tools", "response_format"],
+    reasoning: i === 0 ? { mandatory: false } : null,
+  }));
+  const result = await collectOpenRouter(0, { fetcher: response({ data: rows }) });
+  assert.equal(result.length, 10);
+  assert.equal(result[0].pricing.input, 0);
+  assert.equal(result[1].pricing.input, 1);
+  assert.equal(result[1].pricing.output, 2);
+  assert.equal(result[0].reasoning, true);
+  assert.equal(result[0].tools, true);
+  assert.equal(result[0].structuredOutput, true);
+});
+
+test("Groq and Gemini live catalogs are optional authenticated collectors", async () => {
+  assert.equal(await collectGroq(null), null);
+  assert.equal(await collectGemini(null), null);
+  const groq = await collectGroq("key", 0, { fetcher: response({ data: [{ id: "model-a", owned_by: "Lab", active: true, context_window: 8192 }] }) });
+  assert.deepEqual(groq, [{ id: "model-a", name: "model-a", owner: "Lab", context: 8192 }]);
+  const gemini = await collectGemini("key", 0, { fetcher: response({ models: [{ name: "models/gemini-test", displayName: "Gemini Test", inputTokenLimit: 1000, outputTokenLimit: 200, supportedGenerationMethods: ["generateContent"] }] }) });
+  assert.equal(gemini[0].id, "gemini-test");
+  assert.equal(gemini[0].context, 1000);
+});
 test("JSON validation accepts empty states and rejects broken references, dates and provenance", () => {
   assert.equal(validateData(emptyData()), true);
   assert.equal(validDate("2026-02-30"), false);
