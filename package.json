@@ -1,12 +1,18 @@
 {
   "name": "modelmonitor",
   "version": "1.0.0",
-  "description": "April 2026 AI Model Release Tracker",
+  "description": "AI model release, availability and market intelligence dashboard",
   "type": "module",
   "scripts": {
-    "fetch": "node scripts/fetch-models.js"
+    "fetch": "node scripts/fetch-models.js",
+    "test": "node --test scripts/*.test.js",
+    "lint": "node scripts/lint.js",
+    "validate": "node scripts/validate-data.js"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7"
   }
 }

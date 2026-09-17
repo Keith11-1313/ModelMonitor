@@ -1,335 +1,197 @@
-/**
- * fetch-models.js
- *
- * Runs on a schedule via GitHub Actions.
- * Pulls new AI model releases from two sources:
- *   1. HuggingFace API  — open-weights models
- *   2. Official lab RSS / Atom feeds — closed-source announcements (GPT, Claude, Gemini, etc.)
- *
- * Run manually: node scripts/fetch-models.js
- */
+import { readFile, mkdir, writeFile, rename } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+import { collectZen, collectCatalog, collectDocs, collectHF, ZEN, CATALOG, DOCS } from "./collectors.js";
+import { day, model, source, mergeKnown, resolveIdentity, migrateLegacy, updateAvailability, appendHistory, sorted, digest, event, applyReveal } from "./pipeline.js";
+import { validateCuration, validateData } from "./validation.js";
+import { buildTimeline } from "./timeline.js";
 
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+const root = dirname(dirname(fileURLToPath(import.meta.url)));
+const destination = join(root, "public", "data");
+const date = day();
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const MODELS_PATH = path.join(__dirname, "../public/models.json");
-
-// ── Config ────────────────────────────────────────────────────────────────────
-
-const DAYS_BACK = 10; // slight overlap so no model is missed between runs
-
-const HF_ORGS = [
-  { org: "openai",      company: "OpenAI",      color: "#10a37f" },
-  { org: "anthropic",   company: "Anthropic",   color: "#e879a0" },
-  { org: "google",      company: "Google",      color: "#34d399" },
-  { org: "meta-llama",  company: "Meta",        color: "#3b82f6" },
-  { org: "deepseek-ai", company: "DeepSeek",    color: "#5b9cf6" },
-  { org: "Qwen",        company: "Alibaba",     color: "#f97316" },
-  { org: "mistralai",   company: "Mistral AI",  color: "#f59e0b" },
-  { org: "moonshotai",  company: "Moonshot AI", color: "#a78bfa" },
-  { org: "THUDM",       company: "Zhipu AI",    color: "#facc15" },
-  { org: "microsoft",   company: "Microsoft",   color: "#0078d4" },
-  { org: "nvidia",      company: "NVIDIA",      color: "#76b900" },
-  { org: "01-ai",       company: "01.AI",       color: "#ec4899" },
-  { org: "tiiuae",      company: "TII",         color: "#8b5cf6" },
-  { org: "cohere",      company: "Cohere",      color: "#39d353" },
-  { org: "xai-org",     company: "xAI",         color: "#e5e7eb" },
-];
-
-// Low threshold — important models may not have many likes within 24 h of release
-const MIN_LIKES = 10;
-
-// Official blog RSS / Atom feeds. Failures are silently skipped.
-const RSS_SOURCES = [
-  { url: "https://openai.com/blog/rss.xml",                   company: "OpenAI",     color: "#10a37f", license: "Proprietary"  },
-  { url: "https://www.anthropic.com/rss.xml",                 company: "Anthropic",  color: "#e879a0", license: "Proprietary"  },
-  { url: "https://blog.google/technology/ai/rss/",            company: "Google",     color: "#34d399", license: "Proprietary"  },
-  { url: "https://ai.meta.com/blog/rss/",                     company: "Meta",       color: "#3b82f6", license: "Open Weights" },
-  { url: "https://mistral.ai/feed.xml",                       company: "Mistral AI", color: "#f59e0b", license: "Mixed"        },
-  { url: "https://x.ai/blog/rss.xml",                        company: "xAI",        color: "#e5e7eb", license: "Proprietary"  },
-];
-
-// A post title must match at least one of these to be considered a model release
-const RELEASE_PATTERNS = [
-  /\bintroducing\b/i,
-  /\blaunching\b/i,
-  /\bannouncing\b/i,
-  /\bnew model\b/i,
-  /\bour (new|latest|next)\b/i,
-  /model (release|update|launch)/i,
-  /\b(gpt|claude|gemini|llama|grok|mistral|deepseek|qwen|phi|copilot|o\d)[\s\-]?[\d.]/i,
-];
-
-const EXCLUDE_PATTERNS = [
-  /partnership/i, /acqui/i, /funding/i, /\bhiring\b/i,
-  /safety (report|paper)/i, /policy/i,
-];
-
-// ── Helpers ───────────────────────────────────────────────────────────────────
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-function weekOfMonth(dateStr) {
-  return Math.ceil(new Date(dateStr).getDate() / 7);
+async function readJSON(path, fallback) {
+  try { return JSON.parse(await readFile(path, "utf8")); }
+  catch (error) { if (error.code === "ENOENT") return fallback; throw error; }
 }
 
-function inferLicense(tags = []) {
-  const t = tags.join(" ").toLowerCase();
-  if (t.includes("apache-2.0"))                              return "Apache 2.0";
-  if (t.includes("mit"))                                     return "MIT";
-  if (t.includes("llama"))                                   return "Open Weights";
-  if (t.includes("gpl"))                                     return "Open Source";
-  if (t.includes("proprietary") || t.includes("commercial")) return "Proprietary";
-  return "Open Weights";
+async function save(name, value) {
+  const path = join(destination, `${name}.json`);
+  const text = `${JSON.stringify(value, null, 2)}\n`;
+  let old;
+  try { old = await readFile(path, "utf8"); } catch (error) { if (error.code !== "ENOENT") throw error; }
+  if (old === text) return;
+  await writeFile(`${path}.tmp`, text);
+  await rename(`${path}.tmp`, path);
 }
-
-// Normalise a name so "GPT-5" and "gpt5" map to the same slug for dedup
-function slug(name) {
-  return name.toLowerCase().replace(/[\s\-_.]/g, "");
-}
-
-// ── RSS parsing (no external deps) ───────────────────────────────────────────
-
-function stripCDATA(s) {
-  return (s ?? "").replace(/^<!\[CDATA\[/, "").replace(/\]\]>$/, "").trim();
-}
-
-function getTag(xml, tag) {
-  return xml.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"))?.[1]?.trim() ?? null;
-}
-
-function getLinkHref(xml) {
-  return xml.match(/<link[^>]+href="([^"]+)"/i)?.[1] ?? null;
-}
-
-function parseDate(s) {
-  if (!s) return null;
-  const d = new Date(s);
-  return isNaN(d) ? null : d;
-}
-
-function parseRSSFeed(xml) {
-  const items = [];
-  // RSS 2.0 <item>
-  for (const [, body] of xml.matchAll(/<item[^>]*>([\s\S]*?)<\/item>/gi)) {
-    const title = stripCDATA(getTag(body, "title") ?? "");
-    const link  = getTag(body, "link") || getLinkHref(body);
-    const date  = parseDate(getTag(body, "pubDate") || getTag(body, "dc:date"));
-    if (title) items.push({ title, link, date });
-  }
-  // Atom <entry>
-  for (const [, body] of xml.matchAll(/<entry[^>]*>([\s\S]*?)<\/entry>/gi)) {
-    const title = stripCDATA(getTag(body, "title") ?? "");
-    const link  = getLinkHref(body) || getTag(body, "link");
-    const date  = parseDate(getTag(body, "published") || getTag(body, "updated"));
-    if (title) items.push({ title, link, date });
-  }
-  return items;
-}
-
-function isModelRelease(title) {
-  return (
-    RELEASE_PATTERNS.some((p) => p.test(title)) &&
-    !EXCLUDE_PATTERNS.some((p) => p.test(title))
-  );
-}
-
-function cleanTitle(title) {
-  return title
-    .replace(/^(introducing|launching|announcing|hello,?\s+|meet\s+|releasing\s+)/i, "")
-    .replace(/\s*[:|–—]\s*[\s\S]+$/, "")   // remove subtitle
-    .replace(/\s+is (here|now available|available now).*/i, "")
-    .trim() || title;
-}
-
-// ── HuggingFace ───────────────────────────────────────────────────────────────
-
-async function fetchHFModels(orgEntry, since) {
-  const { org, company, color } = orgEntry;
-  const url =
-    `https://huggingface.co/api/models?author=${org}` +
-    `&sort=createdAt&direction=-1&limit=20&full=true`;
-
-  const res = await fetch(url, {
-    headers: { "User-Agent": "ModelMonitor/1.0" },
-    signal: AbortSignal.timeout(12_000),
-  });
-  if (!res.ok) { console.warn(`    HTTP ${res.status}`); return []; }
-
-  const data = await res.json();
-  const cutoff = new Date(since);
-
-  return data
-    .filter((m) => new Date(m.createdAt) >= cutoff && (m.likes ?? 0) >= MIN_LIKES)
-    .map((m) => ({
-      name:    m.modelId?.split("/")[1] ?? m.id,
-      hfId:    m.modelId ?? m.id,
-      company,
-      date:    m.createdAt.slice(0, 10),
-      tags:    (m.tags ?? []).filter((t) => !t.startsWith("en") && t.length < 30).slice(0, 4),
-      license: inferLicense(m.tags),
-      color,
-      source:  "huggingface",
-    }));
-}
-
-// ── RSS ───────────────────────────────────────────────────────────────────────
-
-async function fetchRSSModels(source, since) {
-  const { url, company, color, license } = source;
-  try {
-    const res = await fetch(url, {
-      headers: { "User-Agent": "ModelMonitor/1.0" },
-      signal: AbortSignal.timeout(12_000),
-    });
-    if (!res.ok) return [];
-
-    const xml  = await res.text();
-    const items = parseRSSFeed(xml);
-    const cutoff = new Date(since);
-
-    return items
-      .filter((i) => i.date && i.date >= cutoff && isModelRelease(i.title))
-      .map((i) => ({
-        name:    cleanTitle(i.title),
-        company,
-        date:    i.date.toISOString().slice(0, 10),
-        tags:    [],
-        license,
-        color,
-        source:  "rss",
-        link:    i.link,
-      }));
-  } catch {
-    return []; // feed doesn't exist or timed out — skip silently
-  }
-}
-
-// ── Enrichment ────────────────────────────────────────────────────────────────
-
-async function fetchSummary(modelName) {
-  const q = encodeURIComponent(modelName.replace(/-/g, " "));
-  try {
-    const res = await fetch(
-      `https://api.semanticscholar.org/graph/v1/paper/search?query=${q}&fields=title,abstract,tldr&limit=1`,
-      { headers: { "User-Agent": "ModelMonitor/1.0" }, signal: AbortSignal.timeout(8_000) },
-    );
-    if (!res.ok) return null;
-    const data = await res.json();
-    const p = data.data?.[0];
-    return p?.tldr?.text ?? p?.abstract?.slice(0, 200) ?? null;
-  } catch {
-    return null;
-  }
-}
-
-async function fetchHighlights(hfId) {
-  if (!hfId) return [];
-  try {
-    const res = await fetch(`https://huggingface.co/${hfId}/raw/main/README.md`, {
-      headers: { "User-Agent": "ModelMonitor/1.0" },
-      signal: AbortSignal.timeout(8_000),
-    });
-    if (!res.ok) return [];
-    const text = await res.text();
-    return [...text.matchAll(/^[-*]\s+(.+)/gm)]
-      .map((m) => m[1].trim())
-      .filter((b) => b.length > 10 && b.length < 120)
-      .slice(0, 3);
-  } catch {
-    return [];
-  }
-}
-
-// ── Main ──────────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log("── ModelMonitor fetch-models ──\n");
-
-  const existing    = JSON.parse(fs.readFileSync(MODELS_PATH, "utf8"));
-  const knownSlugs  = new Set(existing.map((m) => slug(m.name)));
-  let   nextId      = Math.max(...existing.map((m) => m.id), 0) + 1;
-
-  const since = new Date();
-  since.setDate(since.getDate() - DAYS_BACK);
-  const sinceStr = since.toISOString();
-  console.log(`Looking back ${DAYS_BACK} days (since ${sinceStr.slice(0, 10)})\n`);
-
-  const candidates = [];
-
-  // 1 — HuggingFace
-  console.log(`[HuggingFace] Scanning ${HF_ORGS.length} orgs…`);
-  for (const entry of HF_ORGS) {
-    process.stdout.write(`  ${entry.org}… `);
+  const archiveBytes = await readFile(join(root, "public", "models.json"));
+  const archive = JSON.parse(archiveBytes.toString("utf8"));
+  const curation = await readJSON(join(root, "data", "curation.json"));
+  validateCuration(curation);
+  const names = ["models", "timeline", "availability", "history", "metadata", "limits", "signals", "audit", "cache"];
+  const previous = Object.fromEntries(await Promise.all(names.map(async (name) => [name, await readJSON(join(destination, `${name}.json`), name === "history" ? { snapshots: [] } : name === "metadata" ? { sources: [] } : name === "cache" ? {} : [])])));
+  const migration = migrateLegacy(archive, date);
+  const map = new Map(previous.models.map((m) => [m.id, m]));
+  for (const row of migration.models) {
+    const old = map.get(row.id);
+    map.set(row.id, old ? { ...old, type: row.type } : row);
+  }
+  const timeline = [...previous.timeline];
+  const history = structuredClone(previous.history);
+  const cache = structuredClone(previous.cache);
+  const statuses = [];
+  const oldStatus = (id) => previous.metadata.sources.find((s) => s.id === id);
+  async function collect(id, name, url, action) {
+    const old = oldStatus(id);
     try {
-      const models = await fetchHFModels(entry, sinceStr);
-      process.stdout.write(`${models.length} found\n`);
-      candidates.push(...models);
-    } catch (e) {
-      process.stdout.write(`error (${e.message})\n`);
+      const data = await action();
+      statuses.push({ id, name, url, status: "ok", lastChecked: date, lastSuccess: date, count: Array.isArray(data) ? data.length : data.rows?.length ?? data.models?.length });
+      console.log(`${id}: ok`);
+      return data;
+    } catch (error) {
+      statuses.push({ id, name, url, status: "error", lastChecked: date, lastSuccess: old?.lastSuccess ?? null, ...(old?.count !== undefined ? { count: old.count } : {}), error: error.message });
+      console.warn(`${id}: ${error.message}; preserving previous data`);
+      return null;
     }
-    await sleep(300);
   }
-
-  // 2 — RSS feeds
-  console.log(`\n[RSS] Scanning ${RSS_SOURCES.length} feeds…`);
-  for (const src of RSS_SOURCES) {
-    process.stdout.write(`  ${src.company}… `);
-    const models = await fetchRSSModels(src, sinceStr);
-    process.stdout.write(`${models.length} releases\n`);
-    candidates.push(...models);
-    await sleep(200);
-  }
-
-  // 3 — Deduplicate & enrich
-  console.log(`\n${candidates.length} candidates total. Filtering duplicates…\n`);
-  const newModels = [];
-
-  for (const c of candidates) {
-    const s = slug(c.name);
-    if (knownSlugs.has(s)) {
-      console.log(`  skip (exists): ${c.name}`);
-      continue;
+  const [zen, catalog, docs] = await Promise.all([
+    collect("opencode", "OpenCode Zen official availability", ZEN, () => collectZen(oldStatus("opencode")?.count)),
+    collect("models-dev", "models.dev secondary opencode catalog", CATALOG, () => collectCatalog(oldStatus("models-dev")?.count)),
+    collect("zen-docs", "OpenCode Zen official documentation and prices", DOCS, () => collectDocs(oldStatus("zen-docs")?.count)),
+  ]);
+  if (catalog) cache.catalog = { rows: catalog, lastSuccess: date };
+  if (docs) cache.docs = { rows: docs.rows, lastSuccess: date };
+  const verified = new Set();
+  const assertions = [...curation.identities, ...curation.links, ...curation.reveals, ...curation.limits];
+  const evidencePages = new Map([[DOCS, docs?.text ?? null]]);
+  for (const assertion of assertions) {
+    if (!evidencePages.has(assertion.sourceUrl)) {
+      const text = await collect(`evidence:${digest(assertion.sourceUrl).slice(0, 12)}`, "Curated identity evidence", assertion.sourceUrl, async () => {
+        const { request, plain } = await import("./collectors.js");
+        return plain((await request(assertion.sourceUrl, { text: true })).value);
+      });
+      evidencePages.set(assertion.sourceUrl, text);
     }
-    knownSlugs.add(s);
-    console.log(`  + ${c.name} (${c.company}) [${c.source}]`);
-
-    await sleep(500);
-    const [summary, highlights] = await Promise.all([
-      fetchSummary(c.name),
-      fetchHighlights(c.hfId ?? null),
-    ]);
-
-    newModels.push({
-      id:         nextId++,
-      name:       c.name,
-      company:    c.company,
-      date:       c.date,
-      week:       weekOfMonth(c.date),
-      color:      c.color,
-      tags:       c.tags,
-      license:    c.license,
-      summary:    summary ?? `New release by ${c.company}.`,
-      highlights: highlights.length > 0
-        ? highlights
-        : [`Released by ${c.company}`, `Date: ${c.date}`],
-      ...(c.link ? { link: c.link } : {}),
+    const page = evidencePages.get(assertion.sourceUrl);
+    if (page?.includes(assertion.evidence)) verified.add(assertion);
+    else statuses.push({ id: `curation:${digest(assertion).slice(0, 12)}`, name: "Curated assertion verification", url: assertion.sourceUrl, status: "error", lastChecked: date, lastSuccess: null, error: "Source unavailable or exact evidence no longer present; prior assertion retained without refreshing its provenance." });
+  }
+  for (const identity of curation.identities) {
+    if (!verified.has(identity) || map.get(identity.id)?.canonicalId) continue;
+    const row = mergeKnown(map.get(identity.id), {
+      ...model(identity.id, identity.name, identity.provider, date),
+      identity: identity.identity, type: identity.type, summary: identity.summary,
+      aliases: [`opencode/${identity.providerModelId}`], confidence: "official",
+      sources: [source(identity.sourceUrl, "Source-backed curated identity; protocol does not identify maker", "official", date)],
     });
+    map.set(row.id, row);
   }
-
-  if (newModels.length === 0) {
-    console.log("No new notable models found.");
-    return;
+  const links = curation.links.filter((l) => verified.has(l));
+  for (const link of links) {
+    if (!map.has(link.modelId)) throw new Error(`Curated link target missing: ${link.modelId}`);
+    const row = map.get(link.modelId);
+    row.aliases = [...new Set([...row.aliases, link.alias])].sort();
   }
-
-  fs.writeFileSync(MODELS_PATH, JSON.stringify([...newModels, ...existing], null, 2));
-  console.log(`\n✓ Added ${newModels.length} model(s):`);
-  newModels.forEach((m) => console.log(`  • ${m.name} (${m.company})`));
+  let availability = previous.availability;
+  if (zen) {
+    const secondary = new Map((cache.catalog?.rows ?? []).map((r) => [r.id, r]));
+    const official = new Map((cache.docs?.rows ?? []).map((r) => [r.id, r]));
+    const observations = [];
+    for (const { id } of zen) {
+      const canonicalId = resolveIdentity(`opencode:${id}`, [...map.values()], links);
+      const prior = map.get(canonicalId);
+      const supplemental = secondary.get(id);
+      const documented = official.get(id);
+      const row = mergeKnown(prior, {
+        ...(prior ?? model(canonicalId, documented?.name ?? supplemental?.name ?? id, "Unknown", date)),
+        aliases: [`opencode/${id}`], lastChecked: date,
+        context: supplemental?.context ?? null, reasoning: supplemental?.reasoning ?? null,
+        tools: supplemental?.tools ?? null, structuredOutput: supplemental?.structuredOutput ?? null,
+        modalities: supplemental?.modalities ?? [],
+        sources: [source(ZEN, "Official Zen membership; not maker attribution or release date", "official", date),
+          ...(supplemental ? [source(CATALOG, "Secondary catalog capabilities; exact provider model ID", "observed", cache.catalog.lastSuccess)] : [])],
+      });
+      map.set(canonicalId, row);
+      const price = documented?.pricing ?? supplemental?.pricing ?? null;
+      const priorAvailability = previous.availability.find((a) => a.id === `opencode:${id}`);
+      const priceSources = documented?.pricing ? [source(DOCS, "Official published Zen token prices", "official", cache.docs.lastSuccess)] : supplemental?.pricing ? [source(CATALOG, "Secondary catalog prices; not verified official pricing", "observed", cache.catalog.lastSuccess)] : [];
+      const priceDate = documented?.pricing ? cache.docs.lastSuccess : supplemental?.pricing ? cache.catalog.lastSuccess : null;
+      const preservePrice = priorAvailability?.pricing && ((!documented?.pricing && priorAvailability.sources.some((s) => s.url === DOCS && s.label.includes("prices"))) || (priceDate && priorAvailability.sources.some((s) => s.label.includes("prices") && s.lastChecked > priceDate)));
+      observations.push({
+        id: `opencode:${id}`, modelId: canonicalId, provider: "opencode", providerModelId: id,
+        status: "available", free: preservePrice ? priorAvailability.free : price ? price.input === 0 && price.output === 0 : null,
+        context: row.context, reasoning: row.reasoning, tools: row.tools, structuredOutput: row.structuredOutput,
+        modalities: row.modalities, pricing: preservePrice ? priorAvailability.pricing : price,
+        confidence: "official", sources: [...row.sources.filter((s) => s.url === ZEN || s.url === CATALOG), ...priceSources],
+        firstSeen: date, lastChecked: date,
+        notes: "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source.",
+      });
+      if (!prior && history.snapshots.some((s) => s.provider === "opencode") && row.type === "stealth") timeline.push(event("stealth_appearance", row, date, undefined, undefined, timeline.length));
+    }
+    const baseline = !history.snapshots.some((s) => s.provider === "opencode");
+    const result = updateAvailability(previous.availability, observations, "opencode", date, baseline, timeline.length);
+    availability = result.availability;
+    timeline.push(...result.events);
+    appendHistory(history, availability, "opencode", date);
+  }
+  for (let offset = 0; offset < curation.hfOrganizations.length; offset += 3) {
+    await Promise.all(curation.hfOrganizations.slice(offset, offset + 3).map(async (organization) => {
+      const id = `hf:${organization.org}`;
+      const url = `https://huggingface.co/api/models?author=${encodeURIComponent(organization.org)}&sort=createdAt&direction=-1&limit=${curation.hfRecentPerOrganization}&full=true&config=true&cardData=true`;
+      const existing = [...map.values()].filter((m) => m.hfId?.split("/")[0] === organization.org);
+      const result = await collect(id, `Hugging Face official organization: ${organization.org}`, url, () => collectHF(organization, curation.hfRecentPerOrganization, existing, date));
+      if (!result) return;
+      if (result.errors.length) {
+        const status = statuses.find((s) => s.id === id);
+        status.status = "error";
+        status.lastSuccess = oldStatus(id)?.lastSuccess ?? null;
+        status.error = `Partial detail failure: ${result.errors.map((e) => `${e.id}: ${e.error}`).join("; ")}`;
+      }
+      for (const row of result.models) {
+        const old = map.get(row.id);
+        const next = mergeKnown(old, row);
+        if (old?.license && !row.license) next.openness = old.openness;
+        map.set(row.id, next);
+      }
+    }));
+  }
+  for (const reveal of curation.reveals) {
+    if (!verified.has(reveal)) continue;
+    applyReveal([...map.values()], availability, timeline, reveal, date);
+  }
+  if (zen) appendHistory(history, availability, "opencode", date);
+  const limits = curation.limits.map((limit) => {
+    const old = previous.limits.find((l) => l.provider === limit.provider && l.product === limit.product && l.plan === limit.plan);
+    const { evidence, ...value } = limit;
+    return verified.has(limit) ? { ...value, lastChecked: date } : old;
+  }).filter(Boolean);
+  const metadata = {
+    schemaVersion: 1, generatedAt: date, sources: sorted(statuses),
+    archive: { url: "/public/models.json", count: archive.length, sha256: digest(archiveBytes) },
+    limitations: [
+      "firstSeen is the first local observation, never an inferred launch date. API created timestamps and HF repository creation dates are not release dates.",
+      "The first successful provider snapshot is a baseline, not a batch of new releases or availability-added events. History only covers observations since this pipeline began.",
+      "models.dev is a secondary catalog. Only exact IDs in the live official Zen endpoint establish current Zen availability. API protocol and SDK packages never identify a maker.",
+      "Unknown provider means no curated maker attribution, even for familiar names. Provider-scoped IDs are intentionally not fuzzy-merged with HF or legacy records; duplicate underlying models may remain.",
+      "Legacy entities are unverified, have null release dates, and retain a separate legacyReportDate. Blog/product stories are separated from conservative model candidates; all archive reports remain unverified pending review; archive summaries and benchmarks are never imported.",
+      "open_source is shorthand for a recognized permissive weight license, not full OSI AI certification. Restrictive recognized licenses are open_weights; missing, custom or ambiguous licenses stay unknown. HF hosting alone establishes neither.",
+      `HF coverage is selected official organizations, latest ${curation.hfRecentPerOrganization} repositories per organization plus all previously observed repositories. Full per-repository metadata is fetched; this is not a complete release census. HF removals are not inferred from this rolling selection.`,
+      "Fine-tunes, quantizations and optimizations are not foundation releases. Unclassified repositories use type=model, not foundation. No launch or benchmark claims are derived from names, parameter suffixes, or repository creation timestamps.",
+      "Source failures retain known fields and prices. A greater-than-25-percent catalog contraction is rejected for review, which may delay real mass-removal detection. Individual HF metadata failures retain their prior rows.",
+      "Prices are USD per million tokens; official documentation takes precedence over secondary catalog prices. Free does not mean unlimited. Conditional discounts, input length tiers and fees require checking the source. Unknown free status is neither free nor paid.",
+      "Observation timestamps have UTC day precision to limit six-hour schedule churn. Same-day meaningful transitions append ordered snapshots/events; no-change checks refresh at most daily. Generated time is a build date, not evidence that every source succeeded.",
+      "No OpenRouter or RSS discovery is used. Signals and verified release dates remain empty until source-backed evidence is added. Published deprecation does not imply endpoint removal.",
+    ],
+  };
+  const output = { models: sorted([...map.values()]), timeline: buildTimeline([...map.values()], availability, timeline), availability: sorted(availability), history, metadata, limits, signals: previous.signals, audit: migration.audit, cache };
+  validateData(output, archive);
+  if (digest(await readFile(join(root, "public", "models.json"))) !== digest(archiveBytes)) throw new Error("Legacy archive changed during collection");
+  await mkdir(destination, { recursive: true });
+  for (const name of names.filter((n) => n !== "metadata")) await save(name, output[name]);
+  await save("metadata", metadata);
+  console.log(`Validated ${output.models.length} entities, ${availability.length} availability rows, ${output.timeline.length} events; legacy ${archive.length} entries unchanged.`);
 }
 
-main().catch((e) => {
-  console.error("FATAL:", e);
-  process.exit(1);
-});
+main().catch((error) => { console.error(error); process.exitCode = 1; });

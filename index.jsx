@@ -1,876 +1,230 @@
-const { useState, useEffect, useCallback } = React;
+const { useState, useEffect, useMemo, useRef, useCallback, useDeferredValue } = React;
 
-// ── DATA is fetched from /public/models.json at runtime ──
-// Add new models there; this file does not need to change.
+const DATASETS = ["models", "timeline", "availability", "history", "metadata", "limits", "signals", "audit"];
+const NAV = [["overview", "Overview"], ["timeline", "Timeline"], ["releases", "Releases"], ["free", "Free Models"], ["open", "Open Models"], ["analysis", "Analysis"]];
+const FEATURES = [["reasoning", "Reasoning"], ["tools", "Tools"], ["multimodal", "Multimodal"], ["structuredOutput", "Structured output"]];
+const EVENT_LABELS = { legacy_report: "Legacy report · unverified", repository_created: "Repository created · not a launch", catalog_baseline: "Catalog baseline · first observation", model_release: "Model release", release: "Model release", model_reveal: "Identity revealed", availability_added: "Availability added", availability_removed: "Availability removed", became_free: "Became free", no_longer_free: "No longer free", price_change: "Price changed", context_change: "Context changed", capability_update: "Capabilities updated" };
+const EMPTY = [];
+const DAY = 86400000;
 
-const FALLBACK_MODELS = [
-  {
-    id: 1, name: "DeepSeek V4", company: "DeepSeek", date: "2026-04-24",
-    week: 4, color: "#0f62fe",
-    tags: ["Open Weights", "1.6T Params"],
-    license: "Open Weights",
-    summary: "1.6T parameters, 1M context window. Costs a fraction of GPT-5.5.",
-    highlights: ["1.6T parameters", "1M token context", "Fraction of GPT-5.5 cost"],
-  },
-  {
-    id: 2, name: "GPT-5.5", company: "OpenAI", date: "2026-04-23",
-    week: 4, color: "#0f62fe",
-    tags: ["Proprietary", "Agentic"],
-    license: "Proprietary",
-    summary: "Smartest OpenAI model yet. Stronger coding and agentic workflows at same speed as 5.4.",
-    highlights: ["Strongest OpenAI model", "Improved agentic workflows", "Same speed as GPT-5.4"],
-  },
-  {
-    id: 3, name: "Qwen3.6-27B", company: "Alibaba", date: "2026-04-22",
-    week: 4, color: "#0f62fe",
-    tags: ["Open Source"],
-    license: "Open Source",
-    summary: "Open source mid-size coding model. Solid performance for its parameter count.",
-    highlights: ["27B parameters", "Open source", "Strong coding focus"],
-  },
-  {
-    id: 4, name: "Kimi K2.6", company: "Moonshot AI", date: "2026-04-20",
-    week: 3, color: "#0f62fe",
-    tags: ["Open Weights", "MoE", "Multi-agent"],
-    license: "Open Weights",
-    summary: "1T open-weight MoE model. 300 parallel sub-agents, capable of running 12+ hours nonstop.",
-    highlights: ["1T parameter MoE", "300 parallel sub-agents", "12+ hour continuous runs"],
-  },
-  {
-    id: 5, name: "Qwen3.6-Max-Preview", company: "Alibaba", date: "2026-04-20",
-    week: 3, color: "#0f62fe",
-    tags: ["Proprietary", "Flagship"],
-    license: "Proprietary",
-    summary: "Proprietary flagship. Claimed top scores on 6 major coding benchmarks.",
-    highlights: ["Proprietary flagship tier", "Top 6 coding benchmarks", "Max-tier preview"],
-  },
-  {
-    id: 6, name: "Claude Opus 4.7", company: "Anthropic", date: "2026-04-16",
-    week: 3, color: "#0f62fe",
-    tags: ["Proprietary", "Reasoning"],
-    license: "Proprietary",
-    summary: "Biggest upgrade for complex reasoning and long-running agentic tasks.",
-    highlights: ["Complex reasoning upgrade", "Long-running agent work", "Anthropic flagship"],
-  },
-  {
-    id: 7, name: "Qwen3.6-35B-A3B", company: "Alibaba", date: "2026-04-16",
-    week: 3, color: "#0f62fe",
-    tags: ["Open Source", "Apache 2.0"],
-    license: "Apache 2.0",
-    summary: "Open source release under Apache 2.0 license. 35B total, 3B active parameters.",
-    highlights: ["35B total / 3B active params", "Apache 2.0", "Open source"],
-  },
-  {
-    id: 8, name: "Llama 4", company: "Meta", date: "2026-04-08",
-    week: 2, color: "#0f62fe",
-    tags: ["Open Weights", "10M Context"],
-    license: "Open Weights",
-    summary: "Open weights. Scout model ships with 10M token context window.",
-    highlights: ["10M token context", "Scout model variant", "Open weights"],
-  },
-  {
-    id: 9, name: "GLM-5.1", company: "Zhipu AI", date: "2026-04-07",
-    week: 2, color: "#0f62fe",
-    tags: ["MIT License"],
-    license: "MIT",
-    summary: "MIT licensed. Outperformed GPT-5.4 and Opus 4.6 on SWE-bench Pro.",
-    highlights: ["MIT license", "Beats GPT-5.4 on SWE-bench Pro", "Beats Opus 4.6 on SWE-bench Pro"],
-  },
-  {
-    id: 10, name: "Claude Mythos Preview", company: "Anthropic", date: "2026-04-07",
-    week: 2, color: "#0f62fe",
-    tags: ["Gated", "ASL-4"],
-    license: "Gated",
-    summary: "Gated to 50 organizations. Triggered Anthropic ASL-4 safety protocol.",
-    highlights: ["Limited to 50 orgs", "ASL-4 safety triggered", "Preview access only"],
-  },
-  {
-    id: 11, name: "Gemma 4 31B", company: "Google", date: "2026-04-02",
-    week: 1, color: "#0f62fe",
-    tags: ["Open Source"],
-    license: "Open Source",
-    summary: "Open source. Outperforms models 20x its size in benchmarks.",
-    highlights: ["31B parameters", "Beats models 20x larger", "Open source"],
-  },
-];
-
-// ── IBM Carbon CDS token map (white theme) ──
-const CDS = {
-  background:       "#ffffff",
-  layer01:          "#f4f4f4",
-  layer02:          "#e0e0e0",
-  textPrimary:      "#161616",
-  textSecondary:    "#525252",
-  textPlaceholder:  "#6f6f6f",
-  borderSubtle:     "#c6c6c6",
-  borderStrong:     "#8d8d8d",
-  interactive:      "#0f62fe",
-  interactiveHover: "#0353e9",
-  interactiveActive:"#002d9c",
-  linkPrimary:      "#0f62fe",
-  linkHover:        "#0043ce",
-  focusRing:        "#0f62fe",
-  supportError:     "#da1e28",
-  supportSuccess:   "#24a148",
-  supportWarning:   "#f1c21b",
-  supportInfo:      "#0f62fe",
-  navBg:            "#161616",
-  navText:          "#c6c6c6",
-  navTextHover:     "#ffffff",
-  gray90:           "#262626",
-  gray80:           "#393939",
-  gray70:           "#525252",
-  gray60:           "#6f6f6f",
-  gray50:           "#8d8d8d",
-  gray30:           "#c6c6c6",
-  gray20:           "#e0e0e0",
-  gray10:           "#f4f4f4",
-  blue10:           "#edf5ff",
-};
-
-// License badge styles using Carbon semantic colors
-const LICENSE_STYLE = {
-  "Open Weights": { bg: CDS.blue10,              color: CDS.interactive,    border: "#a6c8ff" },
-  "Open Source":  { bg: CDS.blue10,              color: CDS.interactive,    border: "#a6c8ff" },
-  "MIT":          { bg: "#defbe6",               color: CDS.supportSuccess, border: "#a7f0ba" },
-  "Apache 2.0":   { bg: "#defbe6",               color: CDS.supportSuccess, border: "#a7f0ba" },
-  "Proprietary":  { bg: "#fff1f1",               color: CDS.supportError,   border: "#ffd7d9" },
-  "Gated":        { bg: "#fff8e1",               color: "#b28600",          border: "#ffe082" },
-};
-
-// Company accent (used only for bar charts & decorative dots — single blue palette)
-const COMPANY_COLORS = {
-  "DeepSeek":   CDS.interactive,
-  "OpenAI":     "#0043ce",
-  "Alibaba":    "#002d9c",
-  "Moonshot AI":"#4589ff",
-  "Anthropic":  "#78a9ff",
-  "Meta":       "#0f62fe",
-  "Zhipu AI":   "#0353e9",
-  "Google":     "#0043ce",
-};
-
-const WEEKS = [
-  { id: "all", label: "All Releases", range: "Apr 1 – 24" },
-  { id: 4, label: "Week 4", range: "Apr 21 – 27" },
-  { id: 3, label: "Week 3", range: "Apr 14 – 20" },
-  { id: 2, label: "Week 2", range: "Apr 7 – 13" },
-  { id: 1, label: "Week 1", range: "Apr 1 – 6" },
-];
-
-function formatDate(d) {
-  return new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+function list(value) { return Array.isArray(value) ? value : EMPTY; }
+function human(value) { return value == null || value === "" ? "Unknown" : String(value).replaceAll("_", " "); }
+function numeric(value) { return typeof value === "number" && Number.isFinite(value); }
+function number(value) { return numeric(value) ? value.toLocaleString("en-US") : "Unknown"; }
+function truth(value) { return value === true ? "Yes" : value === false ? "No" : "Unknown"; }
+function day(value) { return typeof value === "string" && /^\d{4}-\d{2}-\d{2}/.test(value) && Number.isFinite(Date.parse(value)) ? value.slice(0, 10) : ""; }
+function date(value) { return day(value) ? new Date(`${day(value)}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) : "Unknown"; }
+function fresh(value, now) { const age = now - Date.parse(value); return Number.isFinite(age) && age >= 0 && age <= 2 * DAY; }
+function safeUrl(value) {
+  if (typeof value !== "string") return null;
+  if (value.startsWith("/public/")) return `.${value}`;
+  if (value.startsWith("./public/")) return value;
+  try { const url = new URL(value); return ["https:", "http:"].includes(url.protocol) ? url.href : null; } catch { return null; }
 }
-function formatDateShort(d) {
-  return new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+function canonical(model, modelMap) {
+  const seen = new Set();
+  let current = model;
+  while (current?.canonicalId && !seen.has(current.id)) {
+    seen.add(current.id);
+    const next = modelMap.get(current.canonicalId);
+    if (!next) break;
+    current = next;
+  }
+  return current;
+}
+function isOpen(model) { return ["open_source", "open_weights"].includes(model.openness) && Boolean(model.license) && model.license !== "unknown"; }
+function openness(model) { return isOpen(model) ? model.openness === "open_source" ? "Permissive weight license" : "Open weights · restrictions" : model.openness === "proprietary" ? "Proprietary" : "Unknown"; }
+function verifiedRelease(model) { return Boolean(day(model.releaseDate)) && ["official", "confirmed"].includes(model.confidence) && !["product_announcement", "unverified_entity"].includes(model.type) && !String(model.id).startsWith("legacy:"); }
+function feature(row, key) { return key === "multimodal" ? (list(row.modalities).length ? row.modalities.some(m => m !== "text") : null) : row[key] ?? null; }
+function coverage(row) { return FEATURES.filter(([key]) => feature(row, key) === true).length; }
+function price(row) { const p = row.pricing; return p && numeric(p.input) && numeric(p.output) ? `${p.currency || "Unknown currency"} ${p.input} / ${p.output}` : "Unknown"; }
+function currentEvidence(row, metadata, now) {
+  if (row.status !== "available" || !fresh(row.lastChecked, now)) return false;
+  const health = list(metadata?.sources);
+  const sources = list(row.sources);
+  if (!health.length || !sources.length) return false;
+  return sources.every(source => {
+    const status = health.find(item => item.url === source.url || item.id === source.sourceId);
+    return status?.status === "ok" && fresh(status.lastSuccess, now) && fresh(source.lastChecked, now);
+  });
+}
+function currentPriced(row, metadata, now) {
+  return currentEvidence(row, metadata, now) && numeric(row.pricing?.input) && numeric(row.pricing?.output) && row.pricing.input >= 0 && row.pricing.output >= 0 && list(row.sources).some(source => /pric|cost/i.test(source.label || "") && fresh(source.lastChecked, now));
+}
+function currentFree(row, metadata, now) { return row.free === true && row.pricing?.input === 0 && row.pricing?.output === 0 && currentPriced(row, metadata, now); }
+function searchable(model, availability = EMPTY) { return [model.name, model.id, model.canonicalId, model.provider, model.hfId, model.license, model.type, ...list(model.aliases), ...availability.flatMap(row => [row.provider, row.providerModelId, row.id])].filter(Boolean).join(" ").toLowerCase(); }
+function countBy(rows, getKey) { const counts = new Map(); rows.forEach(row => { const key = getKey(row); counts.set(key, (counts.get(key) || 0) + 1); }); return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])); }
+function emptyData(key) { return key === "history" ? { snapshots: [] } : key === "metadata" ? { sources: [], limitations: [] } : []; }
+function validData(key, data) {
+  if (key === "metadata") return data && !Array.isArray(data) && Array.isArray(data.sources);
+  if (key === "history") return data && Array.isArray(data.snapshots) && data.snapshots.every(row => row && typeof row === "object");
+  return Array.isArray(data) && data.every(row => row && typeof row === "object" && !Array.isArray(row) && (!["models", "availability", "timeline"].includes(key) || typeof row.id === "string"));
+}
+function useDatasets() {
+  const [state, setState] = useState(() => Object.fromEntries(DATASETS.map(key => [key, { status: "loading", data: emptyData(key) }])));
+  const controllers = useRef(new Map());
+  const load = useCallback(async key => {
+    controllers.current.get(key)?.abort();
+    const controller = new AbortController();
+    controllers.current.set(key, controller);
+    setState(old => ({ ...old, [key]: { status: "loading", data: emptyData(key) } }));
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+      const response = await fetch(`./public/data/${key}.json`, { signal: controller.signal, cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      if (!validData(key, data)) throw new Error("Unexpected dataset format");
+      if (controllers.current.get(key) === controller) setState(old => ({ ...old, [key]: { status: "ready", data } }));
+    } catch (error) {
+      if (controllers.current.get(key) === controller) setState(old => ({ ...old, [key]: { status: "error", data: emptyData(key), error: error.name === "AbortError" ? "Request timed out" : error.message } }));
+    } finally { clearTimeout(timeout); }
+  }, []);
+  useEffect(() => {
+    DATASETS.forEach(key => load(key));
+    return () => { const active = [...controllers.current.values()]; controllers.current.clear(); active.forEach(controller => controller.abort()); };
+  }, [load]);
+  return [state, load];
 }
 
+function SourceLink({ url, children }) { const href = safeUrl(url); return href ? <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{children || url}</a> : <span>{children || "Source unavailable"}</span>; }
+function Tag({ children, warning = false }) { return <span className={`tag${warning ? " warning" : ""}`}>{children}</span>; }
+function Empty({ children = "No records match these filters. Try clearing the filters." }) { return <div className="empty">{children}</div>; }
+function Table({ caption, headers, children }) { return <div className="table-scroll" role="region" aria-label={caption} tabIndex={0}><table><caption>{caption}</caption><thead><tr>{headers.map(label => <th scope="col" key={label}>{label}</th>)}</tr></thead><tbody>{children}</tbody></table></div>; }
+function Sources({ sources }) { return list(sources).length ? <ul className="source-list">{sources.map((source, i) => <li key={`${source.url}-${i}`}><SourceLink url={source.url}>{source.label || source.url || "Source"}</SourceLink><small>{human(source.confidence)} · Checked {date(source.lastChecked)}{source.field ? ` · Field: ${human(source.field)}` : ""}</small></li>)}</ul> : <p className="muted">No source evidence supplied.</p>; }
+function RecordFields({ record }) {
+  if (record == null) return <span className="muted">Unknown</span>;
+  if (typeof record !== "object") return typeof record === "boolean" ? truth(record) : <span>{String(record)}</span>;
+  if (Array.isArray(record)) return record.length ? <ul className="record-list">{record.map((item, index) => <li key={index}><RecordFields record={item} /></li>)}</ul> : <span className="muted">None documented</span>;
+  return <dl className="record-fields">{Object.entries(record).map(([key, value]) => <React.Fragment key={key}><dt>{human(key.replace(/([a-z])([A-Z])/g, "$1 $2"))}</dt><dd>{/url|link/i.test(key) && typeof value === "string" ? <SourceLink url={value} /> : <RecordFields record={value} />}</dd></React.Fragment>)}</dl>;
+}
+function LoadStatus({ state, retry }) {
+  const loading = DATASETS.filter(key => state[key].status === "loading");
+  const errors = DATASETS.filter(key => state[key].status === "error");
+  return <div aria-live="polite">{loading.length > 0 && <p className="notice">Loading {loading.join(", ")}… Other sections remain usable.</p>}{errors.map(key => <div className="notice warning" key={key}><span><strong>{human(key)} unavailable.</strong> {state[key].error}. This dataset is empty; no replacement records are shown.</span><button className="secondary" onClick={() => retry(key)}>Retry {key}</button></div>)}</div>;
+}
+function SearchFilters({ query, setQuery, provider, setProvider, providers, children, reset }) { return <div className="filters"><label className="search">Search<input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Name, alias, provider ID, HF ID, license" /></label><label>Provider<select value={provider} onChange={event => setProvider(event.target.value)}><option value="">All providers</option>{providers.map(value => <option key={value} value={value}>{human(value)}</option>)}</select></label>{children}<button className="secondary filter-reset" onClick={reset}>Clear filters</button></div>; }
+function DateFacts({ model }) { return <dl className="date-facts"><dt>Release</dt><dd>{date(model.releaseDate)}{model.releaseDate && !verifiedRelease(model) ? " · unverified" : ""}</dd><dt>Legacy report</dt><dd>{date(model.legacyReportDate)}</dd><dt>Repository created</dt><dd>{date(model.repositoryCreatedAt)}</dd><dt>Date basis</dt><dd>{human(model.dateBasis)}</dd></dl>; }
+function ModelButton({ model, onSelect, children }) { return <button className="text-button" onClick={() => onSelect(model)}>{children || model.name || model.id}</button>; }
+function EventList({ events, modelMap, onSelect }) {
+  if (!events.length) return <Empty>No timeline events to show. Switch to all observations or broaden your filters. An empty timeline does not mean no models were released.</Empty>;
+  const groups = new Map();
+  events.forEach(event => { const key = day(event.date).slice(0, 7) || "unknown"; if (!groups.has(key)) groups.set(key, []); groups.get(key).push(event); });
+  return <div className="timeline">{[...groups].map(([month, rows]) => <section className="timeline-month" key={month}><h2>{month === "unknown" ? "Date unknown" : new Date(`${month}-01T00:00:00Z`).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })}</h2><ol>{rows.map(event => {
+    const model = modelMap.get(event.modelId);
+    const caveat = event.type === "legacy_report" ? "Unverified archive report date, not a verified release." : event.type === "repository_created" ? "Hugging Face repository creation, not a launch date." : event.type === "catalog_baseline" ? "Initial catalog observation, not a release or a newly added endpoint." : null;
+    return <li key={event.id}><time dateTime={day(event.date) || undefined}>{date(event.date)}</time><div className="event-body"><div className="event-meta"><Tag warning={event.confidence === "unverified" || event.type === "legacy_report"}>{EVENT_LABELS[event.type] || human(event.type)}</Tag><span>{human(event.provider)} · {human(event.confidence)}</span></div><h3>{event.title || human(event.type)}</h3>{caveat && <p className="event-caveat">{caveat}</p>}{event.description && <p>{event.description}</p>}{event.previousAlias && <p>Original alias: <strong>{event.previousAlias}</strong></p>}{model ? <ModelButton model={model} onSelect={onSelect}>View identity and evidence for {model.name}</ModelButton> : <p className="muted">Linked entity: {event.modelId || "Unknown"} · details unavailable</p>}<details><summary>Event evidence and changes</summary><Sources sources={event.sources} />{(event.before !== undefined || event.after !== undefined) && <RecordFields record={{ before: event.before ?? null, after: event.after ?? null }} />}</details></div></li>;
+  })}</ol></section>)}</div>;
+}
+function TimelinePage({ events, models, modelMap, availability, onSelect }) {
+  const [query, setQuery] = useState("");
+  const [provider, setProvider] = useState("");
+  const [category, setCategory] = useState("");
+  const [start, setStart] = useState("");
+  const [end, setEnd] = useState("");
+  const [all, setAll] = useState(false);
+  const search = useDeferredValue(query.trim().toLowerCase());
+  const providers = [...new Set(events.map(event => event.provider).filter(Boolean))].sort();
+  const categories = [...new Set(events.map(event => event.type).filter(Boolean))].sort();
+  const invalid = Boolean(start && end && start > end);
+  const filtered = useMemo(() => events.filter(event => {
+    const model = modelMap.get(event.modelId) || {};
+    const text = `${searchable(model, availability.filter(row => row.modelId === model.id))} ${event.title || ""} ${event.description || ""} ${event.previousAlias || ""} ${event.provider || ""} ${event.type || ""}`.toLowerCase();
+    return !invalid && (all || event.notable === true) && (!provider || event.provider === provider) && (!category || event.type === category) && (!start || day(event.date) >= start) && (!end || (day(event.date) && day(event.date) <= end)) && (!search || text.includes(search));
+  }).sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))), [events, models, modelMap, availability, search, provider, category, start, end, all, invalid]);
+  return <><PageHeading title="Timeline" description="A dated record of reports, discoveries and meaningful changes. Each event states what its date actually represents." /><SearchFilters {...{ query, setQuery, provider, setProvider, providers }} reset={() => { setQuery(""); setProvider(""); setCategory(""); setStart(""); setEnd(""); setAll(false); }}><label>Event category<select value={category} onChange={event => setCategory(event.target.value)}><option value="">All categories</option>{categories.map(value => <option key={value} value={value}>{EVENT_LABELS[value] || human(value)}</option>)}</select></label><label>From<input type="date" value={start} onChange={event => setStart(event.target.value)} /></label><label>Through<input type="date" value={end} onChange={event => setEnd(event.target.value)} /></label></SearchFilters><div className="section-toolbar"><label className="checkbox"><input type="checkbox" checked={all} onChange={event => setAll(event.target.checked)} />Include all observations, including catalog baselines</label><span role="status">{number(filtered.length)} events · {all ? "All observations" : "Notable only"}</span></div>{invalid && <p role="alert" className="notice warning">The start date must be on or before the end date.</p>}<EventList events={filtered} modelMap={modelMap} onSelect={onSelect} /></>;
+}
+function PageHeading({ title, description }) { return <header className="page-heading"><h1>{title}</h1><p>{description}</p></header>; }
+function CatalogPage({ mode, models, availability, onSelect }) {
+  const [query, setQuery] = useState("");
+  const [provider, setProvider] = useState("");
+  const [kind, setKind] = useState("");
+  const [sort, setSort] = useState("observed");
+  const search = useDeferredValue(query.trim().toLowerCase());
+  const open = mode === "open";
+  const eligible = useMemo(() => open ? models.filter(isOpen) : models, [models, open]);
+  const providers = [...new Set(eligible.map(model => model.provider).filter(Boolean))].sort();
+  const rows = useMemo(() => eligible.filter(model => (!provider || model.provider === provider) && (!kind || (open ? model.openness === kind : kind === "verified" ? verifiedRelease(model) : model.type === kind)) && (!search || searchable(model, availability.filter(row => row.modelId === model.id)).includes(search))).sort((a, b) => sort === "name" ? String(a.name || a.id).localeCompare(String(b.name || b.id)) : sort === "downloads" ? (b.downloads ?? -1) - (a.downloads ?? -1) : String(b[sort === "release" ? "releaseDate" : "firstSeen"] || "").localeCompare(String(a[sort === "release" ? "releaseDate" : "firstSeen"] || "")) || a.id.localeCompare(b.id)), [eligible, provider, kind, open, search, availability, sort]);
+  return <><PageHeading title={open ? "Open Models" : "Releases & discovered entities"} description={open ? "Documented weight licenses, not assumptions based on hosting. Permissive licenses and restricted open weights stay separate." : "The full discovery catalog: models, previews, aliases and product announcements. Tracked entities are not a count of verified launches."} /><p className="notice">{open ? `${models.filter(model => !model.openness || model.openness === "unknown" || (["open_source", "open_weights"].includes(model.openness) && !isOpen(model))).length} entities have unknown or undocumented openness and are excluded. “Permissive” describes weight licensing, not full OSI AI certification. Free hosted access is a separate question.` : "Release date, legacy report date and repository creation are separate fields. First observed is only the start of local tracking; none of these other dates is substituted for a release."}</p><SearchFilters {...{ query, setQuery, provider, setProvider, providers }} reset={() => { setQuery(""); setProvider(""); setKind(""); setSort("observed"); }}><label>{open ? "Weight license class" : "Entity type"}<select value={kind} onChange={event => setKind(event.target.value)}><option value="">All {open ? "documented licenses" : "entities"}</option>{open ? <><option value="open_source">Permissive weight license</option><option value="open_weights">Restricted open weights</option></> : <><option value="verified">Verified release dates only</option>{[...new Set(models.map(model => model.type).filter(Boolean))].sort().map(value => <option key={value} value={value}>{human(value)}</option>)}</>}</select></label><label>Sort<select value={sort} onChange={event => setSort(event.target.value)}><option value="observed">First observed, newest</option><option value="release">Release date, newest</option><option value="name">Name</option>{open && <option value="downloads">Downloads, highest</option>}</select></label></SearchFilters><p className="result-count" role="status">{number(rows.length)} {open ? "documented open entities" : "tracked entities"}</p>{rows.length ? <Table caption={open ? "Documented open models" : "Discovered entities and separate date evidence"} headers={open ? ["Model / provider", "Weight license", "Architecture / parameters", "Context / popularity", "Date evidence"] : ["Entity / provider", "Type / confidence", "Date evidence", "First observed", "License"]}>{rows.map(model => <tr key={model.id}><th scope="row"><ModelButton model={model} onSelect={onSelect} /><small>{human(model.provider)}</small><small className="mono">{model.id}</small></th>{open ? <><td><Tag>{openness(model)}</Tag><small>{model.license}</small></td><td>{human(model.architecture)}<small>Total: {number(model.parameters)}</small><small>Active: {number(model.activeParameters)}</small><small>Quantization: {human(model.quantization)}</small></td><td>{number(model.context)} tokens<small>{number(model.downloads)} downloads</small><small>{number(model.likes)} likes · popularity only</small></td><td><DateFacts model={model} /></td></> : <><td>{human(model.type)}<small><Tag warning={model.confidence === "unverified"}>{human(model.confidence)}</Tag></small></td><td><DateFacts model={model} /></td><td>{date(model.firstSeen)}</td><td>{human(model.license)}<small>{openness(model)}</small></td></>}</tr>)}</Table> : <Empty />}</>;
+}
+function AvailabilityTable({ rows, modelMap, onSelect, current = false }) { return <Table caption={current ? "Current free endpoints with fresh zero-price evidence" : "Not current: retained free claims"} headers={["Endpoint / identity", "Price: input / output", "Documented features", "Context", "Evidence / conditions"]}>{rows.map(row => {
+  const model = modelMap.get(row.modelId);
+  return <tr key={row.id}><th scope="row">{model ? <ModelButton model={model} onSelect={onSelect}>{row.providerModelId || model.name}</ModelButton> : row.providerModelId || row.id}<small>{human(row.provider)}</small><small className="mono">{row.modelId}</small></th><td>{price(row)}<small>per {row.pricing?.unit || "unknown unit"}</small><Tag warning={!current}>{current ? "Current free token pricing" : "Not current / not verified"}</Tag></td><td>{FEATURES.map(([key, label]) => <small key={key}>{label}: {truth(feature(row, key))}</small>)}</td><td>{number(row.context)} tokens</td><td><small>Checked {date(row.lastChecked)}</small><small>Status: {human(row.status)} · Free: {truth(row.free)}</small><p>{row.notes || "Tier conditions and quotas are not documented in this record. Check the provider source."}</p><Sources sources={row.sources} /></td></tr>;
+})}</Table>; }
+function FreePage({ availability, metadata, now, modelMap, onSelect }) {
+  const [query, setQuery] = useState("");
+  const [provider, setProvider] = useState("");
+  const search = useDeferredValue(query.trim().toLowerCase());
+  const providers = [...new Set(availability.map(row => row.provider).filter(Boolean))].sort();
+  const matches = row => (!provider || row.provider === provider) && (!search || `${searchable(modelMap.get(row.modelId) || {}, [row])} ${row.notes || ""}`.toLowerCase().includes(search));
+  const rows = availability.filter(row => currentFree(row, metadata, now) && matches(row));
+  const excluded = availability.filter(row => row.free === true && !currentFree(row, metadata, now) && matches(row));
+  return <><PageHeading title="Free Models" description="Hosted endpoints with available status, an explicit free flag and fresh zero input/output token prices. Free does not mean unlimited." /><p className="notice">Evidence must be no older than 48 hours, measured from its UTC date (day precision). A failed, missing or stale contributing source excludes the record from current results. Unknown pricing is neither free nor paid.</p><SearchFilters {...{ query, setQuery, provider, setProvider, providers }} reset={() => { setQuery(""); setProvider(""); }} /><div className="section-toolbar"><p role="status">{rows.length} current free endpoints</p><a href="#analysis">Usage limits and methodology</a></div>{rows.length ? <AvailabilityTable rows={rows} modelMap={modelMap} onSelect={onSelect} current /> : <Empty>No current free endpoints satisfy the evidence and freshness checks. Retry failed datasets or inspect the source status in Analysis.</Empty>}<section className="section"><h2>Not current</h2><p className="muted">Retained free claims with removed availability, stale or failed sources, or insufficient price evidence. These do not contribute to the current free count.</p>{excluded.length ? <AvailabilityTable rows={excluded} modelMap={modelMap} onSelect={onSelect} /> : <Empty>No excluded free claims match these filters.</Empty>}<p className="footnote">{availability.filter(row => row.free == null).length} endpoints have unknown free status across the loaded catalog; they are not included in either free or paid totals.</p></section></>;
+}
+function Bars({ title, description, rows, format = number }) { const maximum = Math.max(1, ...rows.map(row => row[1])); return <section className="chart-panel"><h2>{title}</h2><p>{description}</p>{rows.length ? <ol className="bars">{rows.map(([label, value], index) => <li key={`${label}-${index}`}><div className="bar-label"><span>{label}</span><strong className="mono">{format(value)}</strong></div><div className="bar-track" aria-hidden="true"><div style={{ width: `${Math.max(0, value) / maximum * 100}%` }} /></div></li>)}</ol> : <Empty>No documented data for this comparison.</Empty>}</section>; }
+function FeatureChart({ free, paid }) { return <section className="chart-panel wide"><h2>Free vs paid: documented feature support</h2><p>Endpoint counts, not benchmark scores. Groups use current availability and fresh price evidence. Unknown fields are not treated as unsupported.</p><Table caption={`Feature support among ${free.length} free and ${paid.length} paid endpoints`} headers={["Feature", "Free: yes / no / unknown", "Paid: yes / no / unknown"]}>{FEATURES.map(([key, label]) => <tr key={key}><th scope="row">{label}</th>{[free, paid].map((group, index) => { const yes = group.filter(row => feature(row, key) === true).length; const no = group.filter(row => feature(row, key) === false).length; return <td key={index}><div className="feature-meter" aria-hidden="true"><span style={{ width: `${group.length ? yes / group.length * 100 : 0}%` }} /></div><span className="mono">{yes} / {no} / {group.length - yes - no}</span><small>of {group.length} endpoints</small></td>; })}</tr>)}</Table></section>; }
+function Scatter({ rows }) {
+  const points = rows.filter(row => row.pricing?.currency === "USD" && row.pricing?.unit === "1M tokens").map(row => ({ row, x: row.pricing.input + row.pricing.output, y: coverage(row) }));
+  const maximum = Math.max(1, ...points.map(point => point.x));
+  return <section className="chart-panel wide"><h2>Price vs feature coverage proxy</h2><p>Coverage is a count of documented reasoning, tools, multimodal and structured output support (0–4), not intelligence. Unknown support contributes no point, not a negative capability claim. Price is 1M input + 1M output tokens in USD; it is not a workload-adjusted value score.</p>{points.length ? <><svg className="plot" viewBox="0 0 760 300" role="img" aria-label={`Price versus documented feature count for ${points.length} endpoints. Exact values follow in the data table.`}><title>Price versus feature coverage, not intelligence</title>{[0, 1, 2, 3, 4].map(value => <g key={value}><line className="grid-line" x1="65" x2="735" y1={245 - value * 50} y2={245 - value * 50} /><text x="48" y={250 - value * 50} textAnchor="end">{value}</text></g>)}{[0, 0.25, 0.5, 0.75, 1].map(ratio => <text key={ratio} x={65 + ratio * 660} y="268" textAnchor="middle">${(maximum * ratio).toFixed(2)}</text>)}{points.map(point => <circle key={point.row.id} cx={65 + point.x / maximum * 660} cy={245 - point.y * 50} r="5" className={point.row.free === true ? "free-point" : "paid-point"}><title>{point.row.providerModelId}: ${point.x}, {point.y}/4 documented features</title></circle>)}<text x="400" y="294" textAnchor="middle">USD per 1M input + 1M output tokens</text><text transform="translate(16 150) rotate(-90)" textAnchor="middle">Documented features</text></svg><p className="footnote">Blue: free. Black: paid. Points may overlap. Only comparable USD / 1M-token price records are included.</p><details><summary>Exact plot data ({points.length} endpoints)</summary><Table caption="Price and feature coverage data" headers={["Endpoint", "USD input + output", "Supported features", "Unknown features"]}>{points.map(point => <tr key={point.row.id}><th scope="row">{point.row.providerModelId || point.row.id}</th><td>{number(point.x)}</td><td>{point.y} / 4</td><td>{FEATURES.filter(([key]) => feature(point.row, key) == null).length}</td></tr>)}</Table></details></> : <Empty>No fresh comparable price records. No price or capability points have been invented.</Empty>}</section>;
+}
+function HistoryChart({ history }) {
+  const rows = list(history.snapshots).filter(row => row.provider === "opencode" && day(row.date) && numeric(row.free)).slice().sort((a, b) => a.date.localeCompare(b.date));
+  const maximum = Math.max(1, ...rows.map(row => row.free));
+  const first = rows.length ? Date.parse(rows[0].date) : 0;
+  const last = rows.length ? Date.parse(rows[rows.length - 1].date) : 0;
+  const x = row => last === first ? 380 : 70 + (Date.parse(row.date) - first) / (last - first) * 640;
+  const y = row => 225 - row.free / maximum * 175;
+  return <section className="chart-panel wide"><h2>OpenCode free availability history</h2><p>Recorded free endpoint counts at observation time, not a backfilled launch history. A first snapshot is a baseline point; nothing is inferred before it. Gaps between snapshots are unobserved.</p>{rows.length ? <><svg className="plot" viewBox="0 0 760 280" role="img" aria-label={`OpenCode free endpoint history: ${rows.length} snapshots. Exact observations are listed below.`}><title>Observed OpenCode free endpoints</title>{[0, 0.5, 1].map(ratio => <g key={ratio}><line className="grid-line" x1="70" x2="710" y1={225 - ratio * 175} y2={225 - ratio * 175} /><text x="55" y={230 - ratio * 175} textAnchor="end">{number(maximum * ratio)}</text></g>)}{rows.map((row, index) => <circle className="free-point" key={index} cx={x(row)} cy={y(row)} r="6"><title>{date(row.date)}: {row.free} free{row.baseline ? " (baseline)" : ""}</title></circle>)}<text x={last === first ? 380 : 70} y="256" textAnchor="middle">{date(rows[0].date)}</text>{last !== first && <text x="710" y="256" textAnchor="end">{date(rows[rows.length - 1].date)}</text>}</svg><Table caption="OpenCode historical observations, including same-day changes in recorded order" headers={["Observation date", "Basis", "Free", "Paid", "Unknown", "Available"]}>{rows.map((row, index) => <tr key={index}><th scope="row">{date(row.date)}</th><td>{row.baseline ? "Initial baseline" : "Observation"}</td><td>{number(row.free)}</td><td>{number(row.paid)}</td><td>{number(row.unknown)}</td><td>{number(row.available)}</td></tr>)}</Table></> : <Empty>No historical snapshots loaded. No preceding history is assumed.</Empty>}</section>;
+}
+function Methodology({ metadata, state, retry }) { return <section className="section" id="methodology"><h2>Methodology & source health</h2><p>Build date: <strong>{date(metadata.generatedAt)}</strong>. This is not proof that every source succeeded. UTC day-level observations can be up to a day less precise than a timestamp. Counts cover loaded datasets only.</p><ul className="prose-list"><li>Canonical identities follow explicit links only. Familiar aliases and compatible APIs do not establish a maker; duplicates may remain.</li><li>Sources are field-specific: official availability does not make secondary capability metadata official. Unknown means missing evidence, not false.</li><li>Free results require available status, free=true, zero input and output prices, fresh price evidence and healthy contributing sources within 48 hours. Source failures retain history but do not establish current availability.</li><li>Benchmark coverage is insufficient for best free, best paid, best open or best value rankings. Feature counts, context size and downloads are not intelligence measurements.</li>{list(metadata.limitations).map((text, index) => <li key={index}>{text}</li>)}</ul>{list(metadata.sources).length ? <Table caption="Source status and evidence timestamps" headers={["Source", "Status", "Last checked", "Last successful", "Records"]}>{metadata.sources.map((source, index) => <tr key={source.id || index}><th scope="row"><SourceLink url={source.url}>{source.name || source.id}</SourceLink>{source.error && <small>{source.error}</small>}</th><td><Tag warning={source.status !== "ok"}>{human(source.status)}</Tag></td><td>{date(source.lastChecked)}</td><td>{date(source.lastSuccess)}</td><td>{number(source.count)}</td></tr>)}</Table> : <Empty>No source-health metadata loaded. Current availability cannot be established.</Empty>}<details className="section"><summary>Published datasets and independent reload controls</summary><ul className="dataset-list">{DATASETS.map(key => <li key={key}><a href={`./public/data/${key}.json`}>{key}.json</a><span>{state[key].status}</span><button className="secondary" onClick={() => retry(key)} disabled={state[key].status === "loading"}>Reload {key}</button></li>)}</ul></details></section>; }
+function AnalysisPage({ models, availability, metadata, history, limits, signals, audit, state, retry, now }) {
+  const free = availability.filter(row => currentFree(row, metadata, now));
+  const paid = availability.filter(row => row.free === false && currentPriced(row, metadata, now) && (row.pricing.input > 0 || row.pricing.output > 0));
+  const open = models.filter(isOpen);
+  const contextRows = [...models.filter(model => numeric(model.context)).map(model => [model.name || model.id, model.context]), ...availability.filter(row => numeric(row.context)).map(row => [`${row.provider}/${row.providerModelId} (endpoint)`, row.context])].sort((a, b) => b[1] - a[1]).slice(0, 10);
+  return <><PageHeading title="Analysis" description="Compare documented metadata, not unmeasured intelligence. Every chart describes its population, units and limits." /><div className="notice"><strong>Best free, paid, open or value?</strong><span>Insufficient comparable benchmark evidence. No winners or capability rankings are assigned.</span></div><div className="chart-grid"><FeatureChart free={free} paid={paid} /><Scatter rows={[...free, ...paid]} /><Bars title="Open-model downloads" description="Top 10 documented download counts in the tracked open catalog. Popularity, not capability; windows and snapshot dates may differ by source." rows={open.filter(model => numeric(model.downloads)).sort((a, b) => b.downloads - a.downloads).slice(0, 10).map(model => [model.name || model.id, model.downloads])} /><Bars title="Provider distribution" description="Tracked entities by attributed provider, including unknown attribution and retained legacy records. Not verified release counts or market share." rows={countBy(models, model => human(model.provider))} /><Bars title="Largest documented context windows" description="Top 10 recorded token limits across entities and endpoints; aliases can appear separately. Context capacity is not intelligence or effective recall. Records may be stale." rows={contextRows} format={value => `${number(value)} tokens`} /><Bars title="Weight license breakdown" description="Tracked entities grouped by documented license class. Unknown is a separate category, never assumed proprietary or open." rows={countBy(models, model => openness(model))} /><HistoryChart history={history} /></div><section className="section"><h2>Usage limits & reset conditions</h2><p>Free token pricing does not grant unlimited requests. Unknown quotas and reset times stay unknown.</p>{limits.length ? limits.map((record, index) => <article className="record-panel" key={record.id || index}><h3>{human(record.provider)} · {record.product || "Product unknown"}</h3><RecordFields record={record} /></article>) : <Empty>No documented usage limits loaded.</Empty>}</section><section className="section"><h2>Unverified signals</h2><p>Signals are leads, not confirmed releases, identity attribution or availability evidence.</p>{signals.length ? signals.map((record, index) => <article className="record-panel" key={record.id || index}><Tag warning>Unverified signal</Tag><RecordFields record={record} /></article>) : <Empty>No unverified signals in the loaded dataset.</Empty>}</section><section className="section"><h2>Legacy archive audit</h2><p>{audit.length} audit records. Original reports are retained for traceability, not imported as verified launch, license or benchmark claims.</p><details><summary>Inspect archive dispositions</summary>{audit.length ? <Table caption="Legacy archive provenance and dispositions" headers={["Entity", "Disposition", "Report date", "Reason / source"]}>{audit.map((record, index) => <tr key={record.id || index}><th scope="row">{record.id}</th><td>{human(record.disposition)}</td><td>{date(record.legacyReportDate)}</td><td>{record.reason}<small><SourceLink url={record.archiveUrl}>Original archive</SourceLink></small>{record.originalLink && <small><SourceLink url={record.originalLink}>Original reported link (unverified)</SourceLink></small>}</td></tr>)}</Table> : <Empty>No audit records loaded.</Empty>}</details></section><Methodology metadata={metadata} state={state} retry={retry} /></>;
+}
+function Overview({ models, events, availability, metadata, now, state, modelMap, onSelect }) {
+  const recent = events.filter(event => event.notable === true).slice().sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))).slice(0, 5);
+  const stats = [[state.models.status === "ready" ? number(models.length) : "—", "Tracked entities", "Includes aliases and unverified reports", "releases"], [state.models.status === "ready" ? number(models.filter(verifiedRelease).length) : "—", "Verified release dates", "Not baseline or repository dates", "releases"], [state.availability.status === "ready" && state.metadata.status === "ready" ? number(availability.filter(row => currentFree(row, metadata, now)).length) : "—", "Current free endpoints", "Fresh availability and price evidence", "free"], [state.models.status === "ready" ? number(models.filter(isOpen).length) : "—", "Documented open entities", "Permissive or restricted weight licenses", "open"]];
+  return <><header className="overview-heading"><div><h1>AI models.<br />Changes, not claims.</h1><p>Follow model discoveries, hosted availability and open licenses. See what changed, when it was observed, and what the sources actually support.</p><a className="primary-link" href="#timeline">Explore the timeline</a></div><aside><span className="mono">Published snapshot</span><strong>{date(metadata.generatedAt)}</strong><p>Not a live endpoint check. Dates and source health are available in <a href="#analysis">Analysis</a>.</p></aside></header><div className="stats">{stats.map(([value, label, note, href]) => <a href={`#${href}`} key={label}><span className="stat-value">{value}</span><strong>{label}</strong><small>{note}</small></a>)}</div><section className="section"><div className="section-toolbar"><h2>Recent notable events</h2><a href="#timeline">Full timeline and filters</a></div><EventList events={recent} modelMap={modelMap} onSelect={onSelect} /></section><div className="overview-notes"><section><h2>A catalog is not a release calendar.</h2><p>Legacy reports are unverified. Repository creation is not launch. Initial availability is a catalog baseline, not a wave of new releases. The timeline keeps these distinctions visible.</p></section><section><h2>No invented best picks.</h2><p>Comparable benchmarks are not available in these datasets. <a href="#analysis">Analysis</a> compares source-documented features, context windows, prices and popularity without calling them intelligence.</p></section></div></>;
+}
+function ModelDialog({ model, modelMap, availability, events, limits, audit, metadata, now, onClose }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const dialog = ref.current;
+    const opener = document.activeElement;
+    const overflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    dialog.showModal();
+    return () => { dialog.close(); document.body.style.overflow = overflow; if (opener?.isConnected) opener.focus(); };
+  }, []);
+  const identity = canonical(model, modelMap) || model;
+  const relatedIds = new Set([model.id, identity.id, ...[...modelMap.values()].filter(item => canonical(item, modelMap)?.id === identity.id).map(item => item.id)]);
+  const endpoints = availability.filter(row => relatedIds.has(row.modelId));
+  const related = events.filter(event => relatedIds.has(event.modelId) || relatedIds.has(event.before?.modelId) || relatedIds.has(event.after?.modelId)).sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+  return <dialog ref={ref} aria-labelledby="model-dialog-title" onCancel={event => { event.preventDefault(); onClose(); }} onClose={onClose}><div className="dialog-header"><div><p className="muted">Entity details & evidence</p><h2 id="model-dialog-title">{identity.name || identity.id}</h2></div><button className="secondary" onClick={onClose} autoFocus>Close</button></div><div className="dialog-content"><div className="tags"><Tag>{human(identity.type)}</Tag><Tag warning={identity.confidence === "unverified"}>{human(identity.confidence)}</Tag><Tag>{openness(identity)}</Tag></div><section><h3>Canonical identity</h3><dl className="record-fields"><dt>Canonical ID</dt><dd className="mono">{identity.canonicalId || identity.id}</dd><dt>Selected / original alias</dt><dd>{model.name || model.id} <span className="mono">({model.id})</span></dd><dt>Provider attribution</dt><dd>{human(identity.provider)}</dd><dt>Identity status</dt><dd>{human(identity.identity)}. Names and API compatibility do not establish a maker.</dd><dt>Aliases</dt><dd>{list(identity.aliases).join(", ") || "None documented"}</dd><dt>Hugging Face ID</dt><dd>{identity.hfId || "Unknown"}</dd></dl>{identity.canonicalId && !modelMap.has(identity.canonicalId) && <p className="notice warning">The linked canonical record is not loaded. Identity details are incomplete.</p>}</section><section><h3>Dates, not interchangeable</h3><DateFacts model={identity} /><p className="footnote">Legacy report and repository creation dates are not launch dates. Baselines are first observations.</p><p>First observed: {date(identity.firstSeen)} · Last checked: {date(identity.lastChecked)}</p></section><section><h3>Documented specifications</h3><RecordFields record={{ license: identity.license ?? null, openness: openness(identity), contextTokens: identity.context ?? null, parameters: identity.parameters ?? null, activeParameters: identity.activeParameters ?? null, architecture: identity.architecture ?? null, quantization: identity.quantization ?? null, reasoning: identity.reasoning ?? null, tools: identity.tools ?? null, structuredOutput: identity.structuredOutput ?? null, modalities: list(identity.modalities), downloads: identity.downloads ?? null, likes: identity.likes ?? null }} /></section><section><h3>Sources & field confidence</h3><p className="muted">Confidence belongs to the cited claim. Official availability is not official capability or maker evidence. Missing fields are unknown.</p><Sources sources={identity.sources} />{identity.fieldConfidence && <RecordFields record={identity.fieldConfidence} />}{identity.fieldSources && <RecordFields record={identity.fieldSources} />}{model.id !== identity.id && <><h4>Original alias provenance</h4><Sources sources={model.sources} /></>}</section><section><h3>Hosted availability, prices & conditions</h3>{endpoints.length ? endpoints.map(row => <article className="record-panel" key={row.id}><h4>{row.provider} / {row.providerModelId}</h4><Tag warning={!currentEvidence(row, metadata, now)}>{currentFree(row, metadata, now) ? "Current free token pricing" : currentEvidence(row, metadata, now) ? "Fresh availability evidence" : "Not established as current"}</Tag><RecordFields record={row} /></article>) : <p>No linked provider availability loaded. This does not establish unavailability.</p>}</section><section><h3>Usage limits</h3>{limits.filter(limit => endpoints.some(row => row.provider === limit.provider) && (!limit.modelId || relatedIds.has(limit.modelId))).map((limit, index) => <RecordFields key={index} record={limit} />)}<p className="footnote">Provider-wide limits may not describe this model or every plan. Undocumented quotas, tiers and reset conditions remain unknown; consult the cited terms.</p></section><section><h3>Related timeline</h3>{related.length ? <ul className="related-events">{related.map(event => <li key={event.id}><strong>{date(event.date)} · {EVENT_LABELS[event.type] || human(event.type)}</strong><p>{event.title}</p>{event.previousAlias && <p>Original alias: {event.previousAlias}</p>}<Sources sources={event.sources} /></li>)}</ul> : <p>No related timeline events loaded.</p>}</section>{audit.some(row => relatedIds.has(row.id)) && <section><h3>Archive audit</h3>{audit.filter(row => relatedIds.has(row.id)).map(row => <RecordFields key={row.id} record={row} />)}</section>}</div></dialog>;
+}
 function App() {
-  const [activeWeek, setActiveWeek] = useState("all");
-  const [activeView, setActiveView] = useState("grid");
+  const [state, retry] = useDatasets();
+  const [view, setView] = useState(() => NAV.some(([id]) => id === window.location.hash.slice(1)) ? window.location.hash.slice(1) : "overview");
   const [selected, setSelected] = useState(null);
-  const [models, setModels] = useState(FALLBACK_MODELS);
-  const [loadState, setLoadState] = useState("idle");
-
-  const closeModal = useCallback(() => setSelected(null), []);
-
-  // Fetch models.json on mount
+  const [now, setNow] = useState(Date.now);
+  const mainRef = useRef(null);
+  const models = state.models.data;
+  const events = state.timeline.data;
+  const availability = state.availability.data;
+  const metadata = state.metadata.data;
+  const modelMap = useMemo(() => new Map(models.map(model => [model.id, model])), [models]);
   useEffect(() => {
-    setLoadState("loading");
-    fetch("./public/models.json")
-      .then((r) => {
-        if (!r.ok) throw new Error("Failed to load models.json");
-        return r.json();
-      })
-      .then((data) => {
-        setModels(data);
-        setLoadState("idle");
-      })
-      .catch(() => {
-        setLoadState("error");
-      });
+    const handler = () => { const id = window.location.hash.slice(1); if (NAV.some(([key]) => key === id)) { setView(id); setSelected(null); requestAnimationFrame(() => { mainRef.current?.focus(); window.scrollTo(0, 0); }); } };
+    window.addEventListener("hashchange", handler);
+    const timer = setInterval(() => setNow(Date.now()), 60000);
+    return () => { window.removeEventListener("hashchange", handler); clearInterval(timer); };
   }, []);
-
-  // Inject global CSS with IBM Plex fonts, Carbon reset, and micro-animations
-  useEffect(() => {
-    const style = document.createElement("style");
-    style.textContent = `
-      :root {
-        --cds-background: ${CDS.background};
-        --cds-layer-01: ${CDS.layer01};
-        --cds-layer-02: ${CDS.layer02};
-        --cds-text-primary: ${CDS.textPrimary};
-        --cds-text-secondary: ${CDS.textSecondary};
-        --cds-border-subtle: ${CDS.borderSubtle};
-        --cds-interactive: ${CDS.interactive};
-        --cds-button-primary: ${CDS.interactive};
-        --cds-button-primary-hover: ${CDS.interactiveHover};
-        --cds-button-primary-active: ${CDS.interactiveActive};
-        --cds-link-primary: ${CDS.linkPrimary};
-        --cds-link-primary-hover: ${CDS.linkHover};
-        --cds-focus: ${CDS.focusRing};
-        --cds-support-error: ${CDS.supportError};
-        --cds-support-success: ${CDS.supportSuccess};
-        --cds-support-warning: ${CDS.supportWarning};
-        --cds-support-info: ${CDS.supportInfo};
-      }
-
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-      body {
-        font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-        background: var(--cds-background);
-        color: var(--cds-text-primary);
-        -webkit-font-smoothing: antialiased;
-      }
-
-      ::-webkit-scrollbar { width: 6px; }
-      ::-webkit-scrollbar-track { background: ${CDS.layer01}; }
-      ::-webkit-scrollbar-thumb { background: ${CDS.borderSubtle}; }
-
-      /* Tile hover — background shift only, no transform per Carbon */
-      .cds-tile {
-        transition: background-color 0.15s ease;
-        cursor: pointer;
-      }
-      .cds-tile:hover { background-color: ${CDS.layer02} !important; }
-      .cds-tile:focus { outline: 2px solid ${CDS.focusRing}; outline-offset: -2px; }
-
-      /* Tab buttons */
-      .cds-tab {
-        transition: color 0.15s ease, border-bottom-color 0.15s ease, background-color 0.15s ease;
-        touch-action: manipulation;
-      }
-      .cds-tab:hover { color: ${CDS.textPrimary} !important; background-color: ${CDS.layer01} !important; }
-
-      /* View toggle buttons */
-      .cds-view-btn {
-        transition: color 0.15s ease, background-color 0.15s ease;
-        touch-action: manipulation;
-      }
-      .cds-view-btn:hover { background-color: ${CDS.layer01} !important; }
-
-      /* Arrow reveal on list rows */
-      .cds-list-arrow {
-        opacity: 0;
-        transform: translateX(-4px);
-        transition: opacity 0.15s ease, transform 0.15s ease;
-        color: ${CDS.textSecondary};
-        font-size: 18px;
-        flex-shrink: 0;
-      }
-      .cds-tile:hover .cds-list-arrow {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      /* Fade-up entry */
-      .cds-fade-in { animation: cdsUp 0.3s ease both; }
-      @keyframes cdsUp {
-        from { opacity: 0; transform: translateY(8px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-
-      /* Modal entry */
-      .cds-modal-enter { animation: cdsModal 0.2s ease both; }
-      @keyframes cdsModal {
-        from { opacity: 0; transform: scale(0.98) translateY(6px); }
-        to   { opacity: 1; transform: scale(1)   translateY(0); }
-      }
-
-      /* Live pulse dot */
-      .cds-pulse { animation: cdsPulse 2s ease-in-out infinite; }
-      @keyframes cdsPulse {
-        0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(36,161,72,0.4); }
-        50%       { opacity: 0.7; box-shadow: 0 0 0 4px rgba(36,161,72,0); }
-      }
-
-      /* Bar grow */
-      .cds-bar-fill { animation: cdsBar 0.6s ease both; }
-      @keyframes cdsBar { from { width: 0% !important; } }
-
-      /* Stat tile subtle hover */
-      .cds-stat-tile {
-        transition: background-color 0.15s ease;
-      }
-      .cds-stat-tile:hover { background-color: ${CDS.layer02} !important; }
-
-      /* Close button */
-      .cds-close-btn {
-        transition: background-color 0.15s ease;
-      }
-      .cds-close-btn:hover { background-color: ${CDS.layer02} !important; }
-
-      /* Responsive */
-      @media (max-width: 672px) {
-        .cds-stats-row { grid-template-columns: 1fr 1fr !important; }
-        .cds-controls-row { flex-direction: column !important; align-items: stretch !important; }
-        .cds-list-summary-col { display: none !important; }
-        .cds-summary-grid { grid-template-columns: 1fr !important; }
-        .cds-tab-row { flex-wrap: wrap !important; }
-      }
-    `;
-    document.head.appendChild(style);
-    return () => document.head.removeChild(style);
-  }, []);
-
-  // Escape key to close modal
-  useEffect(() => {
-    const handler = (e) => { if (e.key === "Escape") closeModal(); };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [closeModal]);
-
-  const filtered = activeWeek === "all" ? models : models.filter(m => m.week === activeWeek);
-  const companyCount = [...new Set(models.map(m => m.company))].length;
-  const openCount = models.filter(m => ["Open Weights", "Open Source", "MIT", "Apache 2.0"].includes(m.license)).length;
-  const companySummary = Object.entries(
-    models.reduce((acc, m) => { acc[m.company] = (acc[m.company] || 0) + 1; return acc; }, {})
-  ).sort((a, b) => b[1] - a[1]);
-
-  // ── Inline style helpers ──
-  const typo = {
-    // Display 01: 60px, weight 300, lh 1.17
-    display01: { fontSize: "clamp(32px,4.5vw,60px)", fontWeight: 300, lineHeight: 1.17, color: CDS.textPrimary },
-    // Heading 04: 20px, weight 600, lh 1.40
-    heading04: { fontSize: "20px", fontWeight: 600, lineHeight: 1.40, color: CDS.textPrimary },
-    // Heading 05: 20px, weight 400, lh 1.40
-    heading05: { fontSize: "20px", fontWeight: 400, lineHeight: 1.40, color: CDS.textPrimary },
-    // Body Short 01: 14px, weight 400, lh 1.29, ls 0.16px
-    bodyShort01: { fontSize: "14px", fontWeight: 400, lineHeight: 1.29, letterSpacing: "0.16px", color: CDS.textPrimary },
-    // Body Short 02: 14px, weight 600, lh 1.29, ls 0.16px
-    bodyShort02: { fontSize: "14px", fontWeight: 600, lineHeight: 1.29, letterSpacing: "0.16px", color: CDS.textPrimary },
-    // Body Long 01: 16px, weight 400, lh 1.50
-    bodyLong01: { fontSize: "16px", fontWeight: 400, lineHeight: 1.50, color: CDS.textSecondary },
-    // Caption 01: 12px, weight 400, lh 1.33, ls 0.32px
-    caption01: { fontSize: "12px", fontWeight: 400, lineHeight: 1.33, letterSpacing: "0.32px", color: CDS.textSecondary },
-    // Code 01: Mono 14px, weight 400, lh 1.43, ls 0.16px
-    code01: { fontFamily: "'IBM Plex Mono', Menlo, Courier, monospace", fontSize: "14px", fontWeight: 400, lineHeight: 1.43, letterSpacing: "0.16px" },
-  };
-
-  const STATS = [
-    { value: models.length,             label: "Total Releases" },
-    { value: companyCount,              label: "Companies" },
-    { value: openCount,                 label: "Open Weights / Source" },
-    { value: models.length - openCount, label: "Proprietary / Gated" },
-    { value: [...new Set(models.map(m => m.week))].length, label: "Active Weeks" },
-  ];
-
-  // ── Load / Error notification bar (Carbon notification banner style) ──
-  const LoadBanner = () => {
-    if (loadState === "loading") return (
-      <div style={{
-        background: CDS.interactive, color: "#ffffff",
-        padding: "8px 32px",
-        ...typo.bodyShort01,
-        letterSpacing: "0.16px",
-      }}>
-        Fetching latest models…
-      </div>
-    );
-    if (loadState === "error") return (
-      <div style={{
-        background: CDS.supportError, color: "#ffffff",
-        padding: "8px 32px",
-        ...typo.bodyShort01,
-      }}>
-        ⚠ Could not load models.json — showing cached data.
-      </div>
-    );
-    return null;
-  };
-
-  // ── Tag component (Carbon Tag / Label) ──
-  const Tag = ({ children, style: extra }) => (
-    <span style={{
-      display: "inline-block",
-      background: CDS.layer01,
-      color: CDS.textSecondary,
-      ...typo.caption01,
-      padding: "2px 8px",
-      borderRadius: "24px",
-      border: `1px solid ${CDS.borderSubtle}`,
-      ...extra,
-    }}>
-      {children}
-    </span>
-  );
-
-  // ── License tag (color-coded Tag variant) ──
-  const LicenseTag = ({ lic }) => {
-    const st = LICENSE_STYLE[lic] || LICENSE_STYLE["Proprietary"];
-    return (
-      <span style={{
-        display: "inline-block",
-        background: st.bg,
-        color: st.color,
-        border: `1px solid ${st.border}`,
-        ...typo.caption01,
-        padding: "2px 8px",
-        borderRadius: "24px",
-        fontWeight: 600,
-        flexShrink: 0,
-        textTransform: "uppercase",
-        letterSpacing: "0.32px",
-      }}>
-        {lic}
-      </span>
-    );
-  };
-
-  return (
-    <div style={{ fontFamily: "'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif", background: CDS.background, minHeight: "100vh", color: CDS.textPrimary }}>
-      <LoadBanner />
-
-      {/* ── NAV (Carbon masthead: Gray 100, 48px) ── */}
-      <nav style={{
-        background: CDS.navBg,
-        height: "48px",
-        display: "flex", alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0 32px",
-        position: "sticky", top: 0, zIndex: 200,
-      }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          {/* IBM 8-bar logo mark (simplified SVG) */}
-          <svg width="22" height="22" viewBox="0 0 32 32" fill="#ffffff" aria-label="ModelMonitor">
-            <rect x="0" y="2" width="32" height="4"/><rect x="0" y="8" width="32" height="4"/>
-            <rect x="4" y="14" width="24" height="4"/><rect x="4" y="20" width="24" height="4"/>
-            <rect x="0" y="26" width="32" height="4"/>
-          </svg>
-          <span style={{ ...typo.bodyShort02, color: "#ffffff", letterSpacing: "0.16px" }}>
-            ModelMonitor
-          </span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span className="cds-pulse" style={{ width: "6px", height: "6px", borderRadius: "50%", background: CDS.supportSuccess, display: "inline-block" }} />
-          <span style={{ ...typo.code01, fontSize: "11px", color: CDS.navText, letterSpacing: "0.32px" }}>APR 2026</span>
-        </div>
-      </nav>
-
-      {/* ── HEADER ── */}
-      <header style={{ background: CDS.background, padding: "48px 32px 32px", borderBottom: `1px solid ${CDS.borderSubtle}` }}>
-        {/* Display headline */}
-        <h1 style={{ ...typo.display01, marginBottom: "16px", maxWidth: "720px" }}>
-          April in AI
-          <span style={{ display: "block", color: CDS.interactive }}>2026 Model Release Tracker</span>
-        </h1>
-        <p style={{ ...typo.bodyLong01, maxWidth: "600px", marginBottom: "40px" }}>
-          Week-by-week coverage of every significant AI model release in April 2026 — open weights, proprietary, and everything in between.
-        </p>
-
-        {/* ── Stat tiles (Carbon Layer 01: #f4f4f4, 0px radius, no shadow) ── */}
-        <div className="cds-stats-row" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1px", background: CDS.borderSubtle }}>
-          {STATS.map((st, i) => (
-            <div key={i} className="cds-stat-tile" style={{
-              background: CDS.layer01,
-              padding: "24px 20px 20px",
-              borderRadius: "0",
-            }}>
-              <div style={{
-                ...typo.display01,
-                fontSize: "clamp(28px,3vw,42px)",
-                fontFamily: "'IBM Plex Mono', monospace",
-                color: CDS.textPrimary,
-                lineHeight: 1,
-                marginBottom: "8px",
-              }}>
-                {st.value}
-              </div>
-              <div style={{ ...typo.caption01, textTransform: "uppercase", letterSpacing: "0.32px" }}>
-                {st.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </header>
-
-      {/* ── BODY ── */}
-      <main style={{ padding: "32px" }}>
-
-        {/* Controls row */}
-        <div className="cds-controls-row" style={{
-          display: "flex", justifyContent: "space-between",
-          alignItems: "center", marginBottom: "24px",
-          flexWrap: "wrap", gap: "12px",
-        }}>
-          {/* Week tabs (Carbon bottom-border Tab pattern) */}
-          <div className="cds-tab-row" style={{
-            display: "flex", gap: "0",
-            borderBottom: `1px solid ${CDS.borderSubtle}`,
-          }}>
-            {WEEKS.map(w => {
-              const active = activeWeek === w.id;
-              return (
-                <button
-                  key={w.id}
-                  className="cds-tab"
-                  style={{
-                    ...typo.bodyShort01,
-                    fontWeight: active ? 600 : 400,
-                    padding: "12px 16px",
-                    border: "none",
-                    borderBottom: active ? `2px solid ${CDS.interactive}` : "2px solid transparent",
-                    background: "transparent",
-                    color: active ? CDS.textPrimary : CDS.textSecondary,
-                    cursor: "pointer",
-                    whiteSpace: "nowrap",
-                  }}
-                  onClick={() => setActiveWeek(w.id)}
-                  aria-pressed={active}
-                >
-                  {w.label}
-                  <span style={{ ...typo.caption01, marginLeft: "6px", color: CDS.textSecondary }}>
-                    ({w.id !== "all" ? models.filter(m => m.week === w.id).length : models.length})
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* View toggle (Ghost button group) */}
-          <div style={{ display: "flex", border: `1px solid ${CDS.borderSubtle}` }}>
-            {[
-              { id: "grid",    label: "⊞  Grid" },
-              { id: "list",    label: "☰  List" },
-              { id: "summary", label: "◈  Summary" },
-            ].map(v => {
-              const active = activeView === v.id;
-              return (
-                <button
-                  key={v.id}
-                  className="cds-view-btn"
-                  style={{
-                    ...typo.bodyShort01,
-                    padding: "10px 16px",
-                    border: "none",
-                    borderRight: v.id !== "summary" ? `1px solid ${CDS.borderSubtle}` : "none",
-                    background: active ? CDS.interactive : "transparent",
-                    color: active ? "#ffffff" : CDS.textSecondary,
-                    cursor: "pointer",
-                    borderRadius: "0",
-                  }}
-                  onClick={() => setActiveView(v.id)}
-                  aria-pressed={active}
-                >
-                  {v.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Week range label */}
-        {activeWeek !== "all" && (
-          <div style={{ ...typo.caption01, marginBottom: "16px", textTransform: "uppercase" }}>
-            {WEEKS.find(w => w.id === activeWeek)?.range} — {filtered.length} release{filtered.length !== 1 ? "s" : ""}
-          </div>
-        )}
-
-        {/* ── GRID VIEW ── */}
-        {activeView === "grid" && (
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(296px, 1fr))",
-            gap: "1px",
-            background: CDS.borderSubtle,
-          }}>
-            {filtered.length === 0 && (
-              <div style={{ gridColumn: "1/-1", textAlign: "center", padding: "64px 20px", ...typo.bodyShort01, color: CDS.textSecondary }}>
-                No releases in this period.
-              </div>
-            )}
-            {filtered.map((m, i) => (
-              <div
-                key={m.id}
-                className="cds-tile cds-fade-in"
-                style={{
-                  background: CDS.background,
-                  padding: "24px 20px 20px",
-                  borderRadius: "0",
-                  position: "relative",
-                  animationDelay: `${i * 0.04}s`,
-                }}
-                onClick={() => setSelected(m)}
-                role="button"
-                tabIndex={0}
-                aria-label={`${m.name} by ${m.company}`}
-                onKeyDown={e => e.key === "Enter" && setSelected(m)}
-              >
-                {/* Top blue accent bar (2px) */}
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: CDS.interactive }} />
-
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px", gap: "8px" }}>
-                  <h2 style={{ ...typo.heading04, fontSize: "16px" }}>{m.name}</h2>
-                  <LicenseTag lic={m.license} />
-                </div>
-
-                <div style={{ ...typo.code01, fontSize: "11px", color: CDS.interactive, textTransform: "uppercase", letterSpacing: "0.32px", marginBottom: "4px" }}>
-                  {m.company}
-                </div>
-                <div style={{ ...typo.caption01, marginBottom: "12px" }}>
-                  {formatDate(m.date)}
-                </div>
-                <p style={{ ...typo.bodyShort01, color: CDS.textSecondary, marginBottom: "16px" }}>
-                  {m.summary}
-                </p>
-                <div style={{ display: "flex", gap: "4px", flexWrap: "wrap" }}>
-                  {m.tags.map(t => <Tag key={t}>{t}</Tag>)}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* ── LIST VIEW ── */}
-        {activeView === "list" && (
-          <div style={{ borderTop: `1px solid ${CDS.borderSubtle}` }}>
-            {filtered.length === 0 && (
-              <div style={{ textAlign: "center", padding: "64px 20px", ...typo.bodyShort01, color: CDS.textSecondary }}>
-                No releases in this period.
-              </div>
-            )}
-            {filtered.map((m, i) => (
-              <div
-                key={m.id}
-                className="cds-tile cds-fade-in"
-                style={{
-                  background: CDS.background,
-                  borderBottom: `1px solid ${CDS.borderSubtle}`,
-                  borderLeft: `3px solid ${CDS.interactive}`,
-                  padding: "14px 16px",
-                  display: "flex", alignItems: "center", gap: "16px",
-                  animationDelay: `${i * 0.03}s`,
-                }}
-                onClick={() => setSelected(m)}
-                role="button"
-                tabIndex={0}
-                aria-label={`${m.name} by ${m.company}`}
-                onKeyDown={e => e.key === "Enter" && setSelected(m)}
-              >
-                {/* Date pill */}
-                <div style={{ ...typo.code01, fontSize: "11px", color: CDS.textSecondary, background: CDS.layer01, padding: "2px 8px", whiteSpace: "nowrap", flexShrink: 0, letterSpacing: "0.16px" }}>
-                  {formatDateShort(m.date)}
-                </div>
-                <div style={{ flex: "0 0 200px", minWidth: 0 }}>
-                  <div style={{ ...typo.bodyShort02 }}>{m.name}</div>
-                  <div style={{ ...typo.code01, fontSize: "11px", color: CDS.interactive, textTransform: "uppercase", letterSpacing: "0.32px", marginTop: "2px" }}>{m.company}</div>
-                </div>
-                <div className="cds-list-summary-col" style={{ ...typo.bodyShort01, color: CDS.textSecondary, flex: 2 }}>
-                  {m.summary}
-                </div>
-                <LicenseTag lic={m.license} />
-                <span className="cds-list-arrow">›</span>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* ── SUMMARY VIEW ── */}
-        {activeView === "summary" && (
-          <div className="cds-fade-in">
-            {/* Narrative block */}
-            <div style={{ background: CDS.layer01, padding: "32px", marginBottom: "1px", borderTop: `2px solid ${CDS.interactive}` }}>
-              <h2 style={{ ...typo.heading04, marginBottom: "12px" }}>April 2026 — AI Release Summary</h2>
-              <p style={{ ...typo.bodyLong01, maxWidth: "800px" }}>
-                In just 24 days, {companyCount} major AI companies shipped {models.length} significant model releases.{" "}
-                {openCount} of these were open weights or open source, representing {Math.round(openCount / models.length * 100)}% of total releases.{" "}
-                Alibaba led with 3 releases. Anthropic and Meta both shipped major capability upgrades.{" "}
-                The pace of releases across coding benchmarks, agentic workflows, and long-context tasks signals rapid convergence toward capable, long-running agent models.
-              </p>
-            </div>
-
-            <div className="cds-summary-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", background: CDS.borderSubtle, marginBottom: "1px" }}>
-              {/* By Company */}
-              <div style={{ background: CDS.background, padding: "24px" }}>
-                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>Releases by Company</div>
-                {companySummary.map(([company, count], i) => (
-                  <div key={company} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
-                    <div style={{ ...typo.bodyShort01, width: "100px", flexShrink: 0, color: CDS.textSecondary }}>{company}</div>
-                    <div style={{ flex: 1, height: "4px", background: CDS.layer01 }}>
-                      <div className="cds-bar-fill" style={{ height: "100%", width: `${(count / models.length) * 100}%`, background: COMPANY_COLORS[company] || CDS.interactive }} />
-                    </div>
-                    <div style={{ ...typo.code01, fontSize: "12px", color: CDS.textSecondary, width: "16px", textAlign: "right" }}>{count}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* License + Week breakdown */}
-              <div style={{ background: CDS.background, padding: "24px" }}>
-                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>License Breakdown</div>
-                {[
-                  ["Open / Weights / MIT", openCount, CDS.supportSuccess],
-                  ["Proprietary / Gated", models.length - openCount, CDS.supportError],
-                ].map(([label, count, color], i) => (
-                  <div key={label} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
-                    <div style={{ ...typo.bodyShort01, width: "150px", flexShrink: 0, color: CDS.textSecondary }}>{label}</div>
-                    <div style={{ flex: 1, height: "4px", background: CDS.layer01 }}>
-                      <div className="cds-bar-fill" style={{ height: "100%", width: `${(count / models.length) * 100}%`, background: color }} />
-                    </div>
-                    <div style={{ ...typo.code01, fontSize: "12px", color: CDS.textSecondary, width: "16px", textAlign: "right" }}>{count}</div>
-                  </div>
-                ))}
-
-                <div style={{ borderTop: `1px solid ${CDS.borderSubtle}`, margin: "20px 0" }} />
-
-                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>Releases by Week</div>
-                {[4, 3, 2, 1].map(w => {
-                  const wc = models.filter(m => m.week === w).length;
-                  return (
-                    <div key={w} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
-                      <div style={{ ...typo.bodyShort01, width: "64px", flexShrink: 0, color: CDS.textSecondary }}>Week {w}</div>
-                      <div style={{ flex: 1, height: "4px", background: CDS.layer01 }}>
-                        <div className="cds-bar-fill" style={{ height: "100%", width: `${(wc / models.length) * 100}%`, background: CDS.interactive }} />
-                      </div>
-                      <div style={{ ...typo.code01, fontSize: "12px", color: CDS.textSecondary, width: "16px", textAlign: "right" }}>{wc}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Notable Highlights */}
-            <div style={{ background: CDS.background, padding: "24px", border: `1px solid ${CDS.borderSubtle}` }}>
-              <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "20px" }}>Notable Highlights</div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1px", background: CDS.borderSubtle }}>
-                {[
-                  { label: "Largest Model",    value: "DeepSeek V4",         sub: "1.6T parameters" },
-                  { label: "Largest Context",  value: "Llama 4 Scout",        sub: "10M token context" },
-                  { label: "Most Agents",      value: "Kimi K2.6",            sub: "300 parallel sub-agents" },
-                  { label: "Most Restricted",  value: "Claude Mythos Preview", sub: "Gated to 50 orgs, ASL-4" },
-                  { label: "Best Value",       value: "DeepSeek V4",          sub: "Fraction of GPT-5.5 cost" },
-                  { label: "Top Benchmark",    value: "GLM-5.1",              sub: "Beats GPT-5.4 on SWE-bench" },
-                ].map(item => (
-                  <div key={item.label} style={{ background: CDS.layer01, padding: "20px 16px", borderTop: `2px solid ${CDS.interactive}` }}>
-                    <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "8px" }}>{item.label}</div>
-                    <div style={{ ...typo.bodyShort02, color: CDS.interactive, marginBottom: "4px" }}>{item.value}</div>
-                    <div style={{ ...typo.caption01 }}>{item.sub}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-      </main>
-
-      {/* ── MODAL (Carbon Dialog / Side Panel style) ── */}
-      {selected && (
-        <div
-          style={{
-            position: "fixed", inset: 0,
-            background: "rgba(22,22,22,0.5)",
-            backdropFilter: "blur(4px)",
-            WebkitBackdropFilter: "blur(4px)",
-            zIndex: 300,
-            display: "flex", alignItems: "center",
-            justifyContent: "center", padding: "20px",
-          }}
-          onClick={closeModal}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Details for ${selected.name}`}
-        >
-          <div
-            className="cds-modal-enter"
-            style={{
-              background: CDS.background,
-              width: "100%", maxWidth: "540px",
-              position: "relative",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
-              borderTop: `2px solid ${CDS.interactive}`,
-            }}
-            onClick={e => e.stopPropagation()}
-          >
-            {/* Close button */}
-            <button
-              className="cds-close-btn"
-              style={{
-                position: "absolute", top: "16px", right: "16px",
-                background: "transparent",
-                border: `1px solid ${CDS.borderSubtle}`,
-                color: CDS.textSecondary,
-                cursor: "pointer",
-                width: "32px", height: "32px",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "18px", lineHeight: 1,
-                borderRadius: "0",
-              }}
-              onClick={closeModal}
-              aria-label="Close"
-            >
-              ×
-            </button>
-
-            {/* Modal content */}
-            <div style={{ padding: "32px" }}>
-              {/* Week badge */}
-              <div style={{
-                display: "inline-block",
-                background: CDS.layer01,
-                color: CDS.textSecondary,
-                ...typo.caption01, textTransform: "uppercase",
-                padding: "2px 8px",
-                marginBottom: "12px",
-              }}>
-                Week {selected.week} of April
-              </div>
-
-              <h2 style={{ ...typo.display01, fontSize: "clamp(24px,3vw,36px)", marginBottom: "4px" }}>
-                {selected.name}
-              </h2>
-              <div style={{ ...typo.code01, fontSize: "11px", color: CDS.interactive, textTransform: "uppercase", letterSpacing: "0.32px", marginBottom: "4px" }}>
-                {selected.company}
-              </div>
-              <div style={{ ...typo.caption01, marginBottom: "24px" }}>{formatDate(selected.date)}</div>
-
-              <div style={{ borderTop: `1px solid ${CDS.borderSubtle}`, marginBottom: "20px" }} />
-
-              {/* Overview */}
-              <div style={{ marginBottom: "20px" }}>
-                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "10px" }}>Overview</div>
-                <p style={{ ...typo.bodyLong01 }}>{selected.summary}</p>
-              </div>
-
-              {/* Key highlights */}
-              <div style={{ marginBottom: "20px" }}>
-                <div style={{ ...typo.caption01, textTransform: "uppercase", marginBottom: "10px" }}>Key Highlights</div>
-                {selected.highlights.map(h => (
-                  <div key={h} style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "8px" }}>
-                    <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: CDS.interactive, flexShrink: 0, marginTop: "7px" }} />
-                    <span style={{ ...typo.bodyShort01, color: CDS.textSecondary }}>{h}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div style={{ borderTop: `1px solid ${CDS.borderSubtle}`, marginBottom: "20px" }} />
-
-              {/* Tags */}
-              <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", alignItems: "center" }}>
-                <LicenseTag lic={selected.license} />
-                {selected.tags.map(t => <Tag key={t}>{t}</Tag>)}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── FOOTER (Carbon style: Gray 100 bg, white text) ── */}
-      <footer style={{
-        background: CDS.navBg,
-        padding: "16px 32px",
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        flexWrap: "wrap", gap: "8px",
-        marginTop: "auto",
-      }}>
-        <div style={{ ...typo.code01, fontSize: "12px", color: CDS.navText, letterSpacing: "0.32px" }}>
-          ModelMonitor — April 2026
-        </div>
-        <div style={{ ...typo.code01, fontSize: "12px", color: CDS.navText, letterSpacing: "0.16px" }}>
-          {models.length} models · {companyCount} companies
-        </div>
-      </footer>
-
-    </div>
-  );
+  useEffect(() => { document.title = `${NAV.find(([id]) => id === view)?.[1] || "Overview"} — ModelMonitor`; }, [view]);
+  const close = useCallback(() => setSelected(null), []);
+  const common = { models, events, availability, metadata, now, modelMap, onSelect: setSelected };
+  const failures = list(metadata.sources).filter(source => source.status !== "ok");
+  return <><a className="skip-link" href="#main-content">Skip to content</a><header className="masthead"><a className="brand" href="#overview" aria-label="ModelMonitor overview"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M0 2h32v4H0zm0 6h32v4H0zm4 6h24v4H4zm0 6h24v4H4zm-4 6h32v4H0z" /></svg>ModelMonitor</a><nav aria-label="Main navigation">{NAV.map(([id, label]) => <a key={id} href={`#${id}`} aria-current={view === id ? "page" : undefined}>{label}</a>)}</nav></header><main id="main-content" ref={mainRef} tabIndex={-1}><LoadStatus state={state} retry={retry} />{failures.length > 0 && <p className="notice warning">{failures.length} upstream sources report a failure or degraded status. Retained records may be stale; affected endpoints are not counted as current. <a href="#analysis">Inspect source health</a>.</p>}{view === "overview" && <Overview {...common} state={state} />}{view === "timeline" && <TimelinePage {...common} />}{view === "releases" && <CatalogPage key="releases" mode="releases" {...common} />}{view === "free" && <FreePage {...common} />}{view === "open" && <CatalogPage key="open" mode="open" {...common} />}{view === "analysis" && <AnalysisPage {...common} history={state.history.data} limits={state.limits.data} signals={state.signals.data} audit={state.audit.data} state={state} retry={retry} />}</main><footer><strong>ModelMonitor</strong><span>Evidence before attribution. Unknown stays unknown.</span><a href="./public/data/metadata.json">Source metadata</a></footer>{selected && <ModelDialog model={selected} {...common} limits={state.limits.data} audit={state.audit.data} onClose={close} />}</>;
 }

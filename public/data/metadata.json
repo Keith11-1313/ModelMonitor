@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-17",
+  "sources": [
+    {
+      "id": "hf:deepseek-ai",
+      "name": "Hugging Face official organization: deepseek-ai",
+      "url": "https://huggingface.co/api/models?author=deepseek-ai&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:google",
+      "name": "Hugging Face official organization: google",
+      "url": "https://huggingface.co/api/models?author=google&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:meta-llama",
+      "name": "Hugging Face official organization: meta-llama",
+      "url": "https://huggingface.co/api/models?author=meta-llama&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:mistralai",
+      "name": "Hugging Face official organization: mistralai",
+      "url": "https://huggingface.co/api/models?author=mistralai&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:moonshotai",
+      "name": "Hugging Face official organization: moonshotai",
+      "url": "https://huggingface.co/api/models?author=moonshotai&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:nvidia",
+      "name": "Hugging Face official organization: nvidia",
+      "url": "https://huggingface.co/api/models?author=nvidia&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:openai",
+      "name": "Hugging Face official organization: openai",
+      "url": "https://huggingface.co/api/models?author=openai&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:Qwen",
+      "name": "Hugging Face official organization: Qwen",
+      "url": "https://huggingface.co/api/models?author=Qwen&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "hf:zai-org",
+      "name": "Hugging Face official organization: zai-org",
+      "url": "https://huggingface.co/api/models?author=zai-org&sort=createdAt&direction=-1&limit=5&full=true&config=true&cardData=true",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 5
+    },
+    {
+      "id": "models-dev",
+      "name": "models.dev secondary opencode catalog",
+      "url": "https://models.dev/api.json",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 103
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode Zen official availability",
+      "url": "https://opencode.ai/zen/v1/models",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 71
+    },
+    {
+      "id": "zen-docs",
+      "name": "OpenCode Zen official documentation and prices",
+      "url": "https://opencode.ai/docs/zen/",
+      "status": "ok",
+      "lastChecked": "2026-09-17",
+      "lastSuccess": "2026-09-17",
+      "count": 70
+    }
+  ],
+  "archive": {
+    "url": "/public/models.json",
+    "count": 104,
+    "sha256": "348a1466e6f7d517661d0650f7f4799f891871290393d936d4467a7bf28a0333"
+  },
+  "limitations": [
+    "firstSeen is the first local observation, never an inferred launch date. API created timestamps and HF repository creation dates are not release dates.",
+    "The first successful provider snapshot is a baseline, not a batch of new releases or availability-added events. History only covers observations since this pipeline began.",
+    "models.dev is a secondary catalog. Only exact IDs in the live official Zen endpoint establish current Zen availability. API protocol and SDK packages never identify a maker.",
+    "Unknown provider means no curated maker attribution, even for familiar names. Provider-scoped IDs are intentionally not fuzzy-merged with HF or legacy records; duplicate underlying models may remain.",
+    "Legacy entities are unverified, have null release dates, and retain a separate legacyReportDate. Blog/product stories are separated from conservative model candidates; all archive reports remain unverified pending review; archive summaries and benchmarks are never imported.",
+    "open_source is shorthand for a recognized permissive weight license, not full OSI AI certification. Restrictive recognized licenses are open_weights; missing, custom or ambiguous licenses stay unknown. HF hosting alone establishes neither.",
+    "HF coverage is selected official organizations, latest 5 repositories per organization plus all previously observed repositories. Full per-repository metadata is fetched; this is not a complete release census. HF removals are not inferred from this rolling selection.",
+    "Fine-tunes, quantizations and optimizations are not foundation releases. Unclassified repositories use type=model, not foundation. No launch or benchmark claims are derived from names, parameter suffixes, or repository creation timestamps.",
+    "Source failures retain known fields and prices. A greater-than-25-percent catalog contraction is rejected for review, which may delay real mass-removal detection. Individual HF metadata failures retain their prior rows.",
+    "Prices are USD per million tokens; official documentation takes precedence over secondary catalog prices. Free does not mean unlimited. Conditional discounts, input length tiers and fees require checking the source. Unknown free status is neither free nor paid.",
+    "Observation timestamps have UTC day precision to limit six-hour schedule churn. Same-day meaningful transitions append ordered snapshots/events; no-change checks refresh at most daily. Generated time is a build date, not evidence that every source succeeded.",
+    "No OpenRouter or RSS discovery is used. Signals and verified release dates remain empty until source-backed evidence is added. Published deprecation does not imply endpoint removal."
+  ]
+}

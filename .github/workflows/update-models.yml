@@ -1,39 +1,37 @@
-name: Weekly Model Update
+name: Model Intelligence Update
 
 on:
-  # Run Monday and Thursday at 02:00 UTC
   schedule:
-    - cron: '0 2 * * 1'
-    - cron: '0 2 * * 4'
-
-  # Also allow manual trigger from GitHub Actions tab
+    - cron: '17 */6 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: model-intelligence-update
+  cancel-in-progress: false
 
 jobs:
   update-models:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 15
     permissions:
-      contents: write   # needed to git push
-
+      contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Run fetch-models script
-        run: npm run fetch
-
-      - name: Commit updated models.json
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - run: npm run fetch
+      - run: npm run validate
+      - name: Publish changed generated data
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/models.json
-          # Exit cleanly if nothing changed (no new models this week)
-          git diff --cached --quiet && echo "No changes to commit." && exit 0
-          git commit -m "chore(data): weekly model update $(date -u +%Y-%m-%d)"
+          git add public/data/
+          if git diff --cached --quiet; then
+            echo "No generated data changes."
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='github-actions[bot]@users.noreply.github.com' commit -m "chore(data): model intelligence update $(date -u +%Y-%m-%d)"
           git push

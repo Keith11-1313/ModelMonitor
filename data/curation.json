@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "identities": [
+    {
+      "id": "opencode:union-alpha",
+      "providerModelId": "union-alpha",
+      "name": "Union Alpha",
+      "provider": "Unknown",
+      "identity": "unknown",
+      "type": "stealth",
+      "sourceUrl": "https://opencode.ai/docs/zen/",
+      "evidence": "Union Alpha Free is a stealth model available on OpenCode for a limited time.",
+      "summary": "Stealth model offered free for a limited time on OpenCode Zen. Its maker and underlying identity have not been disclosed."
+    },
+    {
+      "id": "opencode:big-pickle",
+      "providerModelId": "big-pickle",
+      "name": "Big Pickle",
+      "provider": "Unknown",
+      "identity": "unknown",
+      "type": "stealth",
+      "sourceUrl": "https://opencode.ai/docs/zen/",
+      "evidence": "Big Pickle is a stealth model",
+      "summary": "Stealth model offered free for a limited time on OpenCode Zen; underlying identity remains unknown."
+    }
+  ],
+  "links": [],
+  "reveals": [],
+  "limits": [
+    {
+      "provider": "opencode",
+      "product": "Zen",
+      "plan": "Pay as you go",
+      "window": "monthly",
+      "reset": {
+        "type": "unspecified",
+        "description": "Workspace and member monthly spending limits are user-configurable. The documentation does not specify a reset timezone or a universal request/token quota."
+      },
+      "confidence": "official",
+      "sourceUrl": "https://opencode.ai/docs/zen/",
+      "evidence": "You can also set a monthly usage limit for the entire workspace and for each member of your team."
+    }
+  ],
+  "hfOrganizations": [
+    { "org": "openai", "provider": "OpenAI" },
+    { "org": "google", "provider": "Google" },
+    { "org": "meta-llama", "provider": "Meta" },
+    { "org": "deepseek-ai", "provider": "DeepSeek" },
+    { "org": "Qwen", "provider": "Alibaba" },
+    { "org": "mistralai", "provider": "Mistral AI" },
+    { "org": "moonshotai", "provider": "Moonshot AI" },
+    { "org": "zai-org", "provider": "Zhipu AI" },
+    { "org": "nvidia", "provider": "NVIDIA" }
+  ],
+  "hfRecentPerOrganization": 5
+}

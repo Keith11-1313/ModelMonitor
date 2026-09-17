@@ -3,49 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>April in AI — 2026 Model Release Tracker</title>
-  <meta name="description" content="Week-by-week tracker of major AI model releases in April 2026. Featuring DeepSeek, GPT-5.5, Qwen, Llama 4, Claude, and more." />
-
-  <!-- React + ReactDOM (production CDN) -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-
-  <!-- Babel standalone — transpiles JSX in the browser (no build step needed) -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-  <!-- IBM Plex fonts -->
+  <meta name="theme-color" content="#161616" />
+  <title>ModelMonitor — AI models, availability & evidence</title>
+  <meta name="description" content="Track AI model discoveries, source-backed availability, open licenses and observed changes. Release dates and unverified reports are kept distinct." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Serif:wght@300;400&display=swap" rel="stylesheet" />
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #ffffff; font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; }
-  </style>
+  <link rel="stylesheet" href="./styles.css" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" defer></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
 </head>
 <body>
-  <div id="root"></div>
-
-  <!--
-    Fetch index.jsx as text, transpile with Babel, eval it, then mount.
-    This avoids the limitations of Babel standalone's external src loading.
-  -->
+  <div id="root"><p class="boot" role="status">Loading ModelMonitor…</p></div>
+  <noscript>ModelMonitor needs JavaScript. Published datasets are available in <a href="./public/data/metadata.json">source metadata</a>.</noscript>
   <script>
-    fetch('./index.jsx')
-      .then(r => r.text())
-      .then(src => {
-        const transformed = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]] }).code;
-        // Append a line that leaks App into the global scope before mounting,
-        // because new Function() runs in its own isolated scope.
-        // eslint-disable-next-line no-new-func
-        new Function(transformed + '\nwindow.App = App;')();
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(React.createElement(window.App));
-      })
-      .catch(err => {
-        document.getElementById('root').innerHTML =
-          '<div style="color:#f87171;font-family:monospace;padding:40px">Failed to load app: ' + err + '</div>';
-      });
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('./index.jsx')
+        .then(response => {
+          if (!response.ok) throw new Error('Application could not be loaded');
+          return response.text();
+        })
+        .then(source => {
+          const code = Babel.transform(source, { presets: [['react', { runtime: 'classic' }]] }).code;
+          new Function(code + '\nReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));')();
+        })
+        .catch(() => {
+          const root = document.getElementById('root');
+          root.textContent = '';
+          const message = document.createElement('p');
+          message.className = 'boot';
+          message.setAttribute('role', 'alert');
+          message.textContent = 'ModelMonitor could not start. Check your connection and reload. React and Babel require access to their CDN.';
+          const retry = document.createElement('button');
+          retry.textContent = 'Reload application';
+          retry.onclick = () => window.location.reload();
+          root.append(message, retry);
+        });
+    });
   </script>
 </body>
 </html>
