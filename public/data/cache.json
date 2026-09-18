@@ -1410,26 +1410,6 @@
         }
       },
       {
-        "id": "union-alpha",
-        "name": "Union Alpha Free",
-        "context": 262144,
-        "reasoning": true,
-        "tools": true,
-        "structuredOutput": null,
-        "modalities": [
-          "image",
-          "text"
-        ],
-        "pricing": {
-          "input": 0,
-          "output": 0,
-          "cachedInput": 0,
-          "cachedOutput": null,
-          "currency": "USD",
-          "unit": "1M tokens"
-        }
-      },
-      {
         "id": "gpt-5.4-nano",
         "name": "GPT-5.4 Nano",
         "context": 400000,
@@ -1708,6 +1688,25 @@
           "input": 1.4,
           "output": 4.4,
           "cachedInput": 0.26,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
+        "id": "jev-latest",
+        "name": "Jev",
+        "context": 64000,
+        "reasoning": false,
+        "tools": false,
+        "structuredOutput": true,
+        "modalities": [
+          "text"
+        ],
+        "pricing": {
+          "input": 0.042,
+          "output": 0,
+          "cachedInput": null,
           "cachedOutput": null,
           "currency": "USD",
           "unit": "1M tokens"
@@ -2236,7 +2235,7 @@
         }
       }
     ],
-    "lastSuccess": "2026-09-17"
+    "lastSuccess": "2026-09-18"
   },
   "docs": {
     "rows": [
@@ -3191,6 +3190,6 @@
         }
       }
     ],
-    "lastSuccess": "2026-09-17"
+    "lastSuccess": "2026-09-18"
   }
 }
