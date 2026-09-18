@@ -49,8 +49,6 @@ export function pricing(cost) {
   };
 }
 
-
-
 const perMillion = (value) => {
   const amount = typeof value === "string" && value.trim() !== "" ? Number(value) : number(value);
   return Number.isFinite(amount) && amount >= 0 ? amount * 1_000_000 : null;
@@ -75,7 +73,7 @@ export async function collectOpenRouter(previousCount = 0, options = {}) {
       reasoning: typeof r.reasoning === "object" || parameters.some((v) => /reasoning/i.test(v)) ? true : null,
       tools: parameters.includes("tools") || parameters.includes("tool_choice") ? true : null,
       structuredOutput: parameters.includes("structured_outputs") || parameters.includes("response_format") ? true : null,
-      hfId: typeof r.hugging_face_id === "string" ? r.hugging_face_id : null,
+      hfId: typeof r.hugging_face_id === "string" && r.hugging_face_id.trim() ? r.hugging_face_id.trim() : null,
     };
   });
 }
