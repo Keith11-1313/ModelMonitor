@@ -2745,15 +2745,36 @@
     "provider": "opencode",
     "providerModelId": "jev-1.13",
     "status": "available",
-    "free": null,
-    "context": null,
-    "reasoning": null,
-    "tools": null,
-    "structuredOutput": null,
-    "modalities": [],
-    "pricing": null,
+    "free": false,
+    "context": 64000,
+    "reasoning": false,
+    "tools": false,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0.042,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
     "confidence": "official",
     "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-19"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      },
       {
         "url": "https://opencode.ai/zen/v1/models",
         "label": "Official Zen membership; not maker attribution or release date",
@@ -2771,15 +2792,36 @@
     "provider": "opencode",
     "providerModelId": "jev-1.13-free",
     "status": "available",
-    "free": null,
-    "context": null,
-    "reasoning": null,
-    "tools": null,
-    "structuredOutput": null,
-    "modalities": [],
-    "pricing": null,
+    "free": true,
+    "context": 64000,
+    "reasoning": false,
+    "tools": false,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
     "confidence": "official",
     "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-19"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      },
       {
         "url": "https://opencode.ai/zen/v1/models",
         "label": "Official Zen membership; not maker attribution or release date",
@@ -3951,7 +3993,7 @@
     "pricing": {
       "input": 0.04,
       "output": 0.08,
-      "cachedInput": 0.008,
+      "cachedInput": 0.016,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4064,9 +4106,9 @@
       "video"
     ],
     "pricing": {
-      "input": 1.875,
-      "output": 10.5,
-      "cachedInput": 0.2175,
+      "input": 1.7,
+      "output": 8.5,
+      "cachedInput": 0.16999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6601,9 +6643,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.047040000000000005,
-      "output": 0.09408000000000001,
-      "cachedInput": 0.009408000000000001,
+      "input": 0.04368,
+      "output": 0.08736,
+      "cachedInput": 0.008735999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6638,7 +6680,7 @@
     "pricing": {
       "input": 0.04,
       "output": 0.08,
-      "cachedInput": 0.008,
+      "cachedInput": 0.016,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6813,9 +6855,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.564282,
-      "output": 1.128564,
-      "cachedInput": 0.047023499999999996,
+      "input": 0.422298,
+      "output": 0.844596,
+      "cachedInput": 0.0351915,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11203,9 +11245,9 @@
       "video"
     ],
     "pricing": {
-      "input": 1.875,
-      "output": 10.5,
-      "cachedInput": 0.2175,
+      "input": 1.7,
+      "output": 8.5,
+      "cachedInput": 0.16999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
