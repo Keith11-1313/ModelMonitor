@@ -2666,6 +2666,55 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-09-19",
+      "provider": "opencode",
+      "available": 74,
+      "free": 8,
+      "paid": 64,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:deepseek-v4.1-flash",
+          "modelId": "opencode:deepseek-v4.1-flash",
+          "free": false
+        },
+        {
+          "id": "opencode:jev-1.13",
+          "modelId": "opencode:jev-1.13",
+          "free": null
+        },
+        {
+          "id": "opencode:jev-1.13-free",
+          "modelId": "opencode:jev-1.13-free",
+          "free": null
+        },
+        {
+          "id": "opencode:qwen3.8-flash",
+          "modelId": "opencode:qwen3.8-flash",
+          "free": false
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-09-19",
+      "provider": "openrouter",
+      "available": 447,
+      "free": 25,
+      "paid": 417,
+      "unknown": 5,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:z-ai/glm-5.3-flashx",
+          "modelId": "openrouter:z-ai/glm-5.3-flashx",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }

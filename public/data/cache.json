@@ -907,6 +907,26 @@
         }
       },
       {
+        "id": "deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash",
+        "context": 1000000,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "pricing": {
+          "input": 0.3,
+          "output": 1.2,
+          "cachedInput": 0.006,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "claude-fable-5-1",
         "name": "Claude Fable 5.1",
         "context": 1000000,
@@ -1447,6 +1467,27 @@
           "output": 180,
           "cachedInput": 30,
           "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
+        "id": "qwen3.8-flash",
+        "name": "Qwen3.8 Flash",
+        "context": 1000000,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "pricing": {
+          "input": 0.15,
+          "output": 0.47,
+          "cachedInput": 0.016,
+          "cachedOutput": 0.2,
           "currency": "USD",
           "unit": "1M tokens"
         }
@@ -2878,6 +2919,18 @@
         }
       },
       {
+        "id": "qwen3.8-flash",
+        "name": "Qwen3.8 Flash",
+        "pricing": {
+          "input": 0.15,
+          "output": 0.47,
+          "cachedInput": 0.016,
+          "cachedOutput": 0.2,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "qwen3.7-max",
         "name": "Qwen3.7 Max",
         "pricing": {
@@ -2921,6 +2974,18 @@
           "output": 1.2,
           "cachedInput": 0.02,
           "cachedOutput": 0.25,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
+        "id": "deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash",
+        "pricing": {
+          "input": 0.3,
+          "output": 1.2,
+          "cachedInput": 0.006,
+          "cachedOutput": null,
           "currency": "USD",
           "unit": "1M tokens"
         }

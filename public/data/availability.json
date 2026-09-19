@@ -834,6 +834,54 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:deepseek-v4.1-flash",
+    "modelId": "opencode:deepseek-v4.1-flash",
+    "provider": "opencode",
+    "providerModelId": "deepseek-v4.1-flash",
+    "status": "available",
+    "free": false,
+    "context": 1000000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.3,
+      "output": 1.2,
+      "cachedInput": 0.006,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-19"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      }
+    ],
+    "firstSeen": "2026-09-19",
+    "lastChecked": "2026-09-19",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:gemini-3-flash",
     "modelId": "opencode:gemini-3-flash",
     "provider": "opencode",
@@ -2692,6 +2740,58 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:jev-1.13",
+    "modelId": "opencode:jev-1.13",
+    "provider": "opencode",
+    "providerModelId": "jev-1.13",
+    "status": "available",
+    "free": null,
+    "context": null,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [],
+    "pricing": null,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      }
+    ],
+    "firstSeen": "2026-09-19",
+    "lastChecked": "2026-09-19",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
+    "id": "opencode:jev-1.13-free",
+    "modelId": "opencode:jev-1.13-free",
+    "provider": "opencode",
+    "providerModelId": "jev-1.13-free",
+    "status": "available",
+    "free": null,
+    "context": null,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [],
+    "pricing": null,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      }
+    ],
+    "firstSeen": "2026-09-19",
+    "lastChecked": "2026-09-19",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:kimi-k2.5",
     "modelId": "opencode:kimi-k2.5",
     "provider": "opencode",
@@ -3518,6 +3618,55 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:qwen3.8-flash",
+    "modelId": "opencode:qwen3.8-flash",
+    "provider": "opencode",
+    "providerModelId": "qwen3.8-flash",
+    "status": "available",
+    "free": false,
+    "context": 1000000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0.15,
+      "output": 0.47,
+      "cachedInput": 0.016,
+      "cachedOutput": 0.2,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-19"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      }
+    ],
+    "firstSeen": "2026-09-19",
+    "lastChecked": "2026-09-19",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:union-alpha",
     "modelId": "opencode:union-alpha",
     "provider": "opencode",
@@ -3730,9 +3879,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.135,
-      "output": 0.54,
-      "cachedInput": 0.00405,
+      "input": 0.13,
+      "output": 0.52,
+      "cachedInput": 0.0026000000000000003,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -3800,9 +3949,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.05104,
-      "output": 0.15312,
-      "cachedInput": 0.001624,
+      "input": 0.04,
+      "output": 0.08,
+      "cachedInput": 0.008,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -3915,9 +4064,9 @@
       "video"
     ],
     "pricing": {
-      "input": 1.95,
-      "output": 10.92,
-      "cachedInput": 0.2262,
+      "input": 1.875,
+      "output": 10.5,
+      "cachedInput": 0.2175,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6452,9 +6601,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.048440000000000004,
-      "output": 0.09688000000000001,
-      "cachedInput": 0.009688,
+      "input": 0.047040000000000005,
+      "output": 0.09408000000000001,
+      "cachedInput": 0.009408000000000001,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6487,9 +6636,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.06,
-      "output": 0.12,
-      "cachedInput": 0.012,
+      "input": 0.04,
+      "output": 0.08,
+      "cachedInput": 0.008,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6664,9 +6813,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.66555,
-      "output": 1.3311,
-      "cachedInput": 0.0554625,
+      "input": 0.564282,
+      "output": 1.128564,
+      "cachedInput": 0.047023499999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11054,9 +11203,9 @@
       "video"
     ],
     "pricing": {
-      "input": 1.95,
-      "output": 10.92,
-      "cachedInput": 0.2262,
+      "input": 1.875,
+      "output": 10.5,
+      "cachedInput": 0.2175,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -19633,6 +19782,43 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-09-19",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:z-ai/glm-5.3-flashx",
+    "modelId": "openrouter:z-ai/glm-5.3-flashx",
+    "provider": "openrouter",
+    "providerModelId": "z-ai/glm-5.3-flashx",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0.37,
+      "output": 1.25,
+      "cachedInput": 0.075,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-19"
+      }
+    ],
+    "firstSeen": "2026-09-19",
     "lastChecked": "2026-09-19",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
