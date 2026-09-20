@@ -117,6 +117,45 @@
     }
   },
   {
+    "id": "event:38a65861e72aefb63be88f24",
+    "date": "2026-09-20",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-flash",
+    "title": "price change: deepseek/deepseek-v4-flash",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.0364,
+        "output": 0.0728,
+        "cachedInput": 0.00728,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.035840000000000004,
+        "output": 0.07168000000000001,
+        "cachedInput": 0.007168,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:3abd84a0da6e0a4d361d6e3f",
     "date": "2026-09-20",
     "type": "price_change",
@@ -429,6 +468,162 @@
     }
   },
   {
+    "id": "event:d4335838465eafdbe2d24a88",
+    "date": "2026-09-20",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+    "title": "price change: deepseek/deepseek-v4-pro-0813",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.66,
+        "output": 1.9800000000000002,
+        "cachedInput": 0.022,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.55044,
+        "output": 1.6513200000000001,
+        "cachedInput": 0.018348,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:da36d67b3559faea9312fa93",
+    "date": "2026-09-20",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-pro-latest",
+    "title": "price change: ~deepseek/deepseek-pro-latest",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.56496,
+        "output": 1.69488,
+        "cachedInput": 0.017976000000000002,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.55044,
+        "output": 1.6513200000000001,
+        "cachedInput": 0.018348,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:ec6f964603393694ea2bfa37",
+    "date": "2026-09-20",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.3",
+    "title": "price change: z-ai/glm-5.3",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.896,
+        "output": 2.816,
+        "cachedInput": 0.16640000000000002,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.868,
+        "output": 2.7279999999999998,
+        "cachedInput": 0.16119999999999998,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:ef2b536b7aedda3f108cad9f",
+    "date": "2026-09-20",
+    "type": "price_change",
+    "modelId": "openrouter:qwen/qwen3.8-27b",
+    "title": "price change: qwen/qwen3.8-27b",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.42,
+        "output": 3,
+        "cachedInput": 0.08499999999999999,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.19999999999999998,
+        "output": 2.5500000000000003,
+        "cachedInput": 0.08499999999999999,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:f8cf2c97ba1e050d8aaae7d4",
     "date": "2026-09-20",
     "type": "availability_removed",
@@ -448,6 +643,44 @@
     "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
     "before": "available",
     "after": "removed"
+  },
+  {
+    "id": "history:37851a33f7cdae436b61379e",
+    "date": "2026-09-20",
+    "type": "repository_created",
+    "modelId": "hf:Qwen/Qwen-Image-2.1-PE-I2I",
+    "title": "repository created: Qwen-Image-2.1-PE-I2I",
+    "provider": "Alibaba",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "history:eb012d5a2fdadd45d637a443",
+    "date": "2026-09-20",
+    "type": "repository_created",
+    "modelId": "hf:Qwen/Qwen-Image-2.1-PE-T2I",
+    "title": "repository created: Qwen-Image-2.1-PE-T2I",
+    "provider": "Alibaba",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
+      }
+    ]
   },
   {
     "id": "event:03e19d4f6de0f0c2167d68e9",
@@ -2614,6 +2847,25 @@
         "label": "Unverified legacy archive; original report date, not a verified launch",
         "confidence": "unverified",
         "lastChecked": "2026-09-17"
+      }
+    ]
+  },
+  {
+    "id": "history:22bf815136123b11de077d83",
+    "date": "2026-09-14",
+    "type": "repository_created",
+    "modelId": "hf:Qwen/Qwen-Image-2.1",
+    "title": "repository created: Qwen-Image-2.1",
+    "provider": "Alibaba",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-09-20"
       }
     ]
   },
