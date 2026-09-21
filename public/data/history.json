@@ -2830,6 +2830,57 @@
       "removed": [
         "openrouter:anthropic/claude-opus-4"
       ]
+    },
+    {
+      "date": "2026-09-21",
+      "provider": "opencode",
+      "available": 76,
+      "free": 10,
+      "paid": 66,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:mimo-v2.6-flash-free",
+          "modelId": "opencode:mimo-v2.6-flash-free",
+          "free": true
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-09-21",
+      "provider": "openrouter",
+      "available": 443,
+      "free": 24,
+      "paid": 414,
+      "unknown": 5,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:xiaomi/mimo-v2.6-flash",
+          "modelId": "openrouter:xiaomi/mimo-v2.6-flash",
+          "free": false
+        },
+        {
+          "id": "openrouter:xiaomi/mimo-v2.6-pro",
+          "modelId": "openrouter:xiaomi/mimo-v2.6-pro",
+          "free": false
+        },
+        {
+          "id": "openrouter:xiaomi/mimo-v2.6-pro-ultraspeed",
+          "modelId": "openrouter:xiaomi/mimo-v2.6-pro-ultraspeed",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:minimax/minimax-m3:batch",
+        "openrouter:moonshotai/kimi-k3:batch",
+        "openrouter:openai/gpt-oss-120b:batch",
+        "openrouter:qwen/qwen3.5-9b:batch",
+        "openrouter:qwen/qwen3.8-2.4t-a95b:batch",
+        "openrouter:thinkingmachines/inkling:batch"
+      ]
     }
   ]
 }
