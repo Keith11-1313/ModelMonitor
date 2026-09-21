@@ -2794,6 +2794,42 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-09-21",
+      "provider": "opencode",
+      "available": 75,
+      "free": 9,
+      "paid": 66,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:grok-4.7",
+          "modelId": "opencode:grok-4.7",
+          "free": false
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-09-21",
+      "provider": "openrouter",
+      "available": 446,
+      "free": 24,
+      "paid": 417,
+      "unknown": 5,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:x-ai/grok-4.7",
+          "modelId": "openrouter:x-ai/grok-4.7",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:anthropic/claude-opus-4"
+      ]
     }
   ]
 }
