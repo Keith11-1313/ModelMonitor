@@ -5,106 +5,1203 @@
   "periodStart": "2026-09-22",
   "periodEnd": "2026-09-22",
   "summary": {
-    "newModels": 0,
+    "newModels": 12,
     "newNotableReleases": 0,
     "becameFree": 0,
     "noLongerFree": 0,
-    "priceChanges": 8,
-    "availabilityAdded": 0,
-    "availabilityRemoved": 0,
+    "priceChanges": 11,
+    "availabilityAdded": 13,
+    "availabilityRemoved": 5,
     "newOpenModels": 0,
     "deprecations": 0,
     "historicalChanges": 0,
-    "modelUpdates": 0,
+    "modelUpdates": 3,
     "modelRemovals": 0,
-    "availabilityUpdates": 8
+    "availabilityUpdates": 13
   },
   "highlights": [
     {
-      "id": "change:c7e9ae1587de35831f2d633d:pricing",
-      "level": "fact",
-      "text": "DeepSeek: DeepSeek V4 Flash 0423's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:a1a0c8d0e0da9579e20f6681:pricing",
+      "id": "change:4abd2f2065de0718cac5edad:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek V4 Pro 0423's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:30cec1b8d4cfa4353668cc0a:pricing",
+      "id": "change:5457c182c95f99318723db8b:pricing",
       "level": "fact",
-      "text": "DeepSeek: DeepSeek V4 Pro 0813's token pricing changed on openrouter.",
+      "text": "MoonshotAI: Kimi K3 (batch)'s token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:be0f6864f67692846a74f736:pricing",
+      "id": "change:d81b3582c659428125d593b8:pricing",
       "level": "fact",
-      "text": "DeepSeek: DeepSeek V4.1 Flash's token pricing changed on openrouter.",
+      "text": "OpenAI: gpt-oss-20b's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:7ebaa6d48fa22d3505a83515:pricing",
+      "id": "change:8242f02a30c8a00add126779:pricing",
       "level": "fact",
-      "text": "MoonshotAI: Kimi K2.7 Code's token pricing changed on openrouter.",
+      "text": "Qwen: Qwen3.6 27B's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:95927d8c002d07d6717fad97:pricing",
+      "id": "change:8bfeed83b2f528e4de0d2f08:pricing",
       "level": "fact",
-      "text": "Z.ai: GLM 5.3's token pricing changed on openrouter.",
+      "text": "Tencent: Hy3's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:751bda62570115670f7d7458:pricing",
+      "id": "change:2424e9a1fc2ab7bf565ec847:pricing",
+      "level": "fact",
+      "text": "Z.ai: GLM 5.3 Flash (batch)'s token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:4389e1d0566efef3f8333c3b:pricing",
+      "level": "fact",
+      "text": "Z.ai: GLM 5.3 (batch)'s token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:1adea819a7519212e10ce10e:pricing",
+      "level": "fact",
+      "text": "Anthropic: Claude Opus Latest's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:0efed518bf832ca93278d918:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek Pro Latest's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:34a0e356cedae923d96b2bf0:pricing",
+      "id": "change:0285dd4df8217656a593b813:pricing",
       "level": "fact",
-      "text": "Z.ai: GLM Latest's token pricing changed on openrouter.",
+      "text": "DeepSeek: DeepSeek V4 Flash Latest's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:320c2231f6ad38e4408bbf81:pricing",
+      "level": "fact",
+      "text": "OpenAI: GPT Luna Latest's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:1b2d7a1293c555c7e70f0adc",
+      "level": "fact",
+      "text": "AionLabs: Aion-2.0 changed: context window.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:8f5f530c45bca85739a5ac1e",
+      "level": "fact",
+      "text": "AionLabs: Aion-3.0 changed: context window.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:a79a2a1a7ebd22fa62fb272a",
+      "level": "fact",
+      "text": "AionLabs: Aion-3.0-Mini changed: context window.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:d3f76217868d15af8a799f65",
+      "level": "fact",
+      "text": "Anthropic: Claude Opus 5.5 was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:dcd730566d733d674f9fc45f",
+      "level": "fact",
+      "text": "Anthropic: Claude Opus 5.5 (batch) was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:2fba4d3814787e86f5f9420d",
+      "level": "fact",
+      "text": "DeepSeek: DeepSeek V4.1 Flash (batch) was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:eab748eedeb86eebcc864655",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Luna was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:8df9e3331327f4f9e738f6f0",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Luna Pro was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:adf4938965936ca085e5a400",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Luna Pro (batch) was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:e3242e3a93341c4405e49613",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Luna (batch) was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:46c33d15f3dc2523c0e365e9",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Sol was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:1de268b928342e8b1300194f",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Sol Pro was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:785eec7293402fdf4fd7a962",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Sol Pro (batch) was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:dd2a3f3ec0e84c43b160dbc8",
+      "level": "fact",
+      "text": "OpenAI: GPT-6 Sol (batch) was added to the tracked model catalog.",
       "url": "https://openrouter.ai/api/v1/models"
     }
   ],
-  "modelChanges": [],
+  "modelChanges": [
+    {
+      "dataset": "models",
+      "entityId": "openrouter:aion-labs/aion-2.0",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "model_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-2.0",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1b2d7a1293c555c7e70f0adc"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:aion-labs/aion-3.0",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "model_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8f5f530c45bca85739a5ac1e"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:aion-labs/aion-3.0-mini",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "model_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0-mini",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a79a2a1a7ebd22fa62fb272a"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:anthropic/claude-opus-5.5",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "anthropic/claude-opus-5.5",
+          "openrouter/anthropic/claude-opus-5.5"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1000000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "Anthropic: Claude Opus 5.5",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d3f76217868d15af8a799f65"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "anthropic/claude-opus-5.5:batch",
+          "openrouter/anthropic/claude-opus-5.5:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1000000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "Anthropic: Claude Opus 5.5 (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:dcd730566d733d674f9fc45f"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "deepseek/deepseek-v4.1-flash:batch",
+          "openrouter/deepseek/deepseek-v4.1-flash:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "DeepSeek: DeepSeek V4.1 Flash (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2fba4d3814787e86f5f9420d"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna",
+          "openrouter/openai/gpt-6-luna"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:eab748eedeb86eebcc864655"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna-pro",
+          "openrouter/openai/gpt-6-luna-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8df9e3331327f4f9e738f6f0"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna-pro:batch",
+          "openrouter/openai/gpt-6-luna-pro:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna Pro (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:adf4938965936ca085e5a400"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna:batch",
+          "openrouter/openai/gpt-6-luna:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e3242e3a93341c4405e49613"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol",
+          "openrouter/openai/gpt-6-sol"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:46c33d15f3dc2523c0e365e9"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol-pro",
+          "openrouter/openai/gpt-6-sol-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1de268b928342e8b1300194f"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol-pro:batch",
+          "openrouter/openai/gpt-6-sol-pro:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol Pro (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:785eec7293402fdf4fd7a962"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol:batch",
+          "openrouter/openai/gpt-6-sol:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:dd2a3f3ec0e84c43b160dbc8"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-oss-20b:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-oss-20b:batch",
+          "openrouter/openai/gpt-oss-20b:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 131072,
+        "hfId": "openai/gpt-oss-20b",
+        "identity": "unknown",
+        "modalities": [
+          "text"
+        ],
+        "name": "OpenAI: gpt-oss-20b (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-oss-20b:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a43894a17def34b27b4d4937"
+    }
+  ],
   "availabilityChanges": [
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-flash",
+      "entityId": "openrouter:aion-labs/aion-2.0",
       "operation": "updated",
       "fields": [
-        "pricing"
+        "context"
       ],
       "before": {
-        "pricing": {
-          "cachedInput": 0.017721200000000003,
-          "currency": "USD",
-          "input": 0.088606,
-          "output": 0.177212,
-          "unit": "1M tokens"
-        }
+        "context": 131072
       },
       "after": {
-        "pricing": {
-          "cachedInput": 0.0098,
-          "currency": "USD",
-          "input": 0.049,
-          "output": 0.098,
-          "unit": "1M tokens"
-        }
+        "context": 1048576
       },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:deepseek/deepseek-v4-flash",
+      "modelId": "openrouter:aion-labs/aion-2.0",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:c7e9ae1587de35831f2d633d"
+      "id": "change:1cfec5d727d908cc404b9eb7"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:aion-labs/aion-3.0",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:115056b78c17bcf581102a26"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:aion-labs/aion-3.0-mini",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0-mini",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e3a700198f3f90de0b67f768"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:anthropic/claude-opus-5.5",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1000000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:anthropic/claude-opus-5.5",
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 5,
+          "currency": "USD",
+          "input": 4,
+          "output": 20,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "anthropic/claude-opus-5.5",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:6afb93b51fa196bc36cc75ad"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1000000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:anthropic/claude-opus-5.5:batch",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "anthropic/claude-opus-5.5:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:377098b62742948e51bb5f6c"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-flash-0731:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4-flash-0731:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:da723157c66506d426863cbf"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-flash-vision-exp:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4-flash-vision-exp:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:12da9a624e1e449efc05e02e"
     },
     {
       "dataset": "availability",
@@ -114,15 +1211,6 @@
         "pricing"
       ],
       "before": {
-        "pricing": {
-          "cachedInput": 0.07960500000000001,
-          "currency": "USD",
-          "input": 0.9552599999999999,
-          "output": 1.9105199999999998,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
         "pricing": {
           "cachedInput": 0.0788655,
           "currency": "USD",
@@ -131,6 +1219,15 @@
           "unit": "1M tokens"
         }
       },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.075342,
+          "currency": "USD",
+          "input": 0.9041039999999999,
+          "output": 1.8082079999999998,
+          "unit": "1M tokens"
+        }
+      },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
@@ -139,147 +1236,940 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:a1a0c8d0e0da9579e20f6681"
+      "id": "change:4abd2f2065de0718cac5edad"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:4920b69fec6797e735793fbf"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+        "pricing": {
+          "cachedInput": 0.00336,
+          "currency": "USD",
+          "input": 0.112,
+          "output": 0.33599999999999997,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "deepseek/deepseek-v4.1-flash:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:458579df7c9365f2a6ee2816"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:meta/muse-glimmer-30b:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:meta/muse-glimmer-30b:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:337317a2edf5ca68cb899224"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:moonshotai/kimi-k3:batch",
+      "operation": "updated",
+      "fields": [
+        "pricing",
+        "status"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.3,
+          "currency": "USD",
+          "input": 3,
+          "output": 15,
+          "unit": "1M tokens"
+        },
+        "status": "removed"
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.228,
+          "currency": "USD",
+          "input": 2.2800000000000002,
+          "output": 11.399999999999999,
+          "unit": "1M tokens"
+        },
+        "status": "available"
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:moonshotai/kimi-k3:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:5457c182c95f99318723db8b"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna",
+        "pricing": {
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d919381e44c2c40f97d65f13"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna-pro",
+        "pricing": {
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:13ff9c5d0cd46f29e46891d5"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna-pro:batch",
+        "pricing": {
+          "cachedInput": 0.005,
+          "cachedOutput": 0.0625,
+          "currency": "USD",
+          "input": 0.049999999999999996,
+          "output": 0.25,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna-pro:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:75f0a7f675bead82a6e26c86"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna:batch",
+        "pricing": {
+          "cachedInput": 0.005,
+          "cachedOutput": 0.0625,
+          "currency": "USD",
+          "input": 0.049999999999999996,
+          "output": 0.25,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:369c956ab70b73012614202a"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol",
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:26465bc914c40af8e97ddd2f"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol-pro",
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:f202ddc9d33ce0aea0c7b983"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol-pro:batch",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 1.25,
+          "currency": "USD",
+          "input": 1,
+          "output": 5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol-pro:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:f1dc66eb764b7bb77fb87ba6"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol:batch",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 1.25,
+          "currency": "USD",
+          "input": 1,
+          "output": 5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:c7ee42ecbeb7c9c6863fe0ed"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-oss-20b",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.088,
+          "cachedInput": 0.03,
           "currency": "USD",
-          "input": 0.624,
-          "output": 2.88,
+          "input": 0.03,
+          "output": 0.13,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.022,
+          "cachedInput": 0.03,
           "currency": "USD",
-          "input": 0.66,
-          "output": 1.9800000000000002,
+          "input": 0.018,
+          "output": 0.09,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "modelId": "openrouter:openai/gpt-oss-20b",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:30cec1b8d4cfa4353668cc0a"
+      "id": "change:d81b3582c659428125d593b8"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "entityId": "openrouter:openai/gpt-oss-20b:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 131072,
+        "free": false,
+        "modalities": [
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-oss-20b:batch",
+        "pricing": {
+          "currency": "USD",
+          "input": 0.024,
+          "output": 0.112,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-oss-20b:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-oss-20b:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8e285ed18ab141bc9e7a8597"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:qwen/qwen3.6-27b",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.006,
+          "cachedInput": 0.03,
           "currency": "USD",
           "input": 0.3,
-          "output": 1.2,
+          "output": 2,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.003,
+          "cachedInput": 0.15,
           "currency": "USD",
-          "input": 0.15,
-          "output": 0.6,
+          "input": 0.32,
+          "output": 2.7,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "modelId": "openrouter:qwen/qwen3.6-27b",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:be0f6864f67692846a74f736"
+      "id": "change:8242f02a30c8a00add126779"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:moonshotai/kimi-k2.7-code",
+      "entityId": "openrouter:tencent/hy3",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.18,
+          "cachedInput": 0.032999999999999995,
           "currency": "USD",
-          "input": 0.7062,
-          "output": 3.21,
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.18,
+          "cachedInput": 0.020625,
           "currency": "USD",
-          "input": 0.7062,
-          "output": 3.3000000000000003,
+          "input": 0.0825,
+          "output": 0.33,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:moonshotai/kimi-k2.7-code",
+      "modelId": "openrouter:tencent/hy3",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:7ebaa6d48fa22d3505a83515"
+      "id": "change:8bfeed83b2f528e4de0d2f08"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:z-ai/glm-5.3",
+      "entityId": "openrouter:z-ai/glm-5.2:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:z-ai/glm-5.2:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:96905ee2d4853401a585625f"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.3-flash:batch",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.156,
+          "cachedInput": 0.015,
           "currency": "USD",
-          "input": 0.84,
-          "output": 2.64,
+          "input": 0.075,
+          "output": 0.25,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.12142000000000001,
+          "cachedInput": 0.012,
           "currency": "USD",
-          "input": 0.6537999999999999,
-          "output": 2.0547999999999997,
+          "input": 0.06,
+          "output": 0.19999999999999998,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:z-ai/glm-5.3",
+      "modelId": "openrouter:z-ai/glm-5.3-flash:batch",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:95927d8c002d07d6717fad97"
+      "id": "change:2424e9a1fc2ab7bf565ec847"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.3:batch",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.13,
+          "currency": "USD",
+          "input": 0.7,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.12,
+          "currency": "USD",
+          "input": 0.72,
+          "output": 2.4,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:z-ai/glm-5.3:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:4389e1d0566efef3f8333c3b"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~anthropic/claude-opus-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.5,
+          "cachedOutput": 6.25,
+          "currency": "USD",
+          "input": 5,
+          "output": 25,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 5,
+          "currency": "USD",
+          "input": 4,
+          "output": 20,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:~anthropic/claude-opus-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1adea819a7519212e10ce10e"
     },
     {
       "dataset": "availability",
@@ -289,15 +2179,6 @@
         "pricing"
       ],
       "before": {
-        "pricing": {
-          "cachedInput": 0.088,
-          "currency": "USD",
-          "input": 0.624,
-          "output": 2.88,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
         "pricing": {
           "cachedInput": 0.018438,
           "currency": "USD",
@@ -306,6 +2187,15 @@
           "unit": "1M tokens"
         }
       },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.018084,
+          "currency": "USD",
+          "input": 0.54252,
+          "output": 1.6275600000000001,
+          "unit": "1M tokens"
+        }
+      },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
@@ -314,76 +2204,82 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:751bda62570115670f7d7458"
+      "id": "change:0efed518bf832ca93278d918"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:~z-ai/glm-latest",
+      "entityId": "openrouter:~deepseek/deepseek-v4-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.10752500000000001,
+          "cachedInput": 0.008,
           "currency": "USD",
-          "input": 0.6545000000000001,
-          "output": 2.057,
+          "input": 0.03,
+          "output": 1,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.12142000000000001,
+          "cachedInput": 0.008,
           "currency": "USD",
-          "input": 0.6537999999999999,
-          "output": 2.0547999999999997,
+          "input": 0.03,
+          "output": 0.7999999999999999,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:~z-ai/glm-latest",
+      "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:34a0e356cedae923d96b2bf0"
-    }
-  ],
-  "pricingChanges": [
+      "id": "change:0285dd4df8217656a593b813"
+    },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-flash",
+      "entityId": "openrouter:~openai/gpt-luna-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.017721200000000003,
-        "currency": "USD",
-        "input": 0.088606,
-        "output": 0.177212,
-        "unit": "1M tokens"
+        "pricing": {
+          "cachedInput": 0.02,
+          "cachedOutput": 0.25,
+          "currency": "USD",
+          "input": 0.19999999999999998,
+          "output": 1.2,
+          "unit": "1M tokens"
+        }
       },
       "after": {
-        "cachedInput": 0.0098,
-        "currency": "USD",
-        "input": 0.049,
-        "output": 0.098,
-        "unit": "1M tokens"
+        "pricing": {
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.5,
+          "unit": "1M tokens"
+        }
       },
-      "type": "price_change",
+      "type": "availability_updated",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:deepseek/deepseek-v4-flash",
+      "modelId": "openrouter:~openai/gpt-luna-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:c7e9ae1587de35831f2d633d:pricing"
-    },
+      "id": "change:320c2231f6ad38e4408bbf81"
+    }
+  ],
+  "pricingChanges": [
     {
       "dataset": "availability",
       "entityId": "openrouter:deepseek/deepseek-v4-pro",
@@ -392,17 +2288,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.07960500000000001,
-        "currency": "USD",
-        "input": 0.9552599999999999,
-        "output": 1.9105199999999998,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.0788655,
         "currency": "USD",
         "input": 0.946386,
         "output": 1.892772,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.075342,
+        "currency": "USD",
+        "input": 0.9041039999999999,
+        "output": 1.8082079999999998,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -413,131 +2309,227 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:a1a0c8d0e0da9579e20f6681:pricing"
+      "id": "change:4abd2f2065de0718cac5edad:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "entityId": "openrouter:moonshotai/kimi-k3:batch",
       "operation": "updated",
       "fields": [
-        "pricing"
+        "pricing",
+        "status"
       ],
       "before": {
-        "cachedInput": 0.088,
+        "cachedInput": 0.3,
         "currency": "USD",
-        "input": 0.624,
-        "output": 2.88,
+        "input": 3,
+        "output": 15,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.022,
+        "cachedInput": 0.228,
         "currency": "USD",
-        "input": 0.66,
-        "output": 1.9800000000000002,
+        "input": 2.2800000000000002,
+        "output": 11.399999999999999,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "modelId": "openrouter:moonshotai/kimi-k3:batch",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:30cec1b8d4cfa4353668cc0a:pricing"
+      "id": "change:5457c182c95f99318723db8b:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "entityId": "openrouter:openai/gpt-oss-20b",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.006,
+        "cachedInput": 0.03,
+        "currency": "USD",
+        "input": 0.03,
+        "output": 0.13,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.03,
+        "currency": "USD",
+        "input": 0.018,
+        "output": 0.09,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-oss-20b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d81b3582c659428125d593b8:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:qwen/qwen3.6-27b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.03,
         "currency": "USD",
         "input": 0.3,
-        "output": 1.2,
+        "output": 2,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.003,
+        "cachedInput": 0.15,
         "currency": "USD",
-        "input": 0.15,
-        "output": 0.6,
+        "input": 0.32,
+        "output": 2.7,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "modelId": "openrouter:qwen/qwen3.6-27b",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:be0f6864f67692846a74f736:pricing"
+      "id": "change:8242f02a30c8a00add126779:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:moonshotai/kimi-k2.7-code",
+      "entityId": "openrouter:tencent/hy3",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.18,
+        "cachedInput": 0.032999999999999995,
         "currency": "USD",
-        "input": 0.7062,
-        "output": 3.21,
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.18,
+        "cachedInput": 0.020625,
         "currency": "USD",
-        "input": 0.7062,
-        "output": 3.3000000000000003,
+        "input": 0.0825,
+        "output": 0.33,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:moonshotai/kimi-k2.7-code",
+      "modelId": "openrouter:tencent/hy3",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:7ebaa6d48fa22d3505a83515:pricing"
+      "id": "change:8bfeed83b2f528e4de0d2f08:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:z-ai/glm-5.3",
+      "entityId": "openrouter:z-ai/glm-5.3-flash:batch",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.156,
+        "cachedInput": 0.015,
         "currency": "USD",
-        "input": 0.84,
-        "output": 2.64,
+        "input": 0.075,
+        "output": 0.25,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.12142000000000001,
+        "cachedInput": 0.012,
         "currency": "USD",
-        "input": 0.6537999999999999,
-        "output": 2.0547999999999997,
+        "input": 0.06,
+        "output": 0.19999999999999998,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:z-ai/glm-5.3",
+      "modelId": "openrouter:z-ai/glm-5.3-flash:batch",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:95927d8c002d07d6717fad97:pricing"
+      "id": "change:2424e9a1fc2ab7bf565ec847:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.3:batch",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.13,
+        "currency": "USD",
+        "input": 0.7,
+        "output": 2.2,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.12,
+        "currency": "USD",
+        "input": 0.72,
+        "output": 2.4,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:z-ai/glm-5.3:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:4389e1d0566efef3f8333c3b:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~anthropic/claude-opus-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.5,
+        "cachedOutput": 6.25,
+        "currency": "USD",
+        "input": 5,
+        "output": 25,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.19999999999999998,
+        "cachedOutput": 5,
+        "currency": "USD",
+        "input": 4,
+        "output": 20,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:~anthropic/claude-opus-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1adea819a7519212e10ce10e:pricing"
     },
     {
       "dataset": "availability",
@@ -547,17 +2539,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.088,
-        "currency": "USD",
-        "input": 0.624,
-        "output": 2.88,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.018438,
         "currency": "USD",
         "input": 0.57948,
         "output": 1.73844,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.018084,
+        "currency": "USD",
+        "input": 0.54252,
+        "output": 1.6275600000000001,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -568,38 +2560,71 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:751bda62570115670f7d7458:pricing"
+      "id": "change:0efed518bf832ca93278d918:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:~z-ai/glm-latest",
+      "entityId": "openrouter:~deepseek/deepseek-v4-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.10752500000000001,
+        "cachedInput": 0.008,
         "currency": "USD",
-        "input": 0.6545000000000001,
-        "output": 2.057,
+        "input": 0.03,
+        "output": 1,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.12142000000000001,
+        "cachedInput": 0.008,
         "currency": "USD",
-        "input": 0.6537999999999999,
-        "output": 2.0547999999999997,
+        "input": 0.03,
+        "output": 0.7999999999999999,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-09-22",
       "observedAt": "2026-09-22",
-      "modelId": "openrouter:~z-ai/glm-latest",
+      "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:34a0e356cedae923d96b2bf0:pricing"
+      "id": "change:0285dd4df8217656a593b813:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~openai/gpt-luna-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.02,
+        "cachedOutput": 0.25,
+        "currency": "USD",
+        "input": 0.19999999999999998,
+        "output": 1.2,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.01,
+        "cachedOutput": 0.125,
+        "currency": "USD",
+        "input": 0.09999999999999999,
+        "output": 0.5,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:~openai/gpt-luna-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:320c2231f6ad38e4408bbf81:pricing"
     }
   ],
   "openModelChanges": [],
@@ -65110,6 +67135,2110 @@
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
       "id": "change:34a0e356cedae923d96b2bf0"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:aion-labs/aion-2.0",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "model_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-2.0",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1b2d7a1293c555c7e70f0adc"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:aion-labs/aion-3.0",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "model_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8f5f530c45bca85739a5ac1e"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:aion-labs/aion-3.0-mini",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "model_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0-mini",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a79a2a1a7ebd22fa62fb272a"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:anthropic/claude-opus-5.5",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "anthropic/claude-opus-5.5",
+          "openrouter/anthropic/claude-opus-5.5"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1000000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "Anthropic: Claude Opus 5.5",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d3f76217868d15af8a799f65"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "anthropic/claude-opus-5.5:batch",
+          "openrouter/anthropic/claude-opus-5.5:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1000000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "Anthropic: Claude Opus 5.5 (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:dcd730566d733d674f9fc45f"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "deepseek/deepseek-v4.1-flash:batch",
+          "openrouter/deepseek/deepseek-v4.1-flash:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "DeepSeek: DeepSeek V4.1 Flash (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2fba4d3814787e86f5f9420d"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna",
+          "openrouter/openai/gpt-6-luna"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:eab748eedeb86eebcc864655"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna-pro",
+          "openrouter/openai/gpt-6-luna-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8df9e3331327f4f9e738f6f0"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna-pro:batch",
+          "openrouter/openai/gpt-6-luna-pro:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna Pro (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:adf4938965936ca085e5a400"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-luna:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-luna:batch",
+          "openrouter/openai/gpt-6-luna:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Luna (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e3242e3a93341c4405e49613"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol",
+          "openrouter/openai/gpt-6-sol"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:46c33d15f3dc2523c0e365e9"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol-pro",
+          "openrouter/openai/gpt-6-sol-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1de268b928342e8b1300194f"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol-pro:batch",
+          "openrouter/openai/gpt-6-sol-pro:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol Pro (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:785eec7293402fdf4fd7a962"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6-sol:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6-sol:batch",
+          "openrouter/openai/gpt-6-sol:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6 Sol (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:dd2a3f3ec0e84c43b160dbc8"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-oss-20b:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-oss-20b:batch",
+          "openrouter/openai/gpt-oss-20b:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 131072,
+        "hfId": "openai/gpt-oss-20b",
+        "identity": "unknown",
+        "modalities": [
+          "text"
+        ],
+        "name": "OpenAI: gpt-oss-20b (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-oss-20b:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a43894a17def34b27b4d4937"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:aion-labs/aion-2.0",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-2.0",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1cfec5d727d908cc404b9eb7"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:aion-labs/aion-3.0",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:115056b78c17bcf581102a26"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:aion-labs/aion-3.0-mini",
+      "operation": "updated",
+      "fields": [
+        "context"
+      ],
+      "before": {
+        "context": 131072
+      },
+      "after": {
+        "context": 1048576
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:aion-labs/aion-3.0-mini",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e3a700198f3f90de0b67f768"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:anthropic/claude-opus-5.5",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1000000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:anthropic/claude-opus-5.5",
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 5,
+          "currency": "USD",
+          "input": 4,
+          "output": 20,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "anthropic/claude-opus-5.5",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:6afb93b51fa196bc36cc75ad"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1000000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:anthropic/claude-opus-5.5:batch",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "anthropic/claude-opus-5.5:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:anthropic/claude-opus-5.5:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:377098b62742948e51bb5f6c"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-flash-0731:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4-flash-0731:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:da723157c66506d426863cbf"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-flash-vision-exp:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4-flash-vision-exp:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:12da9a624e1e449efc05e02e"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-pro",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.0788655,
+          "currency": "USD",
+          "input": 0.946386,
+          "output": 1.892772,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.075342,
+          "currency": "USD",
+          "input": 0.9041039999999999,
+          "output": 1.8082079999999998,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:4abd2f2065de0718cac5edad"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:4920b69fec6797e735793fbf"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+        "pricing": {
+          "cachedInput": 0.00336,
+          "currency": "USD",
+          "input": 0.112,
+          "output": 0.33599999999999997,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "deepseek/deepseek-v4.1-flash:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:458579df7c9365f2a6ee2816"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:meta/muse-glimmer-30b:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:meta/muse-glimmer-30b:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:337317a2edf5ca68cb899224"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:moonshotai/kimi-k3:batch",
+      "operation": "updated",
+      "fields": [
+        "pricing",
+        "status"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.3,
+          "currency": "USD",
+          "input": 3,
+          "output": 15,
+          "unit": "1M tokens"
+        },
+        "status": "removed"
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.228,
+          "currency": "USD",
+          "input": 2.2800000000000002,
+          "output": 11.399999999999999,
+          "unit": "1M tokens"
+        },
+        "status": "available"
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:moonshotai/kimi-k3:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:5457c182c95f99318723db8b"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna",
+        "pricing": {
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d919381e44c2c40f97d65f13"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna-pro",
+        "pricing": {
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:13ff9c5d0cd46f29e46891d5"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna-pro:batch",
+        "pricing": {
+          "cachedInput": 0.005,
+          "cachedOutput": 0.0625,
+          "currency": "USD",
+          "input": 0.049999999999999996,
+          "output": 0.25,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna-pro:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna-pro:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:75f0a7f675bead82a6e26c86"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-luna:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-luna:batch",
+        "pricing": {
+          "cachedInput": 0.005,
+          "cachedOutput": 0.0625,
+          "currency": "USD",
+          "input": 0.049999999999999996,
+          "output": 0.25,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-luna:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-luna:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:369c956ab70b73012614202a"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol",
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:26465bc914c40af8e97ddd2f"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol-pro",
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:f202ddc9d33ce0aea0c7b983"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol-pro:batch",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 1.25,
+          "currency": "USD",
+          "input": 1,
+          "output": 5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol-pro:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol-pro:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:f1dc66eb764b7bb77fb87ba6"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6-sol:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6-sol:batch",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 1.25,
+          "currency": "USD",
+          "input": 1,
+          "output": 5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6-sol:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-6-sol:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:c7ee42ecbeb7c9c6863fe0ed"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-oss-20b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.03,
+          "output": 0.13,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.018,
+          "output": 0.09,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-oss-20b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d81b3582c659428125d593b8"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-oss-20b:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 131072,
+        "free": false,
+        "modalities": [
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-oss-20b:batch",
+        "pricing": {
+          "currency": "USD",
+          "input": 0.024,
+          "output": 0.112,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-oss-20b:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:openai/gpt-oss-20b:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8e285ed18ab141bc9e7a8597"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:qwen/qwen3.6-27b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.3,
+          "output": 2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.15,
+          "currency": "USD",
+          "input": 0.32,
+          "output": 2.7,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:qwen/qwen3.6-27b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8242f02a30c8a00add126779"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.032999999999999995,
+          "currency": "USD",
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.020625,
+          "currency": "USD",
+          "input": 0.0825,
+          "output": 0.33,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8bfeed83b2f528e4de0d2f08"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.2:batch",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:z-ai/glm-5.2:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:96905ee2d4853401a585625f"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.3-flash:batch",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.015,
+          "currency": "USD",
+          "input": 0.075,
+          "output": 0.25,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.012,
+          "currency": "USD",
+          "input": 0.06,
+          "output": 0.19999999999999998,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:z-ai/glm-5.3-flash:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2424e9a1fc2ab7bf565ec847"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.3:batch",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.13,
+          "currency": "USD",
+          "input": 0.7,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.12,
+          "currency": "USD",
+          "input": 0.72,
+          "output": 2.4,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:z-ai/glm-5.3:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:4389e1d0566efef3f8333c3b"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~anthropic/claude-opus-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.5,
+          "cachedOutput": 6.25,
+          "currency": "USD",
+          "input": 5,
+          "output": 25,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "cachedOutput": 5,
+          "currency": "USD",
+          "input": 4,
+          "output": 20,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:~anthropic/claude-opus-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:1adea819a7519212e10ce10e"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-pro-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.018438,
+          "currency": "USD",
+          "input": 0.57948,
+          "output": 1.73844,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.018084,
+          "currency": "USD",
+          "input": 0.54252,
+          "output": 1.6275600000000001,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:~deepseek/deepseek-pro-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:0efed518bf832ca93278d918"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.008,
+          "currency": "USD",
+          "input": 0.03,
+          "output": 1,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.008,
+          "currency": "USD",
+          "input": 0.03,
+          "output": 0.7999999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:0285dd4df8217656a593b813"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~openai/gpt-luna-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.02,
+          "cachedOutput": 0.25,
+          "currency": "USD",
+          "input": 0.19999999999999998,
+          "output": 1.2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.5,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-09-22",
+      "observedAt": "2026-09-22",
+      "modelId": "openrouter:~openai/gpt-luna-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:320c2231f6ad38e4408bbf81"
     }
   ],
   "watchlist": [
@@ -65152,16 +69281,16 @@
     "failedSources": 3
   },
   "snapshot": {
-    "trackedModels": 769,
-    "canonicalModels": 664,
-    "availableEndpoints": 447,
+    "trackedModels": 781,
+    "canonicalModels": 676,
+    "availableEndpoints": 455,
     "freeEndpoints": 26,
-    "paidEndpoints": 416,
+    "paidEndpoints": 424,
     "openModels": 94,
     "openSource": 87,
     "openWeights": 7,
     "proprietary": 0,
-    "unknownOpenness": 570,
+    "unknownOpenness": 582,
     "providers": 9,
     "notableReleasesThisYear": 8,
     "notableReleasesThisMonth": 2
