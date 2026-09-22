@@ -1,5 +1,44 @@
 [
   {
+    "id": "event:02b3a517e71ff61ec48d2f75",
+    "date": "2026-09-22",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+    "title": "price change: deepseek/deepseek-v4-pro-0813",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 1.32,
+        "output": 3.9600000000000004,
+        "cachedInput": 0.044,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.624,
+        "output": 2.88,
+        "cachedInput": 0.088,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:1a83375727fa62252debd2fa",
     "date": "2026-09-22",
     "type": "price_change",
@@ -39,6 +78,48 @@
     }
   },
   {
+    "id": "event:251bf24e3e3353f4d197095d",
+    "date": "2026-09-22",
+    "type": "availability_added",
+    "modelId": "openrouter:nex-agi/nex-n2.5-pro",
+    "title": "availability added: nex-agi/nex-n2.5-pro",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
+    "id": "event:252b405bfe6cd6d12a5b85b7",
+    "date": "2026-09-22",
+    "type": "availability_added",
+    "modelId": "openrouter:nex-agi/nex-n2.5-mini",
+    "title": "availability added: nex-agi/nex-n2.5-mini",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
     "id": "event:2a4ac94ee8d3e4b86e03a2d9",
     "date": "2026-09-22",
     "type": "price_change",
@@ -71,6 +152,45 @@
         "input": 0.15,
         "output": 0.5,
         "cachedInput": 0.049999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:2b165b8072f01115658da4da",
+    "date": "2026-09-22",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-pro-latest",
+    "title": "price change: ~deepseek/deepseek-pro-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.6386160000000001,
+        "output": 1.915848,
+        "cachedInput": 0.021287200000000003,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.624,
+        "output": 2.88,
+        "cachedInput": 0.088,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -154,6 +274,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:838171ecf1f955fb3ac4b995",
+    "date": "2026-09-22",
+    "type": "availability_removed",
+    "modelId": "openrouter:kwaipilot/kat-coder-pro-v2",
+    "title": "availability removed: kwaipilot/kat-coder-pro-v2",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:8eae8dc178a1838ee349beea",
@@ -344,6 +485,123 @@
         "input": 0.04,
         "output": 0.64,
         "cachedInput": 0.016,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c9480f6307ae4c23550cc7a1",
+    "date": "2026-09-22",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-flash-latest",
+    "title": "price change: ~z-ai/glm-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.075,
+        "output": 0.25,
+        "cachedInput": 0.02,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.075,
+        "output": 0.25,
+        "cachedInput": 0.015,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:d630786469eacb18b9d3d602",
+    "date": "2026-09-22",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-latest",
+    "title": "price change: ~z-ai/glm-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.7735,
+        "output": 2.431,
+        "cachedInput": 0.127075,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.6545000000000001,
+        "output": 2.057,
+        "cachedInput": 0.10752500000000001,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:e02110d130fc87bed85bfc20",
+    "date": "2026-09-22",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+    "title": "price change: ~deepseek/deepseek-v4-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.03,
+        "output": 0.7999999999999999,
+        "cachedInput": 0.008,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.03,
+        "output": 1,
+        "cachedInput": 0.008,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"

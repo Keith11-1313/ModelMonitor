@@ -4057,9 +4057,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.6386160000000001,
-      "output": 1.915848,
-      "cachedInput": 0.021287200000000003,
+      "input": 0.624,
+      "output": 2.88,
+      "cachedInput": 0.088,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4093,7 +4093,7 @@
     ],
     "pricing": {
       "input": 0.03,
-      "output": 0.7999999999999999,
+      "output": 1,
       "cachedInput": 0.008,
       "cachedOutput": null,
       "currency": "USD",
@@ -4468,7 +4468,7 @@
     "pricing": {
       "input": 0.075,
       "output": 0.25,
-      "cachedInput": 0.02,
+      "cachedInput": 0.015,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4501,9 +4501,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.7735,
-      "output": 2.431,
-      "cachedInput": 0.127075,
+      "input": 0.6545000000000001,
+      "output": 2.057,
+      "cachedInput": 0.10752500000000001,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6993,9 +6993,9 @@
       "text"
     ],
     "pricing": {
-      "input": 1.32,
-      "output": 3.9600000000000004,
-      "cachedInput": 0.044,
+      "input": 0.624,
+      "output": 2.88,
+      "cachedInput": 0.088,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -9139,7 +9139,7 @@
     "modelId": "openrouter:kwaipilot/kat-coder-pro-v2",
     "provider": "openrouter",
     "providerModelId": "kwaipilot/kat-coder-pro-v2",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": null,
@@ -9167,7 +9167,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-09-22",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-09-22"
   },
   {
     "id": "openrouter:kwaipilot/kat-coder-pro-v2.5",
@@ -11478,6 +11479,42 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:nex-agi/nex-n2.5-mini",
+    "modelId": "openrouter:nex-agi/nex-n2.5-mini",
+    "provider": "openrouter",
+    "providerModelId": "nex-agi/nex-n2.5-mini",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": null,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.024999999999999998,
+      "output": 0.09999999999999999,
+      "cachedInput": 0.0025,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "firstSeen": "2026-09-22",
+    "lastChecked": "2026-09-22",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:nex-agi/nex-n2.5-mini:free",
     "modelId": "openrouter:nex-agi/nex-n2.5-mini:free",
     "provider": "openrouter",
@@ -11510,6 +11547,42 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-09-22",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:nex-agi/nex-n2.5-pro",
+    "modelId": "openrouter:nex-agi/nex-n2.5-pro",
+    "provider": "openrouter",
+    "providerModelId": "nex-agi/nex-n2.5-pro",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.075,
+      "output": 0.25,
+      "cachedInput": 0.015,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-22"
+      }
+    ],
+    "firstSeen": "2026-09-22",
     "lastChecked": "2026-09-22",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },

@@ -2903,6 +2903,30 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-09-22",
+      "provider": "openrouter",
+      "available": 444,
+      "free": 24,
+      "paid": 415,
+      "unknown": 5,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:nex-agi/nex-n2.5-mini",
+          "modelId": "openrouter:nex-agi/nex-n2.5-mini",
+          "free": false
+        },
+        {
+          "id": "openrouter:nex-agi/nex-n2.5-pro",
+          "modelId": "openrouter:nex-agi/nex-n2.5-pro",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:kwaipilot/kat-coder-pro-v2"
+      ]
     }
   ]
 }
