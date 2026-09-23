@@ -3988,6 +3988,55 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:space-bunny-free",
+    "modelId": "opencode:space-bunny-free",
+    "provider": "opencode",
+    "providerModelId": "space-bunny-free",
+    "status": "available",
+    "free": true,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": null,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": 0,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-23"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-23"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-23"
+      }
+    ],
+    "firstSeen": "2026-09-23",
+    "lastChecked": "2026-09-23",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:union-alpha",
     "modelId": "opencode:union-alpha",
     "provider": "opencode",
@@ -4235,9 +4284,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.39999999999999997,
-      "output": 4.300000000000001,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.39996,
+      "output": 1.19988,
+      "cachedInput": 0.012726,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4679,9 +4728,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.5625,
-      "output": 2.5,
-      "cachedInput": 0.125,
+      "input": 0.5614,
+      "output": 1.7644,
+      "cachedInput": 0.10425999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4801,6 +4850,76 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-09-23",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:aion-labs/aion-3.5",
+    "modelId": "openrouter:aion-labs/aion-3.5",
+    "provider": "openrouter",
+    "providerModelId": "aion-labs/aion-3.5",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 3,
+      "output": 6,
+      "cachedInput": 0.75,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-23"
+      }
+    ],
+    "firstSeen": "2026-09-23",
+    "lastChecked": "2026-09-23",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:aion-labs/aion-3.5-mini",
+    "modelId": "openrouter:aion-labs/aion-3.5-mini",
+    "provider": "openrouter",
+    "providerModelId": "aion-labs/aion-3.5-mini",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0.7,
+      "output": 1.4,
+      "cachedInput": 0.18,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-23"
+      }
+    ],
+    "firstSeen": "2026-09-23",
     "lastChecked": "2026-09-23",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -7033,9 +7152,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.088606,
-      "output": 0.177212,
-      "cachedInput": 0.017721200000000003,
+      "input": 0.08245999999999999,
+      "output": 0.16491999999999998,
+      "cachedInput": 0.016492,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7248,9 +7367,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.9552599999999999,
-      "output": 1.9105199999999998,
-      "cachedInput": 0.07960500000000001,
+      "input": 0.953172,
+      "output": 1.906344,
+      "cachedInput": 0.079431,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7283,9 +7402,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.498696,
-      "output": 1.496088,
-      "cachedInput": 0.0166232,
+      "input": 0.46199999999999997,
+      "output": 1.386,
+      "cachedInput": 0.015399999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7355,9 +7474,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.003,
+      "input": 0.09999999999999999,
+      "output": 0.5,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -9324,7 +9443,7 @@
     "providerModelId": "inclusionai/ling-3.0-flash-vl",
     "status": "available",
     "free": false,
-    "context": 131072,
+    "context": 262144,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -9359,7 +9478,7 @@
     "modelId": "openrouter:inclusionai/ling-3.0-flash-vl:free",
     "provider": "openrouter",
     "providerModelId": "inclusionai/ling-3.0-flash-vl:free",
-    "status": "available",
+    "status": "removed",
     "free": true,
     "context": 262144,
     "reasoning": true,
@@ -9389,7 +9508,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-09-23",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-09-23"
   },
   {
     "id": "openrouter:inference-net/schematron-v2-small",
@@ -10656,7 +10776,7 @@
     "modelId": "openrouter:mistralai/devstral-2512",
     "provider": "openrouter",
     "providerModelId": "mistralai/devstral-2512",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": null,
@@ -10685,7 +10805,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-09-23",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-09-23"
   },
   {
     "id": "openrouter:mistralai/ministral-14b-2512",
@@ -19249,9 +19370,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -20944,9 +21065,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.72,
-      "output": 2.4,
-      "cachedInput": 0.12,
+      "input": 0.44999999999999996,
+      "output": 2,
+      "cachedInput": 0.09999999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
