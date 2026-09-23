@@ -3369,7 +3369,6 @@
     "modalities": [
       "audio",
       "image",
-      "pdf",
       "text",
       "video"
     ],
@@ -4271,9 +4270,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.03,
-      "output": 0.7999999999999999,
-      "cachedInput": 0.008,
+      "input": 0.038000000000000006,
+      "output": 0.55,
+      "cachedInput": 0.022799999999999997,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4386,8 +4385,8 @@
       "video"
     ],
     "pricing": {
-      "input": 1.35,
-      "output": 14.33,
+      "input": 1.4989,
+      "output": 10.758,
       "cachedInput": 0.3,
       "cachedOutput": null,
       "currency": "USD",
@@ -7284,9 +7283,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.66,
-      "output": 1.9800000000000002,
-      "cachedInput": 0.022,
+      "input": 0.498696,
+      "output": 1.496088,
+      "cachedInput": 0.0166232,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7356,9 +7355,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.09999999999999999,
-      "output": 0.5,
-      "cachedInput": 0.01,
+      "input": 0.15,
+      "output": 0.6,
+      "cachedInput": 0.003,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12355,7 +12354,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.07,
+      "input": 0.08,
       "output": 0.19999999999999998,
       "cachedInput": 0.04,
       "cachedOutput": null,
@@ -19699,6 +19698,41 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-09-23",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:upstage/solar-mini4",
+    "modelId": "openrouter:upstage/solar-mini4",
+    "provider": "openrouter",
+    "providerModelId": "upstage/solar-mini4",
+    "status": "available",
+    "free": false,
+    "context": 524288,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0.049999999999999996,
+      "output": 0.19999999999999998,
+      "cachedInput": 0.005,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-23"
+      }
+    ],
+    "firstSeen": "2026-09-23",
     "lastChecked": "2026-09-23",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
