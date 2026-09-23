@@ -4284,9 +4284,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.39996,
-      "output": 1.19988,
-      "cachedInput": 0.012726,
+      "input": 0.3945,
+      "output": 2.9000000000000004,
+      "cachedInput": 0.25,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7152,9 +7152,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.08245999999999999,
-      "output": 0.16491999999999998,
-      "cachedInput": 0.016492,
+      "input": 0.08092,
+      "output": 0.16184,
+      "cachedInput": 0.016184,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7367,9 +7367,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.953172,
-      "output": 1.906344,
-      "cachedInput": 0.079431,
+      "input": 0.946386,
+      "output": 1.892772,
+      "cachedInput": 0.0788655,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18712,6 +18712,43 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:qwen/qwen3.8-max-prime",
+    "modelId": "openrouter:qwen/qwen3.8-max-prime",
+    "provider": "openrouter",
+    "providerModelId": "qwen/qwen3.8-max-prime",
+    "status": "available",
+    "free": false,
+    "context": 1000000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 4,
+      "output": 12,
+      "cachedInput": 0.5,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-23"
+      }
+    ],
+    "firstSeen": "2026-09-23",
+    "lastChecked": "2026-09-23",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:qwen/qwen3.8-omni-flash",
     "modelId": "openrouter:qwen/qwen3.8-omni-flash",
     "provider": "openrouter",
@@ -19140,6 +19177,43 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-09-23",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:stealth/space-bunny-alpha",
+    "modelId": "openrouter:stealth/space-bunny-alpha",
+    "provider": "openrouter",
+    "providerModelId": "stealth/space-bunny-alpha",
+    "status": "available",
+    "free": true,
+    "context": 1000000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-23"
+      }
+    ],
+    "firstSeen": "2026-09-23",
     "lastChecked": "2026-09-23",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -21032,7 +21106,7 @@
     "pricing": {
       "input": 0.37,
       "output": 1.25,
-      "cachedInput": 0.075,
+      "cachedInput": 0.09,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
