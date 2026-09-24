@@ -4249,9 +4249,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.099,
-      "output": 0.6,
-      "cachedInput": 0.06,
+      "input": 0.04,
+      "output": 1,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4284,7 +4284,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.3865,
+      "input": 0.39,
       "output": 2.9000000000000004,
       "cachedInput": 0.25,
       "cachedOutput": null,
@@ -4319,9 +4319,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.038000000000000006,
-      "output": 0.55,
-      "cachedInput": 0.022799999999999997,
+      "input": 0.03,
+      "output": 0.32,
+      "cachedInput": 0.016,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4434,9 +4434,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.9099999999999999,
-      "output": 6.9875,
-      "cachedInput": 0.195,
+      "input": 1.4,
+      "output": 10.75,
+      "cachedInput": 0.3,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4693,9 +4693,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.075,
-      "output": 0.25,
-      "cachedInput": 0.015,
+      "input": 0.045,
+      "output": 0.14,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7187,8 +7187,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.04,
-      "output": 0.64,
+      "input": 0.03,
+      "output": 0.32,
       "cachedInput": 0.016,
       "cachedOutput": null,
       "currency": "USD",
@@ -7563,6 +7563,42 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-09-24",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:fireworks/ember-1",
+    "modelId": "openrouter:fireworks/ember-1",
+    "provider": "openrouter",
+    "providerModelId": "fireworks/ember-1",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 3,
+      "output": 15,
+      "cachedInput": 0.3,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-24"
+      }
+    ],
+    "firstSeen": "2026-09-24",
     "lastChecked": "2026-09-24",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -11931,7 +11967,7 @@
     "modelId": "openrouter:nex-agi/nex-n2.5-mini",
     "provider": "openrouter",
     "providerModelId": "nex-agi/nex-n2.5-mini",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -11960,7 +11996,8 @@
     ],
     "firstSeen": "2026-09-22",
     "lastChecked": "2026-09-24",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-09-24"
   },
   {
     "id": "openrouter:nex-agi/nex-n2.5-mini:free",
@@ -12003,7 +12040,7 @@
     "modelId": "openrouter:nex-agi/nex-n2.5-pro",
     "provider": "openrouter",
     "providerModelId": "nex-agi/nex-n2.5-pro",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -12032,7 +12069,8 @@
     ],
     "firstSeen": "2026-09-22",
     "lastChecked": "2026-09-24",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-09-24"
   },
   {
     "id": "openrouter:nex-agi/nex-n2.5-pro:free",
@@ -17174,8 +17212,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.04815,
-      "output": 0.19305,
+      "input": 0.09999999999999999,
+      "output": 0.3,
       "cachedInput": null,
       "cachedOutput": null,
       "currency": "USD",
@@ -19365,7 +19403,7 @@
     "providerModelId": "tencent/hy-mt2-30b-a3b",
     "status": "available",
     "free": false,
-    "context": 8192,
+    "context": 32768,
     "reasoning": null,
     "tools": null,
     "structuredOutput": true,
