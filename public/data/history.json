@@ -3140,6 +3140,39 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-09-24",
+      "provider": "opencode",
+      "available": 80,
+      "free": 11,
+      "paid": 69,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [],
+      "removed": []
+    },
+    {
+      "date": "2026-09-24",
+      "provider": "openrouter",
+      "available": 459,
+      "free": 24,
+      "paid": 430,
+      "unknown": 5,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:openai/gpt-oss-120b:batch",
+          "modelId": "openrouter:openai/gpt-oss-120b:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:z-ai/glm-5.3-prime",
+          "modelId": "openrouter:z-ai/glm-5.3-prime",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
