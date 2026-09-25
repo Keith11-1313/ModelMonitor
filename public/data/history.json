@@ -3193,6 +3193,39 @@
         "openrouter:nex-agi/nex-n2.5-mini",
         "openrouter:nex-agi/nex-n2.5-pro"
       ]
+    },
+    {
+      "date": "2026-09-25",
+      "provider": "opencode",
+      "available": 80,
+      "free": 11,
+      "paid": 69,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [],
+      "removed": []
+    },
+    {
+      "date": "2026-09-25",
+      "provider": "openrouter",
+      "available": 460,
+      "free": 24,
+      "paid": 431,
+      "unknown": 5,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:mistralai/devstral-2512",
+          "modelId": "openrouter:mistralai/devstral-2512",
+          "free": false
+        },
+        {
+          "id": "openrouter:mistralai/mistral-large-2512",
+          "modelId": "openrouter:mistralai/mistral-large-2512",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
