@@ -453,6 +453,26 @@
         }
       },
       {
+        "id": "qwen3.8-max",
+        "name": "Qwen3.8 Max",
+        "context": 262144,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": null,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "pricing": {
+          "input": 2,
+          "output": 6,
+          "cachedInput": 0.25,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "kimi-k3",
         "name": "Kimi K3",
         "context": 1048576,
@@ -3136,6 +3156,18 @@
           "output": 4.25,
           "cachedInput": 0.15,
           "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
+        "id": "qwen3.8-max",
+        "name": "Qwen3.8 Max",
+        "pricing": {
+          "input": 2,
+          "output": 6,
+          "cachedInput": 0.25,
+          "cachedOutput": 2.5,
           "currency": "USD",
           "unit": "1M tokens"
         }

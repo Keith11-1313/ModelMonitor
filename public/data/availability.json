@@ -3988,6 +3988,54 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:qwen3.8-max",
+    "modelId": "opencode:qwen3.8-max",
+    "provider": "opencode",
+    "providerModelId": "qwen3.8-max",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": null,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 2,
+      "output": 6,
+      "cachedInput": 0.25,
+      "cachedOutput": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-25"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-25"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-25"
+      }
+    ],
+    "firstSeen": "2026-09-25",
+    "lastChecked": "2026-09-25",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:space-bunny-free",
     "modelId": "opencode:space-bunny-free",
     "provider": "opencode",
@@ -4284,7 +4332,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.09984,
+      "input": 0.25279999999999997,
       "output": 2.88,
       "cachedInput": 0.08832,
       "cachedOutput": null,
@@ -7474,9 +7522,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.3,
-      "output": 1.2,
-      "cachedInput": 0.006,
+      "input": 0.15,
+      "output": 0.6,
+      "cachedInput": 0.003,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12040,7 +12088,7 @@
     "modelId": "openrouter:nex-agi/nex-n2.5-mini:free",
     "provider": "openrouter",
     "providerModelId": "nex-agi/nex-n2.5-mini:free",
-    "status": "available",
+    "status": "removed",
     "free": true,
     "context": 262144,
     "reasoning": true,
@@ -12069,7 +12117,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-09-25",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-09-25"
   },
   {
     "id": "openrouter:nex-agi/nex-n2.5-pro",
@@ -12113,7 +12162,7 @@
     "modelId": "openrouter:nex-agi/nex-n2.5-pro:free",
     "provider": "openrouter",
     "providerModelId": "nex-agi/nex-n2.5-pro:free",
-    "status": "available",
+    "status": "removed",
     "free": true,
     "context": 262144,
     "reasoning": true,
@@ -12142,7 +12191,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-09-25",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-09-25"
   },
   {
     "id": "openrouter:nousresearch/hermes-3-llama-3.1-405b",
@@ -12541,7 +12591,7 @@
     "providerModelId": "nvidia/nemotron-3.5-lightning",
     "status": "available",
     "free": false,
-    "context": 262144,
+    "context": 1000000,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -12549,7 +12599,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.08,
+      "input": 0.07,
       "output": 0.19999999999999998,
       "cachedInput": 0.04,
       "cachedOutput": null,
