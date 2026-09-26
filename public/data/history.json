@@ -3274,6 +3274,36 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-09-26",
+      "provider": "opencode",
+      "available": 81,
+      "free": 11,
+      "paid": 70,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [],
+      "removed": []
+    },
+    {
+      "date": "2026-09-26",
+      "provider": "openrouter",
+      "available": 459,
+      "free": 21,
+      "paid": 432,
+      "unknown": 6,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:typesafe/jev-router",
+          "modelId": "openrouter:typesafe/jev-router",
+          "free": null
+        }
+      ],
+      "removed": [
+        "openrouter:z-ai/glm-5.2:free"
+      ]
     }
   ]
 }
