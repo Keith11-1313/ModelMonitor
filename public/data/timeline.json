@@ -78,6 +78,84 @@
     }
   },
   {
+    "id": "event:4bff087e5557542ed18882f5",
+    "date": "2026-09-27",
+    "type": "price_change",
+    "modelId": "openrouter:~moonshotai/kimi-latest",
+    "title": "price change: ~moonshotai/kimi-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-27"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.875,
+        "output": 4.8999999999999995,
+        "cachedInput": 0.1015,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.9875,
+        "output": 5.53,
+        "cachedInput": 0.11455,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:50620e940c3b66629d489011",
+    "date": "2026-09-27",
+    "type": "price_change",
+    "modelId": "openrouter:minimax/minimax-m2",
+    "title": "price change: minimax/minimax-m2",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-27"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.255,
+        "output": 1.02,
+        "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:56d1a5c8f8abbcbaa3dbc6a9",
     "date": "2026-09-27",
     "type": "price_change",
@@ -156,6 +234,45 @@
     }
   },
   {
+    "id": "event:6356ca4552c15d6a3cc5e946",
+    "date": "2026-09-27",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-latest",
+    "title": "price change: ~z-ai/glm-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-27"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.2737,
+        "output": 0.8602000000000001,
+        "cachedInput": 0.044965,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.2737,
+        "output": 2.574,
+        "cachedInput": 0.044965,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:6a2d2b83e649071917dd5c66",
     "date": "2026-09-27",
     "type": "price_change",
@@ -227,6 +344,45 @@
         "input": 0.21,
         "output": 0.84,
         "cachedInput": 0.041999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:7f8892987cc9a38888678d3f",
+    "date": "2026-09-27",
+    "type": "price_change",
+    "modelId": "openrouter:qwen/qwen3-30b-a3b",
+    "title": "price change: qwen/qwen3-30b-a3b",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-27"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.13,
+        "output": 0.52,
+        "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.12,
+        "output": 0.5,
+        "cachedInput": null,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -383,6 +539,45 @@
         "input": 0.046900000000000004,
         "output": 0.09380000000000001,
         "cachedInput": 0.00938,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:b23e80a14454baa0750da744",
+    "date": "2026-09-27",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.3",
+    "title": "price change: z-ai/glm-5.3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-27"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.2737,
+        "output": 0.8602000000000001,
+        "cachedInput": 0.044965,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 1.4,
+        "output": 4.4,
+        "cachedInput": 0.26,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
