@@ -3378,6 +3378,41 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-09-28",
+      "provider": "openrouter",
+      "available": 460,
+      "free": 20,
+      "paid": 434,
+      "unknown": 6,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:anthropic/claude-sonnet-5.5",
+          "modelId": "openrouter:anthropic/claude-sonnet-5.5",
+          "free": false
+        },
+        {
+          "id": "openrouter:anthropic/claude-sonnet-5.5:batch",
+          "modelId": "openrouter:anthropic/claude-sonnet-5.5:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:nex-agi/nex-n2.5-mini",
+          "modelId": "openrouter:nex-agi/nex-n2.5-mini",
+          "free": false
+        },
+        {
+          "id": "openrouter:nex-agi/nex-n2.5-pro",
+          "modelId": "openrouter:nex-agi/nex-n2.5-pro",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:deepseek/deepseek-r1-distill-llama-70b",
+        "openrouter:inclusionai/ling-3.0-flash-fin:free"
+      ]
     }
   ]
 }
