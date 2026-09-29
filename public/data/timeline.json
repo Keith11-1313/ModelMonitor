@@ -1,5 +1,26 @@
 [
   {
+    "id": "event:0e9bb3504123e530e026d234",
+    "date": "2026-09-29",
+    "type": "availability_added",
+    "modelId": "openrouter:openai/gpt-6.1-sol:batch",
+    "title": "availability added: openai/gpt-6.1-sol:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
     "id": "event:0eebb0cf0b987323cb7bb95e",
     "date": "2026-09-29",
     "type": "price_change",
@@ -117,6 +138,45 @@
     }
   },
   {
+    "id": "event:194cfcf2e20531642217ee28",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.2",
+    "title": "price change: z-ai/glm-5.2",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.2339,
+        "output": 4.4,
+        "cachedInput": 0.1871,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.2339,
+        "output": 3.9899999999999998,
+        "cachedInput": 0.1871,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:257d622ed5072db8263a4961",
     "date": "2026-09-29",
     "type": "price_change",
@@ -154,6 +214,39 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:260b06442f9ab55b14135c99",
+    "date": "2026-09-29",
+    "type": "availability_added",
+    "modelId": "opencode:gpt-6.1-sol",
+    "title": "availability added: gpt-6.1-sol",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-29"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
   },
   {
     "id": "event:2bab8ffcff7b99ce29df21e9",
@@ -388,6 +481,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:3e5b2543c06adbaa1a75aa4f",
+    "date": "2026-09-29",
+    "type": "availability_added",
+    "modelId": "openrouter:openai/gpt-6.1-sol-pro",
+    "title": "availability added: openai/gpt-6.1-sol-pro",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
   },
   {
     "id": "event:416d1022fef331c2503c4560",
@@ -702,6 +816,45 @@
     }
   },
   {
+    "id": "event:77a24b05dad6943ea7817dbf",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-4.6v",
+    "title": "price change: z-ai/glm-4.6v",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.3,
+        "output": 0.8999999999999999,
+        "cachedInput": 0.049999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.3,
+        "output": 0.8999999999999999,
+        "cachedInput": 0.055,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:7bda086ffc6235f9966e6786",
     "date": "2026-09-29",
     "type": "price_change",
@@ -778,6 +931,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:82ea8a2ab8d609db9719b93e",
+    "date": "2026-09-29",
+    "type": "availability_added",
+    "modelId": "openrouter:openai/gpt-6.1-sol-pro:batch",
+    "title": "availability added: openai/gpt-6.1-sol-pro:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
   },
   {
     "id": "event:836fabfc13491020479c9976",
@@ -961,6 +1135,27 @@
     }
   },
   {
+    "id": "event:a366711972189f056954c42b",
+    "date": "2026-09-29",
+    "type": "availability_added",
+    "modelId": "openrouter:openai/gpt-6.1-sol",
+    "title": "availability added: openai/gpt-6.1-sol",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
     "id": "event:a583efe75ae6d0938309b362",
     "date": "2026-09-29",
     "type": "price_change",
@@ -1032,6 +1227,45 @@
         "input": 0.02,
         "output": 0.3,
         "cachedInput": 0.01,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:afe5104d262763637caaf25a",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.3",
+    "title": "price change: z-ai/glm-5.3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.19,
+        "output": 4,
+        "cachedInput": 0.19,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 1.4,
+        "output": 4.4,
+        "cachedInput": 0.26,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -1273,6 +1507,45 @@
     }
   },
   {
+    "id": "event:c10f8a35b014d92cad8b357d",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+    "title": "price change: deepseek/deepseek-v4-pro-0813",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.4749,
+        "output": 4.199999999999999,
+        "cachedInput": 0.3799,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.39420000000000005,
+        "output": 2.44,
+        "cachedInput": 0.3153,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:c59fe2665d55be0fd2ca853d",
     "date": "2026-09-29",
     "type": "availability_added",
@@ -1338,6 +1611,45 @@
         "input": 0.02,
         "output": 0.6,
         "cachedInput": 0.02,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c73568370de0e7ea53ca0025",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-pro",
+    "title": "price change: deepseek/deepseek-v4-pro",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.936294,
+        "output": 1.872588,
+        "cachedInput": 0.0780245,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.922722,
+        "output": 1.845444,
+        "cachedInput": 0.0768935,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -1540,6 +1852,45 @@
     }
   },
   {
+    "id": "event:ec99b11c6456820d1b806f38",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-latest",
+    "title": "price change: ~z-ai/glm-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.19,
+        "output": 4,
+        "cachedInput": 0.19,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.15,
+        "output": 4,
+        "cachedInput": 0.15,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:ee25962473605594df8c4fd5",
     "date": "2026-09-29",
     "type": "price_change",
@@ -1579,6 +1930,45 @@
     }
   },
   {
+    "id": "event:f1b06da49af672fe206e5884",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:~openai/gpt-sol-latest",
+    "title": "price change: ~openai/gpt-sol-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cachedInput": 0.19999999999999998,
+        "cachedOutput": 2.5,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 2,
+        "output": 10,
+        "cachedInput": 0.09999999999999999,
+        "cachedOutput": 2.5,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:f35923857fd32ff14c9e3d65",
     "date": "2026-09-29",
     "type": "price_change",
@@ -1611,6 +2001,45 @@
         "input": 0.04,
         "output": 0.5,
         "cachedInput": 0.015,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:f632dc466426544b8bb28ab2",
+    "date": "2026-09-29",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy3",
+    "title": "price change: tencent/hy3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0825,
+        "output": 0.33,
+        "cachedInput": 0.020625,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"

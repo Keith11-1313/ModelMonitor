@@ -2785,6 +2785,66 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:gpt-6.1-sol",
+    "modelId": "opencode:gpt-6.1-sol",
+    "provider": "opencode",
+    "providerModelId": "gpt-6.1-sol",
+    "status": "available",
+    "free": false,
+    "context": 1050000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "pdf",
+      "text"
+    ],
+    "pricing": {
+      "input": 2,
+      "output": 10,
+      "cachedInput": 0.2,
+      "cachedOutput": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens",
+      "tiers": [
+        {
+          "contextAbove": 272000,
+          "input": 4,
+          "output": 15,
+          "cachedInput": 0.4,
+          "cachedOutput": 5,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      ]
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-09-29"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "firstSeen": "2026-09-29",
+    "lastChecked": "2026-09-29",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:grok-4.5",
     "modelId": "opencode:grok-4.5",
     "provider": "opencode",
@@ -4723,7 +4783,7 @@
     "pricing": {
       "input": 2,
       "output": 10,
-      "cachedInput": 0.19999999999999998,
+      "cachedInput": 0.09999999999999999,
       "cachedOutput": 2.5,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4867,9 +4927,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.19,
+      "input": 0.15,
       "output": 4,
-      "cachedInput": 0.19,
+      "cachedInput": 0.15,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7582,9 +7642,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.936294,
-      "output": 1.872588,
-      "cachedInput": 0.0780245,
+      "input": 0.922722,
+      "output": 1.845444,
+      "cachedInput": 0.0768935,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7617,9 +7677,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.4749,
-      "output": 4.199999999999999,
-      "cachedInput": 0.3799,
+      "input": 0.39420000000000005,
+      "output": 2.44,
+      "cachedInput": 0.3153,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -15795,6 +15855,154 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:openai/gpt-6.1-sol",
+    "modelId": "openrouter:openai/gpt-6.1-sol",
+    "provider": "openrouter",
+    "providerModelId": "openai/gpt-6.1-sol",
+    "status": "available",
+    "free": false,
+    "context": 1050000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 2,
+      "output": 10,
+      "cachedInput": 0.09999999999999999,
+      "cachedOutput": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "firstSeen": "2026-09-29",
+    "lastChecked": "2026-09-29",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:openai/gpt-6.1-sol-pro",
+    "modelId": "openrouter:openai/gpt-6.1-sol-pro",
+    "provider": "openrouter",
+    "providerModelId": "openai/gpt-6.1-sol-pro",
+    "status": "available",
+    "free": false,
+    "context": 1050000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 2,
+      "output": 10,
+      "cachedInput": 0.09999999999999999,
+      "cachedOutput": 2.5,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "firstSeen": "2026-09-29",
+    "lastChecked": "2026-09-29",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:openai/gpt-6.1-sol-pro:batch",
+    "modelId": "openrouter:openai/gpt-6.1-sol-pro:batch",
+    "provider": "openrouter",
+    "providerModelId": "openai/gpt-6.1-sol-pro:batch",
+    "status": "available",
+    "free": false,
+    "context": 1050000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 1,
+      "output": 5,
+      "cachedInput": 0.049999999999999996,
+      "cachedOutput": 1.25,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "firstSeen": "2026-09-29",
+    "lastChecked": "2026-09-29",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:openai/gpt-6.1-sol:batch",
+    "modelId": "openrouter:openai/gpt-6.1-sol:batch",
+    "provider": "openrouter",
+    "providerModelId": "openai/gpt-6.1-sol:batch",
+    "status": "available",
+    "free": false,
+    "context": 1050000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 1,
+      "output": 5,
+      "cachedInput": 0.049999999999999996,
+      "cachedOutput": 1.25,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "firstSeen": "2026-09-29",
+    "lastChecked": "2026-09-29",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:openai/gpt-audio",
     "modelId": "openrouter:openai/gpt-audio",
     "provider": "openrouter",
@@ -19766,9 +19974,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21033,7 +21241,7 @@
     "pricing": {
       "input": 0.3,
       "output": 0.8999999999999999,
-      "cachedInput": 0.049999999999999996,
+      "cachedInput": 0.055,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21242,7 +21450,7 @@
     ],
     "pricing": {
       "input": 0.2339,
-      "output": 4.4,
+      "output": 3.9899999999999998,
       "cachedInput": 0.1871,
       "cachedOutput": null,
       "currency": "USD",
@@ -21348,9 +21556,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.19,
-      "output": 4,
-      "cachedInput": 0.19,
+      "input": 1.4,
+      "output": 4.4,
+      "cachedInput": 0.26,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

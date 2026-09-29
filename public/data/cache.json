@@ -910,6 +910,38 @@
         }
       },
       {
+        "id": "gpt-6.1-sol",
+        "name": "GPT-6.1 Sol",
+        "context": 1050000,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "pricing": {
+          "input": 2,
+          "output": 10,
+          "cachedInput": 0.2,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "unit": "1M tokens",
+          "tiers": [
+            {
+              "contextAbove": 200000,
+              "input": 4,
+              "output": 15,
+              "cachedInput": 0.4,
+              "cachedOutput": 5,
+              "currency": "USD",
+              "unit": "1M tokens"
+            }
+          ]
+        }
+      },
+      {
         "id": "gemini-3.5-flash-lite",
         "name": "Gemini 3.5 Flash Lite",
         "context": 1048576,
@@ -2508,6 +2540,29 @@
       {
         "id": "gpt-6-sol",
         "name": "GPT 6 Sol",
+        "pricing": {
+          "input": 2,
+          "output": 10,
+          "cachedInput": 0.2,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "unit": "1M tokens",
+          "tiers": [
+            {
+              "contextAbove": 272000,
+              "input": 4,
+              "output": 15,
+              "cachedInput": 0.4,
+              "cachedOutput": 5,
+              "currency": "USD",
+              "unit": "1M tokens"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gpt-6.1-sol",
+        "name": "GPT 6.1 Sol",
         "pricing": {
           "input": 2,
           "output": 10,

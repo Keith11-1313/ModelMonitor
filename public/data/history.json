@@ -3441,6 +3441,55 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-09-29",
+      "provider": "opencode",
+      "available": 84,
+      "free": 12,
+      "paid": 72,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:gpt-6.1-sol",
+          "modelId": "opencode:gpt-6.1-sol",
+          "free": false
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-09-29",
+      "provider": "openrouter",
+      "available": 464,
+      "free": 20,
+      "paid": 438,
+      "unknown": 6,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:openai/gpt-6.1-sol",
+          "modelId": "openrouter:openai/gpt-6.1-sol",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.1-sol-pro",
+          "modelId": "openrouter:openai/gpt-6.1-sol-pro",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.1-sol-pro:batch",
+          "modelId": "openrouter:openai/gpt-6.1-sol-pro:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.1-sol:batch",
+          "modelId": "openrouter:openai/gpt-6.1-sol:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
