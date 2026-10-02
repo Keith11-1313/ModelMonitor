@@ -9,7 +9,7 @@
     "newNotableReleases": 0,
     "becameFree": 0,
     "noLongerFree": 0,
-    "priceChanges": 8,
+    "priceChanges": 11,
     "availabilityAdded": 1,
     "availabilityRemoved": 0,
     "newOpenModels": 0,
@@ -17,74 +17,92 @@
     "historicalChanges": 0,
     "modelUpdates": 0,
     "modelRemovals": 0,
-    "availabilityUpdates": 8
+    "availabilityUpdates": 11
   },
   "highlights": [
     {
-      "id": "change:86e16edf4c7adc92974951e9:pricing",
-      "level": "fact",
-      "text": "DeepSeek: DeepSeek V4 Flash 0423's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:21554b2691d7c3af70e24f69:pricing",
+      "id": "change:9e1cb378dd25e39d8709e58b:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek V4 Flash 0731's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:3860d7243ee15394cdf3314e:pricing",
-      "level": "fact",
-      "text": "DeepSeek: DeepSeek V4 Pro 0813's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:ea9124d63238e0e856ef8a2c:pricing",
+      "id": "change:d3469f88c34fa4976f6bef40:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek V4.1 Flash's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:60c3bd5d4c3df1ecfbfed31c:pricing",
+      "id": "change:37df97124956a08bd85b6888:pricing",
       "level": "fact",
-      "text": "Qwen: Qwen3 30B A3B Instruct 2507's token pricing changed on openrouter.",
+      "text": "Google: Gemma 4 26B A4B 's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:02eae239664c148e9090fff3:pricing",
+      "id": "change:48ed82b80decbd531b16d692:pricing",
+      "level": "fact",
+      "text": "inclusionAI: Ling 3.0 Flash Fin's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:5ac5ad84067595a8a05cb1b1:pricing",
+      "level": "fact",
+      "text": "NVIDIA: Nemotron 3 Ultra's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:12de02852f73f59051dc0836:pricing",
+      "level": "fact",
+      "text": "Tencent: Hy3's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:65d524541d914e58fc7e6508:pricing",
+      "level": "fact",
+      "text": "Tencent: Hy4 preview's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:df377ee164ac4e88a6ef74f7:pricing",
+      "level": "fact",
+      "text": "DeepSeek: DeepSeek Flash Latest's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:404751a1b02d4117e2dc7b82:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek V4 Flash Latest's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:99f21a3675072da0eb459a04:pricing",
+      "id": "change:a8ac6476faa7ad8f06c10deb:pricing",
       "level": "fact",
       "text": "MoonshotAI: Kimi Latest's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:7285faeb00b17b2b25317e5a:pricing",
+      "id": "change:ee6bdadfcf390fff034073c8:pricing",
       "level": "fact",
-      "text": "Z.ai: GLM Latest's token pricing changed on openrouter.",
+      "text": "Z.ai: GLM Flash Latest's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:0a8b172f134fd8f5dc3b9d16",
-      "level": "fact",
-      "text": "inclusionAI: Ling 3.1 Flash was added to the tracked model catalog.",
-      "url": "https://openrouter.ai/api/v1/models"
+      "id": "change:b9c473816601e69f66d7a337",
+      "level": "derived",
+      "text": "Ling 3.1 Flash Free was added to the tracked model catalog.",
+      "url": "https://models.dev/api.json"
     },
     {
-      "id": "change:e9e9dff6c9f599b377309f6e",
-      "level": "fact",
-      "text": "inclusionAI: Ling 3.1 Flash became available on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
+      "id": "change:9cd5dc6f6bdf05a5230cda04",
+      "level": "derived",
+      "text": "Ling 3.1 Flash Free became available on opencode.",
+      "url": "https://models.dev/api.json"
     }
   ],
   "modelChanges": [
     {
       "dataset": "models",
-      "entityId": "openrouter:inclusionai/ling-3.1-flash",
+      "entityId": "opencode:ling-3.1-flash-free",
       "operation": "added",
       "fields": [
         "aliases",
@@ -98,82 +116,122 @@
         "provider",
         "reasoning",
         "sources",
+        "structuredOutput",
         "tools",
         "type"
       ],
       "before": null,
       "after": {
         "aliases": [
-          "inclusionai/ling-3.1-flash",
-          "openrouter/inclusionai/ling-3.1-flash"
+          "opencode/ling-3.1-flash-free"
         ],
         "baseModels": [],
-        "confidence": "official",
+        "confidence": "observed",
         "context": 262144,
         "identity": "unknown",
         "modalities": [
           "text"
         ],
-        "name": "inclusionAI: Ling 3.1 Flash",
+        "name": "Ling 3.1 Flash Free",
         "openness": "unknown",
         "provider": "Unknown",
         "reasoning": true,
         "sources": [
           {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
             "confidence": "official",
-            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
-            "url": "https://openrouter.ai/api/v1/models"
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
           }
         ],
+        "structuredOutput": false,
         "tools": true,
         "type": "model"
       },
       "type": "model_added",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:inclusionai/ling-3.1-flash",
+      "modelId": "opencode:ling-3.1-flash-free",
       "provider": "Unknown",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:0a8b172f134fd8f5dc3b9d16"
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:b9c473816601e69f66d7a337"
     }
   ],
   "availabilityChanges": [
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-flash",
-      "operation": "updated",
+      "entityId": "opencode:ling-3.1-flash-free",
+      "operation": "added",
       "fields": [
-        "pricing"
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
       ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.008400000000000001,
-          "currency": "USD",
-          "input": 0.041999999999999996,
-          "output": 0.08399999999999999,
-          "unit": "1M tokens"
-        }
-      },
+      "before": null,
       "after": {
+        "confidence": "official",
+        "context": 262144,
+        "free": true,
+        "modalities": [
+          "text"
+        ],
+        "modelId": "opencode:ling-3.1-flash-free",
         "pricing": {
-          "cachedInput": 0.0056,
+          "cachedInput": 0,
           "currency": "USD",
-          "input": 0.028,
-          "output": 0.056,
+          "input": 0,
+          "output": 0,
           "unit": "1M tokens"
-        }
+        },
+        "provider": "opencode",
+        "providerModelId": "ling-3.1-flash-free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": false,
+        "tools": true
       },
-      "type": "availability_updated",
+      "type": "availability_added",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:deepseek/deepseek-v4-flash",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:86e16edf4c7adc92974951e9"
+      "modelId": "opencode:ling-3.1-flash-free",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:9cd5dc6f6bdf05a5230cda04"
     },
     {
       "dataset": "availability",
@@ -184,18 +242,18 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.0115,
+          "cachedInput": 0.007699999999999999,
           "currency": "USD",
-          "input": 0.0115,
+          "input": 0.007699999999999999,
           "output": 1.28,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.007699999999999999,
+          "cachedInput": 0.0051,
           "currency": "USD",
-          "input": 0.007699999999999999,
+          "input": 0.0051,
           "output": 1.28,
           "unit": "1M tokens"
         }
@@ -208,46 +266,221 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:21554b2691d7c3af70e24f69"
+      "id": "change:9e1cb378dd25e39d8709e58b"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.044,
+          "cachedInput": 0.006,
           "currency": "USD",
-          "input": 1.32,
-          "output": 3.9600000000000004,
+          "input": 0.3,
+          "output": 1.2,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.022,
+          "cachedInput": 0.02,
           "currency": "USD",
-          "input": 0.66,
-          "output": 1.9800000000000002,
+          "input": 0.02,
+          "output": 0.6,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:3860d7243ee15394cdf3314e"
+      "id": "change:d3469f88c34fa4976f6bef40"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "entityId": "openrouter:google/gemma-4-26b-a4b-it",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.049999999999999996,
+          "currency": "USD",
+          "input": 0.09,
+          "output": 0.3,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0375,
+          "currency": "USD",
+          "input": 0.0675,
+          "output": 0.22499999999999998,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:37df97124956a08bd85b6888"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.012,
+          "currency": "USD",
+          "input": 0.06,
+          "output": 0.18,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.008400000000000001,
+          "currency": "USD",
+          "input": 0.041999999999999996,
+          "output": 0.12319999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:48ed82b80decbd531b16d692"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:nvidia/nemotron-3-ultra-550b-a55b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "currency": "USD",
+          "input": 0.5,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.12,
+          "currency": "USD",
+          "input": 0.6,
+          "output": 2.4,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:nvidia/nemotron-3-ultra-550b-a55b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:5ac5ad84067595a8a05cb1b1"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.032999999999999995,
+          "currency": "USD",
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.020625,
+          "currency": "USD",
+          "input": 0.0825,
+          "output": 0.33,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:12de02852f73f59051dc0836"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.041999999999999996,
+          "currency": "USD",
+          "input": 0.834,
+          "output": 2.501,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0378,
+          "currency": "USD",
+          "input": 0.7505999999999999,
+          "output": 2.2509,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:65d524541d914e58fc7e6508"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
@@ -263,111 +496,22 @@
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.006,
+          "cachedInput": 0.02,
           "currency": "USD",
-          "input": 0.3,
-          "output": 1.2,
+          "input": 0.02,
+          "output": 0.6,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "modelId": "openrouter:~deepseek/deepseek-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:ea9124d63238e0e856ef8a2c"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:inclusionai/ling-3.1-flash",
-      "operation": "added",
-      "fields": [
-        "confidence",
-        "context",
-        "free",
-        "modalities",
-        "modelId",
-        "pricing",
-        "provider",
-        "providerModelId",
-        "reasoning",
-        "sources",
-        "status",
-        "tools"
-      ],
-      "before": null,
-      "after": {
-        "confidence": "official",
-        "context": 262144,
-        "free": true,
-        "modalities": [
-          "text"
-        ],
-        "modelId": "openrouter:inclusionai/ling-3.1-flash",
-        "pricing": {
-          "currency": "USD",
-          "input": 0,
-          "output": 0,
-          "unit": "1M tokens"
-        },
-        "provider": "openrouter",
-        "providerModelId": "inclusionai/ling-3.1-flash",
-        "reasoning": true,
-        "sources": [
-          {
-            "confidence": "official",
-            "label": "Official OpenRouter model catalog availability and token pricing",
-            "url": "https://openrouter.ai/api/v1/models"
-          }
-        ],
-        "status": "available",
-        "tools": true
-      },
-      "type": "availability_added",
-      "date": "2026-10-02",
-      "observedAt": "2026-10-02",
-      "modelId": "openrouter:inclusionai/ling-3.1-flash",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:e9e9dff6c9f599b377309f6e"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:qwen/qwen3-30b-a3b-instruct-2507",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "currency": "USD",
-          "input": 0.09999999999999999,
-          "output": 0.3,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "currency": "USD",
-          "input": 0.04815,
-          "output": 0.19305,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-10-02",
-      "observedAt": "2026-10-02",
-      "modelId": "openrouter:qwen/qwen3-30b-a3b-instruct-2507",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:60c3bd5d4c3df1ecfbfed31c"
+      "id": "change:df377ee164ac4e88a6ef74f7"
     },
     {
       "dataset": "availability",
@@ -378,19 +522,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.0115,
+          "cachedInput": 0.007699999999999999,
           "currency": "USD",
-          "input": 0.0115,
+          "input": 0.007699999999999999,
           "output": 1.28,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.007699999999999999,
+          "cachedInput": 0.0010500000000000002,
           "currency": "USD",
-          "input": 0.007699999999999999,
-          "output": 1.28,
+          "input": 0.0038250000000000003,
+          "output": 1.043574,
           "unit": "1M tokens"
         }
       },
@@ -402,7 +546,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:02eae239664c148e9090fff3"
+      "id": "change:404751a1b02d4117e2dc7b82"
     },
     {
       "dataset": "availability",
@@ -415,17 +559,17 @@
         "pricing": {
           "cachedInput": 0.7999999999999999,
           "currency": "USD",
-          "input": 1.3900000000000001,
+          "input": 1.34,
           "output": 13,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.7999999999999999,
+          "cachedInput": 0.29,
           "currency": "USD",
-          "input": 1.34,
-          "output": 13,
+          "input": 1,
+          "output": 11.357,
           "unit": "1M tokens"
         }
       },
@@ -437,76 +581,45 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:99f21a3675072da0eb459a04"
+      "id": "change:a8ac6476faa7ad8f06c10deb"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:~z-ai/glm-latest",
+      "entityId": "openrouter:~z-ai/glm-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.06,
+          "cachedInput": 0.01125,
           "currency": "USD",
-          "input": 0.12,
-          "output": 4,
+          "input": 0.02625,
+          "output": 0.8999999999999999,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.08,
+          "cachedInput": 0.01125,
           "currency": "USD",
-          "input": 0.12,
-          "output": 4,
+          "input": 0.02625,
+          "output": 0.9287489999999999,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:~z-ai/glm-latest",
+      "modelId": "openrouter:~z-ai/glm-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:7285faeb00b17b2b25317e5a"
+      "id": "change:ee6bdadfcf390fff034073c8"
     }
   ],
   "pricingChanges": [
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-flash",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.008400000000000001,
-        "currency": "USD",
-        "input": 0.041999999999999996,
-        "output": 0.08399999999999999,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.0056,
-        "currency": "USD",
-        "input": 0.028,
-        "output": 0.056,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-10-02",
-      "observedAt": "2026-10-02",
-      "modelId": "openrouter:deepseek/deepseek-v4-flash",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:86e16edf4c7adc92974951e9:pricing"
-    },
     {
       "dataset": "availability",
       "entityId": "openrouter:deepseek/deepseek-v4-flash-0731",
@@ -515,16 +628,16 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.0115,
+        "cachedInput": 0.007699999999999999,
         "currency": "USD",
-        "input": 0.0115,
+        "input": 0.007699999999999999,
         "output": 1.28,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.007699999999999999,
+        "cachedInput": 0.0051,
         "currency": "USD",
-        "input": 0.007699999999999999,
+        "input": 0.0051,
         "output": 1.28,
         "unit": "1M tokens"
       },
@@ -536,42 +649,197 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:21554b2691d7c3af70e24f69:pricing"
+      "id": "change:9e1cb378dd25e39d8709e58b:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.044,
+        "cachedInput": 0.006,
         "currency": "USD",
-        "input": 1.32,
-        "output": 3.9600000000000004,
+        "input": 0.3,
+        "output": 1.2,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.022,
+        "cachedInput": 0.02,
         "currency": "USD",
-        "input": 0.66,
-        "output": 1.9800000000000002,
+        "input": 0.02,
+        "output": 0.6,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:3860d7243ee15394cdf3314e:pricing"
+      "id": "change:d3469f88c34fa4976f6bef40:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "entityId": "openrouter:google/gemma-4-26b-a4b-it",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.049999999999999996,
+        "currency": "USD",
+        "input": 0.09,
+        "output": 0.3,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.0375,
+        "currency": "USD",
+        "input": 0.0675,
+        "output": 0.22499999999999998,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:37df97124956a08bd85b6888:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.012,
+        "currency": "USD",
+        "input": 0.06,
+        "output": 0.18,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.008400000000000001,
+        "currency": "USD",
+        "input": 0.041999999999999996,
+        "output": 0.12319999999999999,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:48ed82b80decbd531b16d692:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:nvidia/nemotron-3-ultra-550b-a55b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.09999999999999999,
+        "currency": "USD",
+        "input": 0.5,
+        "output": 2.2,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.12,
+        "currency": "USD",
+        "input": 0.6,
+        "output": 2.4,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:nvidia/nemotron-3-ultra-550b-a55b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:5ac5ad84067595a8a05cb1b1:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.032999999999999995,
+        "currency": "USD",
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.020625,
+        "currency": "USD",
+        "input": 0.0825,
+        "output": 0.33,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:12de02852f73f59051dc0836:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.041999999999999996,
+        "currency": "USD",
+        "input": 0.834,
+        "output": 2.501,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.0378,
+        "currency": "USD",
+        "input": 0.7505999999999999,
+        "output": 2.2509,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:65d524541d914e58fc7e6508:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
@@ -584,50 +852,21 @@
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.006,
+        "cachedInput": 0.02,
         "currency": "USD",
-        "input": 0.3,
-        "output": 1.2,
+        "input": 0.02,
+        "output": 0.6,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "modelId": "openrouter:~deepseek/deepseek-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:ea9124d63238e0e856ef8a2c:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:qwen/qwen3-30b-a3b-instruct-2507",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "currency": "USD",
-        "input": 0.09999999999999999,
-        "output": 0.3,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "currency": "USD",
-        "input": 0.04815,
-        "output": 0.19305,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-10-02",
-      "observedAt": "2026-10-02",
-      "modelId": "openrouter:qwen/qwen3-30b-a3b-instruct-2507",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:60c3bd5d4c3df1ecfbfed31c:pricing"
+      "id": "change:df377ee164ac4e88a6ef74f7:pricing"
     },
     {
       "dataset": "availability",
@@ -637,17 +876,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.0115,
-        "currency": "USD",
-        "input": 0.0115,
-        "output": 1.28,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.007699999999999999,
         "currency": "USD",
         "input": 0.007699999999999999,
         "output": 1.28,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.0010500000000000002,
+        "currency": "USD",
+        "input": 0.0038250000000000003,
+        "output": 1.043574,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -658,7 +897,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:02eae239664c148e9090fff3:pricing"
+      "id": "change:404751a1b02d4117e2dc7b82:pricing"
     },
     {
       "dataset": "availability",
@@ -670,15 +909,15 @@
       "before": {
         "cachedInput": 0.7999999999999999,
         "currency": "USD",
-        "input": 1.3900000000000001,
+        "input": 1.34,
         "output": 13,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.7999999999999999,
+        "cachedInput": 0.29,
         "currency": "USD",
-        "input": 1.34,
-        "output": 13,
+        "input": 1,
+        "output": 11.357,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -689,38 +928,38 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:99f21a3675072da0eb459a04:pricing"
+      "id": "change:a8ac6476faa7ad8f06c10deb:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:~z-ai/glm-latest",
+      "entityId": "openrouter:~z-ai/glm-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.06,
+        "cachedInput": 0.01125,
         "currency": "USD",
-        "input": 0.12,
-        "output": 4,
+        "input": 0.02625,
+        "output": 0.8999999999999999,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.08,
+        "cachedInput": 0.01125,
         "currency": "USD",
-        "input": 0.12,
-        "output": 4,
+        "input": 0.02625,
+        "output": 0.9287489999999999,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-10-02",
       "observedAt": "2026-10-02",
-      "modelId": "openrouter:~z-ai/glm-latest",
+      "modelId": "openrouter:~z-ai/glm-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:7285faeb00b17b2b25317e5a:pricing"
+      "id": "change:ee6bdadfcf390fff034073c8:pricing"
     }
   ],
   "openModelChanges": [],
@@ -85932,6 +86171,522 @@
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
       "id": "change:7285faeb00b17b2b25317e5a"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:ling-3.1-flash-free",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/ling-3.1-flash-free"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 262144,
+        "identity": "unknown",
+        "modalities": [
+          "text"
+        ],
+        "name": "Ling 3.1 Flash Free",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "structuredOutput": false,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "opencode:ling-3.1-flash-free",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:b9c473816601e69f66d7a337"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "opencode:ling-3.1-flash-free",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 262144,
+        "free": true,
+        "modalities": [
+          "text"
+        ],
+        "modelId": "opencode:ling-3.1-flash-free",
+        "pricing": {
+          "cachedInput": 0,
+          "currency": "USD",
+          "input": 0,
+          "output": 0,
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "ling-3.1-flash-free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": false,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "opencode:ling-3.1-flash-free",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:9cd5dc6f6bdf05a5230cda04"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-flash-0731",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.007699999999999999,
+          "currency": "USD",
+          "input": 0.007699999999999999,
+          "output": 1.28,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0051,
+          "currency": "USD",
+          "input": 0.0051,
+          "output": 1.28,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:deepseek/deepseek-v4-flash-0731",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:9e1cb378dd25e39d8709e58b"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.006,
+          "currency": "USD",
+          "input": 0.3,
+          "output": 1.2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.02,
+          "currency": "USD",
+          "input": 0.02,
+          "output": 0.6,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d3469f88c34fa4976f6bef40"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:google/gemma-4-26b-a4b-it",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.049999999999999996,
+          "currency": "USD",
+          "input": 0.09,
+          "output": 0.3,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0375,
+          "currency": "USD",
+          "input": 0.0675,
+          "output": 0.22499999999999998,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:37df97124956a08bd85b6888"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.012,
+          "currency": "USD",
+          "input": 0.06,
+          "output": 0.18,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.008400000000000001,
+          "currency": "USD",
+          "input": 0.041999999999999996,
+          "output": 0.12319999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:48ed82b80decbd531b16d692"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:nvidia/nemotron-3-ultra-550b-a55b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "currency": "USD",
+          "input": 0.5,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.12,
+          "currency": "USD",
+          "input": 0.6,
+          "output": 2.4,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:nvidia/nemotron-3-ultra-550b-a55b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:5ac5ad84067595a8a05cb1b1"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.032999999999999995,
+          "currency": "USD",
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.020625,
+          "currency": "USD",
+          "input": 0.0825,
+          "output": 0.33,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:12de02852f73f59051dc0836"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.041999999999999996,
+          "currency": "USD",
+          "input": 0.834,
+          "output": 2.501,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0378,
+          "currency": "USD",
+          "input": 0.7505999999999999,
+          "output": 2.2509,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:65d524541d914e58fc7e6508"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.0021149999999999997,
+          "currency": "USD",
+          "input": 0.015,
+          "output": 1.2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.02,
+          "currency": "USD",
+          "input": 0.02,
+          "output": 0.6,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:~deepseek/deepseek-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:df377ee164ac4e88a6ef74f7"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.007699999999999999,
+          "currency": "USD",
+          "input": 0.007699999999999999,
+          "output": 1.28,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0010500000000000002,
+          "currency": "USD",
+          "input": 0.0038250000000000003,
+          "output": 1.043574,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:404751a1b02d4117e2dc7b82"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~moonshotai/kimi-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.7999999999999999,
+          "currency": "USD",
+          "input": 1.34,
+          "output": 13,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.29,
+          "currency": "USD",
+          "input": 1,
+          "output": 11.357,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:~moonshotai/kimi-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a8ac6476faa7ad8f06c10deb"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~z-ai/glm-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.01125,
+          "currency": "USD",
+          "input": 0.02625,
+          "output": 0.8999999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01125,
+          "currency": "USD",
+          "input": 0.02625,
+          "output": 0.9287489999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-02",
+      "observedAt": "2026-10-02",
+      "modelId": "openrouter:~z-ai/glm-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:ee6bdadfcf390fff034073c8"
     }
   ],
   "watchlist": [
@@ -85949,7 +86704,7 @@
     },
     {
       "kind": "stale",
-      "text": "80 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
+      "text": "81 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
     },
     {
       "kind": "incomplete",
@@ -85974,8 +86729,8 @@
     "failedSources": 3
   },
   "snapshot": {
-    "trackedModels": 813,
-    "canonicalModels": 708,
+    "trackedModels": 814,
+    "canonicalModels": 709,
     "availableEndpoints": 470,
     "freeEndpoints": 25,
     "paidEndpoints": 439,
@@ -85983,7 +86738,7 @@
     "openSource": 87,
     "openWeights": 7,
     "proprietary": 0,
-    "unknownOpenness": 614,
+    "unknownOpenness": 615,
     "providers": 9,
     "notableReleasesThisYear": 8,
     "notableReleasesThisMonth": 0
