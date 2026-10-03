@@ -991,7 +991,7 @@
     "pricing": {
       "input": 0,
       "output": 0,
-      "cachedInput": null,
+      "cachedInput": 0,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -1000,8 +1000,14 @@
     "sources": [
       {
         "url": "https://models.dev/api.json",
-        "label": "Secondary catalog prices; not verified official pricing",
+        "label": "Secondary catalog capabilities; exact provider model ID",
         "confidence": "observed",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
         "lastChecked": "2026-10-03"
       },
       {
@@ -4537,9 +4543,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.015,
-      "output": 0.676999,
-      "cachedInput": 0.002097,
+      "input": 0.02,
+      "output": 0.6,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4572,9 +4578,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.396,
-      "cachedInput": 0.004200000000000001,
+      "input": 0.11,
+      "output": 2.7,
+      "cachedInput": 0.099,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4607,9 +4613,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0038250000000000003,
-      "output": 1.043574,
-      "cachedInput": 0.0010500000000000002,
+      "input": 0.0162,
+      "output": 1.28,
+      "cachedInput": 0.0146,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4722,9 +4728,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.75,
-      "output": 11.357,
-      "cachedInput": 0.29,
+      "input": 0.69,
+      "output": 13,
+      "cachedInput": 0.44999999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4981,9 +4987,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.02625,
-      "output": 0.9287489999999999,
-      "cachedInput": 0.01125,
+      "input": 0.035,
+      "output": 0.5,
+      "cachedInput": 0.035,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7586,9 +7592,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0051,
+      "input": 0.0162,
       "output": 1.28,
-      "cachedInput": 0.0051,
+      "cachedInput": 0.0146,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12228,9 +12234,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.43415,
-      "output": 1.8279999999999998,
-      "cachedInput": 0.07311999999999999,
+      "input": 0.95,
+      "output": 4,
+      "cachedInput": 0.16,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -17894,8 +17900,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.09999999999999999,
-      "output": 0.3,
+      "input": 0.04815,
+      "output": 0.19305,
       "cachedInput": null,
       "cachedOutput": null,
       "currency": "USD",
