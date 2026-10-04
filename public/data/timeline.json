@@ -1,5 +1,44 @@
 [
   {
+    "id": "event:002ba7a2ac365118af7a0835",
+    "date": "2026-10-04",
+    "type": "price_change",
+    "modelId": "openrouter:~moonshotai/kimi-latest",
+    "title": "price change: ~moonshotai/kimi-latest",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-04"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.6756000000000001,
+        "output": 13,
+        "cachedInput": 0.44999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.629,
+        "output": 13,
+        "cachedInput": 0.44999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:029248bb76aaeb4d176bc659",
     "date": "2026-10-04",
     "type": "price_change",
@@ -344,6 +383,45 @@
         "input": 0.22,
         "output": 0.5,
         "cachedInput": 0.11,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:7f57548b23793bf3f68526ea",
+    "date": "2026-10-04",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-latest",
+    "title": "price change: ~z-ai/glm-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-04"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.049999999999999996,
+        "output": 5,
+        "cachedInput": 0.04,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.08,
+        "output": 5,
+        "cachedInput": 0.07,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -741,6 +819,45 @@
     }
   },
   {
+    "id": "event:cf333217ed94feeee9f904c5",
+    "date": "2026-10-04",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.2",
+    "title": "price change: z-ai/glm-5.2",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-04"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.38,
+        "output": 3.49,
+        "cachedInput": 0.26,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0504,
+        "output": 8,
+        "cachedInput": 0.0504,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:e212a68ea4616801d2b134e9",
     "date": "2026-10-04",
     "type": "price_change",
@@ -973,6 +1090,25 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "history:e581abfb41f6362564a85ed8",
+    "date": "2026-10-04",
+    "type": "repository_created",
+    "modelId": "hf:google/DiarizationLM-Gemma-4-E4B-v1",
+    "title": "repository created: DiarizationLM-Gemma-4-E4B-v1",
+    "provider": "Google",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/google/DiarizationLM-Gemma-4-E4B-v1",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "event:1358779891d999fe6981e3cc",
