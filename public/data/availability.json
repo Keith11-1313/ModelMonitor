@@ -4543,9 +4543,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.003,
-      "output": 2.4,
-      "cachedInput": 0.003,
+      "input": 0.012563,
+      "output": 1.32,
+      "cachedInput": 0.012563,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4579,7 +4579,7 @@
     ],
     "pricing": {
       "input": 0.15200000000000002,
-      "output": 6,
+      "output": 4.199999999999999,
       "cachedInput": 0.15,
       "cachedOutput": null,
       "currency": "USD",
@@ -4613,9 +4613,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0069,
+      "input": 0.013399999999999999,
       "output": 1.28,
-      "cachedInput": 0.0069,
+      "cachedInput": 0.013399999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4987,9 +4987,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.036,
+      "input": 0.0317,
       "output": 0.5,
-      "cachedInput": 0.0238,
+      "cachedInput": 0.0317,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7557,9 +7557,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0036,
+      "input": 0.0041,
       "output": 1.28,
-      "cachedInput": 0.0036,
+      "cachedInput": 0.0041,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7592,9 +7592,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0069,
+      "input": 0.013399999999999999,
       "output": 1.28,
-      "cachedInput": 0.0069,
+      "cachedInput": 0.013399999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7807,9 +7807,9 @@
       "text"
     ],
     "pricing": {
-      "input": 1.32,
-      "output": 3.9600000000000004,
-      "cachedInput": 0.044,
+      "input": 0.66,
+      "output": 1.9800000000000002,
+      "cachedInput": 0.022,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7879,9 +7879,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.003,
-      "output": 2.4,
-      "cachedInput": 0.003,
+      "input": 0.012563,
+      "output": 1.32,
+      "cachedInput": 0.012563,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10427,7 +10427,7 @@
     "pricing": {
       "input": 0.1875,
       "output": 0.6525,
-      "cachedInput": null,
+      "cachedInput": 0.049999999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10533,8 +10533,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.35,
-      "output": 1.5,
+      "input": 0.3,
+      "output": 1.2,
       "cachedInput": 0.04,
       "cachedOutput": null,
       "currency": "USD",
@@ -11566,6 +11566,42 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-10-06",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:mistralai/mistral-large-4-0",
+    "modelId": "openrouter:mistralai/mistral-large-4-0",
+    "provider": "openrouter",
+    "providerModelId": "mistralai/mistral-large-4-0",
+    "status": "available",
+    "free": false,
+    "context": 524288,
+    "reasoning": null,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.6799999999999999,
+      "output": 2.09,
+      "cachedInput": 0.07,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-06"
+      }
+    ],
+    "firstSeen": "2026-10-06",
     "lastChecked": "2026-10-06",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -18683,9 +18719,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 1,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.08,
+      "output": 0.75,
+      "cachedInput": 0.04,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
