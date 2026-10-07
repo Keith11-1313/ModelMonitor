@@ -3857,6 +3857,45 @@
         "opencode:deepseek-v4-flash-free",
         "opencode:mimo-v2.5-free"
       ]
+    },
+    {
+      "date": "2026-10-07",
+      "provider": "opencode",
+      "available": 87,
+      "free": 13,
+      "paid": 74,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:claude-haiku-5-5",
+          "modelId": "opencode:claude-haiku-5-5",
+          "free": false
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-10-07",
+      "provider": "openrouter",
+      "available": 467,
+      "free": 20,
+      "paid": 440,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:anthropic/claude-haiku-5.5",
+          "modelId": "openrouter:anthropic/claude-haiku-5.5",
+          "free": false
+        },
+        {
+          "id": "openrouter:anthropic/claude-haiku-5.5:batch",
+          "modelId": "openrouter:anthropic/claude-haiku-5.5:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }

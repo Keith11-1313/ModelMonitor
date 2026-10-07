@@ -2051,6 +2051,27 @@
         }
       },
       {
+        "id": "claude-haiku-5-5",
+        "name": "Claude Haiku 5.5",
+        "context": 1000000,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "pricing": {
+          "input": 0.1,
+          "output": 0.5,
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "gemini-3.8-flash",
         "name": "Gemini 3.8 Flash",
         "context": 1048576,
@@ -3117,6 +3138,29 @@
               "output": 22.5,
               "cachedInput": 0.6,
               "cachedOutput": 7.5,
+              "currency": "USD",
+              "unit": "1M tokens"
+            }
+          ]
+        }
+      },
+      {
+        "id": "claude-haiku-5-5",
+        "name": "Claude Haiku 5.5",
+        "pricing": {
+          "input": 0.1,
+          "output": 0.5,
+          "cachedInput": 0.01,
+          "cachedOutput": 0.125,
+          "currency": "USD",
+          "unit": "1M tokens",
+          "tiers": [
+            {
+              "contextAbove": 100000,
+              "input": 0.5,
+              "output": 2.5,
+              "cachedInput": 0.05,
+              "cachedOutput": 0.625,
               "currency": "USD",
               "unit": "1M tokens"
             }

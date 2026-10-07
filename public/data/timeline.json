@@ -195,6 +195,45 @@
     }
   },
   {
+    "id": "event:21f7c9f5773c28b3d0b5f626",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+    "title": "price change: google/gemma-4-26b-a4b-it",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.09,
+        "output": 0.3,
+        "cachedInput": 0.049999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0765,
+        "output": 0.255,
+        "cachedInput": 0.042499999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:23c11d2ed8c341e755c07e66",
     "date": "2026-10-07",
     "type": "price_change",
@@ -579,6 +618,39 @@
     }
   },
   {
+    "id": "event:4947d625d1027b1a153372bb",
+    "date": "2026-10-07",
+    "type": "availability_added",
+    "modelId": "opencode:claude-haiku-5-5",
+    "title": "availability added: claude-haiku-5-5",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-07"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
     "id": "event:4c47dd1206eb72bdc311499e",
     "date": "2026-10-07",
     "type": "price_change",
@@ -611,6 +683,45 @@
         "input": 0.027800000000000002,
         "output": 0.5,
         "cachedInput": 0.027800000000000002,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:4cc67cbecd55fba643cadc9e",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+    "title": "price change: deepseek/deepseek-v4.1-flash",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.049999999999999996,
+        "output": 1.2,
+        "cachedInput": 0.02,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.3,
+        "output": 1.2,
+        "cachedInput": 0.006,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -711,6 +822,45 @@
     }
   },
   {
+    "id": "event:6b28674ebffb60bb82b584f5",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy3",
+    "title": "price change: tencent/hy3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0825,
+        "output": 0.33,
+        "cachedInput": 0.020625,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:7338affcdd6816dd3481c9ab",
     "date": "2026-10-07",
     "type": "price_change",
@@ -748,6 +898,66 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:7385e381dbc2559a7173871e",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:~anthropic/claude-haiku-latest",
+    "title": "price change: ~anthropic/claude-haiku-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 1,
+        "output": 5,
+        "cachedInput": 0.09999999999999999,
+        "cachedOutput": 1.25,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.09999999999999999,
+        "output": 0.5,
+        "cachedInput": 0.01,
+        "cachedOutput": 0.125,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:784e0f6f4e6c94fb2c7b711b",
+    "date": "2026-10-07",
+    "type": "availability_added",
+    "modelId": "openrouter:anthropic/claude-haiku-5.5:batch",
+    "title": "availability added: anthropic/claude-haiku-5.5:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
   },
   {
     "id": "event:79f335c951d285e4a3eedebe",
@@ -966,6 +1176,84 @@
     "after": "available"
   },
   {
+    "id": "event:9a4b48957d90559b6ec3e501",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:moonshotai/kimi-k3",
+    "title": "price change: moonshotai/kimi-k3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.62,
+        "output": 15,
+        "cachedInput": 0.43,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.5,
+        "output": 15,
+        "cachedInput": 0.43,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:9c5583a712c9b6cc515fdcb8",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-flash-latest",
+    "title": "price change: ~deepseek/deepseek-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.049999999999999996,
+        "output": 1.2,
+        "cachedInput": 0.02,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0392,
+        "output": 1.2,
+        "cachedInput": 0.02,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:a4faf053a4babea40d1069c2",
     "date": "2026-10-07",
     "type": "price_change",
@@ -1041,6 +1329,31 @@
         "currency": "USD",
         "unit": "1M tokens"
       }
+    }
+  },
+  {
+    "id": "event:b4615e2e8a07e09c93534452",
+    "date": "2026-10-07",
+    "type": "context_change",
+    "modelId": "openrouter:~anthropic/claude-haiku-latest",
+    "title": "context change: ~anthropic/claude-haiku-latest",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "context": 200000
+    },
+    "after": {
+      "context": 1000000
     }
   },
   {
@@ -1161,6 +1474,45 @@
     }
   },
   {
+    "id": "event:bb2940b71f8350be32b4aabc",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:~moonshotai/kimi-latest",
+    "title": "price change: ~moonshotai/kimi-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.61,
+        "output": 13,
+        "cachedInput": 0.44999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.49,
+        "output": 13,
+        "cachedInput": 0.44999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:bd91a6a4fa796a5f0c9177f6",
     "date": "2026-10-07",
     "type": "price_change",
@@ -1193,6 +1545,123 @@
         "input": 0.04815,
         "output": 0.19305,
         "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c6aecb1f6d61f004e8b86813",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-flash-latest",
+    "title": "price change: ~z-ai/glm-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.036,
+        "output": 0.5,
+        "cachedInput": 0.036,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.04,
+        "output": 0.5,
+        "cachedInput": 0.024999999999999998,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c730be2d19b8ba7caa9abd54",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy4-preview",
+    "title": "price change: tencent/hy4-preview",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.834,
+        "output": 2.501,
+        "cachedInput": 0.041999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.7505999999999999,
+        "output": 2.2509,
+        "cachedInput": 0.0378,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c89d253f06960041a89d8957",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-pro-latest",
+    "title": "price change: ~deepseek/deepseek-pro-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.39999999999999997,
+        "output": 4.300000000000001,
+        "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.2871,
+        "output": 4.199999999999999,
+        "cachedInput": 0.19999999999999998,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -1233,6 +1702,45 @@
         "output": 1.2,
         "cachedInput": 0.02,
         "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:ca18d5a4fd96fc1fd5678d19",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:anthropic/claude-sonnet-5.5:batch",
+    "title": "price change: anthropic/claude-sonnet-5.5:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 1,
+        "output": 5,
+        "cachedInput": 0.09999999999999999,
+        "cachedOutput": 1.25,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 1,
+        "output": 5,
+        "cachedInput": 0.049999999999999996,
+        "cachedOutput": 1.25,
         "currency": "USD",
         "unit": "1M tokens"
       }
@@ -1432,6 +1940,66 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:e9b1b63a8aed3f48b02532fd",
+    "date": "2026-10-07",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v3.2",
+    "title": "price change: deepseek/deepseek-v3.2",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.28,
+        "output": 0.42,
+        "cachedInput": 0.028,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.25899999999999995,
+        "output": 0.42,
+        "cachedInput": 0.135,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:ee5b137566d75f610554a6e1",
+    "date": "2026-10-07",
+    "type": "availability_added",
+    "modelId": "openrouter:anthropic/claude-haiku-5.5",
+    "title": "availability added: anthropic/claude-haiku-5.5",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
   },
   {
     "id": "event:f102cef1a316cad7a4557421",
