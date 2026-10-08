@@ -3918,6 +3918,40 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-10-08",
+      "provider": "opencode",
+      "available": 88,
+      "free": 14,
+      "paid": 74,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:step-5-preview-free",
+          "modelId": "opencode:step-5-preview-free",
+          "free": true
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-10-08",
+      "provider": "openrouter",
+      "available": 468,
+      "free": 20,
+      "paid": 441,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:stepfun/step-5-preview",
+          "modelId": "openrouter:stepfun/step-5-preview",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
