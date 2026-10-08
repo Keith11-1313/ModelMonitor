@@ -3952,6 +3952,49 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-10-08",
+      "provider": "opencode",
+      "available": 87,
+      "free": 13,
+      "paid": 74,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [],
+      "removed": [
+        "opencode:fledge-alpha-free"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "provider": "openrouter",
+      "available": 469,
+      "free": 19,
+      "paid": 443,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:inclusionai/ling-3.0-flash-sante",
+          "modelId": "openrouter:inclusionai/ling-3.0-flash-sante",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.1-sol-pro:batch",
+          "modelId": "openrouter:openai/gpt-6.1-sol-pro:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.1-sol:batch",
+          "modelId": "openrouter:openai/gpt-6.1-sol:batch",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:baidu/ernie-4.5-vl-424b-a47b",
+        "openrouter:inclusionai/ling-3.0-flash-sante:free"
+      ]
     }
   ]
 }
