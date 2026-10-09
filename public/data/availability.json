@@ -4752,8 +4752,8 @@
     ],
     "pricing": {
       "input": 0.016,
-      "output": 1.2,
-      "cachedInput": 0.01,
+      "output": 0.6,
+      "cachedInput": 0.005,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4786,9 +4786,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.1282,
-      "output": 8,
-      "cachedInput": 0.13,
+      "input": 0.14256,
+      "output": 0.42767999999999995,
+      "cachedInput": 0.004536,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4821,9 +4821,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0048,
-      "output": 0.024844,
-      "cachedInput": 0.0048,
+      "input": 0.0061,
+      "output": 1.28,
+      "cachedInput": 0.0061,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4936,8 +4936,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.49,
-      "output": 13,
+      "input": 0.84,
+      "output": 13.5,
       "cachedInput": 0.3,
       "cachedOutput": null,
       "currency": "USD",
@@ -5196,8 +5196,8 @@
     ],
     "pricing": {
       "input": 0.032,
-      "output": 0.264718,
-      "cachedInput": 0.02,
+      "output": 0.092301,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5230,9 +5230,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.031200000000000002,
-      "output": 4.4,
-      "cachedInput": 0.029,
+      "input": 0.039,
+      "output": 4.8,
+      "cachedInput": 0.038000000000000006,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7840,9 +7840,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.022799999999999997,
+      "input": 0.0173,
       "output": 1.28,
-      "cachedInput": 0.022799999999999997,
+      "cachedInput": 0.0173,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7875,9 +7875,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.006,
+      "input": 0.0061,
       "output": 1.28,
-      "cachedInput": 0.006,
+      "cachedInput": 0.0061,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8055,9 +8055,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.275268,
-      "output": 0.550536,
-      "cachedInput": 0.022939,
+      "input": 0.20879999999999999,
+      "output": 0.41759999999999997,
+      "cachedInput": 0.0174,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -9676,9 +9676,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.0675,
+      "output": 0.22499999999999998,
+      "cachedInput": 0.0375,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12628,7 +12628,7 @@
     "pricing": {
       "input": 0.4344,
       "output": 2.4499999999999997,
-      "cachedInput": 0.12,
+      "cachedInput": 0.1077,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12699,9 +12699,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.5,
-      "output": 12,
-      "cachedInput": 0.33,
+      "input": 0.8999999999999999,
+      "output": 14,
+      "cachedInput": 0.6,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18034,7 +18034,7 @@
     "modelId": "openrouter:qwen/qwen-plus-2025-07-28",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen-plus-2025-07-28",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 1000000,
     "reasoning": true,
@@ -18062,7 +18062,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen2.5-vl-72b-instruct",
@@ -18107,7 +18108,7 @@
     "providerModelId": "qwen/qwen3-14b",
     "status": "available",
     "free": false,
-    "context": 131072,
+    "context": 40960,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -18140,7 +18141,7 @@
     "modelId": "openrouter:qwen/qwen3-235b-a22b",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-235b-a22b",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 131072,
     "reasoning": true,
@@ -18168,7 +18169,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-235b-a22b-2507",
@@ -18212,7 +18214,7 @@
     "providerModelId": "qwen/qwen3-235b-a22b-thinking-2507",
     "status": "available",
     "free": false,
-    "context": 131072,
+    "context": 128000,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -18220,8 +18222,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.22999999999999998,
-      "output": 2.3,
+      "input": 0.44999999999999996,
+      "output": 3.5,
       "cachedInput": null,
       "cachedOutput": null,
       "currency": "USD",
@@ -18247,7 +18249,7 @@
     "providerModelId": "qwen/qwen3-30b-a3b",
     "status": "available",
     "free": false,
-    "context": 131072,
+    "context": 40960,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -18315,7 +18317,7 @@
     "modelId": "openrouter:qwen/qwen3-30b-a3b-thinking-2507",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-30b-a3b-thinking-2507",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 81920,
     "reasoning": true,
@@ -18343,7 +18345,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-32b",
@@ -18385,7 +18388,7 @@
     "modelId": "openrouter:qwen/qwen3-8b",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-8b",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 131072,
     "reasoning": true,
@@ -18413,7 +18416,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-coder",
@@ -18560,7 +18564,7 @@
     "modelId": "openrouter:qwen/qwen3-coder-plus",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-coder-plus",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 1000000,
     "reasoning": null,
@@ -18588,14 +18592,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-max",
     "modelId": "openrouter:qwen/qwen3-max",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-max",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -18623,14 +18628,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-max-thinking",
     "modelId": "openrouter:qwen/qwen3-max-thinking",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-max-thinking",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -18658,7 +18664,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-next-80b-a3b-instruct",
@@ -18771,7 +18778,7 @@
     "modelId": "openrouter:qwen/qwen3-vl-235b-a22b-thinking",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-vl-235b-a22b-thinking",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 131072,
     "reasoning": true,
@@ -18800,7 +18807,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-vl-30b-a3b-instruct",
@@ -18854,8 +18862,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.19999999999999998,
-      "output": 2.4,
+      "input": 0.29,
+      "output": 1,
       "cachedInput": null,
       "cachedOutput": null,
       "currency": "USD",
@@ -18879,7 +18887,7 @@
     "modelId": "openrouter:qwen/qwen3-vl-32b-instruct",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-vl-32b-instruct",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 131072,
     "reasoning": null,
@@ -18908,7 +18916,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3-vl-8b-instruct",
@@ -18926,9 +18935,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.117,
-      "output": 0.45499999999999996,
-      "cachedInput": null,
+      "input": 0.25,
+      "output": 0.75,
+      "cachedInput": 0.12,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18951,7 +18960,7 @@
     "modelId": "openrouter:qwen/qwen3-vl-8b-thinking",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-vl-8b-thinking",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 131072,
     "reasoning": true,
@@ -18980,7 +18989,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3.5-122b-a10b",
@@ -19432,7 +19442,7 @@
     "modelId": "openrouter:qwen/qwen3.6-max-preview",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3.6-max-preview",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -19460,7 +19470,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-09",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-09"
   },
   {
     "id": "openrouter:qwen/qwen3.6-plus",
@@ -20598,9 +20609,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -20668,9 +20679,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21862,9 +21873,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.43,
-      "output": 1.75,
-      "cachedInput": 0.08,
+      "input": 0.5,
+      "output": 2,
+      "cachedInput": 0.09999999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22110,7 +22121,7 @@
     ],
     "pricing": {
       "input": 0.06,
-      "output": 4.199999999999999,
+      "output": 6,
       "cachedInput": 0.059,
       "cachedOutput": null,
       "currency": "USD",
@@ -22216,9 +22227,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.04,
-      "output": 7,
-      "cachedInput": 0.039,
+      "input": 0.039,
+      "output": 4.8,
+      "cachedInput": 0.038000000000000006,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

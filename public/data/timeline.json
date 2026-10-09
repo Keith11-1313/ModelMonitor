@@ -1,5 +1,44 @@
 [
   {
+    "id": "event:0b99214964fa84baddef1376",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-4.6",
+    "title": "price change: z-ai/glm-4.6",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.43,
+        "output": 1.75,
+        "cachedInput": 0.08,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.5,
+        "output": 2,
+        "cachedInput": 0.09999999999999999,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:0c533f88f77a41e304991c98",
     "date": "2026-10-09",
     "type": "price_change",
@@ -32,6 +71,45 @@
         "input": 0.22,
         "output": 0.5,
         "cachedInput": 0.11,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:11ffad3e291f963958b88eb0",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-flash-0731",
+    "title": "price change: deepseek/deepseek-v4-flash-0731",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.006,
+        "output": 1.28,
+        "cachedInput": 0.006,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0061,
+        "output": 1.28,
+        "cachedInput": 0.0061,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -115,6 +193,69 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:1c2d868fe25e5915f03880ef",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3.6-max-preview",
+    "title": "availability removed: qwen/qwen3.6-max-preview",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:21168561a504405ff8090113",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-8b",
+    "title": "availability removed: qwen/qwen3-8b",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:236d5149da6afd400579bfc2",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-max",
+    "title": "availability removed: qwen/qwen3-max",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:25ace7afe304f8fdbd969503",
@@ -266,6 +407,45 @@
         "input": 0.72,
         "output": 12.5,
         "cachedInput": 0.29,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:3116a15630def0f8c1986179",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:qwen/qwen3-vl-8b-instruct",
+    "title": "price change: qwen/qwen3-vl-8b-instruct",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.117,
+        "output": 0.45499999999999996,
+        "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.25,
+        "output": 0.75,
+        "cachedInput": 0.12,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -624,6 +804,27 @@
     }
   },
   {
+    "id": "event:598fe1edfa63316660ba0ace",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-235b-a22b",
+    "title": "availability removed: qwen/qwen3-235b-a22b",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:5dfe989b2cfd8797d5b2c5a6",
     "date": "2026-10-09",
     "type": "price_change",
@@ -656,6 +857,45 @@
         "input": 0.016,
         "output": 1.2,
         "cachedInput": 0.005,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:624a6551a702d6f22b7ffa2b",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-flash",
+    "title": "price change: deepseek/deepseek-v4-flash",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.022799999999999997,
+        "output": 1.28,
+        "cachedInput": 0.022799999999999997,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0173,
+        "output": 1.28,
+        "cachedInput": 0.0173,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -734,6 +974,45 @@
         "input": 0.09,
         "output": 0.3,
         "cachedInput": 0.049999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:65bfd8f877a82cc31fec3e83",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:moonshotai/kimi-k3",
+    "title": "price change: moonshotai/kimi-k3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.5,
+        "output": 12,
+        "cachedInput": 0.33,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.8999999999999999,
+        "output": 14,
+        "cachedInput": 0.6,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -897,6 +1176,45 @@
     }
   },
   {
+    "id": "event:6c8c81565c7f1995f22170d5",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-flash-latest",
+    "title": "price change: ~deepseek/deepseek-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.016,
+        "output": 1.2,
+        "cachedInput": 0.01,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.016,
+        "output": 0.6,
+        "cachedInput": 0.005,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:6dcb49455bd60861d1b77ad4",
     "date": "2026-10-09",
     "type": "price_change",
@@ -933,6 +1251,112 @@
         "currency": "USD",
         "unit": "1M tokens"
       }
+    }
+  },
+  {
+    "id": "event:70b7ba57fb0b9d3b803ffdb2",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:~moonshotai/kimi-latest",
+    "title": "price change: ~moonshotai/kimi-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.49,
+        "output": 13,
+        "cachedInput": 0.3,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.84,
+        "output": 13.5,
+        "cachedInput": 0.3,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:70c3441be6ea95af1be70d97",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-max-thinking",
+    "title": "availability removed: qwen/qwen3-max-thinking",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:7d47e747ca902804c3929dcd",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-vl-8b-thinking",
+    "title": "availability removed: qwen/qwen3-vl-8b-thinking",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:7d8fb000d075bb97db2b7a7f",
+    "date": "2026-10-09",
+    "type": "context_change",
+    "modelId": "openrouter:qwen/qwen3-235b-a22b-thinking-2507",
+    "title": "context change: qwen/qwen3-235b-a22b-thinking-2507",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "context": 131072
+    },
+    "after": {
+      "context": 128000
     }
   },
   {
@@ -1014,6 +1438,27 @@
     }
   },
   {
+    "id": "event:80a8f62d77c1273f06f7fdb3",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-30b-a3b-thinking-2507",
+    "title": "availability removed: qwen/qwen3-30b-a3b-thinking-2507",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:813ec7fa3b82a9c53a6ba644",
     "date": "2026-10-09",
     "type": "price_change",
@@ -1085,6 +1530,45 @@
         "input": 0.08,
         "output": 0.75,
         "cachedInput": 0.04,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:8b68e5236e3535606ec77c5c",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:moonshotai/kimi-k2.6",
+    "title": "price change: moonshotai/kimi-k2.6",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.4344,
+        "output": 2.4499999999999997,
+        "cachedInput": 0.12,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.4344,
+        "output": 2.4499999999999997,
+        "cachedInput": 0.1077,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -1170,6 +1654,151 @@
     }
   },
   {
+    "id": "event:90e890042c09b2d6984aba2c",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+    "title": "price change: ~deepseek/deepseek-v4-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.0048,
+        "output": 0.024844,
+        "cachedInput": 0.0048,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0061,
+        "output": 1.28,
+        "cachedInput": 0.0061,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:91d7e31caa1d33ccdb718662",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-pro",
+    "title": "price change: deepseek/deepseek-v4-pro",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.275268,
+        "output": 0.550536,
+        "cachedInput": 0.022939,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.20879999999999999,
+        "output": 0.41759999999999997,
+        "cachedInput": 0.0174,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:97248d92f450bec977463d53",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-coder-plus",
+    "title": "availability removed: qwen/qwen3-coder-plus",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:9a746cadfa85745184839a3d",
+    "date": "2026-10-09",
+    "type": "context_change",
+    "modelId": "openrouter:qwen/qwen3-30b-a3b",
+    "title": "context change: qwen/qwen3-30b-a3b",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "context": 131072
+    },
+    "after": {
+      "context": 40960
+    }
+  },
+  {
+    "id": "event:9c26b1e3a3c8bd107762a28d",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-vl-235b-a22b-thinking",
+    "title": "availability removed: qwen/qwen3-vl-235b-a22b-thinking",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:9dcdce7ba2a33347f982cc82",
     "date": "2026-10-09",
     "type": "price_change",
@@ -1248,6 +1877,84 @@
     }
   },
   {
+    "id": "event:a05a088c4a97840f631140e4",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.2",
+    "title": "price change: z-ai/glm-5.2",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.06,
+        "output": 4.199999999999999,
+        "cachedInput": 0.059,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.06,
+        "output": 6,
+        "cachedInput": 0.059,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:a2e9cf929e0054ce21e54a25",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-flash-latest",
+    "title": "price change: ~z-ai/glm-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.032,
+        "output": 0.264718,
+        "cachedInput": 0.02,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.032,
+        "output": 0.092301,
+        "cachedInput": 0.01,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:a8c31f8fe310873174f918ad",
     "date": "2026-10-09",
     "type": "price_change",
@@ -1280,6 +1987,45 @@
         "input": 0.007899999999999999,
         "output": 1.28,
         "cachedInput": 0.007899999999999999,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:aaa878921bd9ef72e9b7bf28",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:qwen/qwen3-235b-a22b-thinking-2507",
+    "title": "price change: qwen/qwen3-235b-a22b-thinking-2507",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.22999999999999998,
+        "output": 2.3,
+        "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.44999999999999996,
+        "output": 3.5,
+        "cachedInput": null,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -1365,6 +2111,66 @@
     }
   },
   {
+    "id": "event:b2f3a06d22e3db0bbc63b5e0",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen3-vl-32b-instruct",
+    "title": "availability removed: qwen/qwen3-vl-32b-instruct",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:b2fd4a503cf4e5ae2e9a198c",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy4-preview",
+    "title": "price change: tencent/hy4-preview",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.834,
+        "output": 2.501,
+        "cachedInput": 0.041999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.7505999999999999,
+        "output": 2.2509,
+        "cachedInput": 0.0378,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:b4564e052268d116ae10c4f1",
     "date": "2026-10-09",
     "type": "price_change",
@@ -1397,6 +2203,45 @@
         "input": 0.0046,
         "output": 1.28,
         "cachedInput": 0.0046,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:b52268b5c06e2b03b715839e",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.3",
+    "title": "price change: z-ai/glm-5.3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.04,
+        "output": 7,
+        "cachedInput": 0.039,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.039,
+        "output": 4.8,
+        "cachedInput": 0.038000000000000006,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -1443,6 +2288,84 @@
     }
   },
   {
+    "id": "event:bda10be1e692af5b4c52fde8",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:qwen/qwen3-vl-30b-a3b-thinking",
+    "title": "price change: qwen/qwen3-vl-30b-a3b-thinking",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.19999999999999998,
+        "output": 2.4,
+        "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.29,
+        "output": 1,
+        "cachedInput": null,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c155312216b2ba57b7993579",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-latest",
+    "title": "price change: ~z-ai/glm-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.031200000000000002,
+        "output": 4.4,
+        "cachedInput": 0.029,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.039,
+        "output": 4.8,
+        "cachedInput": 0.038000000000000006,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:c5812a1cb8c349ca3e39dac5",
     "date": "2026-10-09",
     "type": "price_change",
@@ -1475,6 +2398,45 @@
         "input": 0.04,
         "output": 7,
         "cachedInput": 0.039,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c81310154a5a36de769f23fa",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy3",
+    "title": "price change: tencent/hy3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0825,
+        "output": 0.33,
+        "cachedInput": 0.020625,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -1521,6 +2483,27 @@
     }
   },
   {
+    "id": "event:d16fef4ca962e997f2ebdc2b",
+    "date": "2026-10-09",
+    "type": "availability_removed",
+    "modelId": "openrouter:qwen/qwen-plus-2025-07-28",
+    "title": "availability removed: qwen/qwen-plus-2025-07-28",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:d486aaecb564f2735c1fc092",
     "date": "2026-10-09",
     "type": "price_change",
@@ -1560,6 +2543,45 @@
     }
   },
   {
+    "id": "event:dadaaedf60bf82b2f83a01e0",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+    "title": "price change: google/gemma-4-26b-a4b-it",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.09,
+        "output": 0.3,
+        "cachedInput": 0.049999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0675,
+        "output": 0.22499999999999998,
+        "cachedInput": 0.0375,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:dbd43436ca4c07c439297ada",
     "date": "2026-10-09",
     "type": "price_change",
@@ -1592,6 +2614,70 @@
         "input": 0.13199999999999998,
         "output": 0.5279999999999999,
         "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:df68dc6361bd5cfe49d116b0",
+    "date": "2026-10-09",
+    "type": "context_change",
+    "modelId": "openrouter:qwen/qwen3-14b",
+    "title": "context change: qwen/qwen3-14b",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "context": 131072
+    },
+    "after": {
+      "context": 40960
+    }
+  },
+  {
+    "id": "event:ed1f1566cc3c7b8e7d1a52d8",
+    "date": "2026-10-09",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-pro-latest",
+    "title": "price change: ~deepseek/deepseek-pro-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.1282,
+        "output": 8,
+        "cachedInput": 0.13,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.14256,
+        "output": 0.42767999999999995,
+        "cachedInput": 0.004536,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -4405,6 +5491,44 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "history:4035cace1faf016b3e6273ae",
+    "date": "2026-10-08",
+    "type": "repository_created",
+    "modelId": "hf:mistralai/LIDstral-Arabic",
+    "title": "repository created: LIDstral-Arabic",
+    "provider": "Mistral AI",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/mistralai/LIDstral-Arabic",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "id": "history:ac5c26a052695425c1def411",
+    "date": "2026-10-08",
+    "type": "repository_created",
+    "modelId": "hf:mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+    "title": "repository created: Voxtral-Mini-4B-Realtime-Arabic",
+    "provider": "Mistral AI",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ]
   },
   {
     "id": "event:00fbb3afa3417337a3dc6f9c",

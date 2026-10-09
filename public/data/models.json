@@ -23,7 +23,7 @@
     ],
     "hfId": "deepseek-ai/DeepSeek-R1",
     "downloads": 1109375,
-    "likes": 14337,
+    "likes": 14339,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -343,7 +343,7 @@
     ],
     "hfId": "deepseek-ai/DeepSeek-V3.2-Exp",
     "downloads": 54341,
-    "likes": 1007,
+    "likes": 1006,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -504,7 +504,7 @@
     ],
     "hfId": "deepseek-ai/DeepSeek-V4-Pro",
     "downloads": 407874,
-    "likes": 5642,
+    "likes": 5645,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -585,7 +585,7 @@
     ],
     "hfId": "deepseek-ai/DeepSeek-V4.1-Flash",
     "downloads": 1316468,
-    "likes": 4284,
+    "likes": 4288,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -702,7 +702,7 @@
     "modalities": [],
     "hfId": "google/embeddinggemma-2",
     "downloads": 29185,
-    "likes": 1294,
+    "likes": 1328,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -783,7 +783,7 @@
     ],
     "hfId": "google/gemma-3-12b-it",
     "downloads": 430189,
-    "likes": 859,
+    "likes": 861,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -865,7 +865,7 @@
     ],
     "hfId": "google/gemma-3-4b-it",
     "downloads": 1212881,
-    "likes": 1567,
+    "likes": 1568,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -947,7 +947,7 @@
     ],
     "hfId": "google/gemma-4-31B-it",
     "downloads": 9588358,
-    "likes": 4062,
+    "likes": 4063,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -1023,7 +1023,7 @@
     "modalities": [],
     "hfId": "google/timesfm-3.0-pytorch",
     "downloads": 1270596,
-    "likes": 935,
+    "likes": 934,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -1177,7 +1177,7 @@
     ],
     "hfId": "meta-llama/Llama-3.2-1B-Instruct",
     "downloads": 7154415,
-    "likes": 1802,
+    "likes": 1805,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -1257,7 +1257,7 @@
     ],
     "hfId": "meta-llama/Llama-3.3-70B-Instruct",
     "downloads": 341503,
-    "likes": 3114,
+    "likes": 3113,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -1494,7 +1494,7 @@
     "modalities": [],
     "hfId": "meta-llama/Llama-Prompt-Guard-2-22M",
     "downloads": 14860,
-    "likes": 73,
+    "likes": 74,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -1532,7 +1532,7 @@
     "modalities": [],
     "hfId": "meta-llama/Llama-Prompt-Guard-2-86M",
     "downloads": 120916,
-    "likes": 269,
+    "likes": 272,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -1660,6 +1660,44 @@
     "firstSeen": "2026-09-17",
     "lastChecked": "2026-10-09",
     "repositoryCreatedAt": "2026-03-11T14:01:29.000Z",
+    "dateBasis": "repository_creation_not_release"
+  },
+  {
+    "id": "hf:mistralai/LIDstral-Arabic",
+    "name": "LIDstral-Arabic",
+    "provider": "Mistral AI",
+    "aliases": [
+      "mistralai/LIDstral-Arabic"
+    ],
+    "type": "model",
+    "releaseDate": null,
+    "license": "apache-2.0",
+    "openness": "open_source",
+    "context": null,
+    "parameters": null,
+    "activeParameters": null,
+    "architecture": null,
+    "quantization": null,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [],
+    "hfId": "mistralai/LIDstral-Arabic",
+    "downloads": 0,
+    "likes": 4,
+    "identity": "known",
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://huggingface.co/mistralai/LIDstral-Arabic",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "firstSeen": "2026-10-09",
+    "lastChecked": "2026-10-09",
+    "repositoryCreatedAt": "2026-10-08T11:37:05.000Z",
     "dateBasis": "repository_creation_not_release"
   },
   {
@@ -2119,6 +2157,47 @@
     "dateBasis": "repository_creation_not_release"
   },
   {
+    "id": "hf:mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+    "name": "Voxtral-Mini-4B-Realtime-Arabic",
+    "provider": "Mistral AI",
+    "aliases": [
+      "mistralai/Voxtral-Mini-4B-Realtime-Arabic"
+    ],
+    "type": "fine_tune",
+    "releaseDate": null,
+    "license": null,
+    "openness": "unknown",
+    "context": null,
+    "parameters": 4429679360,
+    "activeParameters": null,
+    "architecture": "voxtral_realtime",
+    "quantization": null,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [
+      "audio",
+      "text"
+    ],
+    "hfId": "mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+    "downloads": 0,
+    "likes": 4,
+    "identity": "known",
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "firstSeen": "2026-10-09",
+    "lastChecked": "2026-10-09",
+    "repositoryCreatedAt": "2026-10-08T11:36:06.000Z",
+    "dateBasis": "repository_creation_not_release"
+  },
+  {
     "id": "hf:mistralai/Voxtral-Small-24B-2507",
     "name": "Voxtral-Small-24B-2507",
     "provider": "Mistral AI",
@@ -2424,7 +2503,7 @@
     ],
     "hfId": "moonshotai/Kimi-K3",
     "downloads": 1181053,
-    "likes": 11642,
+    "likes": 11645,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -3009,7 +3088,7 @@
     ],
     "hfId": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
     "downloads": 619272,
-    "likes": 228,
+    "likes": 229,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -3283,7 +3362,7 @@
     ],
     "hfId": "openai/gpt-oss-20b",
     "downloads": 6016741,
-    "likes": 5145,
+    "likes": 5146,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -3483,7 +3562,7 @@
     ],
     "hfId": "Qwen/Qwen-Image-2.1",
     "downloads": 122311,
-    "likes": 3146,
+    "likes": 3150,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -3521,7 +3600,7 @@
     "modalities": [],
     "hfId": "Qwen/Qwen-Image-2.1-PE-I2I",
     "downloads": 12958,
-    "likes": 58,
+    "likes": 59,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -3562,7 +3641,7 @@
     ],
     "hfId": "Qwen/Qwen-Image-2.1-PE-T2I",
     "downloads": 8765,
-    "likes": 57,
+    "likes": 58,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -3603,7 +3682,7 @@
     ],
     "hfId": "Qwen/Qwen-Image-2.1-Turbo",
     "downloads": 0,
-    "likes": 163,
+    "likes": 255,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -4652,7 +4731,7 @@
     ],
     "hfId": "Qwen/Qwen3.5-122B-A10B",
     "downloads": 602190,
-    "likes": 628,
+    "likes": 629,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -4775,7 +4854,7 @@
     ],
     "hfId": "Qwen/Qwen3.5-397B-A17B",
     "downloads": 479485,
-    "likes": 1565,
+    "likes": 1566,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -4898,7 +4977,7 @@
     ],
     "hfId": "Qwen/Qwen3.6-35B-A3B",
     "downloads": 3554896,
-    "likes": 2952,
+    "likes": 2953,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -4979,7 +5058,7 @@
     ],
     "hfId": "Qwen/Qwen3.8-27B",
     "downloads": 6783589,
-    "likes": 17324,
+    "likes": 17341,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -5061,7 +5140,7 @@
     ],
     "hfId": "Qwen/Qwen3.8-Flash-Next",
     "downloads": 1751752,
-    "likes": 6054,
+    "likes": 6058,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -5544,7 +5623,7 @@
     ],
     "hfId": "zai-org/GLM-5.3",
     "downloads": 1648104,
-    "likes": 2148,
+    "likes": 2150,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -5628,7 +5707,7 @@
     ],
     "hfId": "zai-org/GLM-5.3-Flash",
     "downloads": 6390969,
-    "likes": 2768,
+    "likes": 2774,
     "identity": "known",
     "confidence": "official",
     "sources": [
@@ -28678,7 +28757,7 @@
     "releaseDate": null,
     "license": null,
     "openness": "unknown",
-    "context": 131072,
+    "context": 40960,
     "parameters": null,
     "activeParameters": null,
     "architecture": null,
@@ -28795,7 +28874,7 @@
     "releaseDate": null,
     "license": null,
     "openness": "unknown",
-    "context": 131072,
+    "context": 128000,
     "parameters": null,
     "activeParameters": null,
     "architecture": null,
@@ -28834,7 +28913,7 @@
     "releaseDate": null,
     "license": null,
     "openness": "unknown",
-    "context": 131072,
+    "context": 40960,
     "parameters": null,
     "activeParameters": null,
     "architecture": null,
