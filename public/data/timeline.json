@@ -273,6 +273,39 @@
     }
   },
   {
+    "id": "event:51f3c1989c74573e1fdea06c",
+    "date": "2026-10-11",
+    "type": "availability_removed",
+    "modelId": "opencode:nemotron-3-ultra-free",
+    "title": "availability removed: nemotron-3-ultra-free",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:5a0a425385376ce3b5ed18f0",
     "date": "2026-10-11",
     "type": "price_change",
@@ -351,6 +384,45 @@
     }
   },
   {
+    "id": "event:68449993f39cf41ec21d6111",
+    "date": "2026-10-11",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy3",
+    "title": "price change: tencent/hy3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0825,
+        "output": 0.33,
+        "cachedInput": 0.020625,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:69971175bf73c8dd520e62a9",
     "date": "2026-10-11",
     "type": "price_change",
@@ -383,6 +455,45 @@
         "input": 0.0107,
         "output": 1.28,
         "cachedInput": 0.0107,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:72a5d718995ed6bb9fe0359d",
+    "date": "2026-10-11",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy4-preview",
+    "title": "price change: tencent/hy4-preview",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.834,
+        "output": 2.501,
+        "cachedInput": 0.041999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.7505999999999999,
+        "output": 2.2509,
+        "cachedInput": 0.0378,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -466,6 +577,78 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:928eac749596703abb055463",
+    "date": "2026-10-11",
+    "type": "price_change",
+    "modelId": "openrouter:moonshotai/kimi-k3",
+    "title": "price change: moonshotai/kimi-k3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.7999999999999999,
+        "output": 10,
+        "cachedInput": 0.55,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.7999999999999999,
+        "output": 13.5,
+        "cachedInput": 0.55,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:acace8f7d726239e5c39dea3",
+    "date": "2026-10-11",
+    "type": "availability_removed",
+    "modelId": "opencode:ling-3.0-flash-fin-free",
+    "title": "availability removed: ling-3.0-flash-fin-free",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:b562d795f1d289373ccf3c69",
@@ -624,6 +807,39 @@
     }
   },
   {
+    "id": "event:cd8b1b216ebc227b4d323f9b",
+    "date": "2026-10-11",
+    "type": "availability_removed",
+    "modelId": "opencode:exo-free",
+    "title": "availability removed: exo-free",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:d64ae4ed99fd51b52a598924",
     "date": "2026-10-11",
     "type": "price_change",
@@ -741,6 +957,33 @@
     }
   },
   {
+    "id": "event:e89201a49300c73baefb3e01",
+    "date": "2026-10-11",
+    "type": "availability_removed",
+    "modelId": "opencode:claude-sonnet-4",
+    "title": "availability removed: claude-sonnet-4",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog prices; not verified official pricing",
+        "confidence": "observed",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:e9315eb0450bc588a0fdc697",
     "date": "2026-10-11",
     "type": "price_change",
@@ -817,6 +1060,39 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:ec28dbb46039325f5343ac2e",
+    "date": "2026-10-11",
+    "type": "availability_removed",
+    "modelId": "opencode:deepseek-v4-flash-vision-exp",
+    "title": "availability removed: deepseek-v4-flash-vision-exp",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:f335ce270af5f1d12314d4a6",
