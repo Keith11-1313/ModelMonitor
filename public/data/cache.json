@@ -970,6 +970,25 @@
         }
       },
       {
+        "id": "cat-jam-free",
+        "name": "Cat Jam Free",
+        "context": 262144,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "text"
+        ],
+        "pricing": {
+          "input": 0,
+          "output": 0,
+          "cachedInput": 0,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "gpt-5.3-codex-spark",
         "name": "GPT-5.3 Codex Spark",
         "context": 128000,
@@ -2687,7 +2706,7 @@
         "pricing": {
           "input": 2,
           "output": 10,
-          "cachedInput": 0.1,
+          "cachedInput": 0.2,
           "cachedOutput": 2.5,
           "currency": "USD",
           "unit": "1M tokens",
@@ -2696,7 +2715,7 @@
               "contextAbove": 272000,
               "input": 4,
               "output": 15,
-              "cachedInput": 0.2,
+              "cachedInput": 0.4,
               "cachedOutput": 5,
               "currency": "USD",
               "unit": "1M tokens"
@@ -3730,6 +3749,18 @@
         }
       },
       {
+        "id": "cat-jam-free",
+        "name": "Cat Jam Free",
+        "pricing": {
+          "input": 0,
+          "output": 0,
+          "cachedInput": 0,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "longcat-2.5-preview-free",
         "name": "LongCat 2.5 Preview Free",
         "pricing": {
@@ -3850,6 +3881,6 @@
         }
       }
     ],
-    "lastSuccess": "2026-10-12"
+    "lastSuccess": "2026-10-13"
   }
 }
