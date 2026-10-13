@@ -4185,6 +4185,65 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-10-13",
+      "provider": "opencode",
+      "available": 86,
+      "free": 11,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:gemini-4-argon",
+          "modelId": "opencode:gemini-4-argon",
+          "free": false
+        },
+        {
+          "id": "opencode:test",
+          "modelId": "opencode:test",
+          "free": null
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-10-13",
+      "provider": "openrouter",
+      "available": 463,
+      "free": 18,
+      "paid": 438,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:google/gemini-4-argon",
+          "modelId": "openrouter:google/gemini-4-argon",
+          "free": false
+        },
+        {
+          "id": "openrouter:inclusionai/ling-3.1-flash",
+          "modelId": "openrouter:inclusionai/ling-3.1-flash",
+          "free": false
+        },
+        {
+          "id": "openrouter:liquid/lfm-2.5-24b-a2b",
+          "modelId": "openrouter:liquid/lfm-2.5-24b-a2b",
+          "free": false
+        },
+        {
+          "id": "openrouter:scaledown/extract",
+          "modelId": "openrouter:scaledown/extract",
+          "free": false
+        },
+        {
+          "id": "openrouter:scaledown/summarize",
+          "modelId": "openrouter:scaledown/summarize",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }

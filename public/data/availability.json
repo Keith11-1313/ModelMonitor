@@ -1582,6 +1582,57 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:gemini-4-argon",
+    "modelId": "opencode:gemini-4-argon",
+    "provider": "opencode",
+    "providerModelId": "gemini-4-argon",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "image",
+      "pdf",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 2,
+      "output": 10,
+      "cachedInput": 0.1,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-13"
+      },
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog prices; not verified official pricing",
+        "confidence": "observed",
+        "lastChecked": "2026-10-13"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-13"
+      }
+    ],
+    "firstSeen": "2026-10-13",
+    "lastChecked": "2026-10-13",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:glm-5",
     "modelId": "opencode:glm-5",
     "provider": "opencode",
@@ -4617,6 +4668,32 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:test",
+    "modelId": "opencode:test",
+    "provider": "opencode",
+    "providerModelId": "test",
+    "status": "available",
+    "free": null,
+    "context": null,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [],
+    "pricing": null,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-13"
+      }
+    ],
+    "firstSeen": "2026-10-13",
+    "lastChecked": "2026-10-13",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:union-alpha",
     "modelId": "opencode:union-alpha",
     "provider": "opencode",
@@ -4864,9 +4941,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.25,
-      "output": 5,
-      "cachedInput": 0.19999999999999998,
+      "input": 0.24947999999999998,
+      "output": 0.7484400000000001,
+      "cachedInput": 0.007937999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5015,7 +5092,7 @@
     ],
     "pricing": {
       "input": 0.73,
-      "output": 13.5,
+      "output": 10,
       "cachedInput": 0.55,
       "cachedOutput": null,
       "currency": "USD",
@@ -7918,9 +7995,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.049999999999999996,
-      "output": 1.28,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.091,
+      "output": 0.182,
+      "cachedInput": 0.0182,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8133,9 +8210,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.9552599999999999,
-      "output": 1.9105199999999998,
-      "cachedInput": 0.07960500000000001,
+      "input": 0.436044,
+      "output": 0.872088,
+      "cachedInput": 0.036337,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -9559,6 +9636,45 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:google/gemini-4-argon",
+    "modelId": "openrouter:google/gemini-4-argon",
+    "provider": "openrouter",
+    "providerModelId": "google/gemini-4-argon",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "file",
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 2,
+      "output": 10,
+      "cachedInput": 0.09999999999999999,
+      "cachedOutput": 0.1875,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-13"
+      }
+    ],
+    "firstSeen": "2026-10-13",
+    "lastChecked": "2026-10-13",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:google/gemini-nano-banana-2.1",
     "modelId": "openrouter:google/gemini-nano-banana-2.1",
     "provider": "openrouter",
@@ -10392,7 +10508,7 @@
     "provider": "openrouter",
     "providerModelId": "inclusionai/ling-3.1-flash",
     "status": "available",
-    "free": true,
+    "free": false,
     "context": 262144,
     "reasoning": true,
     "tools": true,
@@ -10401,9 +10517,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachedInput": null,
+      "input": 0.075,
+      "output": 0.22499999999999998,
+      "cachedInput": 0.015,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10595,6 +10711,41 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-10-13",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:liquid/lfm-2.5-24b-a2b",
+    "modelId": "openrouter:liquid/lfm-2.5-24b-a2b",
+    "provider": "openrouter",
+    "providerModelId": "liquid/lfm-2.5-24b-a2b",
+    "status": "available",
+    "free": false,
+    "context": 128000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0.09999999999999999,
+      "output": 1,
+      "cachedInput": 0.049999999999999996,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-13"
+      }
+    ],
+    "firstSeen": "2026-10-13",
     "lastChecked": "2026-10-13",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -12817,7 +12968,7 @@
     ],
     "pricing": {
       "input": 0.73,
-      "output": 13.5,
+      "output": 10,
       "cachedInput": 0.55,
       "cachedOutput": null,
       "currency": "USD",
@@ -19200,9 +19351,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.08,
-      "output": 0.75,
-      "cachedInput": 0.04,
+      "input": 0.15,
+      "output": 1,
+      "cachedInput": 0.049999999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -20425,6 +20576,80 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:scaledown/extract",
+    "modelId": "openrouter:scaledown/extract",
+    "provider": "openrouter",
+    "providerModelId": "scaledown/extract",
+    "status": "available",
+    "free": false,
+    "context": 1000000,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.04,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-13"
+      }
+    ],
+    "firstSeen": "2026-10-13",
+    "lastChecked": "2026-10-13",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:scaledown/summarize",
+    "modelId": "openrouter:scaledown/summarize",
+    "provider": "openrouter",
+    "providerModelId": "scaledown/summarize",
+    "status": "available",
+    "free": false,
+    "context": 1000000,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.04,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-13"
+      }
+    ],
+    "firstSeen": "2026-10-13",
+    "lastChecked": "2026-10-13",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:stealth/space-bunny-alpha",
     "modelId": "openrouter:stealth/space-bunny-alpha",
     "provider": "openrouter",
@@ -20726,9 +20951,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -20796,9 +21021,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

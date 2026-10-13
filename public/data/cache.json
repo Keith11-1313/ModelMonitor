@@ -2555,6 +2555,29 @@
         }
       },
       {
+        "id": "gemini-4-argon",
+        "name": "Gemini 4 Argon",
+        "context": 1048576,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "audio",
+          "image",
+          "pdf",
+          "text",
+          "video"
+        ],
+        "pricing": {
+          "input": 2,
+          "output": 10,
+          "cachedInput": 0.1,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "x-preview-f-free",
         "name": "Ox Alpha Free (Unlimited)",
         "context": 1000000,
@@ -3230,6 +3253,11 @@
           "currency": "USD",
           "unit": "1M tokens"
         }
+      },
+      {
+        "id": "gemini-4-argon",
+        "name": "Gemini 4 Argon",
+        "pricing": null
       },
       {
         "id": "gemini-3.8-flash",
