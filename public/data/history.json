@@ -4244,6 +4244,49 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-10-14",
+      "provider": "opencode",
+      "available": 86,
+      "free": 11,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [],
+      "removed": []
+    },
+    {
+      "date": "2026-10-14",
+      "provider": "openrouter",
+      "available": 462,
+      "free": 17,
+      "paid": 438,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:~unbiased/pareto-latest",
+          "modelId": "openrouter:~unbiased/pareto-latest",
+          "free": false
+        },
+        {
+          "id": "openrouter:google/gemini-4-argon:batch",
+          "modelId": "openrouter:google/gemini-4-argon:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:unbiased/pareto-26.9",
+          "modelId": "openrouter:unbiased/pareto-26.9",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:apodex/apodex-1.1-mini:free",
+        "openrouter:inclusionai/ling-3.0-flash-fin",
+        "openrouter:inclusionai/ling-3.0-flash-sante",
+        "openrouter:unbiased/pareto"
+      ]
     }
   ]
 }
