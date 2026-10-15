@@ -4418,6 +4418,54 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:nemotron-3.5-super-vl-free",
+    "modelId": "opencode:nemotron-3.5-super-vl-free",
+    "provider": "opencode",
+    "providerModelId": "nemotron-3.5-super-vl-free",
+    "status": "available",
+    "free": true,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": null,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": 0,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "firstSeen": "2026-10-15",
+    "lastChecked": "2026-10-15",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:qwen3.5-plus",
     "modelId": "opencode:qwen3.5-plus",
     "provider": "opencode",
@@ -4949,9 +4997,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.02376,
-      "output": 0.72,
-      "cachedInput": 0.0054,
+      "input": 0.0064,
+      "output": 0.7999999999999999,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -4984,9 +5032,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.1452,
-      "output": 0.4356,
-      "cachedInput": 0.00462,
+      "input": 0.1307,
+      "output": 8,
+      "cachedInput": 0.13,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5134,9 +5182,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.29,
-      "output": 24,
-      "cachedInput": 0.28,
+      "input": 0.39999999999999997,
+      "output": 14,
+      "cachedInput": 0.3,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8291,9 +8339,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.442656,
-      "output": 0.885312,
-      "cachedInput": 0.036888,
+      "input": 0.39532799999999996,
+      "output": 0.7906559999999999,
+      "cachedInput": 0.032944,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8398,9 +8446,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.02376,
-      "output": 0.72,
-      "cachedInput": 0.0054,
+      "input": 0.0064,
+      "output": 0.7999999999999999,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11488,6 +11536,45 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:meta/muse-spark-open",
+    "modelId": "openrouter:meta/muse-spark-open",
+    "provider": "openrouter",
+    "providerModelId": "meta/muse-spark-open",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "file",
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 1.25,
+      "output": 4.25,
+      "cachedInput": 0.15,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "firstSeen": "2026-10-15",
+    "lastChecked": "2026-10-15",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:meta/muse-wonder",
     "modelId": "openrouter:meta/muse-wonder",
     "provider": "openrouter",
@@ -13089,7 +13176,7 @@
       "video"
     ],
     "pricing": {
-      "input": 0.44999999999999996,
+      "input": 0.40499999999999997,
       "output": 15,
       "cachedInput": 0.28,
       "cachedOutput": null,
@@ -13819,6 +13906,80 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-10-15",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:nvidia/nemotron-3.5-super-vl",
+    "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+    "provider": "openrouter",
+    "providerModelId": "nvidia/nemotron-3.5-super-vl",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0.15,
+      "output": 0.5,
+      "cachedInput": 0.02,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "firstSeen": "2026-10-15",
+    "lastChecked": "2026-10-15",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+    "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+    "provider": "openrouter",
+    "providerModelId": "nvidia/nemotron-3.5-super-vl:free",
+    "status": "available",
+    "free": true,
+    "context": 1000000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "firstSeen": "2026-10-15",
     "lastChecked": "2026-10-15",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -19733,9 +19894,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.44999999999999996,
-      "output": 2.7,
-      "cachedInput": 0.03,
+      "input": 0.25,
+      "output": 2,
+      "cachedInput": 0.024999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21073,9 +21234,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21143,9 +21304,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21528,7 +21689,7 @@
     "modelId": "openrouter:unbiased/pareto-26.10-preview",
     "provider": "openrouter",
     "providerModelId": "unbiased/pareto-26.10-preview",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 1048576,
     "reasoning": null,
@@ -21557,7 +21718,8 @@
     ],
     "firstSeen": "2026-10-01",
     "lastChecked": "2026-10-15",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-15"
   },
   {
     "id": "openrouter:unbiased/pareto-26.9",
@@ -22621,9 +22783,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.06,
-      "output": 7,
-      "cachedInput": 0.059,
+      "input": 0.65,
+      "output": 10,
+      "cachedInput": 0.6489999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22728,9 +22890,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.25,
-      "output": 4.8,
-      "cachedInput": 0.24900000000000003,
+      "input": 0.11,
+      "output": 6,
+      "cachedInput": 0.109,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

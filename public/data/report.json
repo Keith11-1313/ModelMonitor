@@ -5,81 +5,1409 @@
   "periodStart": "2026-10-15",
   "periodEnd": "2026-10-15",
   "summary": {
-    "newModels": 0,
+    "newModels": 13,
     "newNotableReleases": 0,
     "becameFree": 0,
     "noLongerFree": 0,
-    "priceChanges": 8,
-    "availabilityAdded": 0,
+    "priceChanges": 11,
+    "availabilityAdded": 4,
     "availabilityRemoved": 1,
     "newOpenModels": 0,
     "deprecations": 0,
     "historicalChanges": 0,
     "modelUpdates": 0,
     "modelRemovals": 0,
-    "availabilityUpdates": 8
+    "availabilityUpdates": 11
   },
   "highlights": [
     {
-      "id": "change:2b454aaf3a35f23226095935:pricing",
+      "id": "change:9dd71c1377d3bbd80540d1ba:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek V4 Pro 0423's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:bb4ca47941d9b6b596857028:pricing",
+      "id": "change:7601e00d855c7cef7b27fd0f:pricing",
       "level": "fact",
-      "text": "DeepSeek: DeepSeek V4 Pro 0813's token pricing changed on openrouter.",
+      "text": "DeepSeek: DeepSeek V4.1 Flash's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:21947b1be32c4c7b593dc7cc:pricing",
+      "id": "change:3f811823ac9451be27826992:pricing",
       "level": "fact",
-      "text": "Mistral: Mistral Small 3.2 24B's token pricing changed on openrouter.",
+      "text": "MoonshotAI: Kimi K3's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:9d1e4e29e98a49d1af91caf2:pricing",
+      "id": "change:bc3f1787fa345e694cb2b283:pricing",
       "level": "fact",
       "text": "Qwen: Qwen3.6 27B's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:3b881a7f75fd1091757ded8a:pricing",
+      "id": "change:a90d2871b1876644d1071ad0:pricing",
+      "level": "fact",
+      "text": "Tencent: Hy3's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:2074cc4935a413345e9bb1b4:pricing",
+      "level": "fact",
+      "text": "Tencent: Hy4 preview's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:28368c3f4b58217bde7f4222:pricing",
       "level": "fact",
       "text": "Z.ai: GLM 5.2's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:bddcd48407987c2335e2c9c2:pricing",
+      "id": "change:28b4e3b986a9efd1c5091857:pricing",
       "level": "fact",
       "text": "Z.ai: GLM 5.3's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:c1ac09336db3d02c0b79b4c2:pricing",
+      "id": "change:da45081cc2a84adac669232d:pricing",
+      "level": "fact",
+      "text": "DeepSeek: DeepSeek Flash Latest's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:8fc7d3944ec60a5448ad4d31:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek Pro Latest's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:d02760b9a52ae23d42600295:pricing",
+      "id": "change:d6458e73a40526aec6faef46:pricing",
       "level": "fact",
-      "text": "Z.ai: GLM Latest's token pricing changed on openrouter.",
+      "text": "MoonshotAI: Kimi Latest's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:542c90ad8c5bd51217f381bc",
+      "id": "change:37da10e7b6681155e4a0cab9",
       "level": "fact",
-      "text": "Anthropic: Claude Sonnet 4 is no longer listed as available on openrouter.",
+      "text": "Timestral-123M was added to the tracked model catalog.",
+      "url": "https://huggingface.co/mistralai/Timestral-123M"
+    },
+    {
+      "id": "change:6791e6fa4133fd2a9103357d",
+      "level": "fact",
+      "text": "Timestral-209M was added to the tracked model catalog.",
+      "url": "https://huggingface.co/mistralai/Timestral-209M"
+    },
+    {
+      "id": "change:fcf1cebdbc0d21af4d32ab63",
+      "level": "fact",
+      "text": "Timestral-28M was added to the tracked model catalog.",
+      "url": "https://huggingface.co/mistralai/Timestral-28M"
+    },
+    {
+      "id": "change:6cc265c397dddb7296ec1ed5",
+      "level": "fact",
+      "text": "Timestral-5M was added to the tracked model catalog.",
+      "url": "https://huggingface.co/mistralai/Timestral-5M"
+    },
+    {
+      "id": "change:c9f20a8b4593110608243930",
+      "level": "fact",
+      "text": "NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr"
+    },
+    {
+      "id": "change:248e23f3fa97a534bba85bbb",
+      "level": "fact",
+      "text": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16 was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+    },
+    {
+      "id": "change:343a8cd6624aa22166f7058a",
+      "level": "fact",
+      "text": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16 was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16"
+    },
+    {
+      "id": "change:b06e29340651747dfd891043",
+      "level": "fact",
+      "text": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4"
+    },
+    {
+      "id": "change:ede23982fe2403a3c4453749",
+      "level": "fact",
+      "text": "Nemotron-3.5-Rerank-8B-BF16 was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16"
+    },
+    {
+      "id": "change:6173d6f38417ad7e5bffc7ee",
+      "level": "derived",
+      "text": "Nemotron 3.5 Super VL Free was added to the tracked model catalog.",
+      "url": "https://models.dev/api.json"
+    },
+    {
+      "id": "change:6c626a89069c3fa7c3490cf8",
+      "level": "fact",
+      "text": "Meta: Muse Spark Open was added to the tracked model catalog.",
       "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:12655f17b43d91ba3ace2668",
+      "level": "fact",
+      "text": "NVIDIA: Nemotron 3.5 Super VL was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:10032806929df966aeae4c68",
+      "level": "fact",
+      "text": "NVIDIA: Nemotron 3.5 Super VL (free) was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:b0aad41143aeb1eeb441ba46",
+      "level": "derived",
+      "text": "Nemotron 3.5 Super VL Free became available on opencode.",
+      "url": "https://models.dev/api.json"
     }
   ],
-  "modelChanges": [],
+  "modelChanges": [
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-123M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-123M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-123M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-123M",
+        "openness": "unknown",
+        "parameters": 122606720,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-123M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-123M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-123M",
+      "id": "change:37da10e7b6681155e4a0cab9"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-209M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-209M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-209M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-209M",
+        "openness": "unknown",
+        "parameters": 209312256,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-209M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-209M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-209M",
+      "id": "change:6791e6fa4133fd2a9103357d"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-28M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-28M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-28M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-28M",
+        "openness": "unknown",
+        "parameters": 27821184,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-28M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-28M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-28M",
+      "id": "change:fcf1cebdbc0d21af4d32ab63"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-5M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-5M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-5M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-5M",
+        "openness": "unknown",
+        "parameters": 5208960,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-5M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-5M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-5M",
+      "id": "change:6cc265c397dddb7296ec1ed5"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "quantization",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr"
+        ],
+        "architecture": "qwen3",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+        "openness": "unknown",
+        "parameters": 673450538,
+        "provider": "NVIDIA",
+        "quantization": "modelopt_fp4",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr"
+          }
+        ],
+        "type": "quantization"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "id": "change:c9f20a8b4593110608243930"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+        ],
+        "architecture": "nemotron_h_omni",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+        "openness": "unknown",
+        "parameters": 124453395976,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "id": "change:248e23f3fa97a534bba85bbb"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16"
+        ],
+        "architecture": "nemotron_h_omni",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+        "openness": "unknown",
+        "parameters": 124453395974,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+      "id": "change:343a8cd6624aa22166f7058a"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "quantization",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4"
+        ],
+        "architecture": "nemotron_h_omni",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+        "openness": "unknown",
+        "parameters": 65769840138,
+        "provider": "NVIDIA",
+        "quantization": "modelopt_mixed",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4"
+          }
+        ],
+        "type": "quantization"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+      "id": "change:b06e29340651747dfd891043"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/Nemotron-3.5-Rerank-8B-BF16"
+        ],
+        "architecture": "mistral3",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/Nemotron-3.5-Rerank-8B-BF16",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Nemotron-3.5-Rerank-8B-BF16",
+        "openness": "unknown",
+        "parameters": 8381159424,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16"
+          }
+        ],
+        "type": "fine_tune"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "id": "change:ede23982fe2403a3c4453749"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:nemotron-3.5-super-vl-free",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/nemotron-3.5-super-vl-free"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "Nemotron 3.5 Super VL Free",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "opencode:nemotron-3.5-super-vl-free",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:6173d6f38417ad7e5bffc7ee"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:meta/muse-spark-open",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "meta/muse-spark-open",
+          "openrouter/meta/muse-spark-open"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "meta-models/Muse-Spark-Open-816B-A42B",
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "Meta: Muse Spark Open",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:meta/muse-spark-open",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:6c626a89069c3fa7c3490cf8"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/nemotron-3.5-super-vl",
+          "openrouter/nvidia/nemotron-3.5-super-vl"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "NVIDIA: Nemotron 3.5 Super VL",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:12655f17b43d91ba3ace2668"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/nemotron-3.5-super-vl:free",
+          "openrouter/nvidia/nemotron-3.5-super-vl:free"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1000000,
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:10032806929df966aeae4c68"
+    }
+  ],
   "availabilityChanges": [
     {
       "dataset": "availability",
-      "entityId": "openrouter:anthropic/claude-sonnet-4",
+      "entityId": "opencode:nemotron-3.5-super-vl-free",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": true,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "opencode:nemotron-3.5-super-vl-free",
+        "pricing": {
+          "cachedInput": 0,
+          "currency": "USD",
+          "input": 0,
+          "output": 0,
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "nemotron-3.5-super-vl-free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "opencode:nemotron-3.5-super-vl-free",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:b0aad41143aeb1eeb441ba46"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-pro",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.036888,
+          "currency": "USD",
+          "input": 0.442656,
+          "output": 0.885312,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.032944,
+          "currency": "USD",
+          "input": 0.39532799999999996,
+          "output": 0.7906559999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:deepseek/deepseek-v4-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:9dd71c1377d3bbd80540d1ba"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.0054,
+          "currency": "USD",
+          "input": 0.02376,
+          "output": 0.72,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.0064,
+          "output": 0.7999999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:7601e00d855c7cef7b27fd0f"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:meta/muse-spark-open",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:meta/muse-spark-open",
+        "pricing": {
+          "cachedInput": 0.15,
+          "currency": "USD",
+          "input": 1.25,
+          "output": 4.25,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "meta/muse-spark-open",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:meta/muse-spark-open",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:178440ba079d6d8a524066ce"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:moonshotai/kimi-k3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.28,
+          "currency": "USD",
+          "input": 0.44999999999999996,
+          "output": 15,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.28,
+          "currency": "USD",
+          "input": 0.40499999999999997,
+          "output": 15,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:moonshotai/kimi-k3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:3f811823ac9451be27826992"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+        "pricing": {
+          "cachedInput": 0.02,
+          "currency": "USD",
+          "input": 0.15,
+          "output": 0.5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "nvidia/nemotron-3.5-super-vl",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:c722b82e2a35f1ad026795a3"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1000000,
+        "free": true,
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+        "pricing": {
+          "currency": "USD",
+          "input": 0,
+          "output": 0,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "nvidia/nemotron-3.5-super-vl:free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:35afbc06d40be84f5f601993"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:qwen/qwen3.6-27b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.44999999999999996,
+          "output": 2.7,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.024999999999999998,
+          "currency": "USD",
+          "input": 0.25,
+          "output": 2,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:qwen/qwen3.6-27b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:bc3f1787fa345e694cb2b283"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.032999999999999995,
+          "currency": "USD",
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.020625,
+          "currency": "USD",
+          "input": 0.0825,
+          "output": 0.33,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a90d2871b1876644d1071ad0"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.041999999999999996,
+          "currency": "USD",
+          "input": 0.834,
+          "output": 2.501,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0378,
+          "currency": "USD",
+          "input": 0.7505999999999999,
+          "output": 2.2509,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2074cc4935a413345e9bb1b4"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:unbiased/pareto-26.10-preview",
       "operation": "updated",
       "fields": [
         "status"
@@ -93,150 +1421,12 @@
       "type": "availability_removed",
       "date": "2026-10-15",
       "observedAt": "2026-10-15",
-      "modelId": "openrouter:anthropic/claude-sonnet-4",
+      "modelId": "openrouter:unbiased/pareto-26.10-preview",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:542c90ad8c5bd51217f381bc"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-pro",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.07960500000000001,
-          "currency": "USD",
-          "input": 0.9552599999999999,
-          "output": 1.9105199999999998,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "cachedInput": 0.036888,
-          "currency": "USD",
-          "input": 0.442656,
-          "output": 0.885312,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-10-15",
-      "observedAt": "2026-10-15",
-      "modelId": "openrouter:deepseek/deepseek-v4-pro",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:2b454aaf3a35f23226095935"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.044,
-          "currency": "USD",
-          "input": 1.32,
-          "output": 3.9600000000000004,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "cachedInput": 0.022,
-          "currency": "USD",
-          "input": 0.66,
-          "output": 1.9800000000000002,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-10-15",
-      "observedAt": "2026-10-15",
-      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:bb4ca47941d9b6b596857028"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "currency": "USD",
-          "input": 0.075,
-          "output": 0.19999999999999998,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "currency": "USD",
-          "input": 0.09375,
-          "output": 0.25,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-10-15",
-      "observedAt": "2026-10-15",
-      "modelId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:21947b1be32c4c7b593dc7cc"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:qwen/qwen3.6-27b",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.03,
-          "currency": "USD",
-          "input": 0.32,
-          "output": 3.1999999999999997,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "cachedInput": 0.03,
-          "currency": "USD",
-          "input": 0.44999999999999996,
-          "output": 2.7,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-10-15",
-      "observedAt": "2026-10-15",
-      "modelId": "openrouter:qwen/qwen3.6-27b",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:9d1e4e29e98a49d1af91caf2"
+      "id": "change:77c80f59a25e3aa6586404fa"
     },
     {
       "dataset": "availability",
@@ -247,19 +1437,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.0231,
+          "cachedInput": 0.059,
           "currency": "USD",
-          "input": 0.0241,
+          "input": 0.06,
           "output": 7,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.059,
+          "cachedInput": 0.6489999999999999,
           "currency": "USD",
-          "input": 0.06,
-          "output": 7,
+          "input": 0.65,
+          "output": 10,
           "unit": "1M tokens"
         }
       },
@@ -271,7 +1461,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:3b881a7f75fd1091757ded8a"
+      "id": "change:28368c3f4b58217bde7f4222"
     },
     {
       "dataset": "availability",
@@ -282,19 +1472,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.029,
+          "cachedInput": 0.24900000000000003,
           "currency": "USD",
-          "input": 0.03,
+          "input": 0.25,
           "output": 4.8,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.24900000000000003,
+          "cachedInput": 0.109,
           "currency": "USD",
-          "input": 0.25,
-          "output": 4.8,
+          "input": 0.11,
+          "output": 6,
           "unit": "1M tokens"
         }
       },
@@ -306,7 +1496,42 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:bddcd48407987c2335e2c9c2"
+      "id": "change:28b4e3b986a9efd1c5091857"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.0054,
+          "currency": "USD",
+          "input": 0.02376,
+          "output": 0.72,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.0064,
+          "output": 0.7999999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:~deepseek/deepseek-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:da45081cc2a84adac669232d"
     },
     {
       "dataset": "availability",
@@ -317,19 +1542,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.22999999999999998,
+          "cachedInput": 0.00462,
           "currency": "USD",
-          "input": 0.22499999999999998,
-          "output": 8,
+          "input": 0.1452,
+          "output": 0.4356,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.00462,
+          "cachedInput": 0.13,
           "currency": "USD",
-          "input": 0.1452,
-          "output": 0.4356,
+          "input": 0.1307,
+          "output": 8,
           "unit": "1M tokens"
         }
       },
@@ -341,42 +1566,42 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:c1ac09336db3d02c0b79b4c2"
+      "id": "change:8fc7d3944ec60a5448ad4d31"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:~z-ai/glm-latest",
+      "entityId": "openrouter:~moonshotai/kimi-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.0223,
+          "cachedInput": 0.28,
           "currency": "USD",
-          "input": 0.024,
-          "output": 4.4,
+          "input": 0.29,
+          "output": 24,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.0565,
+          "cachedInput": 0.3,
           "currency": "USD",
-          "input": 0.0608,
-          "output": 4.4,
+          "input": 0.39999999999999997,
+          "output": 14,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-10-15",
       "observedAt": "2026-10-15",
-      "modelId": "openrouter:~z-ai/glm-latest",
+      "modelId": "openrouter:~moonshotai/kimi-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:d02760b9a52ae23d42600295"
+      "id": "change:d6458e73a40526aec6faef46"
     }
   ],
   "pricingChanges": [
@@ -388,17 +1613,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.07960500000000001,
-        "currency": "USD",
-        "input": 0.9552599999999999,
-        "output": 1.9105199999999998,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.036888,
         "currency": "USD",
         "input": 0.442656,
         "output": 0.885312,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.032944,
+        "currency": "USD",
+        "input": 0.39532799999999996,
+        "output": 0.7906559999999999,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -409,67 +1634,69 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:2b454aaf3a35f23226095935:pricing"
+      "id": "change:9dd71c1377d3bbd80540d1ba:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.044,
+        "cachedInput": 0.0054,
         "currency": "USD",
-        "input": 1.32,
-        "output": 3.9600000000000004,
+        "input": 0.02376,
+        "output": 0.72,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.022,
+        "cachedInput": 0.01,
         "currency": "USD",
-        "input": 0.66,
-        "output": 1.9800000000000002,
+        "input": 0.0064,
+        "output": 0.7999999999999999,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-10-15",
       "observedAt": "2026-10-15",
-      "modelId": "openrouter:deepseek/deepseek-v4-pro-0813",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:bb4ca47941d9b6b596857028:pricing"
+      "id": "change:7601e00d855c7cef7b27fd0f:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "entityId": "openrouter:moonshotai/kimi-k3",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
+        "cachedInput": 0.28,
         "currency": "USD",
-        "input": 0.075,
-        "output": 0.19999999999999998,
+        "input": 0.44999999999999996,
+        "output": 15,
         "unit": "1M tokens"
       },
       "after": {
+        "cachedInput": 0.28,
         "currency": "USD",
-        "input": 0.09375,
-        "output": 0.25,
+        "input": 0.40499999999999997,
+        "output": 15,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-10-15",
       "observedAt": "2026-10-15",
-      "modelId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "modelId": "openrouter:moonshotai/kimi-k3",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:21947b1be32c4c7b593dc7cc:pricing"
+      "id": "change:3f811823ac9451be27826992:pricing"
     },
     {
       "dataset": "availability",
@@ -481,15 +1708,15 @@
       "before": {
         "cachedInput": 0.03,
         "currency": "USD",
-        "input": 0.32,
-        "output": 3.1999999999999997,
+        "input": 0.44999999999999996,
+        "output": 2.7,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.03,
+        "cachedInput": 0.024999999999999998,
         "currency": "USD",
-        "input": 0.44999999999999996,
-        "output": 2.7,
+        "input": 0.25,
+        "output": 2,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -500,7 +1727,69 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:9d1e4e29e98a49d1af91caf2:pricing"
+      "id": "change:bc3f1787fa345e694cb2b283:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.032999999999999995,
+        "currency": "USD",
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.020625,
+        "currency": "USD",
+        "input": 0.0825,
+        "output": 0.33,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a90d2871b1876644d1071ad0:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.041999999999999996,
+        "currency": "USD",
+        "input": 0.834,
+        "output": 2.501,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.0378,
+        "currency": "USD",
+        "input": 0.7505999999999999,
+        "output": 2.2509,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2074cc4935a413345e9bb1b4:pricing"
     },
     {
       "dataset": "availability",
@@ -510,17 +1799,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.0231,
-        "currency": "USD",
-        "input": 0.0241,
-        "output": 7,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.059,
         "currency": "USD",
         "input": 0.06,
         "output": 7,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.6489999999999999,
+        "currency": "USD",
+        "input": 0.65,
+        "output": 10,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -531,7 +1820,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:3b881a7f75fd1091757ded8a:pricing"
+      "id": "change:28368c3f4b58217bde7f4222:pricing"
     },
     {
       "dataset": "availability",
@@ -541,17 +1830,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.029,
-        "currency": "USD",
-        "input": 0.03,
-        "output": 4.8,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.24900000000000003,
         "currency": "USD",
         "input": 0.25,
         "output": 4.8,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.109,
+        "currency": "USD",
+        "input": 0.11,
+        "output": 6,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -562,7 +1851,38 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:bddcd48407987c2335e2c9c2:pricing"
+      "id": "change:28b4e3b986a9efd1c5091857:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.0054,
+        "currency": "USD",
+        "input": 0.02376,
+        "output": 0.72,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.01,
+        "currency": "USD",
+        "input": 0.0064,
+        "output": 0.7999999999999999,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:~deepseek/deepseek-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:da45081cc2a84adac669232d:pricing"
     },
     {
       "dataset": "availability",
@@ -572,17 +1892,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.22999999999999998,
-        "currency": "USD",
-        "input": 0.22499999999999998,
-        "output": 8,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.00462,
         "currency": "USD",
         "input": 0.1452,
         "output": 0.4356,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.13,
+        "currency": "USD",
+        "input": 0.1307,
+        "output": 8,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -593,38 +1913,38 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:c1ac09336db3d02c0b79b4c2:pricing"
+      "id": "change:8fc7d3944ec60a5448ad4d31:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:~z-ai/glm-latest",
+      "entityId": "openrouter:~moonshotai/kimi-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.0223,
+        "cachedInput": 0.28,
         "currency": "USD",
-        "input": 0.024,
-        "output": 4.4,
+        "input": 0.29,
+        "output": 24,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.0565,
+        "cachedInput": 0.3,
         "currency": "USD",
-        "input": 0.0608,
-        "output": 4.4,
+        "input": 0.39999999999999997,
+        "output": 14,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-10-15",
       "observedAt": "2026-10-15",
-      "modelId": "openrouter:~z-ai/glm-latest",
+      "modelId": "openrouter:~moonshotai/kimi-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:d02760b9a52ae23d42600295:pricing"
+      "id": "change:d6458e73a40526aec6faef46:pricing"
     }
   ],
   "openModelChanges": [],
@@ -110380,6 +111700,1435 @@
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
       "id": "change:d02760b9a52ae23d42600295"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-123M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-123M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-123M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-123M",
+        "openness": "unknown",
+        "parameters": 122606720,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-123M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-123M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-123M",
+      "id": "change:37da10e7b6681155e4a0cab9"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-209M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-209M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-209M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-209M",
+        "openness": "unknown",
+        "parameters": 209312256,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-209M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-209M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-209M",
+      "id": "change:6791e6fa4133fd2a9103357d"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-28M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-28M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-28M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-28M",
+        "openness": "unknown",
+        "parameters": 27821184,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-28M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-28M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-28M",
+      "id": "change:fcf1cebdbc0d21af4d32ab63"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:mistralai/Timestral-5M",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "mistralai/Timestral-5M"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "mistralai/Timestral-5M",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Timestral-5M",
+        "openness": "unknown",
+        "parameters": 5208960,
+        "provider": "Mistral AI",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/mistralai/Timestral-5M"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:mistralai/Timestral-5M",
+      "provider": "Mistral AI",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/mistralai/Timestral-5M",
+      "id": "change:6cc265c397dddb7296ec1ed5"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "quantization",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr"
+        ],
+        "architecture": "qwen3",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+        "openness": "unknown",
+        "parameters": 673450538,
+        "provider": "NVIDIA",
+        "quantization": "modelopt_fp4",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr"
+          }
+        ],
+        "type": "quantization"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr",
+      "id": "change:c9f20a8b4593110608243930"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+        ],
+        "architecture": "nemotron_h_omni",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+        "openness": "unknown",
+        "parameters": 124453395976,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "id": "change:248e23f3fa97a534bba85bbb"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16"
+        ],
+        "architecture": "nemotron_h_omni",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+        "openness": "unknown",
+        "parameters": 124453395974,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16"
+          }
+        ],
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16",
+      "id": "change:343a8cd6624aa22166f7058a"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "quantization",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4"
+        ],
+        "architecture": "nemotron_h_omni",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+        "openness": "unknown",
+        "parameters": 65769840138,
+        "provider": "NVIDIA",
+        "quantization": "modelopt_mixed",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4"
+          }
+        ],
+        "type": "quantization"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+      "id": "change:b06e29340651747dfd891043"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/Nemotron-3.5-Rerank-8B-BF16"
+        ],
+        "architecture": "mistral3",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/Nemotron-3.5-Rerank-8B-BF16",
+        "identity": "known",
+        "license": "other",
+        "modalities": [],
+        "name": "Nemotron-3.5-Rerank-8B-BF16",
+        "openness": "unknown",
+        "parameters": 8381159424,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16"
+          }
+        ],
+        "type": "fine_tune"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "hf:nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16",
+      "id": "change:ede23982fe2403a3c4453749"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:nemotron-3.5-super-vl-free",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/nemotron-3.5-super-vl-free"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "Nemotron 3.5 Super VL Free",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "opencode:nemotron-3.5-super-vl-free",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:6173d6f38417ad7e5bffc7ee"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:meta/muse-spark-open",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "meta/muse-spark-open",
+          "openrouter/meta/muse-spark-open"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "meta-models/Muse-Spark-Open-816B-A42B",
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "Meta: Muse Spark Open",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:meta/muse-spark-open",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:6c626a89069c3fa7c3490cf8"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/nemotron-3.5-super-vl",
+          "openrouter/nvidia/nemotron-3.5-super-vl"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "NVIDIA: Nemotron 3.5 Super VL",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:12655f17b43d91ba3ace2668"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/nemotron-3.5-super-vl:free",
+          "openrouter/nvidia/nemotron-3.5-super-vl:free"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1000000,
+        "hfId": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:10032806929df966aeae4c68"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "opencode:nemotron-3.5-super-vl-free",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": true,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "opencode:nemotron-3.5-super-vl-free",
+        "pricing": {
+          "cachedInput": 0,
+          "currency": "USD",
+          "input": 0,
+          "output": 0,
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "nemotron-3.5-super-vl-free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "opencode:nemotron-3.5-super-vl-free",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:b0aad41143aeb1eeb441ba46"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-pro",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.036888,
+          "currency": "USD",
+          "input": 0.442656,
+          "output": 0.885312,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.032944,
+          "currency": "USD",
+          "input": 0.39532799999999996,
+          "output": 0.7906559999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:deepseek/deepseek-v4-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:9dd71c1377d3bbd80540d1ba"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.0054,
+          "currency": "USD",
+          "input": 0.02376,
+          "output": 0.72,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.0064,
+          "output": 0.7999999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:7601e00d855c7cef7b27fd0f"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:meta/muse-spark-open",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:meta/muse-spark-open",
+        "pricing": {
+          "cachedInput": 0.15,
+          "currency": "USD",
+          "input": 1.25,
+          "output": 4.25,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "meta/muse-spark-open",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:meta/muse-spark-open",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:178440ba079d6d8a524066ce"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:moonshotai/kimi-k3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.28,
+          "currency": "USD",
+          "input": 0.44999999999999996,
+          "output": 15,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.28,
+          "currency": "USD",
+          "input": 0.40499999999999997,
+          "output": 15,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:moonshotai/kimi-k3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:3f811823ac9451be27826992"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+        "pricing": {
+          "cachedInput": 0.02,
+          "currency": "USD",
+          "input": 0.15,
+          "output": 0.5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "nvidia/nemotron-3.5-super-vl",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:c722b82e2a35f1ad026795a3"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1000000,
+        "free": true,
+        "modalities": [
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+        "pricing": {
+          "currency": "USD",
+          "input": 0,
+          "output": 0,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "nvidia/nemotron-3.5-super-vl:free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:35afbc06d40be84f5f601993"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:qwen/qwen3.6-27b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.44999999999999996,
+          "output": 2.7,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.024999999999999998,
+          "currency": "USD",
+          "input": 0.25,
+          "output": 2,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:qwen/qwen3.6-27b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:bc3f1787fa345e694cb2b283"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.032999999999999995,
+          "currency": "USD",
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.020625,
+          "currency": "USD",
+          "input": 0.0825,
+          "output": 0.33,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a90d2871b1876644d1071ad0"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.041999999999999996,
+          "currency": "USD",
+          "input": 0.834,
+          "output": 2.501,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0378,
+          "currency": "USD",
+          "input": 0.7505999999999999,
+          "output": 2.2509,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2074cc4935a413345e9bb1b4"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:unbiased/pareto-26.10-preview",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "available"
+      },
+      "after": {
+        "status": "removed"
+      },
+      "type": "availability_removed",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:unbiased/pareto-26.10-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:77c80f59a25e3aa6586404fa"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.2",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.059,
+          "currency": "USD",
+          "input": 0.06,
+          "output": 7,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.6489999999999999,
+          "currency": "USD",
+          "input": 0.65,
+          "output": 10,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:z-ai/glm-5.2",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:28368c3f4b58217bde7f4222"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.24900000000000003,
+          "currency": "USD",
+          "input": 0.25,
+          "output": 4.8,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.109,
+          "currency": "USD",
+          "input": 0.11,
+          "output": 6,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:z-ai/glm-5.3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:28b4e3b986a9efd1c5091857"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.0054,
+          "currency": "USD",
+          "input": 0.02376,
+          "output": 0.72,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.0064,
+          "output": 0.7999999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:~deepseek/deepseek-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:da45081cc2a84adac669232d"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~deepseek/deepseek-pro-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.00462,
+          "currency": "USD",
+          "input": 0.1452,
+          "output": 0.4356,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.13,
+          "currency": "USD",
+          "input": 0.1307,
+          "output": 8,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:~deepseek/deepseek-pro-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8fc7d3944ec60a5448ad4d31"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~moonshotai/kimi-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.28,
+          "currency": "USD",
+          "input": 0.29,
+          "output": 24,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.3,
+          "currency": "USD",
+          "input": 0.39999999999999997,
+          "output": 14,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "modelId": "openrouter:~moonshotai/kimi-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d6458e73a40526aec6faef46"
     }
   ],
   "watchlist": [
@@ -110397,7 +113146,7 @@
     },
     {
       "kind": "stale",
-      "text": "81 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
+      "text": "82 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
     },
     {
       "kind": "incomplete",
@@ -110422,16 +113171,16 @@
     "failedSources": 9
   },
   "snapshot": {
-    "trackedModels": 852,
-    "canonicalModels": 747,
-    "availableEndpoints": 466,
-    "freeEndpoints": 18,
-    "paidEndpoints": 439,
+    "trackedModels": 865,
+    "canonicalModels": 760,
+    "availableEndpoints": 468,
+    "freeEndpoints": 19,
+    "paidEndpoints": 440,
     "openModels": 97,
     "openSource": 90,
     "openWeights": 7,
     "proprietary": 0,
-    "unknownOpenness": 650,
+    "unknownOpenness": 663,
     "providers": 9,
     "notableReleasesThisYear": 8,
     "notableReleasesThisMonth": 0

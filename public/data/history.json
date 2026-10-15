@@ -4352,6 +4352,52 @@
       "removed": [
         "openrouter:anthropic/claude-sonnet-4"
       ]
+    },
+    {
+      "date": "2026-10-15",
+      "provider": "opencode",
+      "available": 87,
+      "free": 12,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:nemotron-3.5-super-vl-free",
+          "modelId": "opencode:nemotron-3.5-super-vl-free",
+          "free": true
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-10-15",
+      "provider": "openrouter",
+      "available": 463,
+      "free": 18,
+      "paid": 438,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:meta/muse-spark-open",
+          "modelId": "openrouter:meta/muse-spark-open",
+          "free": false
+        },
+        {
+          "id": "openrouter:nvidia/nemotron-3.5-super-vl",
+          "modelId": "openrouter:nvidia/nemotron-3.5-super-vl",
+          "free": false
+        },
+        {
+          "id": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+          "modelId": "openrouter:nvidia/nemotron-3.5-super-vl:free",
+          "free": true
+        }
+      ],
+      "removed": [
+        "openrouter:unbiased/pareto-26.10-preview"
+      ]
     }
   ]
 }
