@@ -1116,6 +1116,54 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:deepseek-v4.1-flash-free",
+    "modelId": "opencode:deepseek-v4.1-flash-free",
+    "provider": "opencode",
+    "providerModelId": "deepseek-v4.1-flash-free",
+    "status": "available",
+    "free": true,
+    "context": 200000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": 0,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "firstSeen": "2026-10-15",
+    "lastChecked": "2026-10-15",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:exo-free",
     "modelId": "opencode:exo-free",
     "provider": "opencode",
@@ -4901,8 +4949,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.013680000000000001,
-      "output": 0.891,
+      "input": 0.02376,
+      "output": 0.72,
       "cachedInput": 0.0054,
       "cachedOutput": null,
       "currency": "USD",
@@ -5086,9 +5134,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.32,
-      "output": 14,
-      "cachedInput": 0.3,
+      "input": 0.29,
+      "output": 24,
+      "cachedInput": 0.28,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5416,9 +5464,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.06,
+      "input": 0.024,
       "output": 4.4,
-      "cachedInput": 0.055799999999999995,
+      "cachedInput": 0.0223,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8349,8 +8397,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.013680000000000001,
-      "output": 0.891,
+      "input": 0.02376,
+      "output": 0.72,
       "cachedInput": 0.0054,
       "cachedOutput": null,
       "currency": "USD",
@@ -9941,9 +9989,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0765,
-      "output": 0.255,
-      "cachedInput": 0.042499999999999996,
+      "input": 0.09,
+      "output": 0.3,
+      "cachedInput": 0.049999999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11012,8 +11060,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0509,
-      "output": 0.335,
+      "input": 0.049999999999999996,
+      "output": 0.33,
       "cachedInput": null,
       "cachedOutput": null,
       "currency": "USD",
@@ -20839,7 +20887,7 @@
     "providerModelId": "stepfun/step-5-preview",
     "status": "available",
     "free": false,
-    "context": 1000000,
+    "context": 1048576,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -22572,9 +22620,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.037,
+      "input": 0.0241,
       "output": 7,
-      "cachedInput": 0.036,
+      "cachedInput": 0.0231,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22679,9 +22727,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.079,
+      "input": 0.03,
       "output": 4.8,
-      "cachedInput": 0.078,
+      "cachedInput": 0.029,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22716,9 +22764,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.036,
-      "output": 0.8999999999999999,
-      "cachedInput": 0.01125,
+      "input": 0.15,
+      "output": 0.5,
+      "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

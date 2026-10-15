@@ -2051,6 +2051,26 @@
         }
       },
       {
+        "id": "deepseek-v4.1-flash-free",
+        "name": "DeepSeek V4.1 Flash Free",
+        "context": 200000,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "pricing": {
+          "input": 0,
+          "output": 0,
+          "cachedInput": 0,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "ling-3.0-flash-free",
         "name": "Ling-3.0-flash Free",
         "context": 262144,
@@ -3731,6 +3751,18 @@
       {
         "id": "big-pickle",
         "name": "Big Pickle",
+        "pricing": {
+          "input": 0,
+          "output": 0,
+          "cachedInput": 0,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
+        "id": "deepseek-v4.1-flash-free",
+        "name": "DeepSeek V4.1 Flash Free",
         "pricing": {
           "input": 0,
           "output": 0,
