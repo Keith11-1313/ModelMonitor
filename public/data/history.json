@@ -4398,6 +4398,41 @@
       "removed": [
         "openrouter:unbiased/pareto-26.10-preview"
       ]
+    },
+    {
+      "date": "2026-10-16",
+      "provider": "opencode",
+      "available": 86,
+      "free": 11,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [],
+      "removed": [
+        "opencode:step-5-preview-free"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "provider": "openrouter",
+      "available": 465,
+      "free": 18,
+      "paid": 440,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:moondream/moondream3-preview",
+          "modelId": "openrouter:moondream/moondream3-preview",
+          "free": false
+        },
+        {
+          "id": "openrouter:moondream/moondream3.1-9b-a2b",
+          "modelId": "openrouter:moondream/moondream3.1-9b-a2b",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
