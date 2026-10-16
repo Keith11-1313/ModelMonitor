@@ -4455,6 +4455,47 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-10-16",
+      "provider": "opencode",
+      "available": 88,
+      "free": 13,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:beam-free",
+          "modelId": "opencode:beam-free",
+          "free": true
+        }
+      ],
+      "removed": [
+        "opencode:cat-jam-free"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "provider": "openrouter",
+      "available": 467,
+      "free": 19,
+      "paid": 441,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:reflection/beam-1.0-501b-a23b",
+          "modelId": "openrouter:reflection/beam-1.0-501b-a23b",
+          "free": false
+        },
+        {
+          "id": "openrouter:xingchen-agi/xing4.0-29b-a4b:free",
+          "modelId": "openrouter:xingchen-agi/xing4.0-29b-a4b:free",
+          "free": true
+        }
+      ],
+      "removed": []
     }
   ]
 }

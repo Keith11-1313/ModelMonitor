@@ -1,5 +1,52 @@
 [
   {
+    "id": "opencode:beam-free",
+    "modelId": "opencode:beam-free",
+    "provider": "opencode",
+    "providerModelId": "beam-free",
+    "status": "available",
+    "free": true,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": 0,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-10-16"
+      }
+    ],
+    "firstSeen": "2026-10-16",
+    "lastChecked": "2026-10-16",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:big-pickle",
     "modelId": "opencode:big-pickle",
     "provider": "opencode",
@@ -51,7 +98,7 @@
     "modelId": "opencode:cat-jam-free",
     "provider": "opencode",
     "providerModelId": "cat-jam-free",
-    "status": "available",
+    "status": "removed",
     "free": true,
     "context": 1048576,
     "reasoning": true,
@@ -91,7 +138,8 @@
     ],
     "firstSeen": "2026-10-13",
     "lastChecked": "2026-10-16",
-    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source.",
+    "removedAt": "2026-10-16"
   },
   {
     "id": "opencode:claude-fable-5",
@@ -5096,7 +5144,7 @@
     ],
     "pricing": {
       "input": 0.036,
-      "output": 0.684,
+      "output": 0.6435,
       "cachedInput": 0.0054,
       "cachedOutput": null,
       "currency": "USD",
@@ -5130,9 +5178,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.25,
-      "output": 5,
-      "cachedInput": 0.24900000000000003,
+      "input": 0.24947999999999998,
+      "output": 0.7484400000000001,
+      "cachedInput": 0.007937999999999999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5165,9 +5213,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0049,
+      "input": 0.0111,
       "output": 1.28,
-      "cachedInput": 0.0049,
+      "cachedInput": 0.0111,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5281,7 +5329,7 @@
     ],
     "pricing": {
       "input": 0.29400000000000004,
-      "output": 28,
+      "output": 24,
       "cachedInput": 0.284,
       "cachedOutput": null,
       "currency": "USD",
@@ -5575,9 +5623,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0229,
-      "output": 0.7052,
-      "cachedInput": 0.012499999999999999,
+      "input": 0.01332,
+      "output": 0.72216,
+      "cachedInput": 0.01125,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7906,8 +7954,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.2574,
-      "output": 1.0287,
+      "input": 0.32,
+      "output": 0.8899999999999999,
       "cachedInput": null,
       "cachedOutput": null,
       "currency": "USD",
@@ -8257,9 +8305,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0049,
+      "input": 0.0111,
       "output": 1.28,
-      "cachedInput": 0.0049,
+      "cachedInput": 0.0111,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8437,9 +8485,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.9552599999999999,
-      "output": 1.9105199999999998,
-      "cachedInput": 0.07960500000000001,
+      "input": 0.29719199999999996,
+      "output": 0.5943839999999999,
+      "cachedInput": 0.024766,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8545,7 +8593,7 @@
     ],
     "pricing": {
       "input": 0.036,
-      "output": 0.684,
+      "output": 0.6435,
       "cachedInput": 0.0054,
       "cachedOutput": null,
       "currency": "USD",
@@ -8580,9 +8628,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.112,
-      "output": 0.33599999999999997,
-      "cachedInput": 0.00336,
+      "input": 0.049999999999999996,
+      "output": 0.15,
+      "cachedInput": 0.004,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10136,9 +10184,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.0675,
+      "output": 0.22499999999999998,
+      "cachedInput": 0.0375,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -13347,7 +13395,7 @@
     ],
     "pricing": {
       "input": 0.30400000000000005,
-      "output": 12.533,
+      "output": 11.936,
       "cachedInput": 0.21,
       "cachedOutput": null,
       "currency": "USD",
@@ -20635,6 +20683,41 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:reflection/beam-1.0-501b-a23b",
+    "modelId": "openrouter:reflection/beam-1.0-501b-a23b",
+    "provider": "openrouter",
+    "providerModelId": "reflection/beam-1.0-501b-a23b",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0.25,
+      "output": 1,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-16"
+      }
+    ],
+    "firstSeen": "2026-10-16",
+    "lastChecked": "2026-10-16",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:rekaai/reka-edge",
     "modelId": "openrouter:rekaai/reka-edge",
     "provider": "openrouter",
@@ -21404,9 +21487,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21474,9 +21557,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22586,6 +22669,41 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:xingchen-agi/xing4.0-29b-a4b:free",
+    "modelId": "openrouter:xingchen-agi/xing4.0-29b-a4b:free",
+    "provider": "openrouter",
+    "providerModelId": "xingchen-agi/xing4.0-29b-a4b:free",
+    "status": "available",
+    "free": true,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-16"
+      }
+    ],
+    "firstSeen": "2026-10-16",
+    "lastChecked": "2026-10-16",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:z-ai/glm-4.5",
     "modelId": "openrouter:z-ai/glm-4.5",
     "provider": "openrouter",
@@ -22953,9 +23071,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.037,
-      "output": 9,
-      "cachedInput": 0.036,
+      "input": 0.62,
+      "output": 2.42,
+      "cachedInput": 0.14,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -23097,9 +23215,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0229,
-      "output": 0.7052,
-      "cachedInput": 0.012499999999999999,
+      "input": 0.01332,
+      "output": 0.72216,
+      "cachedInput": 0.01125,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

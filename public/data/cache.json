@@ -2132,6 +2132,25 @@
         }
       },
       {
+        "id": "beam-free",
+        "name": "Beam Free",
+        "context": 1048576,
+        "reasoning": true,
+        "tools": true,
+        "structuredOutput": true,
+        "modalities": [
+          "text"
+        ],
+        "pricing": {
+          "input": 0,
+          "output": 0,
+          "cachedInput": 0,
+          "cachedOutput": null,
+          "currency": "USD",
+          "unit": "1M tokens"
+        }
+      },
+      {
         "id": "ling-3.0-flash-free",
         "name": "Ling-3.0-flash Free",
         "context": 262144,
@@ -3858,8 +3877,8 @@
         }
       },
       {
-        "id": "cat-jam-free",
-        "name": "Cat Jam Free",
+        "id": "beam-free",
+        "name": "Beam Free",
         "pricing": {
           "input": 0,
           "output": 0,
