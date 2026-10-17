@@ -4496,6 +4496,43 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-10-17",
+      "provider": "opencode",
+      "available": 85,
+      "free": 10,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [],
+      "removed": [
+        "opencode:ll-alpha-free",
+        "opencode:muse-spark-1.2-contributor-free",
+        "opencode:muse-spark-1.3-contributor-free"
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "provider": "openrouter",
+      "available": 469,
+      "free": 19,
+      "paid": 443,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:elorian/glimpse",
+          "modelId": "openrouter:elorian/glimpse",
+          "free": false
+        },
+        {
+          "id": "openrouter:qwen/qwen3.7-plus:batch",
+          "modelId": "openrouter:qwen/qwen3.7-plus:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
