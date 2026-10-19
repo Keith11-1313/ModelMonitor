@@ -4600,6 +4600,46 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-10-19",
+      "provider": "opencode",
+      "available": 85,
+      "free": 10,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:minimax-m3.1-flash-free",
+          "modelId": "opencode:minimax-m3.1-flash-free",
+          "free": true
+        }
+      ],
+      "removed": [
+        "opencode:space-bunny-free"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "provider": "openrouter",
+      "available": 469,
+      "free": 20,
+      "paid": 442,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:minimax/minimax-m3.1-flash:free",
+          "modelId": "openrouter:minimax/minimax-m3.1-flash:free",
+          "free": true
+        }
+      ],
+      "removed": [
+        "openrouter:deepseek/deepseek-r1",
+        "openrouter:microsoft/wizardlm-2-8x22b",
+        "openrouter:sao10k/l3.3-euryale-70b"
+      ]
     }
   ]
 }
