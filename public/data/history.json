@@ -4738,6 +4738,38 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-10-22",
+      "provider": "opencode",
+      "available": 86,
+      "free": 10,
+      "paid": 74,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [],
+      "removed": [
+        "opencode:longcat-2.5-preview-free"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "provider": "openrouter",
+      "available": 468,
+      "free": 21,
+      "paid": 440,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:recursive/flint-v1.0:free",
+          "modelId": "openrouter:recursive/flint-v1.0:free",
+          "free": true
+        }
+      ],
+      "removed": [
+        "openrouter:google/gemini-2.5-flash-lite:batch"
+      ]
     }
   ]
 }
