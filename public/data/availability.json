@@ -1970,7 +1970,6 @@
     "structuredOutput": true,
     "modalities": [
       "image",
-      "pdf",
       "text",
       "video"
     ],
@@ -2020,7 +2019,6 @@
     "structuredOutput": true,
     "modalities": [
       "image",
-      "pdf",
       "text",
       "video"
     ],
@@ -5776,8 +5774,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0502,
-      "output": 0.0709,
+      "input": 0.050699999999999995,
+      "output": 0.07020000000000001,
       "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
@@ -8639,9 +8637,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.216108,
-      "output": 0.432216,
-      "cachedInput": 0.018009,
+      "input": 0.20879999999999999,
+      "output": 0.41759999999999997,
+      "cachedInput": 0.0174,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -14612,7 +14610,7 @@
     "modelId": "openrouter:openai/gpt-3.5-turbo",
     "provider": "openrouter",
     "providerModelId": "openai/gpt-3.5-turbo",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 16385,
     "reasoning": null,
@@ -14640,7 +14638,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-24",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-24"
   },
   {
     "id": "openrouter:openai/gpt-3.5-turbo-0613",
@@ -14717,7 +14716,7 @@
     "modelId": "openrouter:openai/gpt-3.5-turbo-instruct",
     "provider": "openrouter",
     "providerModelId": "openai/gpt-3.5-turbo-instruct",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 4095,
     "reasoning": null,
@@ -14745,14 +14744,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-24",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-24"
   },
   {
     "id": "openrouter:openai/gpt-3.5-turbo:batch",
     "modelId": "openrouter:openai/gpt-3.5-turbo:batch",
     "provider": "openrouter",
     "providerModelId": "openai/gpt-3.5-turbo:batch",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 16385,
     "reasoning": null,
@@ -14780,7 +14780,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-24",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-24"
   },
   {
     "id": "openrouter:openai/gpt-4",
@@ -21937,9 +21938,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22007,9 +22008,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -23664,9 +23665,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.079,
-      "output": 1.4,
-      "cachedInput": 0.078,
+      "input": 0.0908,
+      "output": 1.61,
+      "cachedInput": 0.0897,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
