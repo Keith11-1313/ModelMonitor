@@ -4941,6 +4941,41 @@
       "removed": [
         "openrouter:arcee-ai/trinity-large-thinking"
       ]
+    },
+    {
+      "date": "2026-10-26",
+      "provider": "opencode",
+      "available": 84,
+      "free": 9,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [],
+      "removed": [
+        "opencode:deepseek-v4-flash"
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "provider": "openrouter",
+      "available": 468,
+      "free": 20,
+      "paid": 441,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:openai/gpt-6.1-terra",
+          "modelId": "openrouter:openai/gpt-6.1-terra",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.1-terra:batch",
+          "modelId": "openrouter:openai/gpt-6.1-terra:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
