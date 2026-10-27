@@ -4976,6 +4976,41 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-10-27",
+      "provider": "opencode",
+      "available": 84,
+      "free": 9,
+      "paid": 73,
+      "unknown": 2,
+      "baseline": false,
+      "upsert": [],
+      "removed": []
+    },
+    {
+      "date": "2026-10-27",
+      "provider": "openrouter",
+      "available": 463,
+      "free": 20,
+      "paid": 436,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:openai/gpt-6.1-terra-pro",
+          "modelId": "openrouter:openai/gpt-6.1-terra-pro",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:ibm-granite/granite-4.0-h-micro",
+        "openrouter:mistralai/codestral-2508:batch",
+        "openrouter:mistralai/ministral-8b-2512:batch",
+        "openrouter:mistralai/mistral-large-2512:batch",
+        "openrouter:mistralai/mistral-medium-3.1:batch",
+        "openrouter:mistralai/mistral-small-2603:batch"
+      ]
     }
   ]
 }
