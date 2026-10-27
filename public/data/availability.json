@@ -5296,8 +5296,8 @@
     ],
     "pricing": {
       "input": 0.02,
-      "output": 1.21,
-      "cachedInput": 0.012398,
+      "output": 1.5999999999999999,
+      "cachedInput": 0.015,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5330,9 +5330,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.1401,
+      "input": 0.1259,
       "output": 8,
-      "cachedInput": 0.14,
+      "cachedInput": 0.13,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5480,9 +5480,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.17950000000000002,
-      "output": 8.940000000000001,
-      "cachedInput": 0.16999999999999998,
+      "input": 0.16899999999999998,
+      "output": 11.5,
+      "cachedInput": 0.159,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5775,8 +5775,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0313,
-      "output": 0.1046,
+      "input": 0.034499999999999996,
+      "output": 0.0701,
       "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
@@ -8424,9 +8424,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.044899999999999995,
-      "output": 0.44999999999999996,
-      "cachedInput": 0.044899999999999995,
+      "input": 0.04732,
+      "output": 0.09464,
+      "cachedInput": 0.009464,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8639,9 +8639,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.888966,
-      "output": 1.777932,
-      "cachedInput": 0.0740805,
+      "input": 0.877134,
+      "output": 1.754268,
+      "cachedInput": 0.0730945,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10414,9 +10414,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.0765,
+      "output": 0.255,
+      "cachedInput": 0.042499999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -13739,7 +13739,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.6725,
+      "input": 0.56,
       "output": 3.1,
       "cachedInput": 0.15,
       "cachedOutput": null,
@@ -13776,9 +13776,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.189,
-      "output": 20,
-      "cachedInput": 0.179,
+      "input": 0.16899999999999998,
+      "output": 11.5,
+      "cachedInput": 0.159,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -19230,6 +19230,42 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:prism-ml/ternary-bonsai-2-9b",
+    "modelId": "openrouter:prism-ml/ternary-bonsai-2-9b",
+    "provider": "openrouter",
+    "providerModelId": "prism-ml/ternary-bonsai-2-9b",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.08,
+      "output": 0.13,
+      "cachedInput": 0.04,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-27"
+      }
+    ],
+    "firstSeen": "2026-10-27",
+    "lastChecked": "2026-10-27",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:qwen/qwen-2.5-72b-instruct",
     "modelId": "openrouter:qwen/qwen-2.5-72b-instruct",
     "provider": "openrouter",
@@ -22130,9 +22166,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22200,9 +22236,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -23750,9 +23786,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0341,
+      "input": 0.0319,
       "output": 7,
-      "cachedInput": 0.032999999999999995,
+      "cachedInput": 0.0309,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
