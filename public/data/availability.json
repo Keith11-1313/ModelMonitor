@@ -5061,7 +5061,7 @@
     "modelId": "opencode:test",
     "provider": "opencode",
     "providerModelId": "test",
-    "status": "available",
+    "status": "removed",
     "free": null,
     "context": null,
     "reasoning": null,
@@ -5080,7 +5080,8 @@
     ],
     "firstSeen": "2026-10-13",
     "lastChecked": "2026-10-28",
-    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "opencode:union-alpha",
@@ -5330,9 +5331,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.2542,
-      "output": 8,
-      "cachedInput": 0.25,
+      "input": 0.16368,
+      "output": 0.49104,
+      "cachedInput": 0.005208,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5365,8 +5366,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0475,
-      "output": 0.1568,
+      "input": 0.0422,
+      "output": 0.1694,
       "cachedInput": 0.028,
       "cachedOutput": null,
       "currency": "USD",
@@ -5480,9 +5481,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.179,
-      "output": 20,
-      "cachedInput": 0.16899999999999998,
+      "input": 0.20900000000000002,
+      "output": 8.504,
+      "cachedInput": 0.19999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5775,9 +5776,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0207,
-      "output": 0.0516,
-      "cachedInput": 0.0189,
+      "input": 0.0259,
+      "output": 0.1042,
+      "cachedInput": 0.0259,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8639,9 +8640,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.9552599999999999,
-      "output": 1.9105199999999998,
-      "cachedInput": 0.07960500000000001,
+      "input": 0.888966,
+      "output": 1.777932,
+      "cachedInput": 0.0740805,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11486,8 +11487,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.02,
-      "output": 0.04,
+      "input": 0.049999999999999996,
+      "output": 0.08,
       "cachedInput": 0.024999999999999998,
       "cachedOutput": null,
       "currency": "USD",
@@ -13776,9 +13777,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.179,
+      "input": 0.21,
       "output": 20,
-      "cachedInput": 0.16899999999999998,
+      "cachedInput": 0.19999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -14867,7 +14868,7 @@
     "modelId": "openrouter:openai/gpt-4-turbo",
     "provider": "openrouter",
     "providerModelId": "openai/gpt-4-turbo",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 128000,
     "reasoning": null,
@@ -14896,7 +14897,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:openai/gpt-4-turbo:batch",
@@ -18216,7 +18218,7 @@
     "modelId": "openrouter:openai/o1",
     "provider": "openrouter",
     "providerModelId": "openai/o1",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 200000,
     "reasoning": true,
@@ -18246,14 +18248,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:openai/o1-pro",
     "modelId": "openrouter:openai/o1-pro",
     "provider": "openrouter",
     "providerModelId": "openai/o1-pro",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 200000,
     "reasoning": true,
@@ -18283,7 +18286,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:openai/o3",
@@ -18327,7 +18331,7 @@
     "modelId": "openrouter:openai/o3-mini",
     "provider": "openrouter",
     "providerModelId": "openai/o3-mini",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 200000,
     "reasoning": true,
@@ -18356,14 +18360,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:openai/o3-mini-high",
     "modelId": "openrouter:openai/o3-mini-high",
     "provider": "openrouter",
     "providerModelId": "openai/o3-mini-high",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 200000,
     "reasoning": true,
@@ -18392,7 +18397,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:openai/o3-mini:batch",
@@ -18509,7 +18515,7 @@
     "modelId": "openrouter:openai/o4-mini",
     "provider": "openrouter",
     "providerModelId": "openai/o4-mini",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 200000,
     "reasoning": true,
@@ -18539,14 +18545,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:openai/o4-mini-high",
     "modelId": "openrouter:openai/o4-mini-high",
     "provider": "openrouter",
     "providerModelId": "openai/o4-mini-high",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 200000,
     "reasoning": true,
@@ -18576,7 +18583,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:openai/o4-mini:batch",
@@ -20083,7 +20091,7 @@
     "modelId": "openrouter:qwen/qwen3-next-80b-a3b-thinking",
     "provider": "openrouter",
     "providerModelId": "qwen/qwen3-next-80b-a3b-thinking",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -20111,7 +20119,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-10-28",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-10-28"
   },
   {
     "id": "openrouter:qwen/qwen3-vl-235b-a22b-instruct",
@@ -22166,9 +22175,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22236,9 +22245,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -23786,9 +23795,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.014,
+      "input": 0.0117,
       "output": 7,
-      "cachedInput": 0.013000000000000001,
+      "cachedInput": 0.0107,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
