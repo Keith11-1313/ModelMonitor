@@ -1,5 +1,44 @@
 [
   {
+    "id": "event:025613bc3e82b28e3657324d",
+    "date": "2026-10-31",
+    "type": "price_change",
+    "modelId": "openrouter:~z-ai/glm-flash-latest",
+    "title": "price change: ~z-ai/glm-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.0172,
+        "output": 0.047099999999999996,
+        "cachedInput": 0.015700000000000002,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.016300000000000002,
+        "output": 0.1479,
+        "cachedInput": 0.016300000000000002,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:0ea92145c24101a971a561d4",
     "date": "2026-10-31",
     "type": "price_change",
@@ -32,6 +71,45 @@
         "input": 0.0172,
         "output": 0.047099999999999996,
         "cachedInput": 0.015700000000000002,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:0edcf205e9babd2eb5d050c3",
+    "date": "2026-10-31",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+    "title": "price change: ~deepseek/deepseek-v4-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.058,
+        "output": 0.3,
+        "cachedInput": 0.035,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.05764,
+        "output": 0.17292,
+        "cachedInput": 0.0018340000000000001,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -117,6 +195,84 @@
     }
   },
   {
+    "id": "event:3c83a1b2a3b02c02fefca5d6",
+    "date": "2026-10-31",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-flash-latest",
+    "title": "price change: ~deepseek/deepseek-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.0141,
+        "output": 0.173,
+        "cachedInput": 0.013000000000000001,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0141,
+        "output": 0.144,
+        "cachedInput": 0.013000000000000001,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:41bb345d3811bc26c659c388",
+    "date": "2026-10-31",
+    "type": "price_change",
+    "modelId": "openrouter:~moonshotai/kimi-latest",
+    "title": "price change: ~moonshotai/kimi-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.1558,
+        "output": 10.547799999999999,
+        "cachedInput": 0.15,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.14950000000000002,
+        "output": 7.15,
+        "cachedInput": 0.07475000000000001,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:459cff4141e7a546796f2999",
     "date": "2026-10-31",
     "type": "price_change",
@@ -149,6 +305,45 @@
         "input": 0.1558,
         "output": 10.547799999999999,
         "cachedInput": 0.15,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:4db5cb160a01a64dc3abdf01",
+    "date": "2026-10-31",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.2",
+    "title": "price change: z-ai/glm-5.2",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.006,
+        "output": 7,
+        "cachedInput": 0.005,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.006,
+        "output": 6.8,
+        "cachedInput": 0.005,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -273,6 +468,48 @@
     }
   },
   {
+    "id": "event:95e27ec7452662dbebdd9bfa",
+    "date": "2026-10-31",
+    "type": "availability_removed",
+    "modelId": "openrouter:poolside/laguna-s-2.1:free",
+    "title": "availability removed: poolside/laguna-s-2.1:free",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:96c73da949b1ed683582d470",
+    "date": "2026-10-31",
+    "type": "availability_removed",
+    "modelId": "openrouter:poolside/laguna-xs-2.1:free",
+    "title": "availability removed: poolside/laguna-xs-2.1:free",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:9f334504d862a6a109c27ac4",
     "date": "2026-10-31",
     "type": "price_change",
@@ -344,6 +581,66 @@
         "input": 0.0141,
         "output": 0.173,
         "cachedInput": 0.013000000000000001,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:b921a39a0dc43098f1b4577a",
+    "date": "2026-10-31",
+    "type": "availability_removed",
+    "modelId": "openrouter:poolside/laguna-s-2.1",
+    "title": "availability removed: poolside/laguna-s-2.1",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
+    "id": "event:c49e6291d569e9c6c9bc4f95",
+    "date": "2026-10-31",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.3-flash",
+    "title": "price change: z-ai/glm-5.3-flash",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.0172,
+        "output": 0.047099999999999996,
+        "cachedInput": 0.015700000000000002,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.016300000000000002,
+        "output": 0.1479,
+        "cachedInput": 0.016300000000000002,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -622,6 +919,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:fa4822b9477ce51c58617fb3",
+    "date": "2026-10-31",
+    "type": "availability_removed",
+    "modelId": "openrouter:poolside/laguna-xs-2.1",
+    "title": "availability removed: poolside/laguna-xs-2.1",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-10-31"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:ff2806d42d3f9842efbe2713",
