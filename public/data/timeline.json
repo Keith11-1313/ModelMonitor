@@ -741,6 +741,45 @@
     }
   },
   {
+    "id": "event:e4a8305b6437be96d4158a7c",
+    "date": "2026-11-01",
+    "type": "price_change",
+    "modelId": "openrouter:openai/gpt-oss-120b",
+    "title": "price change: openai/gpt-oss-120b",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-01"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.016,
+        "output": 0.059,
+        "cachedInput": 0.075,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.015,
+        "output": 0.057,
+        "cachedInput": 0.014,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:025613bc3e82b28e3657324d",
     "date": "2026-10-31",
     "type": "price_change",
