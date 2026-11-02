@@ -5287,6 +5287,26 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-11-02",
+      "provider": "openrouter",
+      "available": 451,
+      "free": 17,
+      "paid": 427,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:z-ai/glm-5.3-flashx-legal",
+          "modelId": "openrouter:z-ai/glm-5.3-flashx-legal",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:nousresearch/hermes-3-llama-3.1-405b",
+        "openrouter:nousresearch/hermes-3-llama-3.1-70b"
+      ]
     }
   ]
 }
