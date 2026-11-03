@@ -5335,6 +5335,50 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-11-03",
+      "provider": "opencode",
+      "available": 80,
+      "free": 10,
+      "paid": 70,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:crouton-alpha-free",
+          "modelId": "opencode:crouton-alpha-free",
+          "free": true
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-11-03",
+      "provider": "openrouter",
+      "available": 454,
+      "free": 18,
+      "paid": 429,
+      "unknown": 7,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:stealth/crouton-alpha",
+          "modelId": "openrouter:stealth/crouton-alpha",
+          "free": true
+        },
+        {
+          "id": "openrouter:x-ai/grok-4.6:batch",
+          "modelId": "openrouter:x-ai/grok-4.6:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:x-ai/grok-4.7:batch",
+          "modelId": "openrouter:x-ai/grok-4.7:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }

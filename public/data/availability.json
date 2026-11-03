@@ -932,6 +932,56 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:crouton-alpha-free",
+    "modelId": "opencode:crouton-alpha-free",
+    "provider": "opencode",
+    "providerModelId": "crouton-alpha-free",
+    "status": "available",
+    "free": true,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "pdf",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": 0,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-11-03"
+      },
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog prices; not verified official pricing",
+        "confidence": "observed",
+        "lastChecked": "2026-11-03"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-11-03"
+      }
+    ],
+    "firstSeen": "2026-11-03",
+    "lastChecked": "2026-11-03",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:deepseek-v4-flash",
     "modelId": "opencode:deepseek-v4-flash",
     "provider": "opencode",
@@ -10468,9 +10518,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09999999999999999,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.092,
+      "output": 0.275,
+      "cachedInput": 0.046,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -13830,9 +13880,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.192,
-      "output": 15,
-      "cachedInput": 0.182,
+      "input": 0.27599999999999997,
+      "output": 9.6,
+      "cachedInput": 0.13,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18108,9 +18158,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.075,
+      "input": 0.024999999999999998,
+      "output": 0.093,
+      "cachedInput": 0.023,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -19666,8 +19716,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.55,
+      "input": 0.14,
+      "output": 0.7999999999999999,
       "cachedInput": 0.049999999999999996,
       "cachedOutput": null,
       "currency": "USD",
@@ -21969,6 +22019,45 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:stealth/crouton-alpha",
+    "modelId": "openrouter:stealth/crouton-alpha",
+    "provider": "openrouter",
+    "providerModelId": "stealth/crouton-alpha",
+    "status": "available",
+    "free": true,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "file",
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-03"
+      }
+    ],
+    "firstSeen": "2026-11-03",
+    "lastChecked": "2026-11-03",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:stealth/space-bunny-alpha",
     "modelId": "openrouter:stealth/space-bunny-alpha",
     "provider": "openrouter",
@@ -22270,9 +22359,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22340,9 +22429,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -23228,6 +23317,43 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:x-ai/grok-4.6:batch",
+    "modelId": "openrouter:x-ai/grok-4.6:batch",
+    "provider": "openrouter",
+    "providerModelId": "x-ai/grok-4.6:batch",
+    "status": "available",
+    "free": false,
+    "context": 500000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 1.5999999999999999,
+      "output": 4.8,
+      "cachedInput": 0.39999999999999997,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-03"
+      }
+    ],
+    "firstSeen": "2026-11-03",
+    "lastChecked": "2026-11-03",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:x-ai/grok-4.7",
     "modelId": "openrouter:x-ai/grok-4.7",
     "provider": "openrouter",
@@ -23261,6 +23387,43 @@
       }
     ],
     "firstSeen": "2026-09-21",
+    "lastChecked": "2026-11-03",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:x-ai/grok-4.7:batch",
+    "modelId": "openrouter:x-ai/grok-4.7:batch",
+    "provider": "openrouter",
+    "providerModelId": "x-ai/grok-4.7:batch",
+    "status": "available",
+    "free": false,
+    "context": 500000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 1.5999999999999999,
+      "output": 4.8,
+      "cachedInput": 0.39999999999999997,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-03"
+      }
+    ],
+    "firstSeen": "2026-11-03",
     "lastChecked": "2026-11-03",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
