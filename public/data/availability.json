@@ -960,8 +960,14 @@
     "sources": [
       {
         "url": "https://models.dev/api.json",
-        "label": "Secondary catalog prices; not verified official pricing",
+        "label": "Secondary catalog capabilities; exact provider model ID",
         "confidence": "observed",
+        "lastChecked": "2026-11-04"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
         "lastChecked": "2026-11-04"
       },
       {
@@ -5393,9 +5399,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.022,
-      "output": 0.39999999999999997,
-      "cachedInput": 0.004,
+      "input": 0.006,
+      "output": 0.5,
+      "cachedInput": 0.005,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5463,7 +5469,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0553,
+      "input": 0.0434,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -5578,9 +5584,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.1719,
+      "input": 0.18239999999999998,
       "output": 9.338799999999999,
-      "cachedInput": 0.16999999999999998,
+      "cachedInput": 0.18,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5873,9 +5879,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0269,
-      "output": 0.09960000000000001,
-      "cachedInput": 0.0269,
+      "input": 0.0285,
+      "output": 0.0923,
+      "cachedInput": 0.0285,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8557,7 +8563,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0553,
+      "input": 0.0434,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -10512,9 +10518,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09999999999999999,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.037,
+      "output": 0.111,
+      "cachedInput": 0.018,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18152,9 +18158,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.075,
+      "input": 0.020999999999999998,
+      "output": 0.077,
+      "cachedInput": 0.019000000000000003,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21686,6 +21692,41 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:ricursiveai/ripple-65b-preview",
+    "modelId": "openrouter:ricursiveai/ripple-65b-preview",
+    "provider": "openrouter",
+    "providerModelId": "ricursiveai/ripple-65b-preview",
+    "status": "available",
+    "free": false,
+    "context": 16384,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0.19999999999999998,
+      "output": 0.6,
+      "cachedInput": 0.049999999999999996,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-04"
+      }
+    ],
+    "firstSeen": "2026-11-04",
+    "lastChecked": "2026-11-04",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:sakana/fugu-max",
     "modelId": "openrouter:sakana/fugu-max",
     "provider": "openrouter",
@@ -24193,9 +24234,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.08,
-      "output": 3.5999999999999996,
-      "cachedInput": 0.07600000000000001,
+      "input": 0.0699,
+      "output": 1.4,
+      "cachedInput": 0.0689,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -24230,9 +24271,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0269,
-      "output": 0.09960000000000001,
-      "cachedInput": 0.0269,
+      "input": 0.15,
+      "output": 0.5,
+      "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
