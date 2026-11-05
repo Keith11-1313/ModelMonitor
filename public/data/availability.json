@@ -5434,9 +5434,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0963,
+      "input": 0.0927,
       "output": 8,
-      "cachedInput": 0.0963,
+      "cachedInput": 0.0927,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -5469,7 +5469,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.059,
+      "input": 0.0553,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -5585,7 +5585,7 @@
     ],
     "pricing": {
       "input": 0.18239999999999998,
-      "output": 9.7471,
+      "output": 10.544799999999999,
       "cachedInput": 0.18,
       "cachedOutput": null,
       "currency": "USD",
@@ -8563,7 +8563,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.059,
+      "input": 0.0553,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -8778,9 +8778,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.10700000000000001,
-      "output": 4.2780000000000005,
-      "cachedInput": 0.1023,
+      "input": 0.103,
+      "output": 4.109999999999999,
+      "cachedInput": 0.098,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10518,8 +10518,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.020999999999999998,
-      "output": 0.063,
+      "input": 0.022,
+      "output": 0.067,
       "cachedInput": 0.011,
       "cachedOutput": null,
       "currency": "USD",
@@ -11187,6 +11187,41 @@
     "lastChecked": "2026-09-23",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
     "removedAt": "2026-09-23"
+  },
+  {
+    "id": "openrouter:inclusionai/ling-3.0-tiny",
+    "modelId": "openrouter:inclusionai/ling-3.0-tiny",
+    "provider": "openrouter",
+    "providerModelId": "inclusionai/ling-3.0-tiny",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0.015,
+      "output": 0.045,
+      "cachedInput": 0.003,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-05"
+      }
+    ],
+    "firstSeen": "2026-11-05",
+    "lastChecked": "2026-11-05",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:inclusionai/ling-3.1-flash",
@@ -12240,7 +12275,7 @@
     "modelId": "openrouter:minimax/minimax-01",
     "provider": "openrouter",
     "providerModelId": "minimax/minimax-01",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 1000192,
     "reasoning": null,
@@ -12269,7 +12304,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-11-05",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-05"
   },
   {
     "id": "openrouter:minimax/minimax-m1",
@@ -12311,7 +12347,7 @@
     "modelId": "openrouter:minimax/minimax-m2",
     "provider": "openrouter",
     "providerModelId": "minimax/minimax-m2",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 204800,
     "reasoning": true,
@@ -12339,14 +12375,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-11-05",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-05"
   },
   {
     "id": "openrouter:minimax/minimax-m2-her",
     "modelId": "openrouter:minimax/minimax-m2-her",
     "provider": "openrouter",
     "providerModelId": "minimax/minimax-m2-her",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 65536,
     "reasoning": null,
@@ -12374,14 +12411,15 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-11-05",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-05"
   },
   {
     "id": "openrouter:minimax/minimax-m2.1",
     "modelId": "openrouter:minimax/minimax-m2.1",
     "provider": "openrouter",
     "providerModelId": "minimax/minimax-m2.1",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 204800,
     "reasoning": true,
@@ -12409,7 +12447,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-11-05",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-05"
   },
   {
     "id": "openrouter:minimax/minimax-m2.5",
@@ -12461,9 +12500,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.3,
-      "output": 1.2,
-      "cachedInput": 0.06,
+      "input": 0.21,
+      "output": 0.84,
+      "cachedInput": 0.041999999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -13845,7 +13884,7 @@
     "pricing": {
       "input": 0.6,
       "output": 3.5,
-      "cachedInput": 0.15,
+      "cachedInput": 0.16,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18158,9 +18197,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.011,
-      "output": 0.039,
-      "cachedInput": 0.009,
+      "input": 0.15,
+      "output": 0.6,
+      "cachedInput": 0.075,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18789,6 +18828,38 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-11-05",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:openrouter/auto-code",
+    "modelId": "openrouter:openrouter/auto-code",
+    "provider": "openrouter",
+    "providerModelId": "openrouter/auto-code",
+    "status": "available",
+    "free": null,
+    "context": 2000000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "file",
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": null,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-05"
+      }
+    ],
+    "firstSeen": "2026-11-05",
     "lastChecked": "2026-11-05",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -20211,7 +20282,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.09999999999999999,
+      "input": 0.09,
       "output": 1.1,
       "cachedInput": 0.07,
       "cachedOutput": null,

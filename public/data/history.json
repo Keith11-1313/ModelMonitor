@@ -5471,6 +5471,33 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-11-05",
+      "provider": "openrouter",
+      "available": 452,
+      "free": 16,
+      "paid": 428,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:inclusionai/ling-3.0-tiny",
+          "modelId": "openrouter:inclusionai/ling-3.0-tiny",
+          "free": false
+        },
+        {
+          "id": "openrouter:openrouter/auto-code",
+          "modelId": "openrouter:openrouter/auto-code",
+          "free": null
+        }
+      ],
+      "removed": [
+        "openrouter:minimax/minimax-01",
+        "openrouter:minimax/minimax-m2",
+        "openrouter:minimax/minimax-m2-her",
+        "openrouter:minimax/minimax-m2.1"
+      ]
     }
   ]
 }
