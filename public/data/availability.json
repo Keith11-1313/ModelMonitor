@@ -5469,7 +5469,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0553,
+      "input": 0.0434,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -5584,9 +5584,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.18239999999999998,
-      "output": 10.544799999999999,
-      "cachedInput": 0.18,
+      "input": 0.1624,
+      "output": 10.5572,
+      "cachedInput": 0.16,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8563,7 +8563,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0553,
+      "input": 0.0434,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -10359,6 +10359,80 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:google/gemini-omni-1.1-flash",
+    "modelId": "openrouter:google/gemini-omni-1.1-flash",
+    "provider": "openrouter",
+    "providerModelId": "google/gemini-omni-1.1-flash",
+    "status": "available",
+    "free": false,
+    "context": 131072,
+    "reasoning": true,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 1.5,
+      "output": 9,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-05"
+      }
+    ],
+    "firstSeen": "2026-11-05",
+    "lastChecked": "2026-11-05",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:google/gemini-omni-1.2-flash",
+    "modelId": "openrouter:google/gemini-omni-1.2-flash",
+    "provider": "openrouter",
+    "providerModelId": "google/gemini-omni-1.2-flash",
+    "status": "available",
+    "free": false,
+    "context": 131072,
+    "reasoning": true,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 1.5,
+      "output": 9,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-05"
+      }
+    ],
+    "firstSeen": "2026-11-05",
+    "lastChecked": "2026-11-05",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:google/gemma-2-27b-it",
     "modelId": "openrouter:google/gemma-2-27b-it",
     "provider": "openrouter",
@@ -10518,9 +10592,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.022,
-      "output": 0.067,
-      "cachedInput": 0.011,
+      "input": 0.0765,
+      "output": 0.255,
+      "cachedInput": 0.042499999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11730,9 +11804,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.19999999999999998,
-      "output": 0.52,
-      "cachedInput": 0.09999999999999999,
+      "input": 0.59,
+      "output": 0.7899999999999999,
+      "cachedInput": 0.295,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12612,9 +12686,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.015,
+      "input": 0.075,
+      "output": 0.3,
+      "cachedInput": 0.0075,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -18197,9 +18271,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.075,
+      "input": 0.027,
+      "output": 0.101,
+      "cachedInput": 0.024999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21600,9 +21674,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.25,
+      "input": 0.3,
       "output": 1,
-      "cachedInput": 0.049999999999999996,
+      "cachedInput": 0.04,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22465,9 +22539,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22571,9 +22645,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
