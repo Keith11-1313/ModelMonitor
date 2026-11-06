@@ -4821,7 +4821,7 @@
     "modelId": "opencode:pulse-alpha-free",
     "provider": "opencode",
     "providerModelId": "pulse-alpha-free",
-    "status": "available",
+    "status": "removed",
     "free": true,
     "context": 1048576,
     "reasoning": true,
@@ -4862,7 +4862,8 @@
     ],
     "firstSeen": "2026-11-03",
     "lastChecked": "2026-11-06",
-    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source.",
+    "removedAt": "2026-11-06"
   },
   {
     "id": "opencode:qwen3.5-plus",
@@ -5469,7 +5470,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0448,
+      "input": 0.0434,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -5584,9 +5585,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.1529,
-      "output": 10.5572,
-      "cachedInput": 0.15,
+      "input": 0.1634,
+      "output": 10.5539,
+      "cachedInput": 0.16,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8563,7 +8564,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0448,
+      "input": 0.0434,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -8588,7 +8589,7 @@
     "modelId": "openrouter:deepseek/deepseek-v4-flash-0731:batch",
     "provider": "openrouter",
     "providerModelId": "deepseek/deepseek-v4-flash-0731:batch",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 1048576,
     "reasoning": true,
@@ -8598,9 +8599,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.11,
-      "output": 0.33,
-      "cachedInput": 0.0035,
+      "input": 0.048,
+      "output": 0.144,
+      "cachedInput": 0.012,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -8611,13 +8612,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-09-22"
+        "lastChecked": "2026-11-06"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-09-22",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-09-22"
+    "lastChecked": "2026-11-06",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:deepseek/deepseek-v4-flash-0731:free",
@@ -8743,9 +8743,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.821106,
-      "output": 1.642212,
-      "cachedInput": 0.0684255,
+      "input": 0.709572,
+      "output": 1.419144,
+      "cachedInput": 0.059131,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10592,9 +10592,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.0675,
+      "output": 0.22499999999999998,
+      "cachedInput": 0.0375,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11973,7 +11973,7 @@
     "modelId": "openrouter:meta/muse-glimmer-30b:batch",
     "provider": "openrouter",
     "providerModelId": "meta/muse-glimmer-30b:batch",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 131072,
     "reasoning": true,
@@ -11984,9 +11984,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.175,
-      "output": 0.75,
-      "cachedInput": 0.02,
+      "input": 0.24,
+      "output": 0.96,
+      "cachedInput": 0.032,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11997,13 +11997,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-09-22"
+        "lastChecked": "2026-11-06"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-09-22",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-09-22"
+    "lastChecked": "2026-11-06",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:meta/muse-spark-1.1",
@@ -12636,7 +12635,7 @@
     "modelId": "openrouter:minimax/minimax-m3:batch",
     "provider": "openrouter",
     "providerModelId": "minimax/minimax-m3:batch",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 524288,
     "reasoning": true,
@@ -12648,9 +12647,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.3,
-      "output": 1.2,
-      "cachedInput": 0.06,
+      "input": 0.224,
+      "output": 0.88,
+      "cachedInput": 0.0448,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12661,13 +12660,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-09-21"
+        "lastChecked": "2026-11-06"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-09-21",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-09-21"
+    "lastChecked": "2026-11-06",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:minimax/minimax-m3.1-flash",
@@ -18272,9 +18270,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.020999999999999998,
-      "output": 0.078,
-      "cachedInput": 0.019000000000000003,
+      "input": 0.013000000000000001,
+      "output": 0.046,
+      "cachedInput": 0.011,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21439,6 +21437,43 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:qwen/qwen3.8-27b:batch",
+    "modelId": "openrouter:qwen/qwen3.8-27b:batch",
+    "provider": "openrouter",
+    "providerModelId": "qwen/qwen3.8-27b:batch",
+    "status": "available",
+    "free": false,
+    "context": 262144,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0.16,
+      "output": 2,
+      "cachedInput": 0.04,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-06"
+      }
+    ],
+    "firstSeen": "2026-11-06",
+    "lastChecked": "2026-11-06",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:qwen/qwen3.8-27b:free",
     "modelId": "openrouter:qwen/qwen3.8-27b:free",
     "provider": "openrouter",
@@ -22842,6 +22877,43 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-11-06",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:thinkingmachines/inkling-small:batch",
+    "modelId": "openrouter:thinkingmachines/inkling-small:batch",
+    "provider": "openrouter",
+    "providerModelId": "thinkingmachines/inkling-small:batch",
+    "status": "available",
+    "free": false,
+    "context": 524288,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": null,
+    "modalities": [
+      "audio",
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.36,
+      "output": 0.96,
+      "cachedInput": 0.08,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-06"
+      }
+    ],
+    "firstSeen": "2026-11-06",
     "lastChecked": "2026-11-06",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
