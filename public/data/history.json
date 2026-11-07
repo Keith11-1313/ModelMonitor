@@ -5605,6 +5605,50 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-11-07",
+      "provider": "opencode",
+      "available": 81,
+      "free": 11,
+      "paid": 70,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:iceman-free",
+          "modelId": "opencode:iceman-free",
+          "free": true
+        },
+        {
+          "id": "opencode:inkling-2-small-free",
+          "modelId": "opencode:inkling-2-small-free",
+          "free": true
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-11-07",
+      "provider": "openrouter",
+      "available": 460,
+      "free": 16,
+      "paid": 436,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:liquid/lfm-3-1.7b",
+          "modelId": "openrouter:liquid/lfm-3-1.7b",
+          "free": false
+        },
+        {
+          "id": "openrouter:liquid/lfm-3-1.7b:free",
+          "modelId": "openrouter:liquid/lfm-3-1.7b:free",
+          "free": true
+        }
+      ],
+      "removed": []
     }
   ]
 }
