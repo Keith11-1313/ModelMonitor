@@ -5671,6 +5671,42 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-11-08",
+      "provider": "openrouter",
+      "available": 461,
+      "free": 16,
+      "paid": 437,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:deepseek/deepseek-v4.1-flash-1017:batch",
+          "modelId": "openrouter:deepseek/deepseek-v4.1-flash-1017:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:morph/morph-v3-fast:batch",
+          "modelId": "openrouter:morph/morph-v3-fast:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:morph/morph-v3-large:batch",
+          "modelId": "openrouter:morph/morph-v3-large:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:z-ai/glm-5.2:batch",
+          "modelId": "openrouter:z-ai/glm-5.2:batch",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:inception/mercury-2",
+        "openrouter:inception/mercury-2.5",
+        "openrouter:inception/mercury-3"
+      ]
     }
   ]
 }
