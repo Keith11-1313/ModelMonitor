@@ -5748,6 +5748,42 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-11-09",
+      "provider": "opencode",
+      "available": 82,
+      "free": 12,
+      "paid": 70,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:longcat-2.5-free",
+          "modelId": "opencode:longcat-2.5-free",
+          "free": true
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-11-09",
+      "provider": "openrouter",
+      "available": 461,
+      "free": 16,
+      "paid": 437,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:qwen/qwen3.8-max-0902:batch",
+          "modelId": "openrouter:qwen/qwen3.8-max-0902:batch",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:minimax/minimax-m1"
+      ]
     }
   ]
 }
