@@ -5784,6 +5784,64 @@
       "removed": [
         "openrouter:minimax/minimax-m1"
       ]
+    },
+    {
+      "date": "2026-11-09",
+      "provider": "opencode",
+      "available": 83,
+      "free": 11,
+      "paid": 72,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:claude-fable-5-2",
+          "modelId": "opencode:claude-fable-5-2",
+          "free": false
+        },
+        {
+          "id": "opencode:muse-ember-1.0",
+          "modelId": "opencode:muse-ember-1.0",
+          "free": false
+        }
+      ],
+      "removed": [
+        "opencode:crouton-alpha-free"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "provider": "openrouter",
+      "available": 464,
+      "free": 16,
+      "paid": 440,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:anthropic/claude-fable-5.2",
+          "modelId": "openrouter:anthropic/claude-fable-5.2",
+          "free": false
+        },
+        {
+          "id": "openrouter:anthropic/claude-fable-5.2:batch",
+          "modelId": "openrouter:anthropic/claude-fable-5.2:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:meta/muse-ember",
+          "modelId": "openrouter:meta/muse-ember",
+          "free": false
+        },
+        {
+          "id": "openrouter:thinkingmachines/inkling-2-small:free",
+          "modelId": "openrouter:thinkingmachines/inkling-2-small:free",
+          "free": true
+        }
+      ],
+      "removed": [
+        "openrouter:stealth/crouton-alpha"
+      ]
     }
   ]
 }
