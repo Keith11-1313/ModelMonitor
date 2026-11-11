@@ -5935,7 +5935,7 @@
     ],
     "pricing": {
       "input": 0.18239999999999998,
-      "output": 9.338799999999999,
+      "output": 11.0055,
       "cachedInput": 0.18,
       "cachedOutput": null,
       "currency": "USD",
@@ -8121,7 +8121,7 @@
     "modelId": "openrouter:baidu/ernie-5.5-flash-preview",
     "provider": "openrouter",
     "providerModelId": "baidu/ernie-5.5-flash-preview",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 1024000,
     "reasoning": true,
@@ -8148,6 +8148,42 @@
       }
     ],
     "firstSeen": "2026-11-10",
+    "lastChecked": "2026-11-11",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-11"
+  },
+  {
+    "id": "openrouter:baidu/ernie-5.5-flash-preview:free",
+    "modelId": "openrouter:baidu/ernie-5.5-flash-preview:free",
+    "provider": "openrouter",
+    "providerModelId": "baidu/ernie-5.5-flash-preview:free",
+    "status": "available",
+    "free": true,
+    "context": 1024000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
+      }
+    ],
+    "firstSeen": "2026-11-11",
     "lastChecked": "2026-11-11",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -15384,7 +15420,7 @@
     "providerModelId": "nvidia/nemotron-3-super-120b-a12b",
     "status": "available",
     "free": false,
-    "context": 1048576,
+    "context": 262144,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -25497,9 +25533,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.041999999999999996,
+      "input": 0.047,
       "output": 0.061000000000000006,
-      "cachedInput": 0.018,
+      "cachedInput": 0.02,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

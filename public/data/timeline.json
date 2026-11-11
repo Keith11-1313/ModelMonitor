@@ -42,6 +42,91 @@
     "after": "removed"
   },
   {
+    "id": "event:1e674efcca5ee36afe598499",
+    "date": "2026-11-11",
+    "type": "availability_added",
+    "modelId": "openrouter:baidu/ernie-5.5-flash-preview:free",
+    "title": "availability added: baidu/ernie-5.5-flash-preview:free",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
+    "id": "event:2390bfbfbb896af1f4ce915c",
+    "date": "2026-11-11",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.3-flash:batch",
+    "title": "price change: z-ai/glm-5.3-flash:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.041999999999999996,
+        "output": 0.061000000000000006,
+        "cachedInput": 0.018,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.047,
+        "output": 0.061000000000000006,
+        "cachedInput": 0.02,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:3cbc8493daa7485ef74b041c",
+    "date": "2026-11-11",
+    "type": "context_change",
+    "modelId": "openrouter:nvidia/nemotron-3-super-120b-a12b",
+    "title": "context change: nvidia/nemotron-3-super-120b-a12b",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "context": 1048576
+    },
+    "after": {
+      "context": 262144
+    }
+  },
+  {
     "id": "event:3dda783457afeb5434c15a12",
     "date": "2026-11-11",
     "type": "price_change",
@@ -173,6 +258,45 @@
         "input": 0.13199999999999998,
         "output": 0.5279999999999999,
         "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:526c59a8f298332bd2fcd585",
+    "date": "2026-11-11",
+    "type": "price_change",
+    "modelId": "openrouter:~moonshotai/kimi-latest",
+    "title": "price change: ~moonshotai/kimi-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.18239999999999998,
+        "output": 9.338799999999999,
+        "cachedInput": 0.18,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.18239999999999998,
+        "output": 11.0055,
+        "cachedInput": 0.18,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -316,6 +440,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:e6576b6e89a6cc750a26378e",
+    "date": "2026-11-11",
+    "type": "availability_removed",
+    "modelId": "openrouter:baidu/ernie-5.5-flash-preview",
+    "title": "availability removed: baidu/ernie-5.5-flash-preview",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:ed503e7739fd5f307932d11a",
@@ -90283,6 +90428,25 @@
     ]
   },
   {
+    "id": "history:ae886c44280e5e60b90d1348",
+    "date": "2025-11-28",
+    "type": "repository_created",
+    "modelId": "hf:mistralai/Mistral-Large-3-675B-Instruct-2512",
+    "title": "repository created: Mistral-Large-3-675B-Instruct-2512",
+    "provider": "Mistral AI",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
+      }
+    ]
+  },
+  {
     "id": "history:1ae9711f62dbffd5e71f987a",
     "date": "2025-11-04",
     "type": "repository_created",
@@ -91476,6 +91640,25 @@
         "label": "Official organization model card and Hub metadata",
         "confidence": "official",
         "lastChecked": "2026-09-18"
+      }
+    ]
+  },
+  {
+    "id": "history:673c2b10bbfc6f6f9e754301",
+    "date": "2024-07-24",
+    "type": "repository_created",
+    "modelId": "hf:mistralai/Mistral-Large-Instruct-2407",
+    "title": "repository created: Mistral-Large-Instruct-2407",
+    "provider": "Mistral AI",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-11-11"
       }
     ]
   },
