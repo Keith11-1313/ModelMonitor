@@ -5937,6 +5937,42 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-11-11",
+      "provider": "opencode",
+      "available": 85,
+      "free": 12,
+      "paid": 73,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [],
+      "removed": []
+    },
+    {
+      "date": "2026-11-11",
+      "provider": "openrouter",
+      "available": 469,
+      "free": 15,
+      "paid": 446,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:kt/midm-k-3.0-pro",
+          "modelId": "openrouter:kt/midm-k-3.0-pro",
+          "free": false
+        },
+        {
+          "id": "openrouter:motif-technologies/motif-3",
+          "modelId": "openrouter:motif-technologies/motif-3",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:qwen/qwen-2.5-7b-instruct",
+        "openrouter:xingchen-agi/xing4.0-29b-a4b:free"
+      ]
     }
   ]
 }
