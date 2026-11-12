@@ -9418,9 +9418,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.098,
-      "output": 0.29400000000000004,
-      "cachedInput": 0.0029400000000000003,
+      "input": 0.3,
+      "output": 1.2,
+      "cachedInput": 0.006,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -14859,8 +14859,8 @@
       "video"
     ],
     "pricing": {
-      "input": 2,
-      "output": 10,
+      "input": 0.2375,
+      "output": 8.4085,
       "cachedInput": 0.19999999999999998,
       "cachedOutput": null,
       "currency": "USD",
@@ -14876,6 +14876,43 @@
       }
     ],
     "firstSeen": "2026-10-23",
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:moonshotai/kimi-k3.1-pro:batch",
+    "modelId": "openrouter:moonshotai/kimi-k3.1-pro:batch",
+    "provider": "openrouter",
+    "providerModelId": "moonshotai/kimi-k3.1-pro:batch",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0.7,
+      "output": 6,
+      "cachedInput": 0.09999999999999999,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-12"
+      }
+    ],
+    "firstSeen": "2026-11-12",
     "lastChecked": "2026-11-12",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
@@ -21767,9 +21804,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.14,
-      "output": 0.206,
-      "cachedInput": 0.126,
+      "input": 0.043000000000000003,
+      "output": 0.063,
+      "cachedInput": 0.039,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -25535,9 +25572,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.047,
-      "output": 0.061000000000000006,
-      "cachedInput": 0.02,
+      "input": 0.049999999999999996,
+      "output": 0.18,
+      "cachedInput": 0.01,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
