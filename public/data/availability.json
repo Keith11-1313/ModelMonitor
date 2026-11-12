@@ -1970,6 +1970,57 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:gemini-4-hydrogen",
+    "modelId": "opencode:gemini-4-hydrogen",
+    "provider": "opencode",
+    "providerModelId": "gemini-4-hydrogen",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "image",
+      "pdf",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 1.5,
+      "output": 7.5,
+      "cachedInput": 0.075,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-11-12"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-11-12"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-11-12"
+      }
+    ],
+    "firstSeen": "2026-11-12",
+    "lastChecked": "2026-11-12",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:glm-5",
     "modelId": "opencode:glm-5",
     "provider": "opencode",
@@ -5858,10 +5909,10 @@
       "video"
     ],
     "pricing": {
-      "input": 0.75,
-      "output": 3.75,
+      "input": 1.5,
+      "output": 7.5,
       "cachedInput": 0.075,
-      "cachedOutput": 0.0416666666666667,
+      "cachedOutput": 0.0833333333333333,
       "currency": "USD",
       "unit": "1M tokens"
     },
@@ -8012,7 +8063,7 @@
     "modelId": "openrouter:apodex/apodex-1.1-mini:free",
     "provider": "openrouter",
     "providerModelId": "apodex/apodex-1.1-mini:free",
-    "status": "removed",
+    "status": "available",
     "free": true,
     "context": 262144,
     "reasoning": true,
@@ -8035,13 +8086,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-10-13"
+        "lastChecked": "2026-11-12"
       }
     ],
     "firstSeen": "2026-10-01",
-    "lastChecked": "2026-10-14",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-10-14"
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:arcee-ai/trinity-large-thinking",
@@ -9275,9 +9325,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.892272,
-      "output": 1.784544,
-      "cachedInput": 0.07435599999999999,
+      "input": 0.888966,
+      "output": 1.777932,
+      "cachedInput": 0.0740805,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10969,6 +11019,84 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:google/gemini-4-hydrogen",
+    "modelId": "openrouter:google/gemini-4-hydrogen",
+    "provider": "openrouter",
+    "providerModelId": "google/gemini-4-hydrogen",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "file",
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 1.5,
+      "output": 7.5,
+      "cachedInput": 0.075,
+      "cachedOutput": 0.0833333333333333,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-12"
+      }
+    ],
+    "firstSeen": "2026-11-12",
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:google/gemini-4-hydrogen:batch",
+    "modelId": "openrouter:google/gemini-4-hydrogen:batch",
+    "provider": "openrouter",
+    "providerModelId": "google/gemini-4-hydrogen:batch",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "audio",
+      "file",
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 0.75,
+      "output": 3.75,
+      "cachedInput": 0.0375,
+      "cachedOutput": 0.0833333333333333,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-12"
+      }
+    ],
+    "firstSeen": "2026-11-12",
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:google/gemini-nano-banana-2.1",
     "modelId": "openrouter:google/gemini-nano-banana-2.1",
     "provider": "openrouter",
@@ -11238,9 +11366,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.28,
-      "cachedInput": 0.049,
+      "input": 0.0765,
+      "output": 0.255,
+      "cachedInput": 0.042499999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11697,7 +11825,7 @@
     "modelId": "openrouter:inclusionai/ling-3.0-flash-fin",
     "provider": "openrouter",
     "providerModelId": "inclusionai/ling-3.0-flash-fin",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -11720,13 +11848,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-10-13"
+        "lastChecked": "2026-11-12"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-10-14",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-10-14"
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:inclusionai/ling-3.0-flash-fin:free",
@@ -11769,7 +11896,7 @@
     "modelId": "openrouter:inclusionai/ling-3.0-flash-sante",
     "provider": "openrouter",
     "providerModelId": "inclusionai/ling-3.0-flash-sante",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -11792,13 +11919,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-10-13"
+        "lastChecked": "2026-11-12"
       }
     ],
     "firstSeen": "2026-10-08",
-    "lastChecked": "2026-10-14",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-10-14"
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:inclusionai/ling-3.0-flash-sante:free",
@@ -14860,8 +14986,8 @@
     ],
     "pricing": {
       "input": 0.2375,
-      "output": 8.785599999999999,
-      "cachedInput": 0.19,
+      "output": 8.4114,
+      "cachedInput": 0.19999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -20065,6 +20191,42 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:particle-ai/particle-1:free",
+    "modelId": "openrouter:particle-ai/particle-1:free",
+    "provider": "openrouter",
+    "providerModelId": "particle-ai/particle-1:free",
+    "status": "available",
+    "free": true,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": null,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-12"
+      }
+    ],
+    "firstSeen": "2026-11-12",
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:perceptron/perceptron-mk1",
     "modelId": "openrouter:perceptron/perceptron-mk1",
     "provider": "openrouter",
@@ -21804,9 +21966,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.127,
-      "output": 0.187,
-      "cachedInput": 0.114,
+      "input": 0.08499999999999999,
+      "output": 0.125,
+      "cachedInput": 0.07600000000000001,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -23851,6 +24013,42 @@
       }
     ],
     "firstSeen": "2026-09-18",
+    "lastChecked": "2026-11-12",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:thinkingmachines/inkling-2-small",
+    "modelId": "openrouter:thinkingmachines/inkling-2-small",
+    "provider": "openrouter",
+    "providerModelId": "thinkingmachines/inkling-2-small",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.3,
+      "output": 1,
+      "cachedInput": 0.03,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-12"
+      }
+    ],
+    "firstSeen": "2026-11-12",
     "lastChecked": "2026-11-12",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },

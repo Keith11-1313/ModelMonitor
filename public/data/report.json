@@ -5,108 +5,568 @@
   "periodStart": "2026-11-12",
   "periodEnd": "2026-11-12",
   "summary": {
-    "newModels": 0,
+    "newModels": 5,
     "newNotableReleases": 0,
     "becameFree": 0,
     "noLongerFree": 0,
-    "priceChanges": 14,
-    "availabilityAdded": 0,
+    "priceChanges": 5,
+    "availabilityAdded": 8,
     "availabilityRemoved": 0,
     "newOpenModels": 0,
     "deprecations": 0,
     "historicalChanges": 0,
-    "modelUpdates": 0,
+    "modelUpdates": 1,
     "modelRemovals": 0,
-    "availabilityUpdates": 14
+    "availabilityUpdates": 5
   },
   "highlights": [
     {
-      "id": "change:f2bfcc4fda6cbe9fd3a32201:pricing",
+      "id": "change:bcb2ee470b368aaac188fd6b:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek V4 Pro 0423's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:cc0f59a75b6572deb9a18018:pricing",
-      "level": "fact",
-      "text": "DeepSeek: DeepSeek V4.1 Flash's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:6b899dc2eba03c4490c5a372:pricing",
-      "level": "fact",
-      "text": "DeepSeek: DeepSeek V4.1 Flash 1017's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:307a7ec98b20f315102efd37:pricing",
-      "level": "fact",
-      "text": "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)'s token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:232b540fd541f2c5d901c38d:pricing",
+      "id": "change:ad8af943b9b010085392f440:pricing",
       "level": "fact",
       "text": "Google: Gemma 4 26B A4B 's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:e8d25b38eac533ca901452ad:pricing",
-      "level": "fact",
-      "text": "MiniMax: MiniMax M3.1 Flash's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:435f33f97dac3d5e4367dbd0:pricing",
-      "level": "fact",
-      "text": "MoonshotAI: Kimi K2.5's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:b810b0859a2f7bf113ca83e6:pricing",
+      "id": "change:9e53a2b4c2e5061f56660718:pricing",
       "level": "fact",
       "text": "MoonshotAI: Kimi K3.1 Pro's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:8f73ed5927cedbffb82c051a:pricing",
-      "level": "fact",
-      "text": "Qwen: Qwen3 14B's token pricing changed on openrouter.",
-      "url": "https://openrouter.ai/api/v1/models"
-    },
-    {
-      "id": "change:df9d7875393dc2f1912406ed:pricing",
+      "id": "change:5bccf81716f58b6514264922:pricing",
       "level": "fact",
       "text": "Qwen: Qwen3.5-9B's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:2be19adc3961b8f4432833c7:pricing",
+      "id": "change:869c86dba0f4306d15a338d1:pricing",
       "level": "fact",
-      "text": "Tencent: Hy3's token pricing changed on openrouter.",
+      "text": "Google: Gemini Flash Latest's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:c9a40aa78e4e7ed16a49fdf8:pricing",
+      "id": "change:bc5948085ef0d73d5b5a3f22",
+      "level": "derived",
+      "text": "Gemini 4 Hydrogen was added to the tracked model catalog.",
+      "url": "https://models.dev/api.json"
+    },
+    {
+      "id": "change:2ac5966667df4b5e58ef6356",
       "level": "fact",
-      "text": "Tencent: Hy4 preview's token pricing changed on openrouter.",
+      "text": "Google: Gemini 4 Hydrogen was added to the tracked model catalog.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:6de1a9ed6dfba88ce8b7dac7:pricing",
+      "id": "change:000774edfd3c1a6470628116",
       "level": "fact",
-      "text": "Z.ai: GLM 5.2 (batch)'s token pricing changed on openrouter.",
+      "text": "Google: Gemini 4 Hydrogen (batch) was added to the tracked model catalog.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:4c9949a11fc9296fb4fe5357:pricing",
+      "id": "change:a53edac15b616040bbec2cff",
       "level": "fact",
-      "text": "Z.ai: GLM 5.3 (batch)'s token pricing changed on openrouter.",
+      "text": "Particle AI: Particle-1 (free) was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:2f180eea4523153b446e2554",
+      "level": "fact",
+      "text": "Thinking Machines: Inkling 2 Small was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:48b648308d5b00026a52d8be",
+      "level": "fact",
+      "text": "Thinking Machines: Inkling 2 Small (free) changed: Hugging Face ID.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:24c91294c0aa61bc14346661",
+      "level": "derived",
+      "text": "Gemini 4 Hydrogen became available on opencode.",
+      "url": "https://models.dev/api.json"
+    },
+    {
+      "id": "change:3a4bdb135475eba5148fe030",
+      "level": "fact",
+      "text": "Apodex: Apodex 1.1 Mini (free) became available on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:e4881b31a0dfe60316516b72",
+      "level": "fact",
+      "text": "Google: Gemini 4 Hydrogen became available on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:bfc98d07937b8f72708633b6",
+      "level": "fact",
+      "text": "Google: Gemini 4 Hydrogen (batch) became available on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:dd0bc0ff4f8db4fc90af5c25",
+      "level": "fact",
+      "text": "inclusionAI: Ling 3.0 Flash Fin became available on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:bdbbc31519c7e0133e6ce8b1",
+      "level": "fact",
+      "text": "inclusionAI: Ling 3.0 Flash Sante became available on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:49df3cbc4778457c05c1182e",
+      "level": "fact",
+      "text": "Particle AI: Particle-1 (free) became available on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:22da659f26e57a37818e2bcc",
+      "level": "fact",
+      "text": "Thinking Machines: Inkling 2 Small became available on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     }
   ],
-  "modelChanges": [],
+  "modelChanges": [
+    {
+      "dataset": "models",
+      "entityId": "opencode:gemini-4-hydrogen",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/gemini-4-hydrogen"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "image",
+          "pdf",
+          "text",
+          "video"
+        ],
+        "name": "Gemini 4 Hydrogen",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "opencode:gemini-4-hydrogen",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:bc5948085ef0d73d5b5a3f22"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:google/gemini-4-hydrogen",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "google/gemini-4-hydrogen",
+          "openrouter/google/gemini-4-hydrogen"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "Google: Gemini 4 Hydrogen",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:google/gemini-4-hydrogen",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2ac5966667df4b5e58ef6356"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:google/gemini-4-hydrogen:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "google/gemini-4-hydrogen:batch",
+          "openrouter/google/gemini-4-hydrogen:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "Google: Gemini 4 Hydrogen (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:google/gemini-4-hydrogen:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:000774edfd3c1a6470628116"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:particle-ai/particle-1:free",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openrouter/particle-ai/particle-1:free",
+          "particle-ai/particle-1:free"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "Particle AI: Particle-1 (free)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:particle-ai/particle-1:free",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a53edac15b616040bbec2cff"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:thinkingmachines/inkling-2-small",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openrouter/thinkingmachines/inkling-2-small",
+          "thinkingmachines/inkling-2-small"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "thinkingmachines/Inkling-2-Small",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "Thinking Machines: Inkling 2 Small",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:thinkingmachines/inkling-2-small",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2f180eea4523153b446e2554"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:thinkingmachines/inkling-2-small:free",
+      "operation": "updated",
+      "fields": [
+        "hfId"
+      ],
+      "before": {
+        "hfId": null
+      },
+      "after": {
+        "hfId": "thinkingmachines/Inkling-2-Small"
+      },
+      "type": "model_updated",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:thinkingmachines/inkling-2-small:free",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:48b648308d5b00026a52d8be"
+    }
+  ],
   "availabilityChanges": [
+    {
+      "dataset": "availability",
+      "entityId": "opencode:gemini-4-hydrogen",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "image",
+          "pdf",
+          "text",
+          "video"
+        ],
+        "modelId": "opencode:gemini-4-hydrogen",
+        "pricing": {
+          "cachedInput": 0.075,
+          "currency": "USD",
+          "input": 1.5,
+          "output": 7.5,
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "gemini-4-hydrogen",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "opencode:gemini-4-hydrogen",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:24c91294c0aa61bc14346661"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:apodex/apodex-1.1-mini:free",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "removed"
+      },
+      "after": {
+        "status": "available"
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:apodex/apodex-1.1-mini:free",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:3a4bdb135475eba5148fe030"
+    },
     {
       "dataset": "availability",
       "entityId": "openrouter:deepseek/deepseek-v4-pro",
@@ -116,19 +576,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.07960500000000001,
+          "cachedInput": 0.07435599999999999,
           "currency": "USD",
-          "input": 0.9552599999999999,
-          "output": 1.9105199999999998,
+          "input": 0.892272,
+          "output": 1.784544,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.07435599999999999,
+          "cachedInput": 0.0740805,
           "currency": "USD",
-          "input": 0.892272,
-          "output": 1.784544,
+          "input": 0.888966,
+          "output": 1.777932,
           "unit": "1M tokens"
         }
       },
@@ -140,112 +600,135 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f2bfcc4fda6cbe9fd3a32201"
+      "id": "change:bcb2ee470b368aaac188fd6b"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
-      "operation": "updated",
+      "entityId": "openrouter:google/gemini-4-hydrogen",
+      "operation": "added",
       "fields": [
-        "pricing"
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
       ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.004,
-          "currency": "USD",
-          "input": 0.022,
-          "output": 0.39999999999999997,
-          "unit": "1M tokens"
-        }
-      },
+      "before": null,
       "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:google/gemini-4-hydrogen",
         "pricing": {
-          "cachedInput": 0.006,
+          "cachedInput": 0.075,
+          "cachedOutput": 0.0833333333333333,
           "currency": "USD",
-          "input": 0.3,
-          "output": 1.2,
+          "input": 1.5,
+          "output": 7.5,
           "unit": "1M tokens"
-        }
+        },
+        "provider": "openrouter",
+        "providerModelId": "google/gemini-4-hydrogen",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
       },
-      "type": "availability_updated",
+      "type": "availability_added",
       "date": "2026-11-12",
       "observedAt": "2026-11-12",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "modelId": "openrouter:google/gemini-4-hydrogen",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:cc0f59a75b6572deb9a18018"
+      "id": "change:e4881b31a0dfe60316516b72"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash-1017",
-      "operation": "updated",
+      "entityId": "openrouter:google/gemini-4-hydrogen:batch",
+      "operation": "added",
       "fields": [
-        "pricing"
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
       ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.006,
-          "currency": "USD",
-          "input": 0.3,
-          "output": 1.2,
-          "unit": "1M tokens"
-        }
-      },
+      "before": null,
       "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:google/gemini-4-hydrogen:batch",
         "pricing": {
-          "cachedInput": 0.003,
+          "cachedInput": 0.0375,
+          "cachedOutput": 0.0833333333333333,
           "currency": "USD",
-          "input": 0.15,
-          "output": 0.6,
+          "input": 0.75,
+          "output": 3.75,
           "unit": "1M tokens"
-        }
+        },
+        "provider": "openrouter",
+        "providerModelId": "google/gemini-4-hydrogen:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
       },
-      "type": "availability_updated",
+      "type": "availability_added",
       "date": "2026-11-12",
       "observedAt": "2026-11-12",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash-1017",
+      "modelId": "openrouter:google/gemini-4-hydrogen:batch",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:6b899dc2eba03c4490c5a372"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash-1017:batch",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.002,
-          "currency": "USD",
-          "input": 0.011,
-          "output": 0.19999999999999998,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "cachedInput": 0.004,
-          "currency": "USD",
-          "input": 0.049999999999999996,
-          "output": 0.15,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash-1017:batch",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:307a7ec98b20f315102efd37"
+      "id": "change:bfc98d07937b8f72708633b6"
     },
     {
       "dataset": "availability",
@@ -256,19 +739,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.046,
+          "cachedInput": 0.049,
           "currency": "USD",
-          "input": 0.08,
-          "output": 0.09999999999999999,
+          "input": 0.09,
+          "output": 0.28,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.049,
+          "cachedInput": 0.042499999999999996,
           "currency": "USD",
-          "input": 0.09,
-          "output": 0.28,
+          "input": 0.0765,
+          "output": 0.255,
           "unit": "1M tokens"
         }
       },
@@ -280,77 +763,53 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:232b540fd541f2c5d901c38d"
+      "id": "change:ad8af943b9b010085392f440"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:minimax/minimax-m3.1-flash",
+      "entityId": "openrouter:inclusionai/ling-3.0-flash-fin",
       "operation": "updated",
       "fields": [
-        "pricing"
+        "status"
       ],
       "before": {
-        "pricing": {
-          "cachedInput": 0.015,
-          "currency": "USD",
-          "input": 0.15,
-          "output": 0.6,
-          "unit": "1M tokens"
-        }
+        "status": "removed"
       },
       "after": {
-        "pricing": {
-          "cachedInput": 0.0075,
-          "currency": "USD",
-          "input": 0.075,
-          "output": 0.3,
-          "unit": "1M tokens"
-        }
+        "status": "available"
       },
-      "type": "availability_updated",
+      "type": "availability_added",
       "date": "2026-11-12",
       "observedAt": "2026-11-12",
-      "modelId": "openrouter:minimax/minimax-m3.1-flash",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-fin",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:e8d25b38eac533ca901452ad"
+      "id": "change:dd0bc0ff4f8db4fc90af5c25"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:moonshotai/kimi-k2.5",
+      "entityId": "openrouter:inclusionai/ling-3.0-flash-sante",
       "operation": "updated",
       "fields": [
-        "pricing"
+        "status"
       ],
       "before": {
-        "pricing": {
-          "cachedInput": 0.20900000000000002,
-          "currency": "USD",
-          "input": 0.532,
-          "output": 3.3249999999999997,
-          "unit": "1M tokens"
-        }
+        "status": "removed"
       },
       "after": {
-        "pricing": {
-          "cachedInput": 0.15,
-          "currency": "USD",
-          "input": 0.5,
-          "output": 2.5,
-          "unit": "1M tokens"
-        }
+        "status": "available"
       },
-      "type": "availability_updated",
+      "type": "availability_added",
       "date": "2026-11-12",
       "observedAt": "2026-11-12",
-      "modelId": "openrouter:moonshotai/kimi-k2.5",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-sante",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:435f33f97dac3d5e4367dbd0"
+      "id": "change:bdbbc31519c7e0133e6ce8b1"
     },
     {
       "dataset": "availability",
@@ -361,19 +820,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.19999999999999998,
+          "cachedInput": 0.19,
           "currency": "USD",
           "input": 0.2375,
-          "output": 8.4085,
+          "output": 8.785599999999999,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.19,
+          "cachedInput": 0.19999999999999998,
           "currency": "USD",
           "input": 0.2375,
-          "output": 8.785599999999999,
+          "output": 8.4114,
           "unit": "1M tokens"
         }
       },
@@ -385,40 +844,66 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:b810b0859a2f7bf113ca83e6"
+      "id": "change:9e53a2b4c2e5061f56660718"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:qwen/qwen3-14b",
-      "operation": "updated",
+      "entityId": "openrouter:particle-ai/particle-1:free",
+      "operation": "added",
       "fields": [
-        "pricing"
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
       ],
-      "before": {
-        "pricing": {
-          "currency": "USD",
-          "input": 0.09999999999999999,
-          "output": 0.22,
-          "unit": "1M tokens"
-        }
-      },
+      "before": null,
       "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": true,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:particle-ai/particle-1:free",
         "pricing": {
           "currency": "USD",
-          "input": 0.12,
-          "output": 0.24,
+          "input": 0,
+          "output": 0,
           "unit": "1M tokens"
-        }
+        },
+        "provider": "openrouter",
+        "providerModelId": "particle-ai/particle-1:free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
       },
-      "type": "availability_updated",
+      "type": "availability_added",
       "date": "2026-11-12",
       "observedAt": "2026-11-12",
-      "modelId": "openrouter:qwen/qwen3-14b",
+      "modelId": "openrouter:particle-ai/particle-1:free",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:8f73ed5927cedbffb82c051a"
+      "id": "change:49df3cbc4778457c05c1182e"
     },
     {
       "dataset": "availability",
@@ -429,19 +914,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.039,
+          "cachedInput": 0.114,
           "currency": "USD",
-          "input": 0.043000000000000003,
-          "output": 0.063,
+          "input": 0.127,
+          "output": 0.187,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.114,
+          "cachedInput": 0.07600000000000001,
           "currency": "USD",
-          "input": 0.127,
-          "output": 0.187,
+          "input": 0.08499999999999999,
+          "output": 0.125,
           "unit": "1M tokens"
         }
       },
@@ -453,147 +938,104 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:df9d7875393dc2f1912406ed"
+      "id": "change:5bccf81716f58b6514264922"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:tencent/hy3",
+      "entityId": "openrouter:thinkingmachines/inkling-2-small",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:thinkingmachines/inkling-2-small",
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.3,
+          "output": 1,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "thinkingmachines/inkling-2-small",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:thinkingmachines/inkling-2-small",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:22da659f26e57a37818e2bcc"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~google/gemini-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.032999999999999995,
+          "cachedInput": 0.075,
+          "cachedOutput": 0.0416666666666667,
           "currency": "USD",
-          "input": 0.13199999999999998,
-          "output": 0.5279999999999999,
+          "input": 0.75,
+          "output": 3.75,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.020625,
+          "cachedInput": 0.075,
+          "cachedOutput": 0.0833333333333333,
           "currency": "USD",
-          "input": 0.0825,
-          "output": 0.33,
+          "input": 1.5,
+          "output": 7.5,
           "unit": "1M tokens"
         }
       },
       "type": "availability_updated",
       "date": "2026-11-12",
       "observedAt": "2026-11-12",
-      "modelId": "openrouter:tencent/hy3",
+      "modelId": "openrouter:~google/gemini-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:2be19adc3961b8f4432833c7"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:tencent/hy4-preview",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.041999999999999996,
-          "currency": "USD",
-          "input": 0.834,
-          "output": 2.501,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "cachedInput": 0.0378,
-          "currency": "USD",
-          "input": 0.7505999999999999,
-          "output": 2.2509,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:tencent/hy4-preview",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:c9a40aa78e4e7ed16a49fdf8"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:z-ai/glm-5.2:batch",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.118,
-          "currency": "USD",
-          "input": 0.35,
-          "output": 1.0750000000000002,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "cachedInput": 0.109,
-          "currency": "USD",
-          "input": 0.322,
-          "output": 0.989,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:z-ai/glm-5.2:batch",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:6de1a9ed6dfba88ce8b7dac7"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:z-ai/glm-5.3:batch",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "pricing": {
-          "cachedInput": 0.118,
-          "currency": "USD",
-          "input": 0.35,
-          "output": 1.0750000000000002,
-          "unit": "1M tokens"
-        }
-      },
-      "after": {
-        "pricing": {
-          "cachedInput": 0.09999999999999999,
-          "currency": "USD",
-          "input": 0.44999999999999996,
-          "output": 2,
-          "unit": "1M tokens"
-        }
-      },
-      "type": "availability_updated",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:z-ai/glm-5.3:batch",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:4c9949a11fc9296fb4fe5357"
+      "id": "change:869c86dba0f4306d15a338d1"
     }
   ],
   "pricingChanges": [
@@ -605,17 +1047,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.07960500000000001,
-        "currency": "USD",
-        "input": 0.9552599999999999,
-        "output": 1.9105199999999998,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.07435599999999999,
         "currency": "USD",
         "input": 0.892272,
         "output": 1.784544,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.0740805,
+        "currency": "USD",
+        "input": 0.888966,
+        "output": 1.777932,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -626,100 +1068,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f2bfcc4fda6cbe9fd3a32201:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.004,
-        "currency": "USD",
-        "input": 0.022,
-        "output": 0.39999999999999997,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.006,
-        "currency": "USD",
-        "input": 0.3,
-        "output": 1.2,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:cc0f59a75b6572deb9a18018:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash-1017",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.006,
-        "currency": "USD",
-        "input": 0.3,
-        "output": 1.2,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.003,
-        "currency": "USD",
-        "input": 0.15,
-        "output": 0.6,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash-1017",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:6b899dc2eba03c4490c5a372:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:deepseek/deepseek-v4.1-flash-1017:batch",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.002,
-        "currency": "USD",
-        "input": 0.011,
-        "output": 0.19999999999999998,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.004,
-        "currency": "USD",
-        "input": 0.049999999999999996,
-        "output": 0.15,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:deepseek/deepseek-v4.1-flash-1017:batch",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:307a7ec98b20f315102efd37:pricing"
+      "id": "change:bcb2ee470b368aaac188fd6b:pricing"
     },
     {
       "dataset": "availability",
@@ -729,17 +1078,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.046,
-        "currency": "USD",
-        "input": 0.08,
-        "output": 0.09999999999999999,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.049,
         "currency": "USD",
         "input": 0.09,
         "output": 0.28,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.042499999999999996,
+        "currency": "USD",
+        "input": 0.0765,
+        "output": 0.255,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -750,69 +1099,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:232b540fd541f2c5d901c38d:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:minimax/minimax-m3.1-flash",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.015,
-        "currency": "USD",
-        "input": 0.15,
-        "output": 0.6,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.0075,
-        "currency": "USD",
-        "input": 0.075,
-        "output": 0.3,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:minimax/minimax-m3.1-flash",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:e8d25b38eac533ca901452ad:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:moonshotai/kimi-k2.5",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.20900000000000002,
-        "currency": "USD",
-        "input": 0.532,
-        "output": 3.3249999999999997,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.15,
-        "currency": "USD",
-        "input": 0.5,
-        "output": 2.5,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:moonshotai/kimi-k2.5",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:435f33f97dac3d5e4367dbd0:pricing"
+      "id": "change:ad8af943b9b010085392f440:pricing"
     },
     {
       "dataset": "availability",
@@ -822,17 +1109,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.19999999999999998,
-        "currency": "USD",
-        "input": 0.2375,
-        "output": 8.4085,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.19,
         "currency": "USD",
         "input": 0.2375,
         "output": 8.785599999999999,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.19999999999999998,
+        "currency": "USD",
+        "input": 0.2375,
+        "output": 8.4114,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -843,36 +1130,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:b810b0859a2f7bf113ca83e6:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:qwen/qwen3-14b",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "currency": "USD",
-        "input": 0.09999999999999999,
-        "output": 0.22,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "currency": "USD",
-        "input": 0.12,
-        "output": 0.24,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:qwen/qwen3-14b",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:8f73ed5927cedbffb82c051a:pricing"
+      "id": "change:9e53a2b4c2e5061f56660718:pricing"
     },
     {
       "dataset": "availability",
@@ -882,17 +1140,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.039,
-        "currency": "USD",
-        "input": 0.043000000000000003,
-        "output": 0.063,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.114,
         "currency": "USD",
         "input": 0.127,
         "output": 0.187,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.07600000000000001,
+        "currency": "USD",
+        "input": 0.08499999999999999,
+        "output": 0.125,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -903,131 +1161,40 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:df9d7875393dc2f1912406ed:pricing"
+      "id": "change:5bccf81716f58b6514264922:pricing"
     },
     {
       "dataset": "availability",
-      "entityId": "openrouter:tencent/hy3",
+      "entityId": "openrouter:~google/gemini-flash-latest",
       "operation": "updated",
       "fields": [
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.032999999999999995,
+        "cachedInput": 0.075,
+        "cachedOutput": 0.0416666666666667,
         "currency": "USD",
-        "input": 0.13199999999999998,
-        "output": 0.5279999999999999,
+        "input": 0.75,
+        "output": 3.75,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.020625,
+        "cachedInput": 0.075,
+        "cachedOutput": 0.0833333333333333,
         "currency": "USD",
-        "input": 0.0825,
-        "output": 0.33,
+        "input": 1.5,
+        "output": 7.5,
         "unit": "1M tokens"
       },
       "type": "price_change",
       "date": "2026-11-12",
       "observedAt": "2026-11-12",
-      "modelId": "openrouter:tencent/hy3",
+      "modelId": "openrouter:~google/gemini-flash-latest",
       "provider": "openrouter",
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:2be19adc3961b8f4432833c7:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:tencent/hy4-preview",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.041999999999999996,
-        "currency": "USD",
-        "input": 0.834,
-        "output": 2.501,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.0378,
-        "currency": "USD",
-        "input": 0.7505999999999999,
-        "output": 2.2509,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:tencent/hy4-preview",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:c9a40aa78e4e7ed16a49fdf8:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:z-ai/glm-5.2:batch",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.118,
-        "currency": "USD",
-        "input": 0.35,
-        "output": 1.0750000000000002,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.109,
-        "currency": "USD",
-        "input": 0.322,
-        "output": 0.989,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:z-ai/glm-5.2:batch",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:6de1a9ed6dfba88ce8b7dac7:pricing"
-    },
-    {
-      "dataset": "availability",
-      "entityId": "openrouter:z-ai/glm-5.3:batch",
-      "operation": "updated",
-      "fields": [
-        "pricing"
-      ],
-      "before": {
-        "cachedInput": 0.118,
-        "currency": "USD",
-        "input": 0.35,
-        "output": 1.0750000000000002,
-        "unit": "1M tokens"
-      },
-      "after": {
-        "cachedInput": 0.09999999999999999,
-        "currency": "USD",
-        "input": 0.44999999999999996,
-        "output": 2,
-        "unit": "1M tokens"
-      },
-      "type": "price_change",
-      "date": "2026-11-12",
-      "observedAt": "2026-11-12",
-      "modelId": "openrouter:z-ai/glm-5.3:batch",
-      "provider": "openrouter",
-      "confidence": "official",
-      "level": "fact",
-      "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:4c9949a11fc9296fb4fe5357:pricing"
+      "id": "change:869c86dba0f4306d15a338d1:pricing"
     }
   ],
   "openModelChanges": [],
@@ -159008,6 +159175,905 @@
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
       "id": "change:4c9949a11fc9296fb4fe5357"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:gemini-4-hydrogen",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/gemini-4-hydrogen"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "image",
+          "pdf",
+          "text",
+          "video"
+        ],
+        "name": "Gemini 4 Hydrogen",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "opencode:gemini-4-hydrogen",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:bc5948085ef0d73d5b5a3f22"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:google/gemini-4-hydrogen",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "google/gemini-4-hydrogen",
+          "openrouter/google/gemini-4-hydrogen"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "Google: Gemini 4 Hydrogen",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:google/gemini-4-hydrogen",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2ac5966667df4b5e58ef6356"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:google/gemini-4-hydrogen:batch",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "google/gemini-4-hydrogen:batch",
+          "openrouter/google/gemini-4-hydrogen:batch"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "name": "Google: Gemini 4 Hydrogen (batch)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:google/gemini-4-hydrogen:batch",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:000774edfd3c1a6470628116"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:particle-ai/particle-1:free",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openrouter/particle-ai/particle-1:free",
+          "particle-ai/particle-1:free"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "Particle AI: Particle-1 (free)",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:particle-ai/particle-1:free",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:a53edac15b616040bbec2cff"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:thinkingmachines/inkling-2-small",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "hfId",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openrouter/thinkingmachines/inkling-2-small",
+          "thinkingmachines/inkling-2-small"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1048576,
+        "hfId": "thinkingmachines/Inkling-2-Small",
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "name": "Thinking Machines: Inkling 2 Small",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:thinkingmachines/inkling-2-small",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2f180eea4523153b446e2554"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:thinkingmachines/inkling-2-small:free",
+      "operation": "updated",
+      "fields": [
+        "hfId"
+      ],
+      "before": {
+        "hfId": null
+      },
+      "after": {
+        "hfId": "thinkingmachines/Inkling-2-Small"
+      },
+      "type": "model_updated",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:thinkingmachines/inkling-2-small:free",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:48b648308d5b00026a52d8be"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "opencode:gemini-4-hydrogen",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "image",
+          "pdf",
+          "text",
+          "video"
+        ],
+        "modelId": "opencode:gemini-4-hydrogen",
+        "pricing": {
+          "cachedInput": 0.075,
+          "currency": "USD",
+          "input": 1.5,
+          "output": 7.5,
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "gemini-4-hydrogen",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "opencode:gemini-4-hydrogen",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:24c91294c0aa61bc14346661"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:apodex/apodex-1.1-mini:free",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "removed"
+      },
+      "after": {
+        "status": "available"
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:apodex/apodex-1.1-mini:free",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:3a4bdb135475eba5148fe030"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4-pro",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.07435599999999999,
+          "currency": "USD",
+          "input": 0.892272,
+          "output": 1.784544,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0740805,
+          "currency": "USD",
+          "input": 0.888966,
+          "output": 1.777932,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:deepseek/deepseek-v4-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:bcb2ee470b368aaac188fd6b"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:google/gemini-4-hydrogen",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:google/gemini-4-hydrogen",
+        "pricing": {
+          "cachedInput": 0.075,
+          "cachedOutput": 0.0833333333333333,
+          "currency": "USD",
+          "input": 1.5,
+          "output": 7.5,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "google/gemini-4-hydrogen",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:google/gemini-4-hydrogen",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e4881b31a0dfe60316516b72"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:google/gemini-4-hydrogen:batch",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "modelId": "openrouter:google/gemini-4-hydrogen:batch",
+        "pricing": {
+          "cachedInput": 0.0375,
+          "cachedOutput": 0.0833333333333333,
+          "currency": "USD",
+          "input": 0.75,
+          "output": 3.75,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "google/gemini-4-hydrogen:batch",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:google/gemini-4-hydrogen:batch",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:bfc98d07937b8f72708633b6"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:google/gemma-4-26b-a4b-it",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.049,
+          "currency": "USD",
+          "input": 0.09,
+          "output": 0.28,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.042499999999999996,
+          "currency": "USD",
+          "input": 0.0765,
+          "output": 0.255,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:ad8af943b9b010085392f440"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "removed"
+      },
+      "after": {
+        "status": "available"
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-fin",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:dd0bc0ff4f8db4fc90af5c25"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:inclusionai/ling-3.0-flash-sante",
+      "operation": "updated",
+      "fields": [
+        "status"
+      ],
+      "before": {
+        "status": "removed"
+      },
+      "after": {
+        "status": "available"
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-sante",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:bdbbc31519c7e0133e6ce8b1"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:moonshotai/kimi-k3.1-pro",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.19,
+          "currency": "USD",
+          "input": 0.2375,
+          "output": 8.785599999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.19999999999999998,
+          "currency": "USD",
+          "input": 0.2375,
+          "output": 8.4114,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:moonshotai/kimi-k3.1-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:9e53a2b4c2e5061f56660718"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:particle-ai/particle-1:free",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": true,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:particle-ai/particle-1:free",
+        "pricing": {
+          "currency": "USD",
+          "input": 0,
+          "output": 0,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "particle-ai/particle-1:free",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:particle-ai/particle-1:free",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:49df3cbc4778457c05c1182e"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:qwen/qwen3.5-9b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.114,
+          "currency": "USD",
+          "input": 0.127,
+          "output": 0.187,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.07600000000000001,
+          "currency": "USD",
+          "input": 0.08499999999999999,
+          "output": 0.125,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:qwen/qwen3.5-9b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:5bccf81716f58b6514264922"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:thinkingmachines/inkling-2-small",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1048576,
+        "free": false,
+        "modalities": [
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:thinkingmachines/inkling-2-small",
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.3,
+          "output": 1,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "thinkingmachines/inkling-2-small",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:thinkingmachines/inkling-2-small",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:22da659f26e57a37818e2bcc"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~google/gemini-flash-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.075,
+          "cachedOutput": 0.0416666666666667,
+          "currency": "USD",
+          "input": 0.75,
+          "output": 3.75,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.075,
+          "cachedOutput": 0.0833333333333333,
+          "currency": "USD",
+          "input": 1.5,
+          "output": 7.5,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-12",
+      "observedAt": "2026-11-12",
+      "modelId": "openrouter:~google/gemini-flash-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:869c86dba0f4306d15a338d1"
     }
   ],
   "watchlist": [
@@ -159025,7 +160091,7 @@
     },
     {
       "kind": "stale",
-      "text": "82 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
+      "text": "83 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
     },
     {
       "kind": "incomplete",
@@ -159050,16 +160116,16 @@
     "failedSources": 9
   },
   "snapshot": {
-    "trackedModels": 956,
-    "canonicalModels": 851,
-    "availableEndpoints": 471,
-    "freeEndpoints": 16,
-    "paidEndpoints": 447,
+    "trackedModels": 961,
+    "canonicalModels": 856,
+    "availableEndpoints": 478,
+    "freeEndpoints": 18,
+    "paidEndpoints": 452,
     "openModels": 100,
     "openSource": 93,
     "openWeights": 7,
     "proprietary": 0,
-    "unknownOpenness": 751,
+    "unknownOpenness": 756,
     "providers": 9,
     "notableReleasesThisYear": 8,
     "notableReleasesThisMonth": 0

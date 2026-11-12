@@ -6052,6 +6052,70 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-11-12",
+      "provider": "opencode",
+      "available": 86,
+      "free": 12,
+      "paid": 74,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:gemini-4-hydrogen",
+          "modelId": "opencode:gemini-4-hydrogen",
+          "free": false
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-11-12",
+      "provider": "openrouter",
+      "available": 475,
+      "free": 18,
+      "paid": 449,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:apodex/apodex-1.1-mini:free",
+          "modelId": "openrouter:apodex/apodex-1.1-mini:free",
+          "free": true
+        },
+        {
+          "id": "openrouter:google/gemini-4-hydrogen",
+          "modelId": "openrouter:google/gemini-4-hydrogen",
+          "free": false
+        },
+        {
+          "id": "openrouter:google/gemini-4-hydrogen:batch",
+          "modelId": "openrouter:google/gemini-4-hydrogen:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:inclusionai/ling-3.0-flash-fin",
+          "modelId": "openrouter:inclusionai/ling-3.0-flash-fin",
+          "free": false
+        },
+        {
+          "id": "openrouter:inclusionai/ling-3.0-flash-sante",
+          "modelId": "openrouter:inclusionai/ling-3.0-flash-sante",
+          "free": false
+        },
+        {
+          "id": "openrouter:particle-ai/particle-1:free",
+          "modelId": "openrouter:particle-ai/particle-1:free",
+          "free": true
+        },
+        {
+          "id": "openrouter:thinkingmachines/inkling-2-small",
+          "modelId": "openrouter:thinkingmachines/inkling-2-small",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
