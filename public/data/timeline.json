@@ -181,6 +181,45 @@
     }
   },
   {
+    "id": "event:a55bd3739732407d5a40d95e",
+    "date": "2026-11-14",
+    "type": "price_change",
+    "modelId": "openrouter:qwen/qwen3.5-9b",
+    "title": "price change: qwen/qwen3.5-9b",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-14"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.155,
+        "output": 0.227,
+        "cachedInput": 0.13899999999999998,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.153,
+        "output": 0.22499999999999998,
+        "cachedInput": 0.13799999999999998,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:b667ec15bcab7c8df291cef6",
     "date": "2026-11-14",
     "type": "price_change",
@@ -252,6 +291,45 @@
         "input": 0.834,
         "output": 2.501,
         "cachedInput": 0.041999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:ffe5bc71de8aa04910037b44",
+    "date": "2026-11-14",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-5.2:batch",
+    "title": "price change: z-ai/glm-5.2:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-14"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.34700000000000003,
+        "output": 1.068,
+        "cachedInput": 0.117,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.298,
+        "output": 0.916,
+        "cachedInput": 0.101,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
