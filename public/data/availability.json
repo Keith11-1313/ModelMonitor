@@ -9517,9 +9517,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.3,
-      "output": 1.2,
-      "cachedInput": 0.006,
+      "input": 0.15,
+      "output": 0.6,
+      "cachedInput": 0.003,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -9553,8 +9553,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.043000000000000003,
-      "output": 0.384,
+      "input": 0.037,
+      "output": 0.329,
       "cachedInput": 0.004,
       "cachedOutput": null,
       "currency": "USD",
@@ -11415,9 +11415,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.0765,
+      "output": 0.255,
+      "cachedInput": 0.042499999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -13693,9 +13693,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.015,
+      "input": 0.075,
+      "output": 0.3,
+      "cachedInput": 0.0075,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -15111,9 +15111,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.7,
-      "output": 6,
-      "cachedInput": 0.09999999999999999,
+      "input": 0.384,
+      "output": 5.758,
+      "cachedInput": 0.12200000000000001,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22056,9 +22056,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.027,
-      "output": 0.039,
-      "cachedInput": 0.024,
+      "input": 0.114,
+      "output": 0.16799999999999998,
+      "cachedInput": 0.103,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22939,10 +22939,10 @@
       "video"
     ],
     "pricing": {
-      "input": 1.5,
-      "output": 4.5,
-      "cachedInput": 0.075,
-      "cachedOutput": 1.875,
+      "input": 1.4249999999999998,
+      "output": 4.2749999999999995,
+      "cachedInput": 0.07125000000000001,
+      "cachedOutput": 1.78125,
       "currency": "USD",
       "unit": "1M tokens"
     },
@@ -23877,9 +23877,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -23969,6 +23969,42 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:tencent/hy4-flash",
+    "modelId": "openrouter:tencent/hy4-flash",
+    "provider": "openrouter",
+    "providerModelId": "tencent/hy4-flash",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.035,
+      "output": 0.14049999999999999,
+      "cachedInput": 0.0015,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-16"
+      }
+    ],
+    "firstSeen": "2026-11-16",
+    "lastChecked": "2026-11-16",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:tencent/hy4-preview",
     "modelId": "openrouter:tencent/hy4-preview",
     "provider": "openrouter",
@@ -23983,9 +24019,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
