@@ -3799,6 +3799,54 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:hy4-flash-free",
+    "modelId": "opencode:hy4-flash-free",
+    "provider": "opencode",
+    "providerModelId": "hy4-flash-free",
+    "status": "available",
+    "free": true,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": null,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachedInput": 0,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-11-16"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-11-16"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-11-16"
+      }
+    ],
+    "firstSeen": "2026-11-16",
+    "lastChecked": "2026-11-16",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:iceman-free",
     "modelId": "opencode:iceman-free",
     "provider": "opencode",
@@ -9505,8 +9553,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.039,
-      "output": 0.34700000000000003,
+      "input": 0.043000000000000003,
+      "output": 0.384,
       "cachedInput": 0.004,
       "cachedOutput": null,
       "currency": "USD",
@@ -11367,9 +11415,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0675,
-      "output": 0.22499999999999998,
-      "cachedInput": 0.0375,
+      "input": 0.09,
+      "output": 0.3,
+      "cachedInput": 0.049999999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -11659,7 +11707,7 @@
     ],
     "pricing": {
       "input": 0.06,
-      "output": 0.25,
+      "output": 0.15,
       "cachedInput": 0.015,
       "cachedOutput": null,
       "currency": "USD",
@@ -13499,9 +13547,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.27,
-      "output": 0.95,
-      "cachedInput": 0.03,
+      "input": 0.295,
+      "output": 1.2,
+      "cachedInput": 0.06,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -21971,9 +22019,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.6,
-      "output": 3.5999999999999996,
-      "cachedInput": 0.12,
+      "input": 0.44999999999999996,
+      "output": 3,
+      "cachedInput": 0.22,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22008,9 +22056,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.12200000000000001,
-      "output": 0.179,
-      "cachedInput": 0.109,
+      "input": 0.027,
+      "output": 0.039,
+      "cachedInput": 0.024,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -22871,6 +22919,43 @@
       }
     ],
     "firstSeen": "2026-09-23",
+    "lastChecked": "2026-11-16",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
+    "id": "openrouter:qwen/qwen4-max",
+    "modelId": "openrouter:qwen/qwen4-max",
+    "provider": "openrouter",
+    "providerModelId": "qwen/qwen4-max",
+    "status": "available",
+    "free": false,
+    "context": 1000000,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text",
+      "video"
+    ],
+    "pricing": {
+      "input": 1.5,
+      "output": 4.5,
+      "cachedInput": 0.075,
+      "cachedOutput": 1.875,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-16"
+      }
+    ],
+    "firstSeen": "2026-11-16",
     "lastChecked": "2026-11-16",
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
