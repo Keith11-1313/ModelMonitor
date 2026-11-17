@@ -5,62 +5,176 @@
   "periodStart": "2026-11-17",
   "periodEnd": "2026-11-17",
   "summary": {
-    "newModels": 1,
+    "newModels": 9,
     "newNotableReleases": 0,
     "becameFree": 0,
     "noLongerFree": 0,
-    "priceChanges": 5,
-    "availabilityAdded": 0,
+    "priceChanges": 13,
+    "availabilityAdded": 6,
     "availabilityRemoved": 0,
     "newOpenModels": 0,
     "deprecations": 0,
     "historicalChanges": 0,
     "modelUpdates": 0,
     "modelRemovals": 0,
-    "availabilityUpdates": 5
+    "availabilityUpdates": 13
   },
   "highlights": [
     {
-      "id": "change:6747a906d38eaf95160f56c2:pricing",
+      "id": "change:7590eb0f022b290f0568fe0a:pricing",
       "level": "fact",
       "text": "DeepSeek: DeepSeek V4.1 Flash's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:f9cf2f2996297618e71e7e18:pricing",
+      "id": "change:5b77c689c14ec27b1a6273ba:pricing",
       "level": "fact",
       "text": "Google: Gemma 4 26B A4B 's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:f8ab6c9367f584a068673bee:pricing",
+      "id": "change:e7802c42df6d873cd1790363:pricing",
+      "level": "fact",
+      "text": "MiniMax: MiniMax M3.1 Flash's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:e6c2307d78c9070960233882:pricing",
+      "level": "fact",
+      "text": "Mistral: Mistral Medium 3's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:9c5cc30eb5d1a2e516d14313:pricing",
+      "level": "fact",
+      "text": "Mistral: Mistral Medium 3.1's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:b1ea05cfaa3f7eb06ceaa3fb:pricing",
+      "level": "fact",
+      "text": "Mistral: Mistral Small 3.2 24B's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:2360c438025970c64d9e6558:pricing",
       "level": "fact",
       "text": "MoonshotAI: Kimi K2.7 Code's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:f754f5d736023d10a71e9680:pricing",
+      "id": "change:55efeac1fb9aa2d85f7e60d9:pricing",
+      "level": "fact",
+      "text": "OpenAI: gpt-oss-20b's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:8d081ffdce8c1decfd568604:pricing",
       "level": "fact",
       "text": "Qwen: Qwen3.5-9B's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:68fd500914f2e5b1c2060a8b:pricing",
+      "id": "change:79946b3af2b69f19a81d9bc0:pricing",
+      "level": "fact",
+      "text": "Tencent: Hy3's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:6dfa9951c74c1077a4040546:pricing",
+      "level": "fact",
+      "text": "Tencent: Hy4 preview's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:40746738a779c1474989d4d0:pricing",
       "level": "fact",
       "text": "Z.ai: GLM 5.3 Flash's token pricing changed on openrouter.",
       "url": "https://openrouter.ai/api/v1/models"
     },
     {
-      "id": "change:fe53dc18d3c42771bebf646c",
+      "id": "change:c124ab57454d52957688d296:pricing",
       "level": "fact",
-      "text": "Qwen3.8-Flash-Next-NVFP4-QAD was added to the tracked model catalog.",
-      "url": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4-QAD"
+      "text": "OpenAI: GPT Astra Latest's token pricing changed on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:b3bce1dd8604ea1199b4e3fc",
+      "level": "fact",
+      "text": "Llama-3.2-1B-Qwen3.8-27B-Draft was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft"
+    },
+    {
+      "id": "change:99417b7fe8d0360e8343abdb",
+      "level": "fact",
+      "text": "Qwen3.5-0.8B-Qwen3.8-27B-Draft was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft"
+    },
+    {
+      "id": "change:9fb0c94b69b39bd07f1bc3d9",
+      "level": "fact",
+      "text": "Qwen3.5-4B-Qwen3.8-27B-Draft was added to the tracked model catalog.",
+      "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft"
+    },
+    {
+      "id": "change:945069fb8e2d01f8bd3e8b0c",
+      "level": "derived",
+      "text": "GPT 6.2 Astra was added to the tracked model catalog.",
+      "url": "https://models.dev/api.json"
+    },
+    {
+      "id": "change:99b4c6faf4f00d854d4639dc",
+      "level": "derived",
+      "text": "GPT 6.2 Sol was added to the tracked model catalog.",
+      "url": "https://models.dev/api.json"
+    },
+    {
+      "id": "change:15db287b9eafc185a8b8e32b",
+      "level": "fact",
+      "text": "OpenAI: GPT-6.2 Astra was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:aa683e139abea03ef132a7e3",
+      "level": "fact",
+      "text": "OpenAI: GPT-6.2 Astra Pro was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:d0994101ce90dd6bcf5ddc13",
+      "level": "fact",
+      "text": "OpenAI: GPT-6.2 Sol was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:dcbe24b97221a32cdee372b0",
+      "level": "fact",
+      "text": "OpenAI: GPT-6.2 Sol Pro was added to the tracked model catalog.",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "change:de143aa157c5756d7a93da36",
+      "level": "derived",
+      "text": "GPT 6.2 Astra became available on opencode.",
+      "url": "https://models.dev/api.json"
+    },
+    {
+      "id": "change:3bb7b431f633bb1b529d2f3b",
+      "level": "derived",
+      "text": "GPT 6.2 Sol became available on opencode.",
+      "url": "https://models.dev/api.json"
+    },
+    {
+      "id": "change:2522cef744c62f4083f7a25a",
+      "level": "fact",
+      "text": "OpenAI: GPT-6.2 Astra became available on openrouter.",
+      "url": "https://openrouter.ai/api/v1/models"
     }
   ],
   "modelChanges": [
     {
       "dataset": "models",
-      "entityId": "hf:nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
+      "entityId": "hf:nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
       "operation": "added",
       "fields": [
         "aliases",
@@ -76,52 +190,701 @@
         "openness",
         "parameters",
         "provider",
-        "quantization",
         "sources",
         "type"
       ],
       "before": null,
       "after": {
         "aliases": [
-          "nvidia/Qwen3.8-Flash-Next-NVFP4-QAD"
+          "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft"
         ],
-        "architecture": "qwen4_exp",
+        "architecture": "llama",
         "baseModels": [],
         "confidence": "official",
         "dateBasis": "repository_creation_not_release",
-        "hfId": "nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
+        "hfId": "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
         "identity": "known",
         "license": "other",
         "modalities": [
-          "image",
           "text"
         ],
-        "name": "Qwen3.8-Flash-Next-NVFP4-QAD",
+        "name": "Llama-3.2-1B-Qwen3.8-27B-Draft",
         "openness": "unknown",
-        "parameters": 179999981459,
+        "parameters": 1481705472,
         "provider": "NVIDIA",
-        "quantization": "modelopt",
         "sources": [
           {
             "confidence": "official",
             "label": "Official organization model card and Hub metadata",
-            "url": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4-QAD"
+            "url": "https://huggingface.co/nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft"
           }
         ],
-        "type": "quantization"
+        "type": "optimization"
       },
       "type": "model_added",
       "date": "2026-11-17",
       "observedAt": "2026-11-17",
-      "modelId": "hf:nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
+      "modelId": "hf:nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
       "provider": "NVIDIA",
       "confidence": "official",
       "level": "fact",
-      "url": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4-QAD",
-      "id": "change:fe53dc18d3c42771bebf646c"
+      "url": "https://huggingface.co/nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+      "id": "change:b3bce1dd8604ea1199b4e3fc"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft"
+        ],
+        "architecture": "qwen3_5_text",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "text"
+        ],
+        "name": "Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+        "openness": "unknown",
+        "parameters": 752393024,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft"
+          }
+        ],
+        "type": "optimization"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "hf:nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+      "id": "change:99417b7fe8d0360e8343abdb"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft"
+        ],
+        "architecture": "qwen3_5_text",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "text"
+        ],
+        "name": "Qwen3.5-4B-Qwen3.8-27B-Draft",
+        "openness": "unknown",
+        "parameters": 4205751296,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft"
+          }
+        ],
+        "type": "optimization"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "hf:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "id": "change:9fb0c94b69b39bd07f1bc3d9"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/gpt-6.2-astra"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "name": "GPT 6.2 Astra",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-astra",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:945069fb8e2d01f8bd3e8b0c"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/gpt-6.2-sol"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "name": "GPT 6.2 Sol",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-sol",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:99b4c6faf4f00d854d4639dc"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-astra",
+          "openrouter/openai/gpt-6.2-astra"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Astra",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:15db287b9eafc185a8b8e32b"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-astra-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-astra-pro",
+          "openrouter/openai/gpt-6.2-astra-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Astra Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:aa683e139abea03ef132a7e3"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-sol",
+          "openrouter/openai/gpt-6.2-sol"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Sol",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d0994101ce90dd6bcf5ddc13"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-sol-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-sol-pro",
+          "openrouter/openai/gpt-6.2-sol-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Sol Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:dcbe24b97221a32cdee372b0"
     }
   ],
   "availabilityChanges": [
+    {
+      "dataset": "availability",
+      "entityId": "opencode:gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "modelId": "opencode:gpt-6.2-astra",
+        "pricing": {
+          "cachedInput": 0.4,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "tiers": [
+            {
+              "cachedInput": 0.8,
+              "cachedOutput": 20,
+              "contextAbove": 272000,
+              "currency": "USD",
+              "input": 16,
+              "output": 60,
+              "unit": "1M tokens"
+            }
+          ],
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "gpt-6.2-astra",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-astra",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:de143aa157c5756d7a93da36"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "opencode:gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "modelId": "opencode:gpt-6.2-sol",
+        "pricing": {
+          "cachedInput": 0.1,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "tiers": [
+            {
+              "cachedInput": 0.2,
+              "cachedOutput": 5,
+              "contextAbove": 272000,
+              "currency": "USD",
+              "input": 4,
+              "output": 15,
+              "unit": "1M tokens"
+            }
+          ],
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "gpt-6.2-sol",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-sol",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:3bb7b431f633bb1b529d2f3b"
+    },
     {
       "dataset": "availability",
       "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
@@ -131,19 +894,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.004200000000000001,
+          "cachedInput": 0.001014,
           "currency": "USD",
-          "input": 0.14,
-          "output": 0.42,
+          "input": 0.050699999999999995,
+          "output": 0.20279999999999998,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.001014,
+          "cachedInput": 0.006,
           "currency": "USD",
-          "input": 0.050699999999999995,
-          "output": 0.20279999999999998,
+          "input": 0.3,
+          "output": 1.2,
           "unit": "1M tokens"
         }
       },
@@ -155,7 +918,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:6747a906d38eaf95160f56c2"
+      "id": "change:7590eb0f022b290f0568fe0a"
     },
     {
       "dataset": "availability",
@@ -166,19 +929,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.042499999999999996,
+          "cachedInput": 0.049999999999999996,
           "currency": "USD",
-          "input": 0.0765,
-          "output": 0.255,
+          "input": 0.09,
+          "output": 0.3,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.049999999999999996,
+          "cachedInput": 0.042499999999999996,
           "currency": "USD",
-          "input": 0.09,
-          "output": 0.3,
+          "input": 0.0765,
+          "output": 0.255,
           "unit": "1M tokens"
         }
       },
@@ -190,7 +953,147 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f9cf2f2996297618e71e7e18"
+      "id": "change:5b77c689c14ec27b1a6273ba"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:minimax/minimax-m3.1-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.015,
+          "currency": "USD",
+          "input": 0.15,
+          "output": 0.6,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0075,
+          "currency": "USD",
+          "input": 0.075,
+          "output": 0.3,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:minimax/minimax-m3.1-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e7802c42df6d873cd1790363"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-medium-3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.04,
+          "currency": "USD",
+          "input": 0.39999999999999997,
+          "output": 2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.044,
+          "currency": "USD",
+          "input": 0.44,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-medium-3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e6c2307d78c9070960233882"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-medium-3.1",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.04,
+          "currency": "USD",
+          "input": 0.39999999999999997,
+          "output": 2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.044,
+          "currency": "USD",
+          "input": 0.44,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-medium-3.1",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:9c5cc30eb5d1a2e516d14313"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.3,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.075,
+          "output": 0.19999999999999998,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:b1ea05cfaa3f7eb06ceaa3fb"
     },
     {
       "dataset": "availability",
@@ -203,14 +1106,14 @@
         "pricing": {
           "cachedInput": 0.16,
           "currency": "USD",
-          "input": 0.6,
-          "output": 3.5,
+          "input": 0.7,
+          "output": 3.75,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.16,
+          "cachedInput": 0.16999999999999998,
           "currency": "USD",
           "input": 0.7,
           "output": 3.75,
@@ -225,7 +1128,290 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f8ab6c9367f584a068673bee"
+      "id": "change:2360c438025970c64d9e6558"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-astra",
+        "pricing": {
+          "cachedInput": 0.39999999999999997,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-astra",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2522cef744c62f4083f7a25a"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-astra-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-astra-pro",
+        "pricing": {
+          "cachedInput": 0.39999999999999997,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-astra-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:65bafa5af3722239e4003e41"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-sol",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-sol",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:f683b3390832101a3df56b33"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-sol-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-sol-pro",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-sol-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e2abc47334bb6dcdb03749e4"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-oss-20b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.03,
+          "output": 0.13,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.009,
+          "currency": "USD",
+          "input": 0.018,
+          "output": 0.09,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-oss-20b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:55efeac1fb9aa2d85f7e60d9"
     },
     {
       "dataset": "availability",
@@ -236,19 +1422,19 @@
       ],
       "before": {
         "pricing": {
-          "cachedInput": 0.092,
+          "cachedInput": 0.102,
           "currency": "USD",
-          "input": 0.102,
-          "output": 0.15,
+          "input": 0.114,
+          "output": 0.167,
           "unit": "1M tokens"
         }
       },
       "after": {
         "pricing": {
-          "cachedInput": 0.102,
+          "cachedInput": 0.153,
           "currency": "USD",
-          "input": 0.114,
-          "output": 0.167,
+          "input": 0.16999999999999998,
+          "output": 0.25,
           "unit": "1M tokens"
         }
       },
@@ -260,7 +1446,77 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f754f5d736023d10a71e9680"
+      "id": "change:8d081ffdce8c1decfd568604"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.032999999999999995,
+          "currency": "USD",
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.020625,
+          "currency": "USD",
+          "input": 0.0825,
+          "output": 0.33,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:79946b3af2b69f19a81d9bc0"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.041999999999999996,
+          "currency": "USD",
+          "input": 0.834,
+          "output": 2.501,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0378,
+          "currency": "USD",
+          "input": 0.7505999999999999,
+          "output": 2.2509,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:6dfa9951c74c1077a4040546"
     },
     {
       "dataset": "availability",
@@ -273,8 +1529,8 @@
         "pricing": {
           "cachedInput": 0.03,
           "currency": "USD",
-          "input": 0.0399,
-          "output": 0.0784,
+          "input": 0.15,
+          "output": 0.5,
           "unit": "1M tokens"
         }
       },
@@ -282,8 +1538,8 @@
         "pricing": {
           "cachedInput": 0.03,
           "currency": "USD",
-          "input": 0.15,
-          "output": 0.5,
+          "input": 0.0399,
+          "output": 0.0784,
           "unit": "1M tokens"
         }
       },
@@ -295,7 +1551,44 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:68fd500914f2e5b1c2060a8b"
+      "id": "change:40746738a779c1474989d4d0"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~openai/gpt-astra-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 1,
+          "cachedOutput": 12.5,
+          "currency": "USD",
+          "input": 10,
+          "output": 50,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.39999999999999997,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:~openai/gpt-astra-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:c124ab57454d52957688d296"
     }
   ],
   "pricingChanges": [
@@ -307,17 +1600,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.004200000000000001,
-        "currency": "USD",
-        "input": 0.14,
-        "output": 0.42,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.001014,
         "currency": "USD",
         "input": 0.050699999999999995,
         "output": 0.20279999999999998,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.006,
+        "currency": "USD",
+        "input": 0.3,
+        "output": 1.2,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -328,7 +1621,7 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:6747a906d38eaf95160f56c2:pricing"
+      "id": "change:7590eb0f022b290f0568fe0a:pricing"
     },
     {
       "dataset": "availability",
@@ -338,17 +1631,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.042499999999999996,
-        "currency": "USD",
-        "input": 0.0765,
-        "output": 0.255,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.049999999999999996,
         "currency": "USD",
         "input": 0.09,
         "output": 0.3,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.042499999999999996,
+        "currency": "USD",
+        "input": 0.0765,
+        "output": 0.255,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -359,7 +1652,131 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f9cf2f2996297618e71e7e18:pricing"
+      "id": "change:5b77c689c14ec27b1a6273ba:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:minimax/minimax-m3.1-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.015,
+        "currency": "USD",
+        "input": 0.15,
+        "output": 0.6,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.0075,
+        "currency": "USD",
+        "input": 0.075,
+        "output": 0.3,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:minimax/minimax-m3.1-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e7802c42df6d873cd1790363:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-medium-3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.04,
+        "currency": "USD",
+        "input": 0.39999999999999997,
+        "output": 2,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.044,
+        "currency": "USD",
+        "input": 0.44,
+        "output": 2.2,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-medium-3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e6c2307d78c9070960233882:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-medium-3.1",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.04,
+        "currency": "USD",
+        "input": 0.39999999999999997,
+        "output": 2,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.044,
+        "currency": "USD",
+        "input": 0.44,
+        "output": 2.2,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-medium-3.1",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:9c5cc30eb5d1a2e516d14313:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.01,
+        "currency": "USD",
+        "input": 0.09999999999999999,
+        "output": 0.3,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.01,
+        "currency": "USD",
+        "input": 0.075,
+        "output": 0.19999999999999998,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:b1ea05cfaa3f7eb06ceaa3fb:pricing"
     },
     {
       "dataset": "availability",
@@ -371,12 +1788,12 @@
       "before": {
         "cachedInput": 0.16,
         "currency": "USD",
-        "input": 0.6,
-        "output": 3.5,
+        "input": 0.7,
+        "output": 3.75,
         "unit": "1M tokens"
       },
       "after": {
-        "cachedInput": 0.16,
+        "cachedInput": 0.16999999999999998,
         "currency": "USD",
         "input": 0.7,
         "output": 3.75,
@@ -390,7 +1807,38 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f8ab6c9367f584a068673bee:pricing"
+      "id": "change:2360c438025970c64d9e6558:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-oss-20b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.03,
+        "currency": "USD",
+        "input": 0.03,
+        "output": 0.13,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.009,
+        "currency": "USD",
+        "input": 0.018,
+        "output": 0.09,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-oss-20b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:55efeac1fb9aa2d85f7e60d9:pricing"
     },
     {
       "dataset": "availability",
@@ -400,17 +1848,17 @@
         "pricing"
       ],
       "before": {
-        "cachedInput": 0.092,
-        "currency": "USD",
-        "input": 0.102,
-        "output": 0.15,
-        "unit": "1M tokens"
-      },
-      "after": {
         "cachedInput": 0.102,
         "currency": "USD",
         "input": 0.114,
         "output": 0.167,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.153,
+        "currency": "USD",
+        "input": 0.16999999999999998,
+        "output": 0.25,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -421,7 +1869,69 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:f754f5d736023d10a71e9680:pricing"
+      "id": "change:8d081ffdce8c1decfd568604:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.032999999999999995,
+        "currency": "USD",
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.020625,
+        "currency": "USD",
+        "input": 0.0825,
+        "output": 0.33,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:79946b3af2b69f19a81d9bc0:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 0.041999999999999996,
+        "currency": "USD",
+        "input": 0.834,
+        "output": 2.501,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.0378,
+        "currency": "USD",
+        "input": 0.7505999999999999,
+        "output": 2.2509,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:6dfa9951c74c1077a4040546:pricing"
     },
     {
       "dataset": "availability",
@@ -433,15 +1943,15 @@
       "before": {
         "cachedInput": 0.03,
         "currency": "USD",
-        "input": 0.0399,
-        "output": 0.0784,
+        "input": 0.15,
+        "output": 0.5,
         "unit": "1M tokens"
       },
       "after": {
         "cachedInput": 0.03,
         "currency": "USD",
-        "input": 0.15,
-        "output": 0.5,
+        "input": 0.0399,
+        "output": 0.0784,
         "unit": "1M tokens"
       },
       "type": "price_change",
@@ -452,7 +1962,40 @@
       "confidence": "official",
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
-      "id": "change:68fd500914f2e5b1c2060a8b:pricing"
+      "id": "change:40746738a779c1474989d4d0:pricing"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~openai/gpt-astra-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "cachedInput": 1,
+        "cachedOutput": 12.5,
+        "currency": "USD",
+        "input": 10,
+        "output": 50,
+        "unit": "1M tokens"
+      },
+      "after": {
+        "cachedInput": 0.39999999999999997,
+        "cachedOutput": 10,
+        "currency": "USD",
+        "input": 8,
+        "output": 40,
+        "unit": "1M tokens"
+      },
+      "type": "price_change",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:~openai/gpt-astra-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:c124ab57454d52957688d296:pricing"
     }
   ],
   "openModelChanges": [],
@@ -164907,6 +166450,1422 @@
       "level": "fact",
       "url": "https://openrouter.ai/api/v1/models",
       "id": "change:68fd500914f2e5b1c2060a8b"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft"
+        ],
+        "architecture": "llama",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "text"
+        ],
+        "name": "Llama-3.2-1B-Qwen3.8-27B-Draft",
+        "openness": "unknown",
+        "parameters": 1481705472,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft"
+          }
+        ],
+        "type": "optimization"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "hf:nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+      "id": "change:b3bce1dd8604ea1199b4e3fc"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft"
+        ],
+        "architecture": "qwen3_5_text",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "text"
+        ],
+        "name": "Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+        "openness": "unknown",
+        "parameters": 752393024,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft"
+          }
+        ],
+        "type": "optimization"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "hf:nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+      "id": "change:99417b7fe8d0360e8343abdb"
+    },
+    {
+      "dataset": "models",
+      "entityId": "hf:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "architecture",
+        "baseModels",
+        "confidence",
+        "dateBasis",
+        "hfId",
+        "identity",
+        "license",
+        "modalities",
+        "name",
+        "openness",
+        "parameters",
+        "provider",
+        "sources",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft"
+        ],
+        "architecture": "qwen3_5_text",
+        "baseModels": [],
+        "confidence": "official",
+        "dateBasis": "repository_creation_not_release",
+        "hfId": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+        "identity": "known",
+        "license": "other",
+        "modalities": [
+          "text"
+        ],
+        "name": "Qwen3.5-4B-Qwen3.8-27B-Draft",
+        "openness": "unknown",
+        "parameters": 4205751296,
+        "provider": "NVIDIA",
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official organization model card and Hub metadata",
+            "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft"
+          }
+        ],
+        "type": "optimization"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "hf:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "provider": "NVIDIA",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+      "id": "change:9fb0c94b69b39bd07f1bc3d9"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/gpt-6.2-astra"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "name": "GPT 6.2 Astra",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-astra",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:945069fb8e2d01f8bd3e8b0c"
+    },
+    {
+      "dataset": "models",
+      "entityId": "opencode:gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "opencode/gpt-6.2-sol"
+        ],
+        "baseModels": [],
+        "confidence": "observed",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "name": "GPT 6.2 Sol",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-sol",
+      "provider": "Unknown",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:99b4c6faf4f00d854d4639dc"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-astra",
+          "openrouter/openai/gpt-6.2-astra"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Astra",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:15db287b9eafc185a8b8e32b"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-astra-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-astra-pro",
+          "openrouter/openai/gpt-6.2-astra-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Astra Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:aa683e139abea03ef132a7e3"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-sol",
+          "openrouter/openai/gpt-6.2-sol"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Sol",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:d0994101ce90dd6bcf5ddc13"
+    },
+    {
+      "dataset": "models",
+      "entityId": "openrouter:openai/gpt-6.2-sol-pro",
+      "operation": "added",
+      "fields": [
+        "aliases",
+        "baseModels",
+        "confidence",
+        "context",
+        "identity",
+        "modalities",
+        "name",
+        "openness",
+        "provider",
+        "reasoning",
+        "sources",
+        "structuredOutput",
+        "tools",
+        "type"
+      ],
+      "before": null,
+      "after": {
+        "aliases": [
+          "openai/gpt-6.2-sol-pro",
+          "openrouter/openai/gpt-6.2-sol-pro"
+        ],
+        "baseModels": [],
+        "confidence": "official",
+        "context": 1050000,
+        "identity": "unknown",
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "name": "OpenAI: GPT-6.2 Sol Pro",
+        "openness": "unknown",
+        "provider": "Unknown",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter catalog metadata for this provider-scoped endpoint; not maker attribution or release evidence",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "structuredOutput": true,
+        "tools": true,
+        "type": "model"
+      },
+      "type": "model_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol-pro",
+      "provider": "Unknown",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:dcbe24b97221a32cdee372b0"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "opencode:gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "modelId": "opencode:gpt-6.2-astra",
+        "pricing": {
+          "cachedInput": 0.4,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "tiers": [
+            {
+              "cachedInput": 0.8,
+              "cachedOutput": 20,
+              "contextAbove": 272000,
+              "currency": "USD",
+              "input": 16,
+              "output": 60,
+              "unit": "1M tokens"
+            }
+          ],
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "gpt-6.2-astra",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-astra",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:de143aa157c5756d7a93da36"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "opencode:gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "modelId": "opencode:gpt-6.2-sol",
+        "pricing": {
+          "cachedInput": 0.1,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "tiers": [
+            {
+              "cachedInput": 0.2,
+              "cachedOutput": 5,
+              "contextAbove": 272000,
+              "currency": "USD",
+              "input": 4,
+              "output": 15,
+              "unit": "1M tokens"
+            }
+          ],
+          "unit": "1M tokens"
+        },
+        "provider": "opencode",
+        "providerModelId": "gpt-6.2-sol",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "observed",
+            "label": "Secondary catalog capabilities; exact provider model ID",
+            "url": "https://models.dev/api.json"
+          },
+          {
+            "confidence": "official",
+            "label": "Official Zen membership; not maker attribution or release date",
+            "url": "https://opencode.ai/zen/v1/models"
+          },
+          {
+            "confidence": "official",
+            "label": "Official published Zen token prices",
+            "url": "https://opencode.ai/docs/zen/"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "opencode:gpt-6.2-sol",
+      "provider": "opencode",
+      "confidence": "observed",
+      "level": "derived",
+      "url": "https://models.dev/api.json",
+      "id": "change:3bb7b431f633bb1b529d2f3b"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.001014,
+          "currency": "USD",
+          "input": 0.050699999999999995,
+          "output": 0.20279999999999998,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.006,
+          "currency": "USD",
+          "input": 0.3,
+          "output": 1.2,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:7590eb0f022b290f0568fe0a"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:google/gemma-4-26b-a4b-it",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.049999999999999996,
+          "currency": "USD",
+          "input": 0.09,
+          "output": 0.3,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.042499999999999996,
+          "currency": "USD",
+          "input": 0.0765,
+          "output": 0.255,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:5b77c689c14ec27b1a6273ba"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:minimax/minimax-m3.1-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.015,
+          "currency": "USD",
+          "input": 0.15,
+          "output": 0.6,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0075,
+          "currency": "USD",
+          "input": 0.075,
+          "output": 0.3,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:minimax/minimax-m3.1-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e7802c42df6d873cd1790363"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-medium-3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.04,
+          "currency": "USD",
+          "input": 0.39999999999999997,
+          "output": 2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.044,
+          "currency": "USD",
+          "input": 0.44,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-medium-3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e6c2307d78c9070960233882"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-medium-3.1",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.04,
+          "currency": "USD",
+          "input": 0.39999999999999997,
+          "output": 2,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.044,
+          "currency": "USD",
+          "input": 0.44,
+          "output": 2.2,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-medium-3.1",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:9c5cc30eb5d1a2e516d14313"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.09999999999999999,
+          "output": 0.3,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.01,
+          "currency": "USD",
+          "input": 0.075,
+          "output": 0.19999999999999998,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:b1ea05cfaa3f7eb06ceaa3fb"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:moonshotai/kimi-k2.7-code",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.16,
+          "currency": "USD",
+          "input": 0.7,
+          "output": 3.75,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.16999999999999998,
+          "currency": "USD",
+          "input": 0.7,
+          "output": 3.75,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:moonshotai/kimi-k2.7-code",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2360c438025970c64d9e6558"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-astra",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-astra",
+        "pricing": {
+          "cachedInput": 0.39999999999999997,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-astra",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:2522cef744c62f4083f7a25a"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-astra-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-astra-pro",
+        "pricing": {
+          "cachedInput": 0.39999999999999997,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-astra-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-astra-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:65bafa5af3722239e4003e41"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-sol",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-sol",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-sol",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:f683b3390832101a3df56b33"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-6.2-sol-pro",
+      "operation": "added",
+      "fields": [
+        "confidence",
+        "context",
+        "free",
+        "modalities",
+        "modelId",
+        "pricing",
+        "provider",
+        "providerModelId",
+        "reasoning",
+        "sources",
+        "status",
+        "structuredOutput",
+        "tools"
+      ],
+      "before": null,
+      "after": {
+        "confidence": "official",
+        "context": 1050000,
+        "free": false,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "modelId": "openrouter:openai/gpt-6.2-sol-pro",
+        "pricing": {
+          "cachedInput": 0.09999999999999999,
+          "cachedOutput": 2.5,
+          "currency": "USD",
+          "input": 2,
+          "output": 10,
+          "unit": "1M tokens"
+        },
+        "provider": "openrouter",
+        "providerModelId": "openai/gpt-6.2-sol-pro",
+        "reasoning": true,
+        "sources": [
+          {
+            "confidence": "official",
+            "label": "Official OpenRouter model catalog availability and token pricing",
+            "url": "https://openrouter.ai/api/v1/models"
+          }
+        ],
+        "status": "available",
+        "structuredOutput": true,
+        "tools": true
+      },
+      "type": "availability_added",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-6.2-sol-pro",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:e2abc47334bb6dcdb03749e4"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:openai/gpt-oss-20b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.03,
+          "output": 0.13,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.009,
+          "currency": "USD",
+          "input": 0.018,
+          "output": 0.09,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:openai/gpt-oss-20b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:55efeac1fb9aa2d85f7e60d9"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:qwen/qwen3.5-9b",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.102,
+          "currency": "USD",
+          "input": 0.114,
+          "output": 0.167,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.153,
+          "currency": "USD",
+          "input": 0.16999999999999998,
+          "output": 0.25,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:qwen/qwen3.5-9b",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:8d081ffdce8c1decfd568604"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy3",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.032999999999999995,
+          "currency": "USD",
+          "input": 0.13199999999999998,
+          "output": 0.5279999999999999,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.020625,
+          "currency": "USD",
+          "input": 0.0825,
+          "output": 0.33,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:tencent/hy3",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:79946b3af2b69f19a81d9bc0"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:tencent/hy4-preview",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.041999999999999996,
+          "currency": "USD",
+          "input": 0.834,
+          "output": 2.501,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.0378,
+          "currency": "USD",
+          "input": 0.7505999999999999,
+          "output": 2.2509,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:tencent/hy4-preview",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:6dfa9951c74c1077a4040546"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:z-ai/glm-5.3-flash",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.15,
+          "output": 0.5,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.03,
+          "currency": "USD",
+          "input": 0.0399,
+          "output": 0.0784,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:40746738a779c1474989d4d0"
+    },
+    {
+      "dataset": "availability",
+      "entityId": "openrouter:~openai/gpt-astra-latest",
+      "operation": "updated",
+      "fields": [
+        "pricing"
+      ],
+      "before": {
+        "pricing": {
+          "cachedInput": 1,
+          "cachedOutput": 12.5,
+          "currency": "USD",
+          "input": 10,
+          "output": 50,
+          "unit": "1M tokens"
+        }
+      },
+      "after": {
+        "pricing": {
+          "cachedInput": 0.39999999999999997,
+          "cachedOutput": 10,
+          "currency": "USD",
+          "input": 8,
+          "output": 40,
+          "unit": "1M tokens"
+        }
+      },
+      "type": "availability_updated",
+      "date": "2026-11-17",
+      "observedAt": "2026-11-17",
+      "modelId": "openrouter:~openai/gpt-astra-latest",
+      "provider": "openrouter",
+      "confidence": "official",
+      "level": "fact",
+      "url": "https://openrouter.ai/api/v1/models",
+      "id": "change:c124ab57454d52957688d296"
     }
   ],
   "watchlist": [
@@ -164924,7 +167883,7 @@
     },
     {
       "kind": "stale",
-      "text": "83 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
+      "text": "85 endpoints are excluded from current counts because the supporting evidence is older than 48 hours or its source is unhealthy."
     },
     {
       "kind": "incomplete",
@@ -164949,16 +167908,16 @@
     "failedSources": 9
   },
   "snapshot": {
-    "trackedModels": 970,
-    "canonicalModels": 865,
-    "availableEndpoints": 473,
+    "trackedModels": 979,
+    "canonicalModels": 874,
+    "availableEndpoints": 477,
     "freeEndpoints": 17,
-    "paidEndpoints": 448,
+    "paidEndpoints": 452,
     "openModels": 100,
     "openSource": 93,
     "openWeights": 7,
     "proprietary": 0,
-    "unknownOpenness": 765,
+    "unknownOpenness": 774,
     "providers": 9,
     "notableReleasesThisYear": 8,
     "notableReleasesThisMonth": 0
