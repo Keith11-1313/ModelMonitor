@@ -6317,6 +6317,36 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-11-17",
+      "provider": "opencode",
+      "available": 86,
+      "free": 12,
+      "paid": 74,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [],
+      "removed": [
+        "opencode:minimax-m3.1-flash-free"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "provider": "openrouter",
+      "available": 470,
+      "free": 17,
+      "paid": 445,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:z-ai/glm-5.2:batch",
+          "modelId": "openrouter:z-ai/glm-5.2:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
