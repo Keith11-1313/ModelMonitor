@@ -6401,6 +6401,49 @@
         }
       ],
       "removed": []
+    },
+    {
+      "date": "2026-11-18",
+      "provider": "opencode",
+      "available": 88,
+      "free": 12,
+      "paid": 76,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [],
+      "removed": []
+    },
+    {
+      "date": "2026-11-18",
+      "provider": "openrouter",
+      "available": 478,
+      "free": 17,
+      "paid": 453,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:openai/gpt-6.2-astra-pro:batch",
+          "modelId": "openrouter:openai/gpt-6.2-astra-pro:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.2-astra:batch",
+          "modelId": "openrouter:openai/gpt-6.2-astra:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.2-sol-pro:batch",
+          "modelId": "openrouter:openai/gpt-6.2-sol-pro:batch",
+          "free": false
+        },
+        {
+          "id": "openrouter:openai/gpt-6.2-sol:batch",
+          "modelId": "openrouter:openai/gpt-6.2-sol:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
