@@ -6457,6 +6457,50 @@
       "removed": [
         "opencode:glm-5.3-flash-free"
       ]
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "opencode",
+      "available": 89,
+      "free": 12,
+      "paid": 77,
+      "unknown": 0,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:gemini-4-neon",
+          "modelId": "opencode:gemini-4-neon",
+          "free": false
+        },
+        {
+          "id": "opencode:tidepool-alpha-free",
+          "modelId": "opencode:tidepool-alpha-free",
+          "free": true
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-11-19",
+      "provider": "openrouter",
+      "available": 480,
+      "free": 17,
+      "paid": 455,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:google/gemini-4-neon",
+          "modelId": "openrouter:google/gemini-4-neon",
+          "free": false
+        },
+        {
+          "id": "openrouter:google/gemini-4-neon:batch",
+          "modelId": "openrouter:google/gemini-4-neon:batch",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
