@@ -25,6 +25,27 @@
     }
   },
   {
+    "id": "event:042f9998c73fc07dfc797db6",
+    "date": "2026-11-21",
+    "type": "availability_added",
+    "modelId": "opencode:gemini-omni-1.2-flash",
+    "title": "availability added: gemini-omni-1.2-flash",
+    "provider": "opencode",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-11-21"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
     "id": "event:0beea16dd762f07fe9a1893e",
     "date": "2026-11-21",
     "type": "price_change",
@@ -101,6 +122,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:27a3f473ffc5af91eed96231",
+    "date": "2026-11-21",
+    "type": "availability_removed",
+    "modelId": "openrouter:meituan/longcat-2.0",
+    "title": "availability removed: meituan/longcat-2.0",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-21"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:621b282d2e498ddf2c397d0c",
@@ -362,6 +404,27 @@
     }
   },
   {
+    "id": "event:a41a18eee70d1e0bea83c298",
+    "date": "2026-11-21",
+    "type": "availability_added",
+    "modelId": "openrouter:thinkingmachines/inkling-2-mini",
+    "title": "availability added: thinkingmachines/inkling-2-mini",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-21"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
     "id": "event:a4571183fb25cf825ecf18c1",
     "date": "2026-11-21",
     "type": "price_change",
@@ -438,6 +501,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:aa46e2faf4aa31930079c11c",
+    "date": "2026-11-21",
+    "type": "availability_removed",
+    "modelId": "openrouter:dots-studio/dots-3-note-preview:free",
+    "title": "availability removed: dots-studio/dots-3-note-preview:free",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-21"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:aa7ea5d5e27490387411e534",
@@ -558,6 +642,45 @@
     "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
     "before": "available",
     "after": "removed"
+  },
+  {
+    "id": "event:f2923ad968cfcee202f1187d",
+    "date": "2026-11-21",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+    "title": "price change: deepseek/deepseek-v4.1-flash",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-21"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.050699999999999995,
+        "output": 0.20279999999999998,
+        "cachedInput": 0.001014,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.049800000000000004,
+        "output": 0.19920000000000002,
+        "cachedInput": 0.0009960000000000001,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
   },
   {
     "id": "event:f7f8a84e2414bbc0f8a26c92",
