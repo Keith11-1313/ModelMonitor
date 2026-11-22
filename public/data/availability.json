@@ -4613,6 +4613,32 @@
     "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
   },
   {
+    "id": "opencode:jev-1.14",
+    "modelId": "opencode:jev-1.14",
+    "provider": "opencode",
+    "providerModelId": "jev-1.14",
+    "status": "available",
+    "free": null,
+    "context": null,
+    "reasoning": null,
+    "tools": null,
+    "structuredOutput": null,
+    "modalities": [],
+    "pricing": null,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-11-22"
+      }
+    ],
+    "firstSeen": "2026-11-22",
+    "lastChecked": "2026-11-22",
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+  },
+  {
     "id": "opencode:kimi-k2.5",
     "modelId": "opencode:kimi-k2.5",
     "provider": "opencode",
@@ -4959,7 +4985,7 @@
     "modelId": "opencode:longcat-2.5-free",
     "provider": "opencode",
     "providerModelId": "longcat-2.5-free",
-    "status": "available",
+    "status": "removed",
     "free": true,
     "context": 1000000,
     "reasoning": true,
@@ -5000,7 +5026,8 @@
     ],
     "firstSeen": "2026-11-09",
     "lastChecked": "2026-11-22",
-    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source."
+    "notes": "Availability is official; capability and price provenance is field-specific in sources. Null means unknown. Free is token pricing, not an unlimited usage entitlement. Documented discounts and tier conditions may apply; consult source.",
+    "removedAt": "2026-11-22"
   },
   {
     "id": "opencode:longcat-2.5-preview-free",
@@ -6664,9 +6691,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.0999,
+      "input": 0.1188,
       "output": 8,
-      "cachedInput": 0.0999,
+      "cachedInput": 0.12,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7109,8 +7136,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.047,
-      "output": 0.07289999999999999,
+      "input": 0.0399,
+      "output": 0.0784,
       "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
@@ -14556,9 +14583,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.015,
+      "input": 0.075,
+      "output": 0.3,
+      "cachedInput": 0.0075,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -15973,9 +16000,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.253,
-      "output": 8.8,
-      "cachedInput": 0.18,
+      "input": 0.2403,
+      "output": 8.402299999999999,
+      "cachedInput": 0.19999999999999998,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -20722,9 +20749,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.075,
-      "output": 0.3,
-      "cachedInput": 0.0375,
+      "input": 0.03,
+      "output": 0.13,
+      "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -25251,9 +25278,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -26850,9 +26877,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.39999999999999997,
-      "output": 1.75,
-      "cachedInput": 0.08,
+      "input": 0.6,
+      "output": 2.2,
+      "cachedInput": 0.11,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -27168,8 +27195,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.5,
+      "input": 0.0399,
+      "output": 0.0784,
       "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
