@@ -6669,9 +6669,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.036,
-      "output": 0.5,
-      "cachedInput": 0.01,
+      "input": 0.03,
+      "output": 0.19999999999999998,
+      "cachedInput": 0.001,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -6704,9 +6704,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.1188,
+      "input": 0.0999,
       "output": 5,
-      "cachedInput": 0.12,
+      "cachedInput": 0.0999,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7149,8 +7149,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0399,
-      "output": 0.0784,
+      "input": 0.0475,
+      "output": 0.07289999999999999,
       "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
@@ -10303,9 +10303,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.049800000000000004,
-      "output": 0.19920000000000002,
-      "cachedInput": 0.0009960000000000001,
+      "input": 0.3,
+      "output": 1.2,
+      "cachedInput": 0.006,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10339,9 +10339,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.3,
-      "output": 1.2,
-      "cachedInput": 0.006,
+      "input": 0.03,
+      "output": 0.19999999999999998,
+      "cachedInput": 0.001,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12315,9 +12315,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.0765,
+      "output": 0.255,
+      "cachedInput": 0.042499999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -14595,9 +14595,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.015,
+      "input": 0.075,
+      "output": 0.3,
+      "cachedInput": 0.0075,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -25290,9 +25290,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -25422,7 +25422,7 @@
     "providerModelId": "thinkingmachines/inkling",
     "status": "available",
     "free": false,
-    "context": 524288,
+    "context": 1048576,
     "reasoning": true,
     "tools": true,
     "structuredOutput": null,
@@ -26516,7 +26516,7 @@
     "modelId": "openrouter:xiaomi/mimo-v2.5-pro",
     "provider": "openrouter",
     "providerModelId": "xiaomi/mimo-v2.5-pro",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -26544,7 +26544,8 @@
     ],
     "firstSeen": "2026-09-18",
     "lastChecked": "2026-11-23",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-23"
   },
   {
     "id": "openrouter:xiaomi/mimo-v2.6-flash",
@@ -27207,8 +27208,8 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0399,
-      "output": 0.0784,
+      "input": 0.15,
+      "output": 0.5,
       "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
