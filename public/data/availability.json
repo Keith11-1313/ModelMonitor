@@ -4252,7 +4252,6 @@
     "structuredOutput": true,
     "modalities": [
       "image",
-      "pdf",
       "text"
     ],
     "pricing": {
@@ -6840,9 +6839,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.047,
-      "output": 0.3,
-      "cachedInput": 0.035,
+      "input": 0.04532,
+      "output": 0.13596,
+      "cachedInput": 0.001442,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -7167,7 +7166,7 @@
     "providerModelId": "~unbiased/pareto-latest",
     "status": "available",
     "free": false,
-    "context": 1048576,
+    "context": 262144,
     "reasoning": null,
     "tools": true,
     "structuredOutput": true,
@@ -10118,7 +10117,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.047,
+      "input": 0.045599999999999995,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -10297,9 +10296,9 @@
       "text"
     ],
     "pricing": {
-      "input": 1.28,
-      "output": 2.56,
-      "cachedInput": 0.108,
+      "input": 0.63896,
+      "output": 1.5722,
+      "cachedInput": 0.21,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10404,9 +10403,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.14,
-      "output": 0.42,
-      "cachedInput": 0.004200000000000001,
+      "input": 0.050699999999999995,
+      "output": 0.20279999999999998,
+      "cachedInput": 0.001014,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12417,9 +12416,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09,
-      "output": 0.3,
-      "cachedInput": 0.049999999999999996,
+      "input": 0.0765,
+      "output": 0.255,
+      "cachedInput": 0.042499999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -14697,9 +14696,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachedInput": 0.015,
+      "input": 0.075,
+      "output": 0.3,
+      "cachedInput": 0.0075,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -14796,7 +14795,7 @@
     "modelId": "openrouter:mistralai/codestral-2508:batch",
     "provider": "openrouter",
     "providerModelId": "mistralai/codestral-2508:batch",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 256000,
     "reasoning": null,
@@ -14820,13 +14819,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-10-26"
+        "lastChecked": "2026-11-25"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-10-27",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-10-27"
+    "lastChecked": "2026-11-25",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:mistralai/devstral-2512",
@@ -14977,7 +14975,7 @@
     "modelId": "openrouter:mistralai/ministral-8b-2512:batch",
     "provider": "openrouter",
     "providerModelId": "mistralai/ministral-8b-2512:batch",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 262144,
     "reasoning": null,
@@ -15001,13 +14999,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-10-26"
+        "lastChecked": "2026-11-25"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-10-27",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-10-27"
+    "lastChecked": "2026-11-25",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:mistralai/mistral-large",
@@ -15123,7 +15120,7 @@
     "modelId": "openrouter:mistralai/mistral-large-2512:batch",
     "provider": "openrouter",
     "providerModelId": "mistralai/mistral-large-2512:batch",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 262144,
     "reasoning": null,
@@ -15148,13 +15145,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-10-26"
+        "lastChecked": "2026-11-25"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-10-27",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-10-27"
+    "lastChecked": "2026-11-25",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:mistralai/mistral-large-4-0",
@@ -15527,7 +15523,7 @@
     "modelId": "openrouter:mistralai/mistral-small-2603:batch",
     "provider": "openrouter",
     "providerModelId": "mistralai/mistral-small-2603:batch",
-    "status": "removed",
+    "status": "available",
     "free": false,
     "context": 262144,
     "reasoning": true,
@@ -15551,13 +15547,12 @@
         "url": "https://openrouter.ai/api/v1/models",
         "label": "Official OpenRouter model catalog availability and token pricing",
         "confidence": "official",
-        "lastChecked": "2026-10-26"
+        "lastChecked": "2026-11-25"
       }
     ],
     "firstSeen": "2026-09-18",
-    "lastChecked": "2026-10-27",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
-    "removedAt": "2026-10-27"
+    "lastChecked": "2026-11-25",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
     "id": "openrouter:mistralai/mistral-small-3.1-24b-instruct",
@@ -23397,7 +23392,7 @@
       "video"
     ],
     "pricing": {
-      "input": 0.09999999999999999,
+      "input": 0.16999999999999998,
       "output": 0.25,
       "cachedInput": 0.153,
       "cachedOutput": null,
@@ -25254,9 +25249,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.13199999999999998,
-      "output": 0.5279999999999999,
-      "cachedInput": 0.032999999999999995,
+      "input": 0.0825,
+      "output": 0.33,
+      "cachedInput": 0.020625,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -25397,9 +25392,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.834,
-      "output": 2.501,
-      "cachedInput": 0.041999999999999996,
+      "input": 0.7505999999999999,
+      "output": 2.2509,
+      "cachedInput": 0.0378,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -25857,6 +25852,41 @@
     "removedAt": "2026-11-04"
   },
   {
+    "id": "openrouter:tngtech/deepseek-r1t2-chimera",
+    "modelId": "openrouter:tngtech/deepseek-r1t2-chimera",
+    "provider": "openrouter",
+    "providerModelId": "tngtech/deepseek-r1t2-chimera",
+    "status": "available",
+    "free": false,
+    "context": 131072,
+    "reasoning": true,
+    "tools": null,
+    "structuredOutput": true,
+    "modalities": [
+      "text"
+    ],
+    "pricing": {
+      "input": 1,
+      "output": 2.625,
+      "cachedInput": 0.02,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "firstSeen": "2026-11-25",
+    "lastChecked": "2026-11-25",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:typesafe/jev-router",
     "modelId": "openrouter:typesafe/jev-router",
     "provider": "openrouter",
@@ -25930,7 +25960,7 @@
     "modelId": "openrouter:unbiased/pareto-26.10",
     "provider": "openrouter",
     "providerModelId": "unbiased/pareto-26.10",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 1048576,
     "reasoning": null,
@@ -25959,14 +25989,15 @@
     ],
     "firstSeen": "2026-10-18",
     "lastChecked": "2026-11-25",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-25"
   },
   {
     "id": "openrouter:unbiased/pareto-26.10-preview",
     "modelId": "openrouter:unbiased/pareto-26.10-preview",
     "provider": "openrouter",
     "providerModelId": "unbiased/pareto-26.10-preview",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 1048576,
     "reasoning": null,
@@ -25995,14 +26026,15 @@
     ],
     "firstSeen": "2026-10-01",
     "lastChecked": "2026-11-25",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-25"
   },
   {
     "id": "openrouter:unbiased/pareto-26.9",
     "modelId": "openrouter:unbiased/pareto-26.9",
     "provider": "openrouter",
     "providerModelId": "unbiased/pareto-26.9",
-    "status": "available",
+    "status": "removed",
     "free": false,
     "context": 262144,
     "reasoning": null,
@@ -26031,7 +26063,8 @@
     ],
     "firstSeen": "2026-10-14",
     "lastChecked": "2026-11-25",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-25"
   },
   {
     "id": "openrouter:undi95/remm-slerp-l2-13b",
@@ -26963,9 +26996,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.14,
-      "output": 0.86,
-      "cachedInput": 0.024999999999999998,
+      "input": 0.19999999999999998,
+      "output": 1.1,
+      "cachedInput": 0.03,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"

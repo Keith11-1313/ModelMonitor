@@ -78,6 +78,27 @@
     }
   },
   {
+    "id": "event:079e6f703d1dbe29de340980",
+    "date": "2026-11-25",
+    "type": "availability_added",
+    "modelId": "openrouter:mistralai/codestral-2508:batch",
+    "title": "availability added: mistralai/codestral-2508:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "removed",
+    "after": "available"
+  },
+  {
     "id": "event:0916f9e2eca976132d63343b",
     "date": "2026-11-25",
     "type": "availability_added",
@@ -216,6 +237,31 @@
     }
   },
   {
+    "id": "event:1ca8fa9dda07f1b5ad4e7e8e",
+    "date": "2026-11-25",
+    "type": "context_change",
+    "modelId": "openrouter:~unbiased/pareto-latest",
+    "title": "context change: ~unbiased/pareto-latest",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "context": 1048576
+    },
+    "after": {
+      "context": 262144
+    }
+  },
+  {
     "id": "event:267ca230f4413619934947f6",
     "date": "2026-11-25",
     "type": "price_change",
@@ -294,6 +340,45 @@
     }
   },
   {
+    "id": "event:36db03c10d425db922fc5f00",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-pro",
+    "title": "price change: deepseek/deepseek-v4-pro",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 1.28,
+        "output": 2.56,
+        "cachedInput": 0.108,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.63896,
+        "output": 1.5722,
+        "cachedInput": 0.21,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:379877270c42ee4d9106613f",
     "date": "2026-11-25",
     "type": "price_change",
@@ -333,6 +418,84 @@
     }
   },
   {
+    "id": "event:382ed6d0ec3c8114237fe652",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:qwen/qwen3.5-9b",
+    "title": "price change: qwen/qwen3.5-9b",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.09999999999999999,
+        "output": 0.25,
+        "cachedInput": 0.153,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.16999999999999998,
+        "output": 0.25,
+        "cachedInput": 0.153,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:3f0efde4cca2e8d2f49f35e0",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy4-preview",
+    "title": "price change: tencent/hy4-preview",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.834,
+        "output": 2.501,
+        "cachedInput": 0.041999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.7505999999999999,
+        "output": 2.2509,
+        "cachedInput": 0.0378,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
     "id": "event:3fe383c779d82ba8b08819e5",
     "date": "2026-11-25",
     "type": "availability_added",
@@ -352,6 +515,27 @@
     "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
     "before": null,
     "after": "available"
+  },
+  {
+    "id": "event:472042e09e52ccb4eb98226b",
+    "date": "2026-11-25",
+    "type": "availability_removed",
+    "modelId": "openrouter:unbiased/pareto-26.9",
+    "title": "availability removed: unbiased/pareto-26.9",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:47a03a5cc94ea949afc0eb13",
@@ -386,6 +570,45 @@
         "input": 0.036,
         "output": 0.5,
         "cachedInput": 0.01,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:4d0b7000ffee563c932b3f75",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:tencent/hy3",
+    "title": "price change: tencent/hy3",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.13199999999999998,
+        "output": 0.5279999999999999,
+        "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0825,
+        "output": 0.33,
+        "cachedInput": 0.020625,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -432,6 +655,27 @@
     }
   },
   {
+    "id": "event:55fb64421301ec7dd1d709c9",
+    "date": "2026-11-25",
+    "type": "availability_added",
+    "modelId": "openrouter:tngtech/deepseek-r1t2-chimera",
+    "title": "availability added: tngtech/deepseek-r1t2-chimera",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": null,
+    "after": "available"
+  },
+  {
     "id": "event:60d1fef6fbb98f23d0dbf8c3",
     "date": "2026-11-25",
     "type": "context_change",
@@ -454,6 +698,45 @@
     },
     "after": {
       "context": 65536
+    }
+  },
+  {
+    "id": "event:67f8dc4223ad78a1e2dc323f",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:~deepseek/deepseek-v4-flash-latest",
+    "title": "price change: ~deepseek/deepseek-v4-flash-latest",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.047,
+        "output": 0.3,
+        "cachedInput": 0.035,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.04532,
+        "output": 0.13596,
+        "cachedInput": 0.001442,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
     }
   },
   {
@@ -716,6 +999,27 @@
     }
   },
   {
+    "id": "event:a4c358b282494abd86658448",
+    "date": "2026-11-25",
+    "type": "availability_removed",
+    "modelId": "openrouter:unbiased/pareto-26.10",
+    "title": "availability removed: unbiased/pareto-26.10",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
+  },
+  {
     "id": "event:ad34cdb9de7f229723983e5c",
     "date": "2026-11-25",
     "type": "price_change",
@@ -755,6 +1059,105 @@
     }
   },
   {
+    "id": "event:adc06ba2929f2dc074e7c246",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4.1-flash",
+    "title": "price change: deepseek/deepseek-v4.1-flash",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.14,
+        "output": 0.42,
+        "cachedInput": 0.004200000000000001,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.050699999999999995,
+        "output": 0.20279999999999998,
+        "cachedInput": 0.001014,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:ae2924345cb205867a13854e",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:deepseek/deepseek-v4-flash-0731",
+    "title": "price change: deepseek/deepseek-v4-flash-0731",
+    "provider": "openrouter",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.047,
+        "output": 0.3,
+        "cachedInput": 0.035,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.045599999999999995,
+        "output": 0.3,
+        "cachedInput": 0.035,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:b214bab9cf2dd70c3ab900c5",
+    "date": "2026-11-25",
+    "type": "availability_added",
+    "modelId": "openrouter:mistralai/mistral-large-2512:batch",
+    "title": "availability added: mistralai/mistral-large-2512:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "removed",
+    "after": "available"
+  },
+  {
     "id": "event:b4da5dceb2e052759ca655e6",
     "date": "2026-11-25",
     "type": "price_change",
@@ -787,6 +1190,66 @@
         "input": 0.13199999999999998,
         "output": 0.5279999999999999,
         "cachedInput": 0.032999999999999995,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:b943986cdb659c2dee7cdd9e",
+    "date": "2026-11-25",
+    "type": "availability_added",
+    "modelId": "openrouter:mistralai/ministral-8b-2512:batch",
+    "title": "availability added: mistralai/ministral-8b-2512:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "removed",
+    "after": "available"
+  },
+  {
+    "id": "event:bda12d34f690292dc25d2b55",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:minimax/minimax-m3.1-flash",
+    "title": "price change: minimax/minimax-m3.1-flash",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.15,
+        "output": 0.6,
+        "cachedInput": 0.015,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.075,
+        "output": 0.3,
+        "cachedInput": 0.0075,
         "cachedOutput": null,
         "currency": "USD",
         "unit": "1M tokens"
@@ -836,7 +1299,150 @@
     "after": "removed"
   },
   {
+    "id": "event:c3a2946757036045b74edc5e",
+    "date": "2026-11-25",
+    "type": "capability_update",
+    "modelId": "opencode:grok-4.7",
+    "title": "capability update: grok-4.7",
+    "provider": "opencode",
+    "notable": false,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://models.dev/api.json",
+        "label": "Secondary catalog capabilities; exact provider model ID",
+        "confidence": "observed",
+        "lastChecked": "2026-11-25"
+      },
+      {
+        "url": "https://opencode.ai/docs/zen/",
+        "label": "Official published Zen token prices",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      },
+      {
+        "url": "https://opencode.ai/zen/v1/models",
+        "label": "Official Zen membership; not maker attribution or release date",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "modalities": [
+        "image",
+        "pdf",
+        "text"
+      ]
+    },
+    "after": {
+      "modalities": [
+        "image",
+        "text"
+      ]
+    }
+  },
+  {
+    "id": "event:c5c9cb74d24981589d8e0532",
+    "date": "2026-11-25",
+    "type": "availability_added",
+    "modelId": "openrouter:mistralai/mistral-small-2603:batch",
+    "title": "availability added: mistralai/mistral-small-2603:batch",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "removed",
+    "after": "available"
+  },
+  {
     "id": "event:c62a43d7c67dba62fed98462",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:google/gemma-4-26b-a4b-it",
+    "title": "price change: google/gemma-4-26b-a4b-it",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.09,
+        "output": 0.3,
+        "cachedInput": 0.049999999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.0765,
+        "output": 0.255,
+        "cachedInput": 0.042499999999999996,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:c7e0d1a1d299685d50da6d5e",
+    "date": "2026-11-25",
+    "type": "price_change",
+    "modelId": "openrouter:z-ai/glm-4.5-air",
+    "title": "price change: z-ai/glm-4.5-air",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": {
+      "pricing": {
+        "input": 0.14,
+        "output": 0.86,
+        "cachedInput": 0.024999999999999998,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    },
+    "after": {
+      "pricing": {
+        "input": 0.19999999999999998,
+        "output": 1.1,
+        "cachedInput": 0.03,
+        "cachedOutput": null,
+        "currency": "USD",
+        "unit": "1M tokens"
+      }
+    }
+  },
+  {
+    "id": "event:ceb5a1b9c6b100d389e328bb",
     "date": "2026-11-25",
     "type": "price_change",
     "modelId": "openrouter:google/gemma-4-26b-a4b-it",
@@ -912,6 +1518,27 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "event:ea330eaf0df6433acfcd6879",
+    "date": "2026-11-25",
+    "type": "availability_removed",
+    "modelId": "openrouter:unbiased/pareto-26.10-preview",
+    "title": "availability removed: unbiased/pareto-26.10-preview",
+    "provider": "openrouter",
+    "notable": true,
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ],
+    "description": "Observed by ModelMonitor on this date; not an asserted launch date.",
+    "before": "available",
+    "after": "removed"
   },
   {
     "id": "event:f42070d1d587f95a434eb698",
@@ -15661,6 +16288,25 @@
         "unit": "1M tokens"
       }
     }
+  },
+  {
+    "id": "history:f13423c3580bb867022eed94",
+    "date": "2026-11-13",
+    "type": "repository_created",
+    "modelId": "hf:nvidia/Nemotron-3.5-Rerank-1B-BF16",
+    "title": "repository created: Nemotron-3.5-Rerank-1B-BF16",
+    "provider": "NVIDIA",
+    "notable": false,
+    "confidence": "official",
+    "description": "Hugging Face repository creation date, not a verified model launch. Derivative checkpoints remain separate from foundation releases.",
+    "sources": [
+      {
+        "url": "https://huggingface.co/nvidia/Nemotron-3.5-Rerank-1B-BF16",
+        "label": "Official organization model card and Hub metadata",
+        "confidence": "official",
+        "lastChecked": "2026-11-25"
+      }
+    ]
   },
   {
     "id": "event:024f9d703240f11ce0cc93ab",
