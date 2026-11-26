@@ -7053,6 +7053,55 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-11-26",
+      "provider": "opencode",
+      "available": 110,
+      "free": 11,
+      "paid": 77,
+      "unknown": 22,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "opencode:gpt-transcribe",
+          "modelId": "opencode:gpt-transcribe",
+          "free": null
+        },
+        {
+          "id": "opencode:grok-voice-transcribe-2.0",
+          "modelId": "opencode:grok-voice-transcribe-2.0",
+          "free": null
+        }
+      ],
+      "removed": []
+    },
+    {
+      "date": "2026-11-26",
+      "provider": "openrouter",
+      "available": 477,
+      "free": 14,
+      "paid": 455,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:inclusionai/lingsante-3.1-air-vl",
+          "modelId": "openrouter:inclusionai/lingsante-3.1-air-vl",
+          "free": false
+        },
+        {
+          "id": "openrouter:moonshotai/kimi-k2",
+          "modelId": "openrouter:moonshotai/kimi-k2",
+          "free": false
+        },
+        {
+          "id": "openrouter:moonshotai/kimi-k2-0905",
+          "modelId": "openrouter:moonshotai/kimi-k2-0905",
+          "free": false
+        }
+      ],
+      "removed": []
     }
   ]
 }
