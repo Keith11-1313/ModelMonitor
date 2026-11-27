@@ -7124,6 +7124,25 @@
       "baseline": false,
       "upsert": [],
       "removed": []
+    },
+    {
+      "date": "2026-11-27",
+      "provider": "openrouter",
+      "available": 477,
+      "free": 13,
+      "paid": 456,
+      "unknown": 8,
+      "baseline": false,
+      "upsert": [
+        {
+          "id": "openrouter:inclusionai/ling-3.2-flash",
+          "modelId": "openrouter:inclusionai/ling-3.2-flash",
+          "free": false
+        }
+      ],
+      "removed": [
+        "openrouter:inclusionai/ling-3.2-flash:free"
+      ]
     }
   ]
 }

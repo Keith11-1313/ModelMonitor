@@ -6939,9 +6939,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.047,
-      "output": 0.3,
-      "cachedInput": 0.035,
+      "input": 0.04532,
+      "output": 0.13596,
+      "cachedInput": 0.001442,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -10217,7 +10217,7 @@
       "text"
     ],
     "pricing": {
-      "input": 0.047,
+      "input": 0.045599999999999995,
       "output": 0.3,
       "cachedInput": 0.035,
       "cachedOutput": null,
@@ -10396,8 +10396,8 @@
       "text"
     ],
     "pricing": {
-      "input": 0.888188,
-      "output": 1.5082,
+      "input": 0.81641,
+      "output": 1.5381,
       "cachedInput": 0.19999999999999998,
       "cachedOutput": null,
       "currency": "USD",
@@ -10503,9 +10503,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.14,
-      "output": 0.42,
-      "cachedInput": 0.004200000000000001,
+      "input": 0.050699999999999995,
+      "output": 0.20279999999999998,
+      "cachedInput": 0.001014,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -12444,7 +12444,7 @@
     ],
     "pricing": {
       "input": 0.08,
-      "output": 0.44999999999999996,
+      "output": 0.16,
       "cachedInput": 0.04,
       "cachedOutput": null,
       "currency": "USD",
@@ -12516,9 +12516,9 @@
       "video"
     ],
     "pricing": {
-      "input": 0.0765,
-      "output": 0.255,
-      "cachedInput": 0.042499999999999996,
+      "input": 0.09,
+      "output": 0.3,
+      "cachedInput": 0.049999999999999996,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
@@ -13260,11 +13260,47 @@
     "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
   },
   {
+    "id": "openrouter:inclusionai/ling-3.2-flash",
+    "modelId": "openrouter:inclusionai/ling-3.2-flash",
+    "provider": "openrouter",
+    "providerModelId": "inclusionai/ling-3.2-flash",
+    "status": "available",
+    "free": false,
+    "context": 1048576,
+    "reasoning": true,
+    "tools": true,
+    "structuredOutput": true,
+    "modalities": [
+      "image",
+      "text"
+    ],
+    "pricing": {
+      "input": 0.3,
+      "output": 0.8999999999999999,
+      "cachedInput": 0.06,
+      "cachedOutput": null,
+      "currency": "USD",
+      "unit": "1M tokens"
+    },
+    "confidence": "official",
+    "sources": [
+      {
+        "url": "https://openrouter.ai/api/v1/models",
+        "label": "Official OpenRouter model catalog availability and token pricing",
+        "confidence": "official",
+        "lastChecked": "2026-11-27"
+      }
+    ],
+    "firstSeen": "2026-11-27",
+    "lastChecked": "2026-11-27",
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+  },
+  {
     "id": "openrouter:inclusionai/ling-3.2-flash:free",
     "modelId": "openrouter:inclusionai/ling-3.2-flash:free",
     "provider": "openrouter",
     "providerModelId": "inclusionai/ling-3.2-flash:free",
-    "status": "available",
+    "status": "removed",
     "free": true,
     "context": 1048576,
     "reasoning": true,
@@ -13293,7 +13329,8 @@
     ],
     "firstSeen": "2026-11-13",
     "lastChecked": "2026-11-27",
-    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement."
+    "notes": "OpenRouter free endpoints have zero token pricing but remain subject to account and provider rate limits. A free endpoint is not an unlimited entitlement.",
+    "removedAt": "2026-11-27"
   },
   {
     "id": "openrouter:inclusionai/lingsante-3.1-air-vl",
@@ -24030,7 +24067,7 @@
     "providerModelId": "qwen/qwen3.8-2.4t-a95b",
     "status": "available",
     "free": false,
-    "context": 1048576,
+    "context": 1000000,
     "reasoning": true,
     "tools": true,
     "structuredOutput": true,
@@ -25704,9 +25741,9 @@
       "text"
     ],
     "pricing": {
-      "input": 0.075,
-      "output": 0.3,
-      "cachedInput": 0.015,
+      "input": 0.06,
+      "output": 0.24,
+      "cachedInput": 0.012,
       "cachedOutput": null,
       "currency": "USD",
       "unit": "1M tokens"
